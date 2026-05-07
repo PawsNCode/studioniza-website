@@ -286,6 +286,23 @@ a:hover { opacity: 0.7; }
   text-decoration: none;
   color: inherit;
 }
+.post-hero {
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--gray-line);
+  background: linear-gradient(135deg, var(--magenta-soft), var(--white));
+  margin: 16px 0 20px;
+  max-width: 720px;
+  transition: border-color 0.2s;
+}
+.post-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.post-card:hover .post-hero { border-color: var(--magenta); }
 .post-card:hover { opacity: 1; }
 .post-card:hover .post-title { color: var(--magenta); }
 .post-meta {
@@ -516,6 +533,9 @@ footer {
         <span class="post-date">May 2026</span>
         <span class="post-meta-divider">·</span>
         <span class="post-readtime">12 min read</span>
+      </div>
+      <div class="post-hero">
+        <img src="shopify-seo-checklist-hero.webp" alt="Clean desk with laptop showing Shopify SEO checklist settings and a handwritten notebook">
       </div>
       <h2 class="post-title">Shopify SEO Checklist for New Stores: 25 Pages You Need to Optimize First</h2>
       <p class="post-excerpt">Most new Shopify stores have 30 to 80 products and maybe 50 indexable URLs. Of those, 25 carry almost all the SEO weight. Here&#39;s the priority order, with what to fix on each.</p>
