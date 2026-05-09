@@ -487,6 +487,75 @@ footer {
   .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
 }
 </style>
+
+<!-- Blog schema (for Google, Bing, ChatGPT, Perplexity, AI Overviews) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://studioniza.com/journal/#blog",
+  "url": "https://studioniza.com/journal/",
+  "name": "Studio Niza Journal",
+  "description": "Practical Shopify growth notes for solo founders: SEO, AI chatbots, content writing, and reviews management.",
+  "inLanguage": "en-US",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://studioniza.com/#organization",
+    "name": "Studio Niza",
+    "url": "https://studioniza.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://studioniza.com/images/studio-niza-logo.png"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Niza Ravelo",
+      "jobTitle": "Founder, Studio Niza",
+      "url": "https://studioniza.com/"
+    }
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Shopify SEO Checklist for New Stores: 25 Pages You Need to Optimize First",
+      "url": "https://studioniza.com/journal/shopify-seo-checklist/",
+      "datePublished": "2026-05-08",
+      "image": "https://studioniza.com/journal/shopify-seo-checklist/shopify-seo-checklist-hero.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Niza Ravelo"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Studio Niza"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://studioniza.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Journal",
+      "item": "https://studioniza.com/journal/"
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 <nav class="nav">
