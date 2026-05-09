@@ -257,6 +257,68 @@ a:hover { opacity: 0.7; }
   max-width: 56ch;
   color: var(--dark-gray);
 }
+
+.journal-services {
+  padding: clamp(40px, 5vw, 56px) 0;
+  border-bottom: 1px solid var(--gray-line);
+  background: var(--magenta-soft);
+}
+.journal-services-heading {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+.journal-services-intro {
+  color: var(--dark-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin-bottom: 28px;
+}
+.journal-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .journal-services-grid { grid-template-columns: 1fr; }
+}
+.journal-service-link {
+  display: block;
+  padding: 18px 20px;
+  background: var(--white);
+  border: 1px solid var(--gray-line);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.journal-service-link:hover {
+  border-color: var(--magenta);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.journal-service-name {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.0625rem;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+.journal-service-link:hover .journal-service-name {
+  color: var(--magenta);
+}
+.journal-service-desc {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--dark-gray);
+  line-height: 1.5;
+}
+
 .post-list {
   padding: clamp(40px, 6vw, 72px) 0 clamp(64px, 10vw, 120px);
 }
@@ -602,6 +664,31 @@ footer {
     <div class="label">Studio Niza Journal</div>
     <h1>Shopify growth notes for solo founders.</h1>
     <p>The Studio Niza Journal is a working notebook on Shopify SEO, AI chatbots, blog content, and reviews management. Written by Niza Ravelo, a one-person Shopify growth studio working with founders worldwide. Practical, opinionated, drawn from real client work.</p>
+  </div>
+</section>
+
+<section class="journal-services">
+  <div class="container-narrow">
+    <h2 class="journal-services-heading">What Studio Niza does</h2>
+    <p class="journal-services-intro">Most journal posts go deeper into one of these four services. If you'd rather skip the reading and ask a question, the email link in the footer always works.</p>
+    <div class="journal-services-grid">
+      <a href="/#seo" class="journal-service-link">
+        <span class="journal-service-name">Shopify SEO &amp; GEO</span>
+        <span class="journal-service-desc">Product, collection, and page optimization for Google and AI search.</span>
+      </a>
+      <a href="/#chatbots" class="journal-service-link">
+        <span class="journal-service-name">AI Chatbots</span>
+        <span class="journal-service-desc">Custom Shopify chatbots that answer questions and recover carts.</span>
+      </a>
+      <a href="/#blog" class="journal-service-link">
+        <span class="journal-service-name">Content Writing</span>
+        <span class="journal-service-desc">SEO blog content written for solo Shopify founders.</span>
+      </a>
+      <a href="/#reviews" class="journal-service-link">
+        <span class="journal-service-name">Reviews Management</span>
+        <span class="journal-service-desc">Automated review requests, responses, and discontinued listing redirects.</span>
+      </a>
+    </div>
   </div>
 </section>
 
