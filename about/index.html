@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ============================================================
+     PASS #1: Title and meta description
+     Targets the founder/entity queries: "Niza Ravelo," "Studio Niza
+     founder," "Studio Niza about." Establishes Person entity for GEO.
+     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Studio Niza and Niza Ravelo | Shopify Growth Studio</title>
+<meta name="description" content="Studio Niza is a solo Shopify growth practice run by Niza Ravelo. Twelve years in digital marketing and ecommerce, focused on Shopify since 2015. SEO, content, AI chatbots, and reviews.">
+<link rel="canonical" href="https://studioniza.com/about/">
+
+<!-- ============================================================
+     PASS #2: Open Graph and Twitter Card
+     ============================================================ -->
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://studioniza.com/about/">
+<meta property="og:title" content="About Studio Niza and Niza Ravelo | Shopify Growth Studio">
+<meta property="og:description" content="Studio Niza is a solo Shopify growth practice run by Niza Ravelo. Twelve years in digital marketing and ecommerce, focused on Shopify since 2015. SEO, content, AI chatbots, and reviews.">
+<meta property="og:image" content="https://studioniza.com/images/studio-niza-about.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="About Studio Niza: a solo Shopify growth practice run by Niza Ravelo">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:locale" content="en_US">
+<meta property="profile:first_name" content="Niza">
+<meta property="profile:last_name" content="Ravelo">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://studioniza.com/about/">
+<meta name="twitter:title" content="About Studio Niza and Niza Ravelo | Shopify Growth Studio">
+<meta name="twitter:description" content="Studio Niza is a solo Shopify growth practice run by Niza Ravelo. Twelve years in digital marketing and ecommerce, focused on Shopify since 2015. SEO, content, AI chatbots, and reviews.">
+<meta name="twitter:image" content="https://studioniza.com/images/studio-niza-about.png">
+<meta name="twitter:image:alt" content="About Studio Niza: a solo Shopify growth practice run by Niza Ravelo">
+
+<!-- ============================================================
+     PASS #3: JSON-LD Structured Data
+     - AboutPage schema (the page itself)
+     - Person schema (Niza Ravelo as the named entity, the GEO win)
+     - Organization schema (Studio Niza, with founder linked to Person)
+     - BreadcrumbList
+     This is the single biggest GEO leverage point on the site:
+     when AI engines describe Studio Niza or Niza Ravelo, they
+     extract from this structured data.
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://studioniza.com/about/#aboutpage",
+      "url": "https://studioniza.com/about/",
+      "name": "About Studio Niza and Niza Ravelo",
+      "description": "Studio Niza is a solo Shopify growth practice run by Niza Ravelo. Twelve years in digital marketing and ecommerce, focused on Shopify since 2015. Four services: SEO and GEO, blog content, AI chatbots, and reviews management.",
+      "isPartOf": {
+        "@id": "https://studioniza.com/#website"
+      },
+      "about": {
+        "@id": "https://studioniza.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://studioniza.com/#niza-ravelo"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://studioniza.com/#niza-ravelo",
+      "name": "Niza Ravelo",
+      "givenName": "Niza",
+      "familyName": "Ravelo",
+      "jobTitle": "Founder and Solo Practitioner, Studio Niza",
+      "description": "Founder of Studio Niza. Twelve years of experience in digital marketing, content, and ecommerce, with Shopify as the focus since 2015. Specializes in Shopify SEO, GEO, content writing, AI chatbots, and reviews management for solo founders and small Shopify stores.",
+      "url": "https://studioniza.com/about/",
+      "knowsAbout": [
+        "Shopify SEO",
+        "Generative Engine Optimization",
+        "Ecommerce content writing",
+        "AI chatbots for Shopify",
+        "Reviews management",
+        "Shopify growth strategy",
+        "Schema markup",
+        "Google Merchant Center"
+      ],
+      "worksFor": {
+        "@id": "https://studioniza.com/#organization"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "Philippines"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://studioniza.com/#organization",
+      "name": "Studio Niza",
+      "alternateName": "Studio Niza Shopify Growth Studio",
+      "url": "https://studioniza.com/",
+      "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+      "founder": {
+        "@id": "https://studioniza.com/#niza-ravelo"
+      },
+      "foundingDate": "2025",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PH"
+      },
+      "serviceType": [
+        "Shopify SEO",
+        "Generative Engine Optimization",
+        "Ecommerce Content Writing",
+        "AI Chatbot Development",
+        "Reviews Management"
+      ],
+      "knowsAbout": [
+        "Shopify ecommerce",
+        "SEO",
+        "GEO",
+        "Content marketing",
+        "AI chatbots",
+        "Reviews management"
+      ],
+      "email": "contact@studioniza.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://studioniza.com/#website",
+      "url": "https://studioniza.com/",
+      "name": "Studio Niza",
+      "publisher": {
+        "@id": "https://studioniza.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://studioniza.com/about/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://studioniza.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://studioniza.com/about/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" href="/images/studio-niza-favicon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --container: 1200px;
+  --container-narrow: 900px;
+  --pad-section: 80px;
+  --pad-section-mobile: 48px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body { font-family: var(--sans); font-size: 16px; line-height: 1.6; color: var(--dark-gray); background: var(--white); -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); line-height: 1.05; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.15; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.625rem); line-height: 1.25; }
+h4 { font-size: clamp(1.125rem, 1.5vw, 1.25rem); line-height: 1.3; }
+
+p { color: var(--dark-gray); }
+.lead { font-size: 1.125rem; line-height: 1.6; color: var(--dark-gray); }
+
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+
+.label { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #801D5C !important; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; text-decoration: none; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+}
+
+.breadcrumb { padding: 16px 0; font-size: 0.875rem; color: var(--gray); border-bottom: 1px solid var(--gray-line); }
+.breadcrumb a { color: var(--gray); }
+.breadcrumb a:hover { color: var(--magenta); opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--black); font-weight: 500; }
+
+.page-intro { padding: 64px 0 40px; }
+.page-intro h1 { margin: 16px 0 24px; max-width: 24ch; }
+.page-intro .lead { font-size: 1.125rem; max-width: 60ch; }
+@media (max-width: 768px) { .page-intro { padding: 40px 0 32px; } }
+
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; margin-top: 32px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; padding: 14px 24px; border-radius: 8px; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; text-decoration: none; }
+.btn-primary { background: var(--magenta); color: var(--white); border-color: var(--magenta); }
+.btn-primary:hover { background: #6a1850; border-color: #6a1850; color: #ffffff; opacity: 1; }
+.btn-outline { background: transparent; color: var(--magenta); border-color: var(--magenta); }
+.btn-outline:hover { background: var(--magenta); color: var(--white); opacity: 1; }
+
+.section { padding: var(--pad-section) 0; }
+@media (max-width: 768px) { .section { padding: var(--pad-section-mobile) 0; } }
+.section-divided { border-top: 1px solid var(--gray-line); }
+.section-soft { background: var(--magenta-soft); }
+.section-head { margin-bottom: 48px; max-width: 56ch; }
+.section-head h2 { margin: 12px 0 16px; }
+.section-head .lead { color: var(--dark-gray); font-size: 1.125rem; }
+@media (max-width: 768px) { .section-head { margin-bottom: 32px; } }
+
+/* ORIGIN STORY - longform prose */
+.origin-prose { font-size: 1.0625rem; line-height: 1.7; color: var(--dark-gray); }
+.origin-prose p { margin-bottom: 24px; }
+.origin-prose p:last-child { margin-bottom: 0; }
+
+/* WHY GRID (services and how-i-work blocks) */
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+@media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; gap: 32px; } }
+.why-block { padding-top: 24px; border-top: 1px solid var(--gray-line); }
+.why-block .why-num { font-family: var(--serif); font-size: 0.9375rem; color: var(--magenta); margin-bottom: 8px; }
+.why-block h3 { font-size: 1.375rem; margin-bottom: 12px; line-height: 1.25; }
+.why-block p { font-size: 0.9375rem; line-height: 1.65; }
+
+/* TWO-COLUMN GRID for tools */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+@media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; gap: 32px; } }
+
+.scope-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; list-style: none; padding: 0; }
+@media (max-width: 768px) { .scope-list { grid-template-columns: 1fr; } }
+.scope-list li { font-size: 0.9375rem; color: var(--dark-gray); padding: 8px 0 8px 22px; position: relative; border-bottom: 1px solid var(--gray-line); }
+.scope-list li::before { content: "→"; position: absolute; left: 0; top: 8px; color: var(--magenta); }
+
+/* STUDIO PROSE */
+.studio-prose { font-size: 1.0625rem; line-height: 1.7; color: var(--dark-gray); max-width: 60ch; }
+.studio-prose p { margin-bottom: 20px; }
+.studio-prose p:last-child { margin-bottom: 0; }
+
+.footer-cta { padding: 72px 0; background: var(--magenta-soft); text-align: center; }
+.footer-cta h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 16px; max-width: 24ch; margin-left: auto; margin-right: auto; }
+.footer-cta p { max-width: 56ch; margin: 0 auto 32px; font-size: 1.0625rem; }
+.footer-cta p.footer-cta-fallback { margin: 24px auto 0; font-size: 1.0625rem; color: var(--dark-gray); }
+@media (max-width: 768px) { .footer-cta { padding: 48px 0; } }
+
+footer { padding: 56px 0 32px; border-top: 1px solid var(--gray-line); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; margin-bottom: 64px; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { display: block; margin-bottom: 12px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-brand .footer-by-line { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom { padding-top: 32px; border-top: 1px solid var(--gray-line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 0.8125rem; color: var(--gray); }
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="Studio Niza home">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger" type="button">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+            <a href="/services/blog-content/">Content Writing</a>
+            <a href="/services/ai-chatbots/">AI Chatbots</a>
+            <a href="/services/reviews-management/">Reviews Management</a>
+            <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal.html">Journal</a></li>
+      <li><a href="/about/" class="active">About</a></li>
+      <li><a href="/#contact" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============================================================
+     BREADCRUMB
+     ============================================================ -->
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">About</span>
+  </nav>
+</div>
+
+<!-- ============================================================
+     PASS #4: HERO
+     - Names entity (Studio Niza) and founder (Niza Ravelo)
+     - Establishes 12 years of experience for E-E-A-T
+     - Names the platform (Shopify) and the focus year (2015)
+     ============================================================ -->
+<section class="page-intro">
+  <div class="container">
+    <div class="label">About</div>
+    <h1>Twelve years building things on the internet. Now focused on Shopify.</h1>
+    <p class="lead">I'm Niza Ravelo. I've spent the last twelve years working in digital marketing, content, and ecommerce in various forms, with Shopify as the focus since 2015. Studio Niza is where that experience focuses on one thing: helping Shopify owners actually grow.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PASS #5: ORIGIN STORY (E-E-A-T: Experience signal)
+     ============================================================ -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="section-head">
+      <div class="label">Origin</div>
+      <h2>The path here.</h2>
+    </div>
+    <div class="origin-prose">
+      <p>I started freelancing in 2014, doing eBay listings. From there, the work expanded across most of the major ecommerce platforms: Amazon, then Shopify around 2015, then Etsy, BigCommerce, Magento, and a handful of smaller ones along the way. Each platform taught me something different about how online stores actually work, and where the gaps tend to live.</p>
+      <p>Of all of them, Shopify stuck. It's the platform built for solopreneurs and small brands, and the more I worked with it, the more I found myself recommending it to almost every client building from scratch. The combination of solid defaults, a thriving app ecosystem, and a learning curve that doesn't punish beginners is hard to beat.</p>
+      <p>Somewhere along the way, I realized the best way to actually understand Shopify was to use it for myself. So I built my own Shopify store from the ground up: products, photography, listings, SEO, content, the chatbot, the email flows, every layer of it. The store eventually went on pause when client work picked up enough that I couldn't sustain both at the standard I wanted, and a rebrand has been in the works ever since. But that hands-on experience permanently changed how I work with clients. There's a difference between recommending an SEO strategy you've read about and recommending one you've personally watched move your own numbers.</p>
+      <p>I went full-time freelance once the freelance income consistently exceeded my day-job salary, working evenings and weekends to keep up. Studio Niza is the result of those years narrowing in on what I do best: focused Shopify growth work, four services, no generic agency menu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES OVERVIEW (links to dedicated service pages)
+     ============================================================ -->
+<section class="section section-divided">
+  <div class="container">
+    <div class="section-head">
+      <div class="label">Services</div>
+      <h2>What I actually do.</h2>
+      <p class="lead">Four services. Specialized to Shopify. No generic agency menu.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-block">
+        <div class="why-num">01</div>
+        <h3><a href="/services/shopify-seo/">Shopify SEO and GEO</a></h3>
+        <p>Custom keyword research per page, real schema, image enhancement work, indexing follow-through. Plus generative engine optimization, so your products get cited when buyers ask AI assistants.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-num">02</div>
+        <h3><a href="/services/blog-content/">SEO blog content</a></h3>
+        <p>Keyword-researched, brand-aligned posts that target the questions your buyers are typing into Google. Built for SEO without reading like SEO.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-num">03</div>
+        <h3><a href="/services/ai-chatbots/">AI chatbots</a></h3>
+        <p>Custom assistants trained on your store. They answer customer questions, recover abandoned carts, hand off when needed. Hosted, maintained, quietly working.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-num">04</div>
+        <h3><a href="/services/reviews-management/">Reviews management</a></h3>
+        <p>Automated requests, branded follow-ups, replies to every review. Plus reviews redirect when products discontinue, so accumulated trust signals don't disappear.</p>
+      </div>
+    </div>
+    <p style="margin-top: 32px;"><a href="/#pricing">See full services and pricing →</a></p>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW I WORK (E-E-A-T: working principles)
+     ============================================================ -->
+<section class="section section-divided section-soft">
+  <div class="container">
+    <div class="section-head">
+      <div class="label">How I work</div>
+      <h2>How I work.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-block">
+        <div class="why-num">01</div>
+        <h3>Async by default</h3>
+        <p>Everything happens over email and Loom. No standing meetings, no Zoom calls, no calendar tag. If a 30-minute call is genuinely necessary, we'll have one. Most of the time it isn't.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-num">02</div>
+        <h3>Specialized to Shopify</h3>
+        <p>I don't take work on WooCommerce, Squarespace, BigCommerce, or other platforms. The whole value of a specialist is that they've solved the same problems hundreds of times. If your store is on Shopify, you're in the right place.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-num">03</div>
+        <h3>Honest scope, honest pricing</h3>
+        <p>Every dollar is on the pricing page. Every scope item is in the contract. If a service can't be delivered well at a given price, the price goes up or the tier comes off the menu. I don't run discovery calls that turn into sales calls.</p>
+      </div>
+      <div class="why-block">
+        <div class="why-num">04</div>
+        <h3>Built to be left</h3>
+        <p>Most of my work is permanent. Optimized pages stay optimized. Published blog posts stay published. The chatbot is the one exception, because chatbots need ongoing care to stay accurate. Everything else is yours forever, even if we eventually part ways.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT THE STUDIO (location lives here, country-level only)
+     ============================================================ -->
+<section class="section section-divided">
+  <div class="container">
+    <div class="section-head">
+      <div class="label">The studio</div>
+      <h2>About the studio.</h2>
+    </div>
+    <div class="studio-prose">
+      <p>Studio Niza is a solo practice based in the Philippines, working with Shopify owners worldwide. The studio name reflects how I actually operate: a small, focused workspace where things get made carefully, not a large team you'll be passed around.</p>
+      <p>All work is done by me. If the studio ever grows beyond a solo operation, it will only be with people whose work I'd want to put my own name on. For now, when you hire Studio Niza, you're hiring me.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TOOLS AND PLATFORMS (E-E-A-T: expertise signal)
+     Specific platform name kept generic ("Managed AI chatbot platform") to
+     match the chatbot service page, which deliberately keeps the platform generic.
+     ============================================================ -->
+<section class="section section-divided">
+  <div class="container">
+    <div class="section-head">
+      <div class="label">Tools</div>
+      <h2>Tools and platforms I use.</h2>
+    </div>
+    <div class="grid-2">
+      <div>
+        <h4 style="font-size: 1rem; margin-bottom: 16px;">Shopify ecosystem</h4>
+        <ul class="scope-list" style="grid-template-columns: 1fr;">
+          <li>Shopify admin and Liquid</li>
+          <li>Google Search Console</li>
+          <li>Google Merchant Center</li>
+          <li>Google Analytics 4</li>
+          <li>Bing Webmaster Tools</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size: 1rem; margin-bottom: 16px;">Production tools</h4>
+        <ul class="scope-list" style="grid-template-columns: 1fr;">
+          <li>Managed AI chatbot platform</li>
+          <li>Judge.me, Stamped.io, Yotpo (reviews platforms)</li>
+          <li>Loom (async client communication)</li>
+          <li>Tally (intake forms)</li>
+          <li>Notion (project management)</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top: 24px; color: var(--gray); font-size: 0.875rem; font-style: italic;">The list is short on purpose. A consultant who lists every tool ever invented isn't a specialist, they're an aggregator.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER CTA
+     ============================================================ -->
+<section class="footer-cta">
+  <div class="container">
+    <h2>Working together starts with an email.</h2>
+    <p>Send me your store URL and what you're trying to solve. I'll send back a Loom recommending where to start. Within 48 hours.</p>
+    <a class="btn btn-primary" href="/#contact">Send me a project brief →</a>
+    <p class="footer-cta-fallback">Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> directly.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" style="height: 48px; width: auto;" />
+        <p class="footer-by-line">By Niza Ravelo</p>
+        <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+          <li><a href="/services/blog-content/">Content Writing</a></li>
+          <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+          <li><a href="/services/reviews-management/">Reviews Management</a></li>
+          <li><a href="/#bundles">Bundles</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/journal.html">Journal</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+          <li><a href="/#contact">Send a project brief</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+      <span style="color: var(--gray);">Studio Niza is a service of Nisshy's Virtual Assistance Services, a sole proprietorship registered in the Philippines.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
