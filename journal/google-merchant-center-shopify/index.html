@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Merchant Center Shopify: Free Listings Setup</title>
+<meta name="description" content="A step-by-step Google Merchant Center setup walkthrough for new Shopify stores. Get on free listings, avoid the Misrepresentation suspension, and fix the errors that hit first.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/google-merchant-center-shopify/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Google Merchant Center for Shopify: A Free Listings Setup Walkthrough for New Stores">
+<meta property="og:description" content="The full Google Merchant Center setup for Shopify. Free listings, common errors, and how to avoid the Misrepresentation suspension.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/google-merchant-center-shopify/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/google-merchant-center-shopify/google-merchant-center-shopify.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Google Merchant Center for Shopify by Studio Niza">
+<meta property="article:published_time" content="2026-05-09T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Merchant Center for Shopify: A Free Listings Setup Walkthrough for New Stores">
+<meta name="twitter:description" content="Google Merchant Center setup for new Shopify stores. Free listings, errors, and suspension fixes.">
+<meta name="twitter:image" content="https://studioniza.com/journal/google-merchant-center-shopify/google-merchant-center-shopify.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Google Merchant Center for Shopify", "item": "https://studioniza.com/journal/google-merchant-center-shopify/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Google Merchant Center for Shopify: A Free Listings Setup Walkthrough for New Stores",
+  "description": "A step-by-step Google Merchant Center setup walkthrough for new Shopify stores. Free listings, common feed errors, and how to avoid the Misrepresentation suspension.",
+  "image": "https://studioniza.com/journal/google-merchant-center-shopify/google-merchant-center-shopify.png",
+  "author": {"@type": "Person", "name": "Niza Ravelo", "url": "https://studioniza.com/about/"},
+  "publisher": {"@type": "Organization", "name": "Studio Niza", "logo": {"@type": "ImageObject", "url": "https://studioniza.com/images/studio-niza-logo-wide.png"}},
+  "datePublished": "2026-05-09T10:00:00+08:00",
+  "dateModified": "2026-05-09T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/google-merchant-center-shopify/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.9375rem; font-weight: 500; color: var(--magenta); }
+.back-link::before { content: '←'; }
+.back-link:hover { opacity: 0.7; }
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/services/shopify-seo/">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Google Merchant Center for Shopify</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">May 9, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>12 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Google Merchant Center for Shopify: A Free Listings Setup Walkthrough for New Stores</h1>
+      <div style="text-align: center;"><img src="/journal/google-merchant-center-shopify/google-merchant-center-shopify-hero.webp" alt="Laptop showing the Google and YouTube channel inside Shopify admin on a soft pink desk" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Free product listings across Google Search, Images, the Shopping tab, Lens, and Gemini. Set up in 30 minutes, then troubleshoot the four things that usually break first.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-is-google-merchant-center">What Google Merchant Center actually is</a></li>
+        <li><a href="#before-you-start">Before you start: three things to have ready</a></li>
+        <li><a href="#setup-walkthrough">The Google Merchant Center Shopify setup, step by step</a></li>
+        <li><a href="#fix-the-errors">The four errors that disapprove most new Shopify stores</a></li>
+        <li><a href="#misrepresentation-suspension">How to avoid the Misrepresentation suspension</a></li>
+        <li><a href="#what-results-actually-look-like">What free listings traffic actually looks like in month one</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>You've launched your Shopify store, written your product descriptions, and added your first collections. Now someone in a Facebook group tells you to "set up Google Merchant Center for free listings," and you have no idea what that means or where to start.</p>
+
+      <p>Here's the short version: Google Merchant Center is the place where Shopify and Google talk to each other about your products. Once you connect them, your products can show up across Google Search, Images, the Shopping tab, YouTube, Google Lens, and Gemini, for free. No ad spend required. <a href="https://support.google.com/merchants/answer/13889434?hl=en" target="_blank" rel="noopener noreferrer">Google calls these "free listings"</a>, and they're available in the United States, Canada, the UK, Australia, Brazil, Japan, Mexico, India, and a growing list of countries.</p>
+
+      <p>The setup itself takes about 30 minutes. Getting through approval without your account being suspended for "Misrepresentation" is the harder part. This guide walks you through the full google merchant center shopify setup, then tells you exactly what to fix when (not if) something gets disapproved. Written for solo founders under six months in, who'd rather not read seven other guides to find the one thing that actually mattered.</p>
+
+      <h2 id="what-is-google-merchant-center">What Google Merchant Center actually is</h2>
+
+      <p>Google Merchant Center is a free Google product. It holds your store's product feed (titles, prices, images, availability, shipping) and pushes that data to every Google surface where products can appear. Think of it as the warehouse Google reads from. Your Shopify admin is where you stock the warehouse.</p>
+
+      <p>Two things get confused all the time, so let's pull them apart.</p>
+
+      <p><strong>Google Shopping ads</strong> are paid. You set a daily budget, Google charges per click, and your products appear in the sponsored slots at the top of search results. This is Google Ads.</p>
+
+      <p><strong>Free product listings</strong> are unpaid. <a href="https://help.shopify.com/en/manual/online-sales-channels/marketplaces/google/shopping-on-google/google-listings" target="_blank" rel="noopener noreferrer">Shopify confirms</a> that for eligible stores, products synced through the Google &amp; YouTube channel can appear across Google for free. Same product feed, same Merchant Center account. Just no ad spend.</p>
+
+      <p>For a brand-new Shopify store, free listings are the right place to start. They won't drive Amazon-scale traffic in week one, but they cost nothing and they compound. Some merchants report free listings driving 20% to 30% of their total Google traffic once feeds are well-optimized. The work below is what gets you there.</p>
+
+      <h2 id="before-you-start">Before you start: three things to have ready</h2>
+
+      <p>You can spend an hour clicking through setup screens and find out at the end that you were missing one piece. Avoid that by having these three things in place first.</p>
+
+      <p><strong>A connected custom domain.</strong> Google won't index a store still sitting on a <code>.myshopify.com</code> subdomain. Connect your custom domain in Shopify before starting, and confirm it's the primary domain.</p>
+
+      <p><strong>Real policy pages.</strong> Shipping policy, return and refund policy, privacy policy, contact information, and an About page that mentions a real person or company. Empty placeholder pages are the single fastest way to get suspended for Misrepresentation. More on that below.</p>
+
+      <p><strong>A Google account.</strong> Use your business email, not a personal Gmail you share with your partner. You'll receive critical notifications here, and switching accounts later is annoying.</p>
+
+      <p>One more setting Shopify owners miss: your <a href="https://help.shopify.com/en/manual/online-sales-channels/google/requirements" target="_blank" rel="noopener noreferrer">general shipping profile</a> needs at least one shipping rate set up for the country you want to sell to. Custom shipping profiles don't sync correctly. Check Settings &gt; Shipping and delivery in your Shopify admin before continuing.</p>
+
+      <h2 id="setup-walkthrough">The Google Merchant Center Shopify setup, step by step</h2>
+
+      <p>Same four-step flow Shopify and Google have used since 2024, when Merchant Center Next replaced the older interface. Install, verify, sync, opt in.</p>
+
+      <div style="text-align: center;"><img src="/journal/google-merchant-center-shopify/google-merchant-center-shopify-setup-flow.webp" alt="Four-step Google Merchant Center Shopify setup flow diagram: install, verify, sync, opt in" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Step 1: Install the Google &amp; YouTube channel</h3>
+
+      <p>From your Shopify admin, go to Sales channels in the left sidebar. Click the "+" next to "Sales channels," find "Google &amp; YouTube," and click Add channel. The app is free, made by Google, and is the official way Shopify products sync to Merchant Center.</p>
+
+      <p>Once installed, you'll be prompted to connect a Google account. Use the business email mentioned earlier. If you already have a Merchant Center account, you can connect it. If you don't, the app will create one for you in the background, which is the easier path for new stores.</p>
+
+      <h3>Step 2: Verify and claim your store URL</h3>
+
+      <p>Google needs to confirm you own the domain you're listing products from. When you set up through the Google &amp; YouTube channel, verification usually happens automatically. You'll see a green checkmark next to your domain in the Merchant Center settings.</p>
+
+      <p>If automatic verification fails (this happens to maybe one in ten stores), Google will ask you to verify manually with a meta tag, HTML file, or Google Tag Manager. The meta tag route is easiest: copy the tag Google gives you, paste it into your Shopify theme's <code>theme.liquid</code> file just before the closing <code>&lt;/head&gt;</code> tag, and click Verify in Merchant Center.</p>
+
+      <h3>Step 3: Sync your product feed</h3>
+
+      <p>This is where Shopify pushes your product data to Merchant Center. Once the channel is connected and your domain is verified, sync usually starts automatically. In the Google &amp; YouTube channel overview, you'll see a Product status section that shows how many products are syncing, approved, pending, or disapproved.</p>
+
+      <p>First-time sync can take 24 to 72 hours. Some products will likely be flagged in that window. Don't panic. Most of the flags are fixable in 5 minutes once you know which one you're looking at.</p>
+
+      <h3>Step 4: Confirm you are opted in to free listings</h3>
+
+      <p>If you set up Merchant Center through the Google &amp; YouTube channel, <a href="https://support.google.com/merchants/answer/13692890?hl=en" target="_blank" rel="noopener noreferrer">Google's documentation confirms</a> you're automatically opted in to show products for free across Google. But it's worth double-checking, because some store owners get surprised later when they assume they're listed and they aren't.</p>
+
+      <p>In Merchant Center, click the gear icon, go to Data sources, and confirm that "Free listings" appears as a destination on your product data source. If it's missing, click the pencil icon next to Marketing methods and add it.</p>
+
+      <h2 id="fix-the-errors">The four errors that disapprove most new Shopify stores</h2>
+
+      <p>Almost every new Shopify store hits the same wall on first sync. Some products approve, some get flagged. Here are the four most common errors, in the order they usually appear in your Diagnostics tab.</p>
+
+      <div style="text-align: center;"><img src="/journal/google-merchant-center-shopify/google-merchant-center-shopify-feed-errors.webp" alt="Diagram of four common Google Merchant Center Shopify feed errors: price mismatch, GTIN, shipping, image" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Price mismatches</h3>
+
+      <p>The single most common Shopify-specific error. Merchant Center crawls your live product page, compares the price it finds against the price in your feed, and disapproves the product if they don't match. Even a 1-cent difference will do it.</p>
+
+      <p>Three usual causes. First, you set a sale price in Shopify but the feed sent the original price (or vice versa). Second, you ship to multiple countries and your Shopify market settings show one price while your feed targets another. Third, your theme has <a href="https://www.ilanadavis.com/blogs/articles/resolving-mismatched-value-price-from-shopify-to-merchant-center" target="_blank" rel="noopener noreferrer">structured data conflicting with the feed</a>, which happens more often with variant pricing.</p>
+
+      <p>The fix: keep automatic feed updates enabled in the Google &amp; YouTube app. If the error persists, manually re-sync the affected product from the bulk editor. If a specific variant is still mismatched, your theme's product schema may need editing or removing.</p>
+
+      <h3>GTIN issues (and the custom product workaround)</h3>
+
+      <p>GTIN stands for Global Trade Item Number. It's the barcode that comes with mass-manufactured products. If your product has a barcode, you must add it to the variant's Barcode field in Shopify, and Google will validate it against the GS1 database.</p>
+
+      <p>What about custom or handmade products that don't have a GTIN? <a href="https://support.google.com/merchants/answer/13693497?hl=en" target="_blank" rel="noopener noreferrer">Google's policy</a> is clear: art, handmade goods, and other custom items don't need a GTIN, but you must mark them as custom. The path in Shopify: Sales channels &gt; Google &amp; YouTube &gt; Product feed &gt; Manage Products, then set "Custom product" to True for the relevant products. Save.</p>
+
+      <p>For manufactured products without a barcode, you'll need to add a Manufacturer Part Number (MPN) and a brand in the Vendor field. Without one of these three (GTIN, custom product flag, or MPN plus brand), the product is disapproved or limited.</p>
+
+      <h3>Shipping and tax not configured</h3>
+
+      <p>Since June 2023, <a href="https://help.shopify.com/en/manual/online-sales-channels/google/requirements" target="_blank" rel="noopener noreferrer">Google requires shipping cost on all free listings and ads</a> in many countries. If your Shopify shipping settings don't import cleanly, products are flagged.</p>
+
+      <p>The fix: in the Google &amp; YouTube channel, go to Settings &gt; Shipping settings and choose "Automatically import settings" from your Shopify general shipping profile. If you sell internationally and your shipping isn't configured for a specific country, products targeting that country will fail. Sell only to countries where your shipping is actually set up.</p>
+
+      <p>For tax, US sellers need to indicate state-level tax rates. Most other countries handle this automatically through Shopify Markets.</p>
+
+      <h3>Image quality and promotional overlays</h3>
+
+      <p>Google rejects product images with promotional text ("50% OFF" badges), watermarks, logos overlapping the product, or generic placeholder graphics. Apparel images must be at least 250 x 250 pixels. Other categories need at least 100 x 100. Both are minimums you'll blow past with normal product photography, but stores using small thumbnails or compressed images get flagged.</p>
+
+      <p>The fix: use your highest-resolution image as the featured image. Strip any text, sale badges, or watermarks. If you've been adding promo overlays in Canva, save a clean version for the product feed and use the promo version only for marketing posts.</p>
+
+      <h2 id="misrepresentation-suspension">How to avoid the Misrepresentation suspension</h2>
+
+      <p>This is the section every other setup guide skips. It shouldn't, because it's the single most likely reason a new Shopify store will spend two weeks in setup and end up suspended with no path back.</p>
+
+      <p>Misrepresentation is Google's catch-all suspension reason for stores that "look untrustworthy." It triggers when Google can't verify who's behind the store, when policies are missing or vague, when the contact information looks fake, or when the store pattern matches stores Google has previously identified as scams. New stores get hit disproportionately because they lack the trust signals (age, traffic, reviews) that protect established stores.</p>
+
+      <div style="text-align: center;"><img src="/journal/google-merchant-center-shopify/google-merchant-center-shopify-trust-signals.webp" alt="Trust signals checklist for Google Merchant Center Shopify approval: policies, contact, reviews, branding" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>The frustrating part: Google doesn't tell you which specific thing failed. So you fix everything you can, then request a review.</p>
+
+      <p>The trust signals that actually move the needle, based on community threads where stores got reinstated:</p>
+
+      <p><strong>Complete policy pages.</strong> Shipping policy with real timeframes and costs, return and refund policy with a real return window, privacy policy, and terms of service. Don't use Shopify's default templates without filling in the variables. Empty policies (or policies that say "TBD") trigger Misrepresentation faster than no policies at all.</p>
+
+      <p><strong>Real, visible contact information.</strong> A contact email on a custom domain (not Gmail). A real physical address or at least a city or region. A contact form that actually works. Phone number is optional but helpful.</p>
+
+      <p><strong>An About page that mentions a person.</strong> Not "About Us: We are passionate about quality." A founder name, a brief story, and a photo if possible. Stores with anonymous About pages get flagged more often than stores with a human face.</p>
+
+      <p><strong>A few real reviews on product pages.</strong> Even five reviews on your top-selling product is significantly better than zero. If you don't have reviews yet, the long-term solution is automated <a href="/services/reviews-management/">reviews management</a> after every order. Short-term, ask your first ten customers manually.</p>
+
+      <p><strong>A verified Google Business Profile.</strong> Optional but it adds a credibility layer that helps Merchant Center connect your business identity to a real entity.</p>
+
+      <p>If you're still suspended after fixing all of the above, request a review from Merchant Center and wait 7 days. Don't request multiple reviews back to back. Google flags accounts that do this as more suspicious, not less.</p>
+
+      <h2 id="what-results-actually-look-like">What free listings traffic actually looks like in month one</h2>
+
+      <p>Manage expectations early or you'll quit at week three. Here's the realistic pattern for a brand-new Shopify store with 30 to 80 products.</p>
+
+      <p><strong>Week 1.</strong> Setup, sync, first round of disapprovals. Plan to spend 2 to 3 hours fixing the four errors above. Maybe 60% of your products are approved by end of week 1.</p>
+
+      <p><strong>Weeks 2 to 4.</strong> The remaining 40% either get approved after fixes or stay disapproved for reasons that take longer to diagnose. You may see 5 to 50 impressions per day in Merchant Center reporting. Most of those won't convert. That's normal.</p>
+
+      <p><strong>Month 2.</strong> If your feed quality is solid and your products match real search intent, you start seeing clicks. Maybe 1 to 5 per day. Conversion will lag rankings by another month.</p>
+
+      <p><strong>Months 3 to 6.</strong> The compounding starts. Stores that stay consistent with feed quality and don't trigger new disapprovals usually see meaningful free listings traffic by month 4. The stores that quit at month 1 never find out.</p>
+
+      <p>Free listings won't replace SEO, content, or paid ads. They're one channel that compounds quietly in the background when the feed is right. The <a href="/journal/shopify-seo-checklist/">Shopify SEO checklist for new stores</a> handles the on-page foundation; Merchant Center handles the product-data layer that on-page SEO can't reach.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Setting up google merchant center shopify isn't complicated. The official channel, automatic verification, automatic shipping import, and automatic free-listings opt-in handle most of the work. What's harder is staying out of the suspension queue and fixing the four feed errors that almost every new store hits.</p>
+
+      <p>The order to follow: install and sync first, then fix the disapprovals as they appear, then harden the trust signals on your store before any Misrepresentation review hits. Most cheap SEO services skip Merchant Center entirely because it's not part of the template they run. That means it's also one of the cleanest organic channels available to a solo Shopify owner who's willing to spend a weekend on it.</p>
+
+      <p>Once the feed is approved and clean, the work shifts to maintenance. Check Diagnostics weekly. Keep prices and stock synced. Add new products to the channel as you launch them. Free listings are a slow channel, but the floor is "I never paid Google a cent and they sent me traffic anyway." That floor isn't bad.</p>
+
+
+      <div class="cta-block">
+        <h3>Want this set up properly without the suspension surprise?</h3>
+        <p>Google Merchant Center optimization is included in every Studio Niza SEO tier, alongside custom keyword research, real schema, internal linking, and indexing follow-up. Pricing starts at $499 one-time for 25 pages.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See SEO pricing & scope <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div itemscope itemtype="https://schema.org/FAQPage">
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Is Google Merchant Center free for Shopify stores?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Yes. Google Merchant Center itself is a free Google product, and the Google &amp; YouTube channel in Shopify is also free to install. Free product listings across Google Search, Images, the Shopping tab, Lens, and Gemini cost nothing. The only thing you'd pay for is Google Shopping ads, which are a separate paid program you don't have to use.</p>
+              </div>
+            </div>
+          </details>
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Do I need Google Ads to use Google Merchant Center?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>No. Google Ads and free product listings are separate programs that share the same Merchant Center account. You can run free listings without ever creating a Google Ads account or spending a dollar. Many new Shopify stores start with free listings only and add paid ads months later when they have feed data to optimize against.</p>
+              </div>
+            </div>
+          </details>
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>How long does it take to get approved on Google Merchant Center?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>For most new Shopify stores, initial sync and product review take 24 to 72 hours, with the first round of disapprovals visible within a week. Stores that hit the Misrepresentation suspension can take 2 to 4 weeks to recover after fixing trust signals and requesting a review. Plan for a full month before your google merchant center shopify setup is fully approved and stable.</p>
+              </div>
+            </div>
+          </details>
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Why does my Shopify product feed keep getting price mismatch errors?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Three common causes. Your sale price changed but the feed hasn't re-synced. Your theme's structured data shows a different price than the feed at the variant level. Or your Shopify market settings are pushing one currency while Merchant Center is reading another. Enable automatic feed updates in the Google &amp; YouTube app first, then check variant-level prices on the affected products.</p>
+              </div>
+            </div>
+          </details>
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Do I need a GTIN if I make my products myself?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>No. Custom-made products, handmade goods, original art, and one-of-a-kind items don't need a GTIN. You do need to mark them as custom in the Google &amp; YouTube channel: Sales channels &gt; Google &amp; YouTube &gt; Manage Products, then set "Custom product" to True. Without this flag, Google assumes the GTIN is missing and disapproves the product.</p>
+              </div>
+            </div>
+          </details>
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Which countries can use Google free product listings?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Free listings are available in the United States, Canada, the United Kingdom, Australia, Brazil, Japan, Mexico, India, Argentina, Chile, Colombia, South Africa, and a growing list of European and Asian countries. The Shopping tab is available across most of these. For the current list, check Google's official free listings documentation, since Google adds new countries regularly.</p>
+              </div>
+            </div>
+          </details>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+      <a href="/journal/" class="back-link">Back to Journal</a>
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/services/shopify-seo/">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+</script>
+</body>
+</html>
