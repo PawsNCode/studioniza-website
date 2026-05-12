@@ -57,6 +57,7 @@
         "@id": "https://studioniza.com/#organization"
       }
     },
+
     {
       "@type": "ProfessionalService",
       "@id": "https://studioniza.com/#organization",
@@ -65,39 +66,62 @@
       "url": "https://studioniza.com/",
       "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
       "logo": {
-          "@type": "ImageObject",
-          "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
-          "width": 1200,
-          "height": 400
-        },
-      "founder": {
-        "@type": "Person",
-        "name": "Niza Ravelo"
+        "@type": "ImageObject",
+        "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+        "width": 500,
+        "height": 200
       },
-      "email": "contact@studioniza.com",
-      "priceRange": "$$",
-      "image": "https://studioniza.com/images/studio-niza-home.png",
+      "founder": {
+        "@id": "https://studioniza.com/#niza-ravelo"
+      },
+      "foundingDate": "2026",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "PH"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "Customer Service",
-          "email": "contact@studioniza.com",
-          "availableLanguage": "English",
-          "areaServed": "Worldwide"
-        },
-        {
-          "@type": "ContactPoint",
-          "contactType": "Sales",
-          "email": "contact@studioniza.com",
-          "availableLanguage": "English",
-          "areaServed": "Worldwide"
-        }
-      ]
+      "serviceType": [
+        "Shopify SEO",
+        "Generative Engine Optimization",
+        "Ecommerce Content Writing",
+        "AI Chatbot Development",
+        "Reviews Management"
+      ],
+      "knowsAbout": [
+        "Shopify ecommerce",
+        "Search engine optimization",
+        "Generative engine optimization",
+        "Ecommerce content marketing",
+        "AI chatbot development",
+        "Online reviews management",
+        "Schema markup",
+        "Google Merchant Center"
+      ],
+      "email": "contact@studioniza.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@studioniza.com",
+        "contactType": "customer service",
+        "availableLanguage": "English",
+        "areaServed": "Worldwide"
+      },
+      "priceRange": "$$",
+      "image": "https://studioniza.com/images/studio-niza-home.png"
     },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://studioniza.com/#website",
+      "url": "https://studioniza.com/",
+      "name": "Studio Niza",
+      "publisher": {
+        "@id": "https://studioniza.com/#organization"
+      }
+    },
+
     {
       "@type": "BreadcrumbList",
       "@id": "https://studioniza.com/contact/#breadcrumb",
