@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://studioniza.com/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -47,6 +47,13 @@
   </url>
 
   <!-- Blog posts -->
+  <url>
+    <loc>https://studioniza.com/journal/shopify-ai-chatbot/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://studioniza.com/journal/google-merchant-center-shopify/</loc>
     <lastmod>2026-05-09</lastmod>
