@@ -48,6 +48,13 @@
 
   <!-- Blog posts -->
   <url>
+    <loc>https://studioniza.com/journal/shopify-customer-support-automation/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://studioniza.com/journal/shopify-ai-chatbot/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
