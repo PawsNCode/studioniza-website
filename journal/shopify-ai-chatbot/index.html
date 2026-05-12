@@ -51,8 +51,8 @@
   "headline": "Shopify AI Chatbot: What It Actually Does (and What It Doesn't)",
   "description": "An honest breakdown of what a Shopify AI chatbot really does for a small store, what it can't reliably do, and how to know when you're ready for one.",
   "image": "https://studioniza.com/journal/shopify-ai-chatbot/shopify-ai-chatbot.png",
-  "author": {"@type": "Person", "name": "Niza Ravelo", "url": "https://studioniza.com/about/"},
-  "publisher": {"@type": "Organization", "name": "Studio Niza", "logo": {"@type": "ImageObject", "url": "https://studioniza.com/images/studio-niza-logo-wide.png"}},
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
   "datePublished": "2026-05-10T10:00:00+08:00",
   "dateModified": "2026-05-10T10:00:00+08:00",
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-ai-chatbot/"}
@@ -84,6 +84,64 @@
   "address": {"@type": "PostalAddress", "addressCountry": "PH"},
   "email": "contact@studioniza.com",
   "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-ai-chatbot/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a Shopify AI chatbot cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing ranges from free (Shopify Inbox) to over $2,000 a month (enterprise managed services). The two main categories are self-serve apps at $19 to $279 a month, where you do the setup and ongoing maintenance, and managed services at $99 to $2,000 a month, where the vendor builds and maintains the bot for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a Shopify AI chatbot work on the free Shopify plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopify Inbox (the native option) is free and works on every Shopify plan. Most third-party chatbot apps also work on Basic Shopify and up. Some advanced features like custom API flows or live-agent handoff to Gorgias may require a higher-tier Shopify plan or paid app integrations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Shopify Inbox enough or do I need a real AI chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For stores doing under roughly 50 orders a month, Shopify Inbox is genuinely enough. It handles basic FAQs and gives you a chat presence without ongoing cost. Beyond 50 to 100 orders a month, the value of a properly trained AI chatbot (real WISMO automation, abandoned cart recovery, deeper product recommendations) starts to compound, and Inbox alone leaves money on the table."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a Shopify AI chatbot handle returns and refunds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Premium-tier managed bots with custom Shopify API flows can process simple returns and exchanges end-to-end. Most starter and mid-tier bots flag the return request, capture the relevant details, and hand off to your support email or live agent platform. Complex or contested returns should always go to a human, regardless of tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to set up a Shopify AI chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A properly trained chatbot, grounded in your actual products, policies, and order data, takes 2 to 4 weeks to set up for a managed service. Self-serve apps can technically be installed in an hour, but expect 5 to 10 hours of your own setup time plus several weeks of tuning before the bot answers reliably. Anything claiming a fully ready Shopify AI chatbot in under a day is template-only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I lose my chatbot if I cancel the managed service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most managed services, yes. The chatbot configuration, hosting, and platform access typically sit on accounts the vendor owns. When you cancel, the bot stops. This is by design: the monthly fee covers continuous maintenance, not a one-time build you keep forever. Self-serve apps work differently. You own the configuration but you also own all the ongoing maintenance work."
+      }
+    }
+  ]
 }
 </script>
 
@@ -346,7 +404,7 @@ footer.site-footer {
           </div>
         </div>
       </li>
-      <li><a href="/services/shopify-seo/">Pricing</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
       <li><a href="/journal/" class="active">Journal</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/contact/" class="nav-cta">Email me</a></li>
@@ -587,7 +645,7 @@ footer.site-footer {
 
       <hr>
 
-      <div itemscope itemtype="https://schema.org/FAQPage">
+      <div>
 
         <h2 id="faq">Frequently asked questions</h2>
 
@@ -595,73 +653,73 @@ footer.site-footer {
 
         <div class="faq-grid">
 
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>How much does a Shopify AI chatbot cost?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>Pricing ranges from free (Shopify Inbox) to over $2,000 a month (enterprise managed services). The two main categories are self-serve apps at $19 to $279 a month, where you do the setup and ongoing maintenance, and managed services at $99 to $2,000 a month, where the vendor builds and maintains the bot for you.</p>
               </div>
             </div>
           </details>
 
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Will a Shopify AI chatbot work on the free Shopify plan?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>Shopify Inbox (the native option) is free and works on every Shopify plan. Most third-party chatbot apps also work on Basic Shopify and up. Some advanced features like custom API flows or live-agent handoff to Gorgias may require a higher-tier Shopify plan or paid app integrations.</p>
               </div>
             </div>
           </details>
 
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Is Shopify Inbox enough or do I need a real AI chatbot?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>For stores doing under roughly 50 orders a month, Shopify Inbox is genuinely enough. It handles basic FAQs and gives you a chat presence without ongoing cost. Beyond 50 to 100 orders a month, the value of a properly trained AI chatbot (real WISMO automation, abandoned cart recovery, deeper product recommendations) starts to compound, and Inbox alone leaves money on the table.</p>
               </div>
             </div>
           </details>
 
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Can a Shopify AI chatbot handle returns and refunds?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>Premium-tier managed bots with custom Shopify API flows can process simple returns and exchanges end-to-end. Most starter and mid-tier bots flag the return request, capture the relevant details, and hand off to your support email or live agent platform. Complex or contested returns should always go to a human, regardless of tier.</p>
               </div>
             </div>
           </details>
 
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>How long does it take to set up a Shopify AI chatbot?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>A properly trained chatbot, grounded in your actual products, policies, and order data, takes 2 to 4 weeks to set up for a managed service. Self-serve apps can technically be installed in an hour, but expect 5 to 10 hours of your own setup time plus several weeks of tuning before the bot answers reliably. Anything claiming a fully ready Shopify AI chatbot in under a day is template-only.</p>
               </div>
             </div>
           </details>
 
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Do I lose my chatbot if I cancel the managed service?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>For most managed services, yes. The chatbot configuration, hosting, and platform access typically sit on accounts the vendor owns. When you cancel, the bot stops. This is by design: the monthly fee covers continuous maintenance, not a one-time build you keep forever. Self-serve apps work differently. You own the configuration but you also own all the ongoing maintenance work.</p>
               </div>
             </div>
@@ -696,7 +754,7 @@ footer.site-footer {
         <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
         <li><a href="/services/reviews-management/">Reviews Management</a></li>
         <li><a href="/#bundles">Bundles</a></li>
-        <li><a href="/services/shopify-seo/">Pricing</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/journal/">Journal</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
