@@ -41,12 +41,19 @@
   <!-- Journal index (updated as new posts publish) -->
   <url>
     <loc>https://studioniza.com/journal/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog posts -->
+  <url>
+    <loc>https://studioniza.com/journal/google-merchant-center-shopify/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://studioniza.com/journal/shopify-seo-checklist/</loc>
     <lastmod>2026-05-11</lastmod>
