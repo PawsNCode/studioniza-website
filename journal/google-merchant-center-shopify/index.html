@@ -51,8 +51,8 @@
   "headline": "Google Merchant Center for Shopify: A Free Listings Setup Walkthrough for New Stores",
   "description": "A step-by-step Google Merchant Center setup walkthrough for new Shopify stores. Free listings, common feed errors, and how to avoid the Misrepresentation suspension.",
   "image": "https://studioniza.com/journal/google-merchant-center-shopify/google-merchant-center-shopify.png",
-  "author": {"@type": "Person", "name": "Niza Ravelo", "url": "https://studioniza.com/about/"},
-  "publisher": {"@type": "Organization", "name": "Studio Niza", "logo": {"@type": "ImageObject", "url": "https://studioniza.com/images/studio-niza-logo-wide.png"}},
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
   "datePublished": "2026-05-09T10:00:00+08:00",
   "dateModified": "2026-05-09T10:00:00+08:00",
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/google-merchant-center-shopify/"}
@@ -84,6 +84,64 @@
   "address": {"@type": "PostalAddress", "addressCountry": "PH"},
   "email": "contact@studioniza.com",
   "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/google-merchant-center-shopify/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Google Merchant Center free for Shopify stores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Google Merchant Center itself is a free Google product, and the Google & YouTube channel in Shopify is also free to install. Free product listings across Google Search, Images, the Shopping tab, Lens, and Gemini cost nothing. The only thing you'd pay for is Google Shopping ads, which are a separate paid program you don't have to use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need Google Ads to use Google Merchant Center?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google Ads and free product listings are separate programs that share the same Merchant Center account. You can run free listings without ever creating a Google Ads account or spending a dollar. Many new Shopify stores start with free listings only and add paid ads months later when they have feed data to optimize against."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to get approved on Google Merchant Center?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most new Shopify stores, initial sync and product review take 24 to 72 hours, with the first round of disapprovals visible within a week. Stores that hit the Misrepresentation suspension can take 2 to 4 weeks to recover after fixing trust signals and requesting a review. Plan for a full month before your google merchant center shopify setup is fully approved and stable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my Shopify product feed keep getting price mismatch errors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three common causes. Your sale price changed but the feed hasn't re-synced. Your theme's structured data shows a different price than the feed at the variant level. Or your Shopify market settings are pushing one currency while Merchant Center is reading another. Enable automatic feed updates in the Google & YouTube app first, then check variant-level prices on the affected products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a GTIN if I make my products myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Custom-made products, handmade goods, original art, and one-of-a-kind items don't need a GTIN. You do need to mark them as custom in the Google & YouTube channel: Sales channels > Google & YouTube > Manage Products, then set Custom product to True. Without this flag, Google assumes the GTIN is missing and disapproves the product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which countries can use Google free product listings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free listings are available in the United States, Canada, the United Kingdom, Australia, Brazil, Japan, Mexico, India, Argentina, Chile, Colombia, South Africa, and a growing list of European and Asian countries. The Shopping tab is available across most of these. For the current list, check Google's official free listings documentation, since Google adds new countries regularly."
+      }
+    }
+  ]
 }
 </script>
 
@@ -346,7 +404,7 @@ footer.site-footer {
           </div>
         </div>
       </li>
-      <li><a href="/services/shopify-seo/">Pricing</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
       <li><a href="/journal/" class="active">Journal</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/contact/" class="nav-cta">Email me</a></li>
@@ -551,7 +609,7 @@ footer.site-footer {
 
       <hr>
 
-      <div itemscope itemtype="https://schema.org/FAQPage">
+      <div>
 
         <h2 id="faq">Frequently asked questions</h2>
 
@@ -559,68 +617,68 @@ footer.site-footer {
 
         <div class="faq-grid">
 
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Is Google Merchant Center free for Shopify stores?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>Yes. Google Merchant Center itself is a free Google product, and the Google &amp; YouTube channel in Shopify is also free to install. Free product listings across Google Search, Images, the Shopping tab, Lens, and Gemini cost nothing. The only thing you'd pay for is Google Shopping ads, which are a separate paid program you don't have to use.</p>
               </div>
             </div>
           </details>
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Do I need Google Ads to use Google Merchant Center?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>No. Google Ads and free product listings are separate programs that share the same Merchant Center account. You can run free listings without ever creating a Google Ads account or spending a dollar. Many new Shopify stores start with free listings only and add paid ads months later when they have feed data to optimize against.</p>
               </div>
             </div>
           </details>
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>How long does it take to get approved on Google Merchant Center?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>For most new Shopify stores, initial sync and product review take 24 to 72 hours, with the first round of disapprovals visible within a week. Stores that hit the Misrepresentation suspension can take 2 to 4 weeks to recover after fixing trust signals and requesting a review. Plan for a full month before your google merchant center shopify setup is fully approved and stable.</p>
               </div>
             </div>
           </details>
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Why does my Shopify product feed keep getting price mismatch errors?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>Three common causes. Your sale price changed but the feed hasn't re-synced. Your theme's structured data shows a different price than the feed at the variant level. Or your Shopify market settings are pushing one currency while Merchant Center is reading another. Enable automatic feed updates in the Google &amp; YouTube app first, then check variant-level prices on the affected products.</p>
               </div>
             </div>
           </details>
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Do I need a GTIN if I make my products myself?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>No. Custom-made products, handmade goods, original art, and one-of-a-kind items don't need a GTIN. You do need to mark them as custom in the Google &amp; YouTube channel: Sales channels &gt; Google &amp; YouTube &gt; Manage Products, then set "Custom product" to True. Without this flag, Google assumes the GTIN is missing and disapproves the product.</p>
               </div>
             </div>
           </details>
-          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary itemprop="name">
+          <details>
+            <summary>
               <span>Which countries can use Google free product listings?</span>
               <span>+</span>
             </summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <div itemprop="text">
+            <div>
+              <div>
                 <p>Free listings are available in the United States, Canada, the United Kingdom, Australia, Brazil, Japan, Mexico, India, Argentina, Chile, Colombia, South Africa, and a growing list of European and Asian countries. The Shopping tab is available across most of these. For the current list, check Google's official free listings documentation, since Google adds new countries regularly.</p>
               </div>
             </div>
@@ -656,7 +714,7 @@ footer.site-footer {
         <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
         <li><a href="/services/reviews-management/">Reviews Management</a></li>
         <li><a href="/#bundles">Bundles</a></li>
-        <li><a href="/services/shopify-seo/">Pricing</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/journal/">Journal</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
