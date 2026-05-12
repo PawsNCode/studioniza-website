@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What a Shopify AI Chatbot Actually Does (and Doesn't)</title>
+<meta name="description" content="An honest look at what a Shopify AI chatbot actually does for a small store, what it doesn't, and how to know if your store is ready for one.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-ai-chatbot/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Shopify AI Chatbot: What It Actually Does (and What It Doesn't)">
+<meta property="og:description" content="What a Shopify AI chatbot really does for a small store, what it can't, and how to know if you're ready.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-ai-chatbot/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-ai-chatbot/shopify-ai-chatbot.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify AI Chatbot: What It Actually Does by Studio Niza">
+<meta property="article:published_time" content="2026-05-10T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify AI Chatbot: What It Actually Does (and What It Doesn't)">
+<meta name="twitter:description" content="What a Shopify AI chatbot really does, what it can't, and when you're ready for one.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-ai-chatbot/shopify-ai-chatbot.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify AI Chatbot", "item": "https://studioniza.com/journal/shopify-ai-chatbot/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Shopify AI Chatbot: What It Actually Does (and What It Doesn't)",
+  "description": "An honest breakdown of what a Shopify AI chatbot really does for a small store, what it can't reliably do, and how to know when you're ready for one.",
+  "image": "https://studioniza.com/journal/shopify-ai-chatbot/shopify-ai-chatbot.png",
+  "author": {"@type": "Person", "name": "Niza Ravelo", "url": "https://studioniza.com/about/"},
+  "publisher": {"@type": "Organization", "name": "Studio Niza", "logo": {"@type": "ImageObject", "url": "https://studioniza.com/images/studio-niza-logo-wide.png"}},
+  "datePublished": "2026-05-10T10:00:00+08:00",
+  "dateModified": "2026-05-10T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-ai-chatbot/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 0.9375rem; font-weight: 500; color: var(--magenta); }
+.back-link::before { content: '←'; }
+.back-link:hover { opacity: 0.7; }
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/services/shopify-seo/">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify AI Chatbot</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">May 10, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Shopify AI Chatbot: What It Actually Does (and What It Doesn't)</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-ai-chatbot/shopify-ai-chatbot-hero.webp" alt="Editorial desk scene with a laptop showing a Shopify store admin and a clean chat widget mockup" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">A plainspoken breakdown of what a Shopify AI chatbot actually automates for a small store, what it can't reliably do, and how to know if you're ready for one.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-a-shopify-ai-chatbot-is">What a Shopify AI chatbot is (and isn't)</a></li>
+        <li><a href="#what-shopify-ai-chatbots-actually-do">What a Shopify AI chatbot actually does well</a></li>
+        <li><a href="#what-shopify-ai-chatbots-dont-do">What a Shopify AI chatbot doesn't do</a></li>
+        <li><a href="#shopify-ai-chatbot-cost">How much a Shopify AI chatbot actually costs</a></li>
+        <li><a href="#when-is-your-shopify-store-ready-for-a-chatbot">When your store is ready for a chatbot</a></li>
+        <li><a href="#how-to-pick-the-right-shopify-chatbot">How to pick the right Shopify chatbot</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>You've seen the pitch. A Shopify AI chatbot will answer your customers in seconds, recover abandoned carts, recommend products, and basically run your support so you can sleep. Some of that is true. Some of it is wishful copy on a sales page.</p>
+
+      <p>If you've shopped around for a chatbot in the last six months, you've probably noticed prices ranging from $19 a month to $2,000 a month for what sounds like the same thing. The reason is simple: the cheap options are software you operate, and the expensive ones are services someone else operates. Both work. They're just very different products with very different time costs to you.</p>
+
+      <p>This post is a plainspoken look at what a Shopify AI chatbot actually does for a small store, where it earns its keep, where it falls down, and how to know if you're ready for one. No hype. If your store isn't ready yet, I'll say so. If a free tool fits, I'll point at the free tool.</p>
+
+      <h2 id="what-a-shopify-ai-chatbot-is">What a Shopify AI chatbot is (and isn't)</h2>
+
+      <p>A Shopify AI chatbot is software that sits as a chat widget on your store, reads what a customer types, and responds in natural language. The good ones are trained on your specific products, policies, and order data. The bad ones answer from generic templates and hallucinate when they don't know.</p>
+
+      <p>Before you compare apps, it helps to understand the two categories you're actually choosing between.</p>
+
+      <h3>AI chatbot vs rule-based chatbot</h3>
+
+      <p>Rule-based chatbots follow a decision tree you build. Customer taps "Track my order," bot asks for order number, bot returns status. They work fine for predictable flows. They break the moment a customer phrases something the script didn't anticipate.</p>
+
+      <p>AI chatbots use natural language understanding to interpret what a customer means, not just what they typed. As <a href="https://www.shopify.com/blog/chatbots" target="_blank" rel="noopener noreferrer">Shopify's own documentation puts it</a>, AI-powered bots are "constantly processing new information, learning from it, and growing in their ability to handle a given situation." That's the real difference. Rule-based bots react. AI bots reason (within limits we'll get to).</p>
+
+      <p>For most small Shopify stores, the question isn't AI vs rule-based. It's whether you want any chatbot at all yet. We'll come back to that.</p>
+
+      <h3>Self-serve vs managed</h3>
+
+      <p>The other split is who maintains the bot after launch. Self-serve chatbot apps like Tidio, Shopify Inbox, and SmartBot let you install, configure, and run the bot yourself. Pricing typically runs $0 to $279 a month depending on conversation volume.</p>
+
+      <p>Managed chatbot services build, host, monitor, and tune the bot for you. Pricing runs $99 to $2,000 a month. The work is the same in both cases. The question is whether you do it or someone else does. Most founders underestimate how much weekly tuning a chatbot actually needs to stay accurate as products change.</p>
+
+      <h2 id="what-shopify-ai-chatbots-actually-do">What a Shopify AI chatbot actually does well</h2>
+
+      <p>Across hundreds of Shopify stores running AI chatbots today, four use cases come up over and over. These are the things a properly trained bot handles cleanly. Everything else is either premature, optional, or better done by a human.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-ai-chatbot/shopify-ai-chatbot-what-bots-do-well.webp" alt="Bar chart showing where Shopify AI chatbots succeed: WISMO 93 percent, FAQs 85, recommendations 70, returns 58, billing 17" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Answers "where is my order?" (WISMO)</h3>
+
+      <p>WISMO (the industry term for "Where Is My Order") is the single highest-volume question every Shopify store receives after about 50 orders a month. A bot connected to your Shopify order data can answer it instantly with a real tracking number and status.</p>
+
+      <p>This is where chatbots quietly earn their keep. <a href="https://www.hellorep.ai/blog/the-future-of-ai-in-ecommerce-40-statistics-on-conversational-ai-agents-for-2025" target="_blank" rel="noopener noreferrer">Rep AI's 2025 ecommerce report</a> found that 93% of routine customer questions can be resolved by AI without human intervention. Most of that 93% is WISMO and basic FAQs. Done well, this single use case is enough to justify a chatbot.</p>
+
+      <h3>Handles repeat FAQs and policy questions</h3>
+
+      <p>The five questions your customers ask in some form every single day: shipping times, return policy, sizing, materials, restocks. A chatbot trained on your actual policies (not a generic FAQ template) handles these without bothering you.</p>
+
+      <p>The catch is "trained on your actual policies." A bot that's grounded in real store data answers correctly. A bot that runs on a generic large language model with no grounding will sometimes invent shipping windows that don't exist or quote return policies you don't have. This is the single biggest failure mode in cheap chatbot installs.</p>
+
+      <h3>Recommends products and reduces cart abandonment</h3>
+
+      <p>Cart abandonment is the biggest leak in ecommerce. The <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener noreferrer">Baymard Institute's 2025 update</a> puts the global cart abandonment rate at 70.19%. Roughly 7 out of every 10 shoppers who add to cart leave without buying.</p>
+
+      <p>A chatbot can intervene at two points. First, on the product page, by answering the question that's making the shopper hesitate ("does this run small?"). Second, during checkout, by surfacing shipping information or a missing discount code. <a href="https://www.shopify.com/blog/ai-chatbot" target="_blank" rel="noopener noreferrer">Shopify cites research</a> suggesting AI chatbots can increase conversions by around 23% when deployed thoughtfully. Real-world results vary by category and traffic quality. The mechanism is sound: answering objections at the moment of hesitation is more effective than chasing the customer with a discount email three hours later.</p>
+
+      <h3>Captures leads and contact info during conversations</h3>
+
+      <p>This is the least-discussed but highest-margin use case. A chatbot that asks for an email at the right moment ("want me to email you when we restock?") quietly builds your list while doing other work. The newsletter capture happens inside a conversation the customer already started, which converts much better than a homepage pop-up they were trying to dismiss.</p>
+
+      <h2 id="what-shopify-ai-chatbots-dont-do">What a Shopify AI chatbot doesn't do</h2>
+
+      <p>This is the part most chatbot vendors skip. A chatbot is a tool with limits. Pretending otherwise leads to bad installs and frustrated customers.</p>
+
+      <h3>It doesn't replace human support for complex issues</h3>
+
+      <p>Returns disputes, damaged shipments, custom orders, sensitive complaints. These need a person. The best bots know this and hand off cleanly to email or to a live agent platform like Gorgias or Zendesk. The worst bots try to handle everything and loop the customer through three rounds of "I'm sorry, I didn't understand that" before giving up.</p>
+
+      <p>Gartner research cited in the same Rep AI report found that only <a href="https://www.hellorep.ai/blog/the-future-of-ai-in-ecommerce-40-statistics-on-conversational-ai-agents-for-2025" target="_blank" rel="noopener noreferrer">17% of billing disputes were resolved</a> by customers who used a chatbot at any point. Transactional questions are where bots shine. Emotional or contested questions are where they fail. Plan for both.</p>
+
+      <h3>It doesn't make up answers (when it's grounded correctly)</h3>
+
+      <p>This is the one most cheap installs get wrong. An AI chatbot built on a general large language model with no connection to your actual store data will confidently invent answers when it doesn't know. It will quote shipping times that don't exist. It will describe products you don't sell. It will reference a return policy that contradicts yours.</p>
+
+      <p>A properly built Shopify AI chatbot is "grounded" in your real data: your Shopify products, your policies, your order information. When it doesn't have the answer in its trained scope, it should say so and hand off, not invent. If a vendor can't explain how their bot avoids hallucination, that's a red flag worth taking seriously.</p>
+
+      <h3>It doesn't "sell harder" the way a good salesperson can</h3>
+
+      <p>Chatbots are not closers. They're assistants. They can answer the question that unblocks a sale, but they can't read a hesitating customer's emotional state and respond with the right reassurance the way a human can. For high-consideration purchases (anything over a few hundred dollars), expect the bot to assist sales, not drive them. The conversion lift comes from removing friction, not from persuasion.</p>
+
+      <h2 id="shopify-ai-chatbot-cost">How much a Shopify AI chatbot actually costs</h2>
+
+      <p>The pricing landscape is wider than almost any other Shopify service. Here's what you're actually looking at.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Monthly cost</th>
+            <th>Setup</th>
+            <th>Who does the work</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shopify Inbox (native)</td>
+            <td>Free</td>
+            <td>You</td>
+            <td>You</td>
+          </tr>
+          <tr>
+            <td>Self-serve app (Tidio, SmartBot, etc.)</td>
+            <td>$19 to $279</td>
+            <td>You</td>
+            <td>You</td>
+          </tr>
+          <tr>
+            <td>Managed service (entry)</td>
+            <td>$99 to $300</td>
+            <td>$500 to $1,500</td>
+            <td>Vendor</td>
+          </tr>
+          <tr>
+            <td>Managed service (enterprise)</td>
+            <td>$300 to $2,000+</td>
+            <td>$2,000 to $10,000+</td>
+            <td>Vendor</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div style="text-align: center;"><img src="/journal/shopify-ai-chatbot/shopify-ai-chatbot-self-serve-vs-managed.webp" alt="Comparison illustration: self-serve Shopify AI chatbot vs managed service, pricing and responsibilities" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Self-serve software ($0 to $279/mo)</h3>
+
+      <p>Self-serve apps look cheaper because the monthly fee is lower. The hidden cost is your time. Expect 5 to 10 hours of setup, then 2 to 5 hours a month of ongoing tuning as your products change and customers ask in ways you didn't anticipate. If your hourly rate is meaningful, the "cheap" option is often the expensive one.</p>
+
+      <p>Self-serve is a real fit for: founders who genuinely enjoy this work, stores with very stable product catalogs, and stores small enough that the bot only needs to answer 30 to 50 conversations a month.</p>
+
+      <h3>Managed services ($99 to $2,000+/mo)</h3>
+
+      <p>Managed services bundle hosting, weekly conversation review, prompt tuning, integration maintenance, and email or live-agent support into the monthly fee. The lower end of this range ($99 to $300) is where Shopify-specialist solo studios and small shops live. The upper end ($500+) is enterprise platforms built for stores doing 10,000+ orders a month.</p>
+
+      <p>The honest math on the $99-a-month floor: the underlying AI platform costs about $15 per client when shared, plus another $5 to $15 in usage credits, plus weekly monitoring time worth $30 to $60. That's $65 to $105 of real cost per client per month. Anyone charging $19 a month for a "managed" service is either taking a loss or not actually doing the maintenance.</p>
+
+      <h2 id="when-is-your-shopify-store-ready-for-a-chatbot">When your store is ready for a chatbot (and when it isn't)</h2>
+
+      <p>Most "do I need a chatbot" articles answer yes regardless. That's because they're written by chatbot vendors. Here's the honest version.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-ai-chatbot/shopify-ai-chatbot-readiness-check.webp" alt="Vertical decision diagram: is your Shopify store ready for an AI chatbot based on monthly order volume" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>The order-volume floor most stores miss</h3>
+
+      <p>Below roughly 50 orders a month, a chatbot is almost always premature. You're not getting enough WISMO questions to justify the setup, and your time is better spent on traffic, conversion, and reviews. <a href="https://www.shopify.com/blog/ecommerce-chatbots" target="_blank" rel="noopener noreferrer">Shopify Inbox</a> (free, built-in) handles whatever support volume you have at this stage.</p>
+
+      <p>Between 50 and 500 orders a month is the gray zone. A chatbot can help here, but only if your other foundations are solid. If your <a href="/journal/shopify-seo-checklist/">SEO checklist for new stores</a> isn't done, your product pages aren't converting, or your reviews are thin, a chatbot is the wrong investment. Fix the leaky bucket first.</p>
+
+      <p>Above 500 orders a month, the math almost always works. Support volume is real, WISMO is constant, and the time saved is meaningful. This is where a managed chatbot service becomes a near-obvious yes.</p>
+
+      <h3>Signs you're ready</h3>
+
+      <p>You're answering the same 5 questions every day. You're losing weekend hours to "where is my order" emails. You have a stable product catalog with policies you've actually written down. You can name your top 10 customer questions without thinking. These are the signs.</p>
+
+      <h3>Signs you're not</h3>
+
+      <p>Your product catalog changes weekly. You haven't written your shipping or return policies yet. You're not yet hitting 50 orders a month. You're chasing chatbots because a competitor has one. Wait. Spend the money on <a href="/services/shopify-seo/">Shopify SEO</a> or <a href="/services/reviews-management/">reviews management</a> first. Those compound. A chatbot installed on a store with weak foundations just makes the foundations more visible.</p>
+
+      <h2 id="how-to-pick-the-right-shopify-chatbot">How to pick the right Shopify chatbot</h2>
+
+      <p>If you've decided your store is ready, the choice between platforms and providers is the next question. A short list of things worth asking.</p>
+
+      <h3>Questions to ask before signing up</h3>
+
+      <p>How is the bot grounded in my actual store data? (If the answer is vague, walk away.) What happens when the bot doesn't know an answer? (Hand off to email or live agent, not invent.) Who maintains the bot as my products change? (You, or them?) What's included in the monthly fee? (Hosting, monitoring, tuning, support? Or just access?) What happens to the bot if I cancel? (For managed services, the bot stops. That's standard. Just know it upfront.)</p>
+
+      <h3>Red flags</h3>
+
+      <p>Vendors who promise "100% automation" or "fully replaces your support team." Setup fees that seem suspiciously low (real custom training is 10 to 50 hours of work). Monthly fees under $50 for a service that claims to do weekly monitoring (the math doesn't work). No transparent pricing on the website. Refusal to show you a live demo on a store like yours.</p>
+
+      <p>The best chatbot vendors will tell you when their service isn't a fit. That honesty is usually the strongest signal you'll get.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>A Shopify AI chatbot is a useful tool for the right store at the right time. It answers WISMO questions instantly. It handles repeat FAQs without your involvement. It nudges cart abandoners back into checkout. It captures leads while it works. Done well, it's quietly one of the best uses of $99 to $300 a month a small Shopify store can spend.</p>
+
+      <p>Done badly, it makes your store worse. A chatbot that hallucinates policies, loops customers in dead ends, or pretends to handle complaints it should hand off, actively damages trust. The cheap version of this service is rarely worth the savings.</p>
+
+      <p>If your store is doing under 50 orders a month, you almost certainly don't need a chatbot yet. Shopify Inbox is enough. Focus on traffic, on conversion, on getting your first 100 reviews. The chatbot conversation gets interesting when you're losing weekend hours to "where is my order" emails. Until then, save the budget for something with faster payback.</p>
+
+      <p>And if you do install one, install it on a store with the foundations already in place. A chatbot is amplification. It makes a good store better and a leaky store leakier.</p>
+
+
+
+      <div class="cta-block">
+        <h3>Want a chatbot built and managed for you?</h3>
+        <p>The Studio Niza AI Chatbot service builds a custom chatbot trained on your products, hosts it on a managed platform account, and tunes it weekly. Setup from $599, $99 a month all-in. No platform fees billed to you.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See chatbot pricing &amp; scope <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div itemscope itemtype="https://schema.org/FAQPage">
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>How much does a Shopify AI chatbot cost?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Pricing ranges from free (Shopify Inbox) to over $2,000 a month (enterprise managed services). The two main categories are self-serve apps at $19 to $279 a month, where you do the setup and ongoing maintenance, and managed services at $99 to $2,000 a month, where the vendor builds and maintains the bot for you.</p>
+              </div>
+            </div>
+          </details>
+
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Will a Shopify AI chatbot work on the free Shopify plan?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Shopify Inbox (the native option) is free and works on every Shopify plan. Most third-party chatbot apps also work on Basic Shopify and up. Some advanced features like custom API flows or live-agent handoff to Gorgias may require a higher-tier Shopify plan or paid app integrations.</p>
+              </div>
+            </div>
+          </details>
+
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Is Shopify Inbox enough or do I need a real AI chatbot?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>For stores doing under roughly 50 orders a month, Shopify Inbox is genuinely enough. It handles basic FAQs and gives you a chat presence without ongoing cost. Beyond 50 to 100 orders a month, the value of a properly trained AI chatbot (real WISMO automation, abandoned cart recovery, deeper product recommendations) starts to compound, and Inbox alone leaves money on the table.</p>
+              </div>
+            </div>
+          </details>
+
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Can a Shopify AI chatbot handle returns and refunds?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>Premium-tier managed bots with custom Shopify API flows can process simple returns and exchanges end-to-end. Most starter and mid-tier bots flag the return request, capture the relevant details, and hand off to your support email or live agent platform. Complex or contested returns should always go to a human, regardless of tier.</p>
+              </div>
+            </div>
+          </details>
+
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>How long does it take to set up a Shopify AI chatbot?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>A properly trained chatbot, grounded in your actual products, policies, and order data, takes 2 to 4 weeks to set up for a managed service. Self-serve apps can technically be installed in an hour, but expect 5 to 10 hours of your own setup time plus several weeks of tuning before the bot answers reliably. Anything claiming a fully ready Shopify AI chatbot in under a day is template-only.</p>
+              </div>
+            </div>
+          </details>
+
+          <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary itemprop="name">
+              <span>Do I lose my chatbot if I cancel the managed service?</span>
+              <span>+</span>
+            </summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div itemprop="text">
+                <p>For most managed services, yes. The chatbot configuration, hosting, and platform access typically sit on accounts the vendor owns. When you cancel, the bot stops. This is by design: the monthly fee covers continuous maintenance, not a one-time build you keep forever. Self-serve apps work differently. You own the configuration but you also own all the ongoing maintenance work.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+      <a href="/journal/" class="back-link">Back to Journal</a>
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/services/shopify-seo/">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+</script>
+</body>
+</html>
