@@ -398,6 +398,45 @@ footer.site-footer {
 @media (max-width: 640px) {
   .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
 }
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
 </style>
 </head>
 <body>
@@ -769,11 +808,17 @@ footer.site-footer {
     </div>
   </div>
 
-  <footer class="article-footer">
-    <div class="container-narrow">
-      <a href="/journal/" class="back-link">Back to Journal</a>
-    </div>
-  </footer>
+<footer class="article-footer">
+  <div class="container-narrow">
+
+    <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-seo-checklist">
+      <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+      <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+      <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+    </nav>
+
+  </div>
+</footer>
 
 </article>
 <footer class="site-footer">
@@ -814,6 +859,52 @@ footer.site-footer {
 function toggleNav() {
   document.getElementById('nav-links').classList.toggle('open');
 }
+
+<script>
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+
 </script>
 </body>
 </html>
