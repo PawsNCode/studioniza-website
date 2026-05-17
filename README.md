@@ -29,6 +29,6 @@ For service inquiries: [contact@studioniza.com](mailto:contact@studioniza.com)
 
 For everything else: [niza@studioniza.com](mailto:niza@studioniza.com)
 
----
+-----
 
 © Studio Niza. All rights reserved.
