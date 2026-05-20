@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Chatbot Setup: The First 30 Days After Launch</title>
+<meta name="description" content="A practical week-by-week guide to Shopify chatbot setup after launch. What to monitor, the 3 patterns to fix, and the WISMO baseline.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-chatbot-first-30-days/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Shopify Chatbot Setup: What to Monitor and Tune in the First 30 Days">
+<meta property="og:description" content="Week-by-week Shopify chatbot tuning guide. What to monitor, what to fix, and when to upgrade.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-chatbot-first-30-days/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-chatbot-first-30-days/shopify-chatbot-first-30-days.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify Chatbot Setup: The First 30 Days by Studio Niza">
+<meta property="article:published_time" content="2026-05-20T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Chatbot Setup: What to Monitor and Tune in the First 30 Days">
+<meta name="twitter:description" content="A week-by-week Shopify chatbot tuning guide for the first 30 days.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-chatbot-first-30-days/shopify-chatbot-first-30-days.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify Chatbot First 30 Days", "item": "https://studioniza.com/journal/shopify-chatbot-first-30-days/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Shopify Chatbot Setup: What to Monitor and Tune in the First 30 Days",
+  "description": "A practical week-by-week guide to Shopify chatbot setup after launch. What to monitor in weeks 1 through 4, the three patterns to fix first, the WISMO baseline, and when to upgrade tiers.",
+  "image": "https://studioniza.com/journal/shopify-chatbot-first-30-days/shopify-chatbot-first-30-days.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-05-20T10:00:00+08:00",
+  "dateModified": "2026-05-20T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-chatbot-first-30-days/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-chatbot-first-30-days/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long until a Shopify chatbot is actually accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually 3 to 4 weeks of real conversations. The first week is calibration, not performance. By week 4, a well-tuned bot connected to real Shopify data should be resolving 55 to 70 percent of tier-1 questions without a human, with WISMO accuracy near 95 percent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good containment rate for a Shopify chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In month one, 55 to 70 percent of conversations resolved by the bot is realistic. By month three with consistent tuning, 70 to 85 percent is achievable. Anything below 40 percent at week 4 usually means the bot has structural problems, not surface issues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I trust my chatbot's accuracy in week one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for high-stakes answers. Treat the first 14 days as a discovery phase. Watch the conversation logs daily, confirm integrations are working, and flag anything that looks invented. Save the actual tuning work for week 2 once you have enough conversations to find patterns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my chatbot fallback rate so high?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost always a knowledge base gap, not a model problem. A fallback rate above 15 percent usually means specific topics are missing from training. Audit the top 5 fallback reasons in your conversation logs and add the missing FAQ content. Fallback often drops by half within a week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to retrain my Shopify chatbot every month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not full retraining, but weekly conversation review and prompt updates are how good bots stay good. Your products change, Shopify pushes API updates, and customers find new ways to phrase old questions. Without ongoing tuning, a chatbot that is accurate on day one is wrong by month three."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I move from Basic to Advanced tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When WISMO containment is above 85 percent and you are still personally fielding 30+ tickets a week, the residual work usually justifies the Advanced features. Those include live agent handoff via Gorgias or Zendesk, abandoned cart recovery flows, and lead qualification logic. Below that volume, Basic is doing its job and the upgrade would be a feature looking for a problem."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify Chatbot First 30 Days</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">May 20, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Shopify Chatbot Setup: What to Monitor and Tune in the First 30 Days</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-first-30-days/shopify-chatbot-first-30-days-hero.webp" alt="Laptop on a clean desk showing a Shopify chatbot dashboard with weekly tuning notes" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">A practical Shopify chatbot setup guide for the first 30 days after launch. What to monitor week by week, the three patterns almost every new bot needs fixed, and how to set a WISMO baseline you can actually trust.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-the-first-30-days-actually-look-like">What the first 30 days actually look like</a></li>
+        <li><a href="#the-metrics-to-watch">The metrics to watch (and the ones to ignore)</a></li>
+        <li><a href="#week-1-stabilize">Week 1: stabilize, don't optimize</a></li>
+        <li><a href="#week-2-find-the-knowledge-gaps">Week 2: find the knowledge gaps</a></li>
+        <li><a href="#week-3-tune-the-three-most-common-broken-patterns">Week 3: tune the three most common broken patterns</a></li>
+        <li><a href="#week-4-set-your-wismo-baseline">Week 4: set your WISMO baseline</a></li>
+        <li><a href="#when-to-consider-the-advanced-tier">When to consider upgrading to the Advanced tier</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>Most posts about Shopify chatbot setup stop at install day. They show you the widget, the welcome message, the seven canned questions, and then move on. Nobody tells you what happens at week one, when a real customer asks something your bot guesses at instead of looking up.</p>
+
+      <p>This is the post about what happens after install. Specifically, the first 30 days. What to monitor, what to fix, what to ignore, and how to know whether your bot is actually working or just talking.</p>
+
+      <p>I'm writing this from the seat of someone who builds and maintains these for a living. The pattern is consistent across every store I've launched. Week one looks worse than you expect. By week four, you either have a chatbot that's earning its keep or one that's quietly burning trust.</p>
+
+      <p>If you haven't installed yet, start with my post on <a href="/journal/shopify-ai-chatbot/">what a Shopify AI chatbot actually does and doesn't do</a>. That post answers the "should I even have one" question. This one answers the "okay it's live, now what" question.</p>
+
+      <h2 id="what-the-first-30-days-actually-look-like">What the first 30 days actually look like</h2>
+
+      <p>A new Shopify chatbot is not a finished product on launch day. It's an opinionated draft that needs real customer conversations to become accurate. The training data you fed it during setup (your FAQ, your policies, your product catalog) is your best guess at what customers will ask. Real customers will ask in ways you didn't predict.</p>
+
+      <p>The first 30 days is the period where the bot is calibrated against actual usage. Four phases, roughly one per week:</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-first-30-days/shopify-chatbot-first-30-days-week-by-week.webp" alt="Diagram showing the four phases of Shopify chatbot setup: stabilize, discover, tune, baseline" style="margin-bottom: 16px; float: none;"></div>
+
+      <p><strong>Week 1: stabilize.</strong> Confirm nothing is broken. The integrations work, the widget loads, conversations are being logged. Don't optimize anything yet.</p>
+
+      <p><strong>Week 2: discover.</strong> Read every conversation. Find the questions you didn't anticipate. Build the gap list.</p>
+
+      <p><strong>Week 3: tune.</strong> Fix the three most common broken patterns. Update prompts, add knowledge base entries, tighten scope.</p>
+
+      <p><strong>Week 4: baseline.</strong> Measure containment, fallback, and WISMO accuracy against a now-stable bot. This is your starting line, not your finish line.</p>
+
+      <p>Skip any of these and you'll be debugging in month three what you should have caught in month one.</p>
+
+      <h2 id="the-metrics-to-watch">The metrics to watch (and the ones to ignore)</h2>
+
+      <p>Most chatbot platforms show you a dashboard full of numbers. Most of those numbers are vanity. Three metrics actually matter in the first 30 days.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-first-30-days/shopify-chatbot-first-30-days-metrics.webp" alt="Three chatbot metric cards showing containment rate, fallback rate, and reopen rate" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>The three that matter</h3>
+
+      <p><strong>Containment rate.</strong> The percentage of conversations the bot fully resolved without handing off to a human. According to <a href="https://www.oscarchat.ai/blog/how-to-measure-chatbot-roi/" target="_blank" rel="noopener noreferrer">Oscar Chat's 2026 benchmarks</a>, a containment rate above 60 percent paired with high customer satisfaction is the sign of a healthy bot. Above 60 percent with low satisfaction means the bot is trapping users without solving anything. Track both.</p>
+
+      <p><strong>Fallback rate.</strong> The percentage of messages the bot couldn't answer and either escalated or returned a "sorry, I don't know" reply. <a href="https://quickchat.ai/post/chatbot-analytics" target="_blank" rel="noopener noreferrer">Quickchat AI recommends an alert threshold of 15 percent</a>. Above that, you have knowledge gaps that need attention. Below that, your bot has enough coverage to be useful.</p>
+
+      <p><strong>Reopen rate.</strong> The percentage of "resolved" conversations where the same customer comes back within 48 hours with the same problem. This is the metric vendors don't put on dashboards because it exposes containment that wasn't actually resolution. <a href="https://fin.ai/learn/ai-agent-kpis-enterprise-performance-metrics-framework" target="_blank" rel="noopener noreferrer">Fin.ai notes that a declining reopen rate is the cleanest signal</a> that your bot is delivering real answers, not just keeping customers in a loop.</p>
+
+      <h3>The ones to ignore in month one</h3>
+
+      <p>Total conversations. Sessions started. Average session length. Unique visitors who engaged. These are activity counters, not performance metrics. A bot can have thousands of conversations and resolve none of them.</p>
+
+      <p>The same goes for customer satisfaction scores in the first 14 days. The sample size is too small for the data to mean much. Start watching CSAT in week 3, when the bot has stabilized.</p>
+
+      <h2 id="week-1-stabilize">Week 1: stabilize, don't optimize</h2>
+
+      <p>The temptation in week one is to start tweaking prompts the moment you see a bad answer. Don't. Week one is for checking that the plumbing works.</p>
+
+      <h3>What to check daily in week 1</h3>
+
+      <p><strong>The widget loads on every page.</strong> Mobile and desktop. Check product pages, collection pages, the cart, and the checkout if your platform allows the widget there. Theme updates and app conflicts can break the widget without warning.</p>
+
+      <p><strong>Order data is syncing.</strong> Place a test order yourself, or use a recent real order. Ask the bot "where is my order, [order number]?" The bot should pull the real tracking info from Shopify, not invent it. If it invents a status, your Shopify integration is misconfigured and that's the first fix.</p>
+
+      <p><strong>Conversations are being logged.</strong> Open the conversation log in your platform. Make sure you can see what customers typed and what the bot replied. If logs are missing, you're flying blind for the rest of the month.</p>
+
+      <p><strong>The handoff path works.</strong> Send the bot a message it should escalate ("I need to return a damaged item, the package arrived broken"). Confirm the email or live chat handoff actually reaches you. The most common bug in week one is a handoff that triggers but never delivers.</p>
+
+      <h3>What not to fix in week 1</h3>
+
+      <p>Don't rewrite prompts based on three bad conversations. Don't add training entries for questions only one customer asked. Don't change tone or personality unless something is genuinely off-brand. Week one is observational. Take notes for week two.</p>
+
+      <p>If your store is doing fewer than 30 orders a week, you may not even hit enough chatbot volume in week one to make decisions. That's fine. Let week two carry the discovery work.</p>
+
+      <h2 id="week-2-find-the-knowledge-gaps">Week 2: find the knowledge gaps</h2>
+
+      <p>Week two is where the real work starts. By now you have 50 to 200 conversations to review, depending on your traffic. Most of them will look fine. A handful will reveal what your bot doesn't know.</p>
+
+      <h3>The conversation review process</h3>
+
+      <p>Block 60 to 90 minutes. Open every conversation from the past 7 days, sorted by anything flagged as fallback, low confidence, or escalated. Read the customer's question, then read what the bot said. Note where the answer was wrong, vague, or absent.</p>
+
+      <p>You're looking for three things. Questions the bot didn't try to answer (pure fallback). Questions it answered wrong (hallucination). Questions it answered correctly but in a way that didn't match your brand voice (tonal mismatch).</p>
+
+      <h3>Categorize the gaps</h3>
+
+      <p>By the end of the review, you should have a list of 5 to 15 gaps grouped by category. Common categories in month one:</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Gap category</th>
+            <th>What it looks like</th>
+            <th>The fix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Policy edge cases</td>
+            <td>"Do you ship to Hawaii on weekends?" The bot answers generic shipping but misses the specific case.</td>
+            <td>Add an explicit knowledge base entry for the edge case.</td>
+          </tr>
+          <tr>
+            <td>Product variant questions</td>
+            <td>"Does the navy size medium fit like the cream?" The bot guesses or refuses.</td>
+            <td>Connect variant-specific notes or escalate consistently.</td>
+          </tr>
+          <tr>
+            <td>Sale and promo confusion</td>
+            <td>"Is the 20% off code stackable with free shipping?" The bot doesn't know.</td>
+            <td>Update training when promos launch. Promo gaps are predictable.</td>
+          </tr>
+          <tr>
+            <td>Recently changed policies</td>
+            <td>The bot quotes a return window that changed last month.</td>
+            <td>Single source of truth: update the policy page, then retrain.</td>
+          </tr>
+          <tr>
+            <td>Off-scope conversations</td>
+            <td>Customer asks about a competitor or asks the bot to be a therapist.</td>
+            <td>Tighten scope. The bot should politely decline and offer to help with the store.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>What "trained on your store" actually means</h3>
+
+      <p>A bot grounded in your real Shopify data answers from policies, products, and orders it can verify. A bot running on a generic large language model with no grounding will confidently invent answers when it doesn't know. Research on retrieval-grounded chatbots found that <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12425422/" target="_blank" rel="noopener noreferrer">hallucination rates dropped from around 40 percent on ungrounded models to near zero when responses were tied to a verified knowledge base</a>. The difference between a $19 self-serve bot and a properly built one is mostly grounding.</p>
+
+      <p>If your week two review is finding more than 3 or 4 hallucinations, the bot isn't grounded tightly enough. That's a scope problem, not a model problem. The fix is to narrow what the bot is allowed to answer and broaden what it's allowed to escalate.</p>
+
+      <h2 id="week-3-tune-the-three-most-common-broken-patterns">Week 3: tune the three most common broken patterns</h2>
+
+      <p>Across every Shopify chatbot I've launched, the same three patterns surface in weeks 2 and 3. If your bot has any of them, fix them in this order.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-first-30-days/shopify-chatbot-first-30-days-fallback-patterns.webp" alt="Three speech bubbles showing common Shopify chatbot fallback patterns to fix in week three" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Pattern 1: hallucinated shipping windows</h3>
+
+      <p>The single most common bug. A customer asks "when will my order arrive?" The bot, lacking a real tracking link, invents a delivery date that sounds plausible but isn't tied to anything. The customer plans around it, the package arrives late, and now you have a complaint that didn't need to exist.</p>
+
+      <p>The fix is structural. The bot should never answer a shipping question without either a real tracking number lookup or an explicit "I don't have the tracking info yet, let me get someone on this" handoff. Remove the bot's permission to guess.</p>
+
+      <h3>Pattern 2: premature escalation on questions it should handle</h3>
+
+      <p>The opposite problem. The bot escalates "what's your return policy?" to a human because the policy page wasn't in its training data, or was there but indexed badly. Now you're answering a question that shouldn't have reached your inbox.</p>
+
+      <p>The fix is to audit the bot's top fallback reasons in week 2 and explicitly add the missing FAQ content. <a href="https://www.tidio.com/blog/chatbot-analytics/" target="_blank" rel="noopener noreferrer">Tidio's analysis of chatbot fallback patterns</a> notes that most fallback comes from a handful of repeat topics. Fix the five most common and your fallback rate often drops by half.</p>
+
+      <h3>Pattern 3: repeated fallback on the same topic</h3>
+
+      <p>The most expensive pattern, because it tells you a real customer demand is being missed. If five different customers in one week ask about gift wrapping and the bot fails every time, gift wrapping needs to be in the knowledge base before the weekend. Repeat fallback is a signal, not noise.</p>
+
+      <p>Build a habit: at the end of week 3, look at the top 5 fallback topics and decide for each one whether to add training, change scope, or accept it as a legitimate human-only escalation.</p>
+
+      <h2 id="week-4-set-your-wismo-baseline">Week 4: set your WISMO baseline</h2>
+
+      <p>WISMO ("where is my order") is the single highest-volume question every Shopify store gets after roughly 50 orders a month. It's also the question a chatbot should handle better than anything else, because the answer lives in structured Shopify data.</p>
+
+      <p>By week 4, your bot should have hundreds of WISMO conversations logged. That's enough to set a real baseline.</p>
+
+      <h3>The three WISMO numbers to record in week 4</h3>
+
+      <p><strong>WISMO containment rate.</strong> Of all WISMO questions, how many did the bot fully resolve with a real tracking lookup? Aim for 85 percent or higher. A well-grounded bot connected to Shopify order data should be near 95 percent on this single metric.</p>
+
+      <p><strong>WISMO median response time.</strong> The bot should answer in under 5 seconds. If it's slower, the Shopify API call is misconfigured or the prompt is doing unnecessary work before the lookup.</p>
+
+      <p><strong>WISMO fallback reasons.</strong> When WISMO does escalate, why? "Order not found" usually means the customer typed the order number wrong. "Status unclear" means the bot is overcautious and you can loosen its scope. "Customer wants to change the address" is a legitimate human task. Each reason gets a different fix.</p>
+
+      <h3>What good containment actually looks like</h3>
+
+      <p><a href="https://alhena.ai/blog/ai-chatbot-containment-vs-deflection-rate/" target="_blank" rel="noopener noreferrer">Alhena AI's benchmarks for ecommerce chatbots</a> put a strong containment rate at 70 to 90 percent overall, with anything below 40 percent signalling weak natural language understanding, outdated knowledge bases, or missing backend integrations. In month one, expect the overall number to land around 55 to 70 percent. If you're below 40 percent at week 4, the bot needs a structural rework, not more prompt tweaks.</p>
+
+      <p>Set the baseline now. Every month after this, you're measuring against week 4. The trajectory of these numbers, not the absolute values, is what tells you whether the bot is still earning its place.</p>
+
+      <h2 id="when-to-consider-the-advanced-tier">When to consider upgrading to the Advanced tier</h2>
+
+      <p>Most stores spend 3 to 9 months on a Basic-tier chatbot. The Basic tier handles the work that justifies a bot in the first place: WISMO, FAQs, product info, newsletter capture, email handoff for complex issues. If those four jobs are still your bottleneck, stay on Basic.</p>
+
+      <p>Move to Advanced when three signals show up together.</p>
+
+      <h3>Signal 1: WISMO is solved and tickets keep coming</h3>
+
+      <p>If WISMO containment is above 85 percent and you're still fielding 30+ tickets a week, the residual is probably cart questions, lead capture, or live-agent-only conversations. Advanced adds live agent handoff via Gorgias or Zendesk, abandoned cart recovery flows, and lead qualification logic. Those features only earn their cost when WISMO is no longer the bottleneck.</p>
+
+      <h3>Signal 2: abandoned cart volume is meaningful</h3>
+
+      <p>If your store is seeing real cart abandonment volume (the <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener noreferrer">Baymard Institute pegs the global average at 70.22 percent</a>), an abandoned cart flow that fires inside an active chat conversation converts much higher than a generic email recovery sequence. The Advanced tier includes that flow. The Basic tier does not.</p>
+
+      <h3>Signal 3: you're starting to lose leads</h3>
+
+      <p>If you can name a specific lead-loss pattern (people ask about wholesale and never hear back, people request a custom order and the email gets buried), lead qualification logic justifies the upgrade. Otherwise it's a feature looking for a problem.</p>
+
+      <p>For context on the studio's tiering: <strong>Basic is $599 setup plus $99 per month with up to 500 conversations</strong>. <strong>Advanced is $1,299 setup plus $179 per month with up to 1,500 conversations</strong>, the live agent integrations, and a monthly analytics dashboard. The full scope and the minimum terms are on the <a href="/services/ai-chatbots/">AI Chatbots service page</a>.</p>
+
+      <p>One honest note that belongs in every chatbot conversation: the monthly fee covers hosting, weekly tuning, and prompt updates on a managed AI platform account. If you cancel, the bot stops working. This is by design and disclosed upfront, because a chatbot without ongoing maintenance breaks within months. Everything else Studio Niza delivers (SEO, blog content, reviews) stays with the client forever. The chatbot is the one exception.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>The first 30 days of a Shopify chatbot is not a launch event. It's a calibration period. Treat it that way and the bot you end month one with is a real asset. Treat it as "installed and done" and you'll have a slow leak of bad answers for the next year.</p>
+
+      <p>The order matters. Week 1, stabilize. Week 2, find the gaps. Week 3, fix the three patterns. Week 4, set the baseline. After that, the rhythm becomes weekly: read the conversations, fix what broke, update what changed. If you're building the underlying FAQ content yourself, the work pairs naturally with the <a href="/journal/shopify-seo-checklist/">Shopify SEO checklist</a> since both ask the same question of your store: what would a customer actually ask, and is the answer written down anywhere?</p>
+
+      <p>And if you're still upstream of installing one, the <a href="/journal/shopify-customer-support-automation/">chatbot vs hire decision guide</a> walks through whether your store has the volume to make this worth doing yet. Honest scope beats impressive scope. The same applies to whether you need a bot at all.</p>
+
+      <div class="cta-block">
+        <h3>Want the first 30 days handled for you?</h3>
+        <p>The Studio Niza AI chatbot service includes the build, the launch, and the weekly tuning that makes month one actually work. Basic starts at $599 setup plus $99 per month, with the Advanced tier ready when you outgrow it.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See chatbot pricing and scope <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>How long until a Shopify chatbot is actually accurate?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Usually 3 to 4 weeks of real conversations. The first week is calibration, not performance. By week 4, a well-tuned bot connected to real Shopify data should be resolving 55 to 70 percent of tier-1 questions without a human, with WISMO accuracy near 95 percent.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>What is a good containment rate for a Shopify chatbot?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>In month one, 55 to 70 percent of conversations resolved by the bot is realistic. By month three with consistent tuning, 70 to 85 percent is achievable. Anything below 40 percent at week 4 usually means the bot has structural problems, not surface issues.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Should I trust my chatbot's accuracy in week one?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not for high-stakes answers. Treat the first 14 days as a discovery phase. Watch the conversation logs daily, confirm integrations are working, and flag anything that looks invented. Save the actual tuning work for week 2 once you have enough conversations to find patterns.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Why is my chatbot fallback rate so high?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Almost always a knowledge base gap, not a model problem. A fallback rate above 15 percent usually means specific topics are missing from training. Audit the top 5 fallback reasons in your conversation logs and add the missing FAQ content. Fallback often drops by half within a week.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Do I need to retrain my Shopify chatbot every month?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not full retraining, but weekly conversation review and prompt updates are how good bots stay good. Your products change, Shopify pushes API updates, and customers find new ways to phrase old questions. Without ongoing tuning, a chatbot that is accurate on day one is wrong by month three.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>When should I move from Basic to Advanced tier?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>When WISMO containment is above 85 percent and you are still personally fielding 30+ tickets a week, the residual work usually justifies the Advanced features. Those include live agent handoff via Gorgias or Zendesk, abandoned cart recovery flows, and lead qualification logic. Below that volume, Basic is doing its job and the upgrade would be a feature looking for a problem.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-chatbot-first-30-days">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+</body>
+</html>
