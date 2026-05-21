@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Migrate Reviews on Discontinued Shopify Products</title>
+<meta name="description" content="Lost reviews when you retired a Shopify SKU? Migrate them with Judge.me Product Groups, Loox/Stamped/Yotpo CSV, and stay FTC-compliant.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/migrate-reviews-discontinued-shopify-product/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="How to Migrate Reviews When You Discontinue a Shopify Product">
+<meta property="og:description" content="How to migrate Shopify reviews when you discontinue a product. Judge.me, Loox, Stamped, Yotpo, and the FTC rules.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/migrate-reviews-discontinued-shopify-product/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/migrate-reviews-discontinued-shopify-product/migrate-reviews-discontinued-shopify-product.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Migrate Reviews on Discontinued Shopify Products by Studio Niza">
+<meta property="article:published_time" content="2026-05-21T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Reviews">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Migrate Reviews When You Discontinue a Shopify Product">
+<meta name="twitter:description" content="Migrating Shopify reviews when a SKU goes discontinued. The working procedures, the FTC rules.">
+<meta name="twitter:image" content="https://studioniza.com/journal/migrate-reviews-discontinued-shopify-product/migrate-reviews-discontinued-shopify-product.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Migrate Reviews on Discontinued Products", "item": "https://studioniza.com/journal/migrate-reviews-discontinued-shopify-product/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Migrate Reviews When You Discontinue a Shopify Product",
+  "description": "How to migrate Shopify reviews when you discontinue a product. Judge.me Product Groups walkthrough, Loox/Stamped/Yotpo CSV path, FTC compliance notes, and the SEO cost of doing nothing.",
+  "image": "https://studioniza.com/journal/migrate-reviews-discontinued-shopify-product/migrate-reviews-discontinued-shopify-product.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-05-21T10:00:00+08:00",
+  "dateModified": "2026-05-21T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/migrate-reviews-discontinued-shopify-product/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/migrate-reviews-discontinued-shopify-product/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I move all my reviews from a discontinued Shopify product to a new one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On Judge.me, no, full bulk transfers between products are no longer permitted. The official replacement is Product Groups, which shares the same reviews across multiple products. On Loox, Stamped, and Yotpo you can do a CSV export and re-import, but expect to manually fix verified buyer flags, photo URLs, and reply threads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does migrating reviews violate FTC rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if the new product is substantially different from the old one. The FTC's Rule on Consumer Reviews, effective October 21, 2024, prohibits review hijacking, which is repurposing a review so it appears to be about a meaningfully different product. Migrating reviews from V3 of a running shoe to V4 is fine; migrating them to a sandal is not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take Judge.me Product Groups to display merged reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Judge.me states reviews may take at least 2 minutes to appear after adding products to a group. In practice it is often closer to 5 minutes. Refresh the new product page in an incognito window to verify the merged star rating and review count are showing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to star snippets in Google when I delete a Shopify product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google removes the star snippet from search results within roughly a week, because the product schema no longer reports an aggregate rating. After you migrate the reviews and republish the product schema, allow 2 to 4 weeks for Google to re-crawl, re-parse, and restore the snippet. The recovery is not instant even when the underlying data is fixed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free way to migrate reviews on Judge.me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Product Groups now requires Judge.me's paid Awesome plan, which starts at $15 per month with a 15-day free trial. If you can complete the migration inside the trial window, the actual cost is zero. Outside that, $15 is usually trivial compared to the value of the orphaned reviews on a 2-year-old store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I migrate reviews if the new product is meaningfully different from the old one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This is the line the FTC drew with the review hijacking ban. The practical test is whether the original reviewer would still recognize the new product as the same item they bought. If they would say that's not what I reviewed, the migration is not legitimate and you should leave the old reviews on the discontinued product and start fresh on the new one."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Migrate Reviews on Discontinued Products</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Reviews</span>
+        <span class="post-date">May 21, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>How to Migrate Reviews When You Discontinue a Shopify Product</h1>
+      <div style="text-align: center;"><img src="/journal/migrate-reviews-discontinued-shopify-product/migrate-reviews-discontinued-shopify-product-hero.webp" alt="Shopify product page with orphaned reviews after discontinuing a SKU, beside a migration plan notebook" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">What happens to your reviews when you retire or merge a Shopify SKU. The Judge.me Product Groups workflow, the manual CSV path for Loox, Stamped, and Yotpo, and the FTC line you cannot cross.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-happens-when-you-discontinue">What actually happens to reviews when you discontinue a Shopify product</a></li>
+        <li><a href="#the-seo-cost">The SEO and conversion cost of doing nothing</a></li>
+        <li><a href="#ftc-rules-first">The FTC rules you need to know before migrating anything</a></li>
+        <li><a href="#judge-me-product-groups">The Judge.me Product Groups workflow</a></li>
+        <li><a href="#csv-migration-loox-stamped-yotpo">The manual CSV path for Loox, Stamped, and Yotpo</a></li>
+        <li><a href="#redirect-urls-or-lose-the-seo">Don't forget the 301 redirect</a></li>
+        <li><a href="#wrapping-up">When to migrate yourself versus hire it out</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>You retired an old SKU. Or you merged three variant listings into one. Or you replaced last year's product with this year's better version. And then you looked at the new product page and the reviews were gone. All of them. Months or years of work, vanished from the page that needed them most.</p>
+
+      <p>This is one of the worst feelings a Shopify owner can have, and it is almost always recoverable. The reviews still exist in the platform's database; what you lost is the visible connection to the live product. That connection can be rebuilt in most cases, using Judge.me Product Groups, a manual CSV migration on Loox, Stamped, or Yotpo, or a 301 redirect to preserve the SEO value.</p>
+
+      <p>Before any of that, one rule matters: the FTC has clear limits on which reviews you can migrate. Moving reviews from a discontinued product to a meaningfully different one is now a federal violation, not a gray area. We will start there, then walk through the working procedures.</p>
+
+      <h2 id="what-happens-when-you-discontinue">What actually happens to reviews when you discontinue a Shopify product</h2>
+
+      <p>When you delete a Shopify product, the product's database row disappears, and any review app matching reviews to that product ID has nothing to attach them to. The reviews stay in the review platform's database, but they no longer render on a live URL. Your accumulated star average for that product is gone from public view.</p>
+
+      <p>Softer changes behave differently. Most review apps key on the Shopify product ID, so archiving a product keeps the reviews intact in the database but hides them from the storefront. Merging variants typically creates a new master product with a new ID, which means the new master starts at zero reviews even if the old variants had hundreds between them.</p>
+
+      <p>The three scenarios where Shopify owners lose reviews most often are: retiring a seasonal product, replacing a 2024 version with a 2026 version, and consolidating five color variants that were originally listed as separate products into one product with a color selector. All three are common. All three are recoverable in most cases.</p>
+
+      <h2 id="the-seo-cost">The SEO and conversion cost of doing nothing</h2>
+
+      <p>If you let those reviews stay orphaned, two things happen at the same time, and both quietly cost you money for months.</p>
+
+      <p>The first is the loss of star snippets in Google. Product schema with review aggregate ratings is what triggers those golden star rows under product titles in search results. When the review count on a product page drops to zero, Google removes the star snippet, sometimes within a week. You can read more about <a href="/journal/shopify-store-fewer-reviews/">how reviews shape SERP click-through rate</a>; the short version is that star snippets typically lift organic CTR by 10 to 30 percent on commercial queries, and you lose all of that on the products you orphaned.</p>
+
+      <p>The second is the conversion drop on the product page itself. Baymard Institute research consistently shows that <a href="https://baymard.com/blog/user-reviews-and-ratings" target="_blank" rel="noopener noreferrer">product reviews are among the most consulted elements on a product detail page</a>, and shoppers reading a 4.7-star product with 200 reviews convert at a meaningfully higher rate than the same product showing zero reviews. The new product is identical in every way that matters to the buyer; the only difference is the missing social proof, and that shows up in the conversion rate within 30 days.</p>
+
+      <p>For a 2-year-old store with even modest review accumulation, the combined cost usually runs into thousands of dollars per quarter on the affected pages. This is why the migration is worth doing carefully.</p>
+
+      <h2 id="ftc-rules-first">The FTC rules you need to know before migrating anything</h2>
+
+      <p>On October 21, 2024, the FTC's Rule on the Use of Consumer Reviews and Testimonials took effect. One of the practices it explicitly prohibits is called review hijacking, which the FTC defines as <a href="https://www.ftc.gov/business-guidance/blog/2023/06/ftc-endorsements-final-revised-guides-proposed-new-rule-updated-staff-publication" target="_blank" rel="noopener noreferrer">using or repurposing a consumer review written for one product so that it appears to have been written for a substantially different product</a>.</p>
+
+      <p>This is the line you cannot cross. Migrating 300 reviews of last year's running shoe (V3) to this year's running shoe (V4) is fine if V4 is genuinely the successor product with similar materials, fit, and use case. Migrating those same reviews to a sandal, a hiking boot, or a "redesigned" shoe that is materially different in shape or construction is review hijacking. The FTC can issue civil penalties for this now, not just warning letters.</p>
+
+      <p>The practical test is simple: if the customer who wrote the review would still recognize the new product as the same product they bought and would still stand by their original words, the migration is legitimate. If they would say "that's not what I reviewed," you cannot move the review.</p>
+
+      <p>For more on the full rule, the <a href="https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews" target="_blank" rel="noopener noreferrer">FTC's official endorsements page</a> is the authoritative source. Three other rules in that document also apply: you cannot suppress legitimate negative reviews on the old product, you cannot edit reviews to make them more positive on the new product, and you cannot remove the original purchase date metadata if it accompanies the review on the new page.</p>
+
+      <h2 id="judge-me-product-groups">The Judge.me Product Groups workflow (the cleanest path)</h2>
+
+      <p>If your store runs Judge.me, Product Groups is the right tool for this job. It is the only Shopify reviews platform that lets you officially share the same reviews across multiple products without creating duplicates, and it handles the live update of the aggregate star rating automatically.</p>
+
+      <p>One thing to flag honestly: Product Groups now requires Judge.me's paid Awesome plan. It used to be available on the free tier, and Judge.me changed that in 2025. The Awesome plan starts at $15 per month and gives you 15 days free to test the migration. If the value of your orphaned reviews is more than $15 (and for any 2-year-old store, it almost certainly is), the math is straightforward.</p>
+
+      <h3>When Product Groups is the right tool</h3>
+
+      <p>Product Groups is the right answer when: you are replacing one product with a clear successor, you merged variants into a new master product, you have multiple SKUs for what is functionally the same product (different color names, different sizes, same item), or you are running A/B variant tests across product pages and want the reviews to follow.</p>
+
+      <p>It is the wrong answer when: the products are genuinely different (FTC rule), you need to move reviews to a brand-new product that has no thematic relationship, or you only want to migrate some reviews (Product Groups shares all of them, not selected ones).</p>
+
+      <h3>Step-by-step setup</h3>
+
+      <p>From the Judge.me admin, go to <strong>Settings &gt; Product groups</strong>. Click <strong>Create new group</strong>, give the group a clear internal name (something like "Running Shoe V3 to V4 migration"), and add both the old product and the new product to the group. If the old product is already deleted from Shopify, Judge.me usually still has the product record cached, and you can find it in the group's product picker by SKU or by review count.</p>
+
+      <p>Once the group is saved, give it about 2 to 5 minutes. Judge.me states that reviews may take at least 2 minutes to appear on a new group page, and in practice it is often closer to 5. Refresh the new product page on your storefront and you should see the combined review count and the merged star rating.</p>
+
+      <p>Each product can only belong to one product group, and each group can include up to 10,000 products. For 99 percent of Shopify stores, neither limit is a constraint.</p>
+
+      <h3>What Product Groups won't do</h3>
+
+      <p>Product Groups shares the reviews across the products in the group; it does not move them. The original review still lives on the old product in the database. If you ever delete the old product from Judge.me directly (not just from Shopify), the reviews are removed from the group. Always check that the old product is still present in Judge.me before cleaning up your Shopify admin.</p>
+
+      <p>It also does not work for cross-store migrations. If you are moving from a sunset store to a new store on a different Shopify domain, you need cross-store syndication (a separate Judge.me feature) or a CSV migration.</p>
+
+      <p>Finally, in 2024 Judge.me announced that <a href="https://judge.me/help/en/articles/12050430-moving-reviews-from-one-product-to-another" target="_blank" rel="noopener noreferrer">to comply with Shopify, full review transfers between products are no longer permitted</a>. They will move individual misrouted reviews on request, but bulk transfer between products is closed. Product Groups is the official replacement.</p>
+
+      <div style="text-align: center;"><img src="/journal/migrate-reviews-discontinued-shopify-product/migrate-reviews-discontinued-shopify-product-migration-paths.webp" alt="Diagram of the three migration paths for discontinued Shopify product reviews" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="csv-migration-loox-stamped-yotpo">The manual CSV path for Loox, Stamped, and Yotpo</h2>
+
+      <p>If your store runs Loox, Stamped, or Yotpo, you do not have a Product Groups equivalent. The path is a manual CSV export from the old product, careful field remapping, and a re-import to the new product. It is more work, more breakage points, and you should plan for a 30-minute to 2-hour effort depending on review count.</p>
+
+      <h3>Loox export-import workflow</h3>
+
+      <p>From the Loox admin, go to <strong>Manage Reviews</strong>, find the old product, and export the reviews. Loox exports a CSV with reviewer name, email, rating, title, body, photo URLs, and the Shopify product ID. To re-import to a new product, you need to edit the product ID column to match the new product's Shopify ID, then upload the file via <strong>Manage Reviews &gt; Import Reviews</strong>. Loox lets you import up to 100,000 reviews per store via custom CSV, which is more than enough for almost any case.</p>
+
+      <p>Two things break in this workflow that you have to fix manually: the <strong>verified buyer</strong> flag is usually lost (Loox tries to re-match against the order history but if the original orders are old, it will not always succeed), and the <strong>photo URLs</strong> sometimes 404 because Loox rotates its CDN. If photo reviews matter to you, plan to manually re-upload the photos after the import. The <a href="https://help.loox.io/support/solutions/articles/501000162508-importing-reviews-using-a-custom-file" target="_blank" rel="noopener noreferrer">Loox custom file import documentation</a> walks through the required column headers.</p>
+
+      <h3>Stamped CSV workflow</h3>
+
+      <p>Stamped works similarly. Export reviews from the old product, update the product handle and product ID, and import via the Stamped admin's review import tool. Stamped has stricter CSV format requirements than Loox, so download their import template first and match your file's column order to it exactly. A single mismatched header will cause Stamped to reject the whole file silently.</p>
+
+      <p>One detail specific to Stamped: their import preserves the original review date if you include it in the CSV. Many sellers leave this column blank by accident and the imported reviews all show today's date, which immediately flags the migration as suspicious to both Google and shoppers. Always include the original date in the import.</p>
+
+      <h3>Yotpo CSV workflow</h3>
+
+      <p>Yotpo's process is the most involved. Their CSV format includes more required fields (review type, source, sentiment tags), and they cap free-tier review imports more aggressively. If you are on Yotpo's free or Growth plan and migrating more than 200 reviews, expect to contact Yotpo support for a manual import on their end, typically within 3 to 5 business days.</p>
+
+      <p>Yotpo also separates star ratings, written reviews, and Q&amp;A into different objects in their database. The export produces these as separate CSV files, and each must be imported independently and linked back to the new product ID.</p>
+
+      <h3>The five things that break in a CSV migration</h3>
+
+      <p>In every CSV migration I have done, the same five things break, and budgeting time to fix them is the difference between a clean migration and a half-done one:</p>
+
+      <p>(1) <strong>Verified buyer flags</strong> usually don't survive. If the new product ID has no matching past orders, the reviews come in as unverified. You can sometimes re-match by editing the customer email field to match the original order, but plan to lose this on some reviews.</p>
+
+      <p>(2) <strong>Photo URLs</strong> can 404 if the platform rotates its image CDN. Always download the photos before the export and prepare to re-attach them after the import.</p>
+
+      <p>(3) <strong>Review dates</strong> default to "today" if the date column is blank or formatted wrong, which is the single most common mistake.</p>
+
+      <p>(4) <strong>Reply threads</strong> (your store's responses to reviews) often come in detached from the parent review. You may need to manually re-link them.</p>
+
+      <p>(5) <strong>SEO snippets</strong> take 2 to 4 weeks to repopulate after the import, because Google has to re-crawl, re-parse the product schema, and re-evaluate the aggregate rating. Do not panic if the star snippet does not appear instantly.</p>
+
+      <div style="text-align: center;"><img src="/journal/migrate-reviews-discontinued-shopify-product/migrate-reviews-discontinued-shopify-product-csv-fields.webp" alt="CSV fields that break during Shopify discontinued product reviews migration" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="redirect-urls-or-lose-the-seo">Don't forget the 301 redirect (or you lose the SEO anyway)</h2>
+
+      <p>This is the step almost every Shopify owner skips, and it is the one that quietly wastes half of the migration effort. If you discontinue a product, Shopify will start serving a 404 on the old URL. Any backlinks pointing to the old URL (Google's index, third-party blogs, your own past emails, social posts) will fail. Even if you successfully migrated the reviews to the new product, the SEO equity in those backlinks is lost unless you redirect the old URL to the new one.</p>
+
+      <p>In the Shopify admin, go to <strong>Online Store &gt; Navigation &gt; URL Redirects</strong>, click <strong>Create URL redirect</strong>, paste the old product handle in the "From" field and the new product URL in the "To" field. Shopify automatically applies a 301 redirect. You can find the full <a href="/journal/shopify-seo-checklist/">SEO checklist for new stores</a> that walks through this step in more detail, but for migration purposes, the redirect is non-negotiable.</p>
+
+      <p>If you have done a deeper Shopify SEO and GEO setup, you may also want to update internal links to the old product and resubmit the sitemap. Most stores skip both. Both matter. If you want this done end-to-end, the <a href="/services/shopify-seo/">Shopify SEO and GEO service</a> covers the redirect mapping and sitemap resubmission as part of any structural change to product URLs.</p>
+
+      <h2 id="wrapping-up">When to migrate yourself versus hire it out</h2>
+
+      <p>If you have 1 to 3 discontinued products with under 50 reviews each, and your store runs Judge.me, this is a 30-minute DIY task. Set up the Product Group, verify the live storefront, set the redirects, done. The Awesome plan free trial covers the whole project if you act inside 15 days.</p>
+
+      <p>If you have 5 or more discontinued products, any product with more than 100 reviews, or you are on Loox, Stamped, or Yotpo where the CSV path applies, the time cost rises sharply and so do the breakage points. This is where most stores either let the reviews stay orphaned (the expensive default) or hire help.</p>
+
+      <p>The Studio Niza <a href="/services/reviews-management/">reviews management service</a> includes discontinued listing review migration as part of every recurring engagement: Product Groups setup, CSV imports on the other platforms, photo re-attachment, redirect mapping, and FTC-rule verification on every migrated review. Most reviews services do not do this. It is the specific reason Studio Niza's Reviews tier exists.</p>
+
+      <p>Whether you handle it yourself or have someone else handle it, do not let the reviews sit orphaned. Every week you wait is another week of lost star snippets, lost click-through, and lost conversion on the pages that were earning trust for you.</p>
+
+      <div class="cta-block">
+        <h3>Want this done for you?</h3>
+        <p>Studio Niza's Reviews Management service includes discontinued-listing review migration. Product Groups setup, CSV imports, 301 redirect mapping, and every star snippet recovered where the FTC allows it. From $199/month, no platform lock-in.</p>
+        <a href="/services/reviews-management/" class="cta-button">See pricing & services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Can I move all my reviews from a discontinued Shopify product to a new one?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>On Judge.me, no, full bulk transfers between products are no longer permitted. The official replacement is Product Groups, which shares the same reviews across multiple products. On Loox, Stamped, and Yotpo you can do a CSV export and re-import, but expect to manually fix verified buyer flags, photo URLs, and reply threads.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Does migrating reviews violate FTC rules?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Only if the new product is substantially different from the old one. The FTC's Rule on Consumer Reviews, effective October 21, 2024, prohibits review hijacking, which is repurposing a review so it appears to be about a meaningfully different product. Migrating reviews from V3 of a running shoe to V4 is fine; migrating them to a sandal is not.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How long does it take Judge.me Product Groups to display merged reviews?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Judge.me states reviews may take at least 2 minutes to appear after adding products to a group. In practice it is often closer to 5 minutes. Refresh the new product page in an incognito window to verify the merged star rating and review count are showing.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>What happens to star snippets in Google when I delete a Shopify product?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Google removes the star snippet from search results within roughly a week, because the product schema no longer reports an aggregate rating. After you migrate the reviews and republish the product schema, allow 2 to 4 weeks for Google to re-crawl, re-parse, and restore the snippet. The recovery is not instant even when the underlying data is fixed.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Is there a free way to migrate reviews on Judge.me?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Product Groups now requires Judge.me's paid Awesome plan, which starts at $15 per month with a 15-day free trial. If you can complete the migration inside the trial window, the actual cost is zero. Outside that, $15 is usually trivial compared to the value of the orphaned reviews on a 2-year-old store.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Should I migrate reviews if the new product is meaningfully different from the old one?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. This is the line the FTC drew with the review hijacking ban. The practical test is whether the original reviewer would still recognize the new product as the same item they bought. If they would say "that's not what I reviewed," the migration is not legitimate and you should leave the old reviews on the discontinued product and start fresh on the new one.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="migrate-reviews-discontinued-shopify-product">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+</body>
+</html>
