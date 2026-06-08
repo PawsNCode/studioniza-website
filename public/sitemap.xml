@@ -49,6 +49,12 @@
   <!-- Blog posts -->
   <!-- ADD NEW BLOGS HERE (BLOCK 3) -->
   <url>
+    <loc>https://studioniza.com/journal/ai-blog-content-shopify-seo-worth-it/</loc>
+    <lastmod>2026-06-08T10:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://studioniza.com/journal/ask-customers-reviews-ftc-compliant/</loc>
     <lastmod>2026-06-07T10:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
