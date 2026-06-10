@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot Resolution Rate vs Deflection Rate</title>
+<meta name="description" content="Chatbot resolution rate vs deflection rate, explained for Shopify owners. Why a high deflection number can hide bad support, plus the 4 metrics to track.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/chatbot-resolution-vs-deflection-rate/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="What Is Chatbot Resolution Rate vs Deflection Rate (and Which One to Trust)?">
+<meta property="og:description" content="Resolution rate vs deflection rate for Shopify chatbots, and why the impressive number can hide bad support.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/chatbot-resolution-vs-deflection-rate/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/chatbot-resolution-vs-deflection-rate/chatbot-resolution-vs-deflection-rate.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chatbot Resolution Rate vs Deflection Rate by Studio Niza">
+<meta property="article:published_time" content="2026-06-10T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Is Chatbot Resolution Rate vs Deflection Rate (and Which One to Trust)?">
+<meta name="twitter:description" content="Resolution rate vs deflection rate for Shopify chatbots, explained plainly.">
+<meta name="twitter:image" content="https://studioniza.com/journal/chatbot-resolution-vs-deflection-rate/chatbot-resolution-vs-deflection-rate.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Resolution Rate vs Deflection Rate", "item": "https://studioniza.com/journal/chatbot-resolution-vs-deflection-rate/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Is Chatbot Resolution Rate vs Deflection Rate (and Which One to Trust)?",
+  "description": "Chatbot resolution rate vs deflection rate explained for Shopify owners. Why a high deflection rate can hide a bad customer experience, the four metrics worth tracking instead, and the one question to ask any chatbot vendor before you sign.",
+  "image": "https://studioniza.com/journal/chatbot-resolution-vs-deflection-rate/chatbot-resolution-vs-deflection-rate.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-06-10T10:00:00+08:00",
+  "dateModified": "2026-06-10T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/chatbot-resolution-vs-deflection-rate/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/chatbot-resolution-vs-deflection-rate/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good resolution rate for an ecommerce chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your catalog and how complex your questions are. Older rule-based bots often resolve only 10% to 30% of what they touch, while modern AI agents that can look up real order data resolve much more. Watch your own number trend upward over time rather than chasing someone else's benchmark."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between containment rate and deflection rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deflection rate counts every conversation the bot handled without a human, including ones where the customer gave up. Containment rate is a slightly higher bar that excludes customers who asked for an agent, but it still does not confirm the problem was solved. Neither one proves resolution, which is why you track resolution and CSAT alongside them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a chatbot have a high deflection rate and still be bad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and this is the core trap. A conversation counts as deflected the moment the customer stops talking to the bot, even if they left with no answer. A bot can post a 90% deflection rate while resolving closer to 40% of problems, so a high deflection rate alone tells you very little."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I check if my chatbot's deflection number is real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read the transcripts and watch the re-contact rate. If a large share of resolved customers come back about the same issue within 24 to 48 hours, the resolutions were not real. Pairing the deflection number with CSAT and a weekly transcript review is the fastest way to catch a bot that is failing quietly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What CSAT score should a Shopify chatbot aim for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aim for 80% or higher. Ecommerce satisfaction scores tend to run in the low 80s, so anything well below that signals customers are leaving conversations unhappy. A high containment rate sitting next to a low CSAT is a clear sign the bot is ending chats by frustrating people rather than helping them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a small Shopify store really need to track all of these metrics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, not at the start. If you are early, watch confirmed resolution rate and CSAT, and skim a handful of real transcripts each week. You can add handoff quality and re-contact rate once you have steady chat volume."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Resolution Rate vs Deflection Rate</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">June 10, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>What Is Chatbot Resolution Rate vs Deflection Rate (and Which One to Trust)?</h1>
+      <div style="text-align: center;"><img src="/journal/chatbot-resolution-vs-deflection-rate/chatbot-resolution-vs-deflection-rate-hero.webp" alt="Two chatbot metric cards on a desk, a large deflection rate beside a smaller resolution rate" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Every chatbot vendor leads with an impressive percentage. Resolution rate vs deflection rate is the gap between a problem solved and a customer who quietly gave up, and here is how to tell which one you are being shown.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#defined">Resolution rate, deflection rate, and the sneaky third one</a></li>
+        <li><a href="#deflection-hides-cx">Why a high deflection rate can hide a bad customer experience</a></li>
+        <li><a href="#four-metrics">The four metrics worth tracking instead</a></li>
+        <li><a href="#benchmarks">What a good number actually looks like for a small store</a></li>
+        <li><a href="#the-one-question">The one question to ask any chatbot vendor</a></li>
+        <li><a href="#who-checks">Who is actually reading the transcripts</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>A chatbot vendor showed you a number. Maybe it was 90% deflection, maybe 80%, maybe a clean round "we handle most of your support." It looked great on the slide, so you nodded. Then, before you signed, a small voice asked: most of <em>what</em>, exactly?</p>
+
+      <p>That voice is right. The difference between chatbot resolution rate vs deflection rate is the single most useful thing to understand before you pay for an AI chatbot, and it is the one thing most vendor pages are careful not to spell out.</p>
+
+      <p>Here is the short version. Deflection rate counts how many conversations the bot handled without passing them to a human. Resolution rate counts how many of those conversations actually solved the customer's problem. Those are not the same thing, and on a real dashboard they can sit 50 points apart.</p>
+
+      <p>For a new Shopify store, the gap is not academic. A "deflected" conversation can be a shopper who got their answer and bought something. It can also be a shopper who got a wrong answer, gave up, and closed the tab. Both look identical in a deflection number, and only one of them keeps your store.</p>
+
+      <p>This post defines both metrics in plain terms, shows why a high deflection rate can hide a bad customer experience, gives you the four numbers worth tracking instead, and ends with the one question that tells you whether a vendor's percentage is real. No jargon you have to look up.</p>
+
+      <h2 id="defined">Resolution rate, deflection rate, and the sneaky third one</h2>
+
+      <p>Three words get used as if they mean the same thing. They do not, and getting them straight is most of the battle.</p>
+
+      <p><strong>Deflection rate</strong> is the share of conversations the bot handled without escalating to a human, regardless of what happened to the customer. If someone chatted with the bot and did not then open a ticket or email you, that counts as deflected. A shopper who gave up in frustration and a shopper who got a perfect answer are both "deflected."</p>
+
+      <p><strong>Containment rate</strong> is a slightly higher bar. It counts conversations that ended inside the bot without the customer asking for a human. It excludes the people who hit "talk to an agent," but it still does not prove the customer got what they needed. A bot can contain a conversation by giving a vague answer that simply stops the customer from escalating.</p>
+
+      <p><strong>Resolution rate</strong> is the real one. It counts conversations where the customer's actual problem was solved. The order status was found. The return was started. The sizing question was answered correctly. This is the number tied to whether people come back and buy. <a href="https://support.zendesk.com/hc/en-us/articles/8357756478106-Understanding-the-difference-between-deflection-bot-handled-automated-resolution-and-custom-resolution-rates-Ultimate" target="_blank" rel="noopener noreferrer">Zendesk's own documentation</a> draws the same line: a true automated resolution is one a system verifies actually closed the loop, not one it assumes because the chat ended.</p>
+
+      <h3>A simple way to picture it</h3>
+
+      <p>The three numbers stack. Every resolved conversation is contained, and every contained conversation is deflected. But the reverse is not true, and that is exactly where the trouble lives. A high deflection number can be padded with conversations that were never resolved and never even properly contained.</p>
+
+      <div style="text-align: center;"><img src="/journal/chatbot-resolution-vs-deflection-rate/chatbot-resolution-vs-deflection-rate-three-terms.webp" alt="Diagram showing deflection rate, containment rate, and resolution rate as nested layers" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="deflection-hides-cx">Why a high deflection rate can hide a bad customer experience</h2>
+
+      <p>Here is the uncomfortable part. A chatbot with a 90% deflection rate can have a resolution rate closer to 40%, according to <a href="https://www.lorikeetcx.ai/articles/resolve-not-deflect" target="_blank" rel="noopener noreferrer">a 2026 analysis of AI support deployments</a>. The dashboard shows the 90. The 40 is the part you feel three months later.</p>
+
+      <p>The reason has a name: false deflection. A conversation gets marked as deflected the moment the customer stops talking to the bot, even if they stopped because the bot was useless. When <a href="https://www.usefini.com/blog/deflection-rate-vs-resolution-rate-ai-support" target="_blank" rel="noopener noreferrer">one support team audited real deployments</a>, it found that 15% to 25% of "deflected" tickets had been deflected with wrong or incomplete answers. The customer left. Their problem did not.</p>
+
+      <h3>Why this is worse in ecommerce</h3>
+
+      <p>In a B2B help desk, a frustrated customer files another ticket, so you see the re-contact. In a Shopify store, a frustrated customer just leaves. They abandon the cart. They do not write in to tell you the bot failed them. The conversation gets counted as a win while the sale walks out the door.</p>
+
+      <p>That silent exit costs more than one order. A shopper who had a bad support experience is not going to leave you a glowing review, and reviews are part of how the next shopper decides whether to trust you. Weak support quietly feeds <a href="/services/reviews-management/">fewer reviews and weaker trust signals</a>, which feeds fewer sales. None of it shows up in a deflection number.</p>
+
+      <p>This matters right now because nearly everyone is rushing in. A <a href="https://www.gartner.com/en/newsroom/press-releases/2026-02-18-gartner-survey-finds-ninety-one-percent-of-customer-service-leaders-under-pressure-to-implement-ai-in-2026" target="_blank" rel="noopener noreferrer">2026 Gartner survey</a> found 91% of service leaders are under pressure to add AI, and more than 80% of organizations expect to cut support headcount within 18 months. When that many teams lean on automation that fast, the metric you trust is the difference between a bot that helps and a bot that quietly costs you customers.</p>
+
+      <div style="text-align: center;"><img src="/journal/chatbot-resolution-vs-deflection-rate/chatbot-resolution-vs-deflection-rate-false-deflection.webp" alt="Flow showing one chat counted as deflected whether resolved, escalated, or abandoned" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="four-metrics">The four metrics worth tracking instead</h2>
+
+      <p>If deflection is the number not to trust on its own, what should you actually watch? Four metrics, and none of them is hard to understand.</p>
+
+      <h3>1. Confirmed resolution rate</h3>
+
+      <p>The percentage of conversations where the customer's problem was actually solved, confirmed by the customer or by a check of the transcript, not assumed because the chat ended. This is the closest thing to a single honest score.</p>
+
+      <h3>2. CSAT (customer satisfaction)</h3>
+
+      <p>A one-tap thumbs up or down, or a 1 to 5 rating, at the end of the chat. Aim for 80% or higher. A high containment rate sitting next to a low CSAT is the clearest warning that your bot is ending conversations by wearing people out, not by helping them.</p>
+
+      <h3>3. Escalation and handoff quality</h3>
+
+      <p>When the bot cannot help, does it hand the customer to you cleanly, with the conversation history attached? Or does it dead-end them in a loop, typing "agent, agent, agent" with no way out? A bot tuned only for deflection will avoid handing off, because every handoff dents the number. That is the opposite of what you want.</p>
+
+      <h3>4. Re-contact rate within 24 to 48 hours</h3>
+
+      <p>Of the customers the bot "resolved," how many came back about the same thing within a day or two? A low re-contact rate is the best proof a resolution was real. A high one means the bot closed conversations it never actually finished.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>What it tells you</th>
+            <th>A healthy signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Confirmed resolution rate</td>
+            <td>Problems actually solved, not just chats ended</td>
+            <td>Trending upward over time</td>
+          </tr>
+          <tr>
+            <td>CSAT</td>
+            <td>Whether customers liked the experience</td>
+            <td>80% or higher</td>
+          </tr>
+          <tr>
+            <td>Escalation and handoff quality</td>
+            <td>How cleanly the bot passes you a customer it cannot help</td>
+            <td>Fast, with chat history attached</td>
+          </tr>
+          <tr>
+            <td>Re-contact rate (24 to 48 hours)</td>
+            <td>Whether a "resolved" issue stayed resolved</td>
+            <td>Low and stable</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div style="text-align: center;"><img src="/journal/chatbot-resolution-vs-deflection-rate/chatbot-resolution-vs-deflection-rate-four-metrics.webp" alt="Simple dashboard showing resolution rate, CSAT, handoff quality, and re-contact rate" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="benchmarks">What a good number actually looks like for a small store</h2>
+
+      <p>Now the question every owner actually wants answered: what is a good number?</p>
+
+      <p>Honest answer first. It depends on your catalog, your return policy, and how messy your questions are. A store with clear shipping rules and a tight catalog will see higher numbers than one selling custom or made-to-order goods. Anyone who quotes you a single guaranteed percentage without asking about your store is selling you the number, not the result.</p>
+
+      <p>That said, here are real ranges to anchor on. Older rule-based bots tend to resolve only 10% to 30% of what they touch. Modern AI agents that can take a real action, like looking up an actual order, resolve far more. The direction of travel is steep: <a href="https://www.cxtoday.com/contact-center/agentic-ai-gartner-predicts-80-of-customer-problems-solved-without-human-help-by-2029/" target="_blank" rel="noopener noreferrer">Gartner expects agentic AI</a> to autonomously resolve about 80% of common service issues by 2029. The point is not the headline figure. It is that the industry is finally being measured on resolving problems, which is the number you should care about too.</p>
+
+      <p>For CSAT, 80% and up is the bar, and ecommerce satisfaction scores tend to run a little above that. For re-contact, lower is better, full stop.</p>
+
+      <h3>Why chasing 90% deflection is a trap</h3>
+
+      <p>A 90% deflection target sounds like a goal. In practice, pushing deflection that high usually means the bot is refusing to hand off, which is exactly the behavior that frustrates the customers who need real help. The stores that win are not the ones with the highest deflection. They are the ones whose customers got what they came for and came back.</p>
+
+      <h2 id="the-one-question">The one question to ask any chatbot vendor</h2>
+
+      <p>If you remember one thing from this post, make it this question. Ask any chatbot vendor, before you sign:</p>
+
+      <p><strong>"When you quote that percentage, what exactly are you counting, and can you show me the transcripts behind it?"</strong></p>
+
+      <p>A vendor who is proud of their resolution will answer in one breath: here is how we define a solved conversation, here are real chats, here is the re-contact rate. A vendor leaning on deflection will get vague. They will talk about "engagement" and "automation" and steer away from showing you actual conversations. The dodge is the answer.</p>
+
+      <p>In <a href="/about/">twelve years watching this play out</a>, the pattern holds. The number is only as honest as the definition under it, and the definition is only as honest as the transcripts.</p>
+
+      <h3>Four follow-ups worth asking</h3>
+
+      <p>If you want to go one level deeper, ask these. How do you define a "resolved" conversation, in plain words? What is your re-contact rate within 48 hours? When the bot cannot help, what exactly happens to that customer? And can I read ten real transcripts, including the ones that went badly?</p>
+
+      <p>The last one matters most. Anyone can show you the good chats. The bad ones tell you how the tool behaves when your customer is already annoyed. If a vendor will not show you transcripts, that is useful information on its own. You can always <a href="/contact/">send me the details</a> and I will tell you what the number probably means.</p>
+
+      <h2 id="who-checks">Who is actually reading the transcripts</h2>
+
+      <p>Here is the thing every dashboard hides: a number means nothing if no one reads the conversations behind it. This is the real split in the chatbot market, and it has nothing to do with the logo on the software.</p>
+
+      <h3>Self-serve software</h3>
+
+      <p>You pay roughly $39 to $279 a month, you get a dashboard, and you are on your own. The tool will happily report a deflection rate. Whether that rate is real, whether the bot is quietly failing on your top three questions, whether your handoff is broken: that is all on you to catch, in time you do not have.</p>
+
+      <h3>Managed service</h3>
+
+      <p>You pay more, and part of what you pay for is a person who actually reads the transcripts, finds the conversations that went sideways, and fixes the bot's answers. That weekly review is the entire point. It is the difference between a number on a screen and a bot that gets better.</p>
+
+      <p>The cost gap is smaller than it looks once you count resolution. Industry estimates in 2026 put an AI-handled resolution at well under a dollar, against several dollars for one a human handles. That gap only pays off on conversations that were genuinely resolved. A cheap tool with a flattering deflection number can cost you more than a managed bot that solves real problems, once you add back the lost carts and the support you still end up doing yourself.</p>
+
+      <p>This is how the <a href="/services/ai-chatbots/">Studio Niza AI chatbot service</a> is built: trained on your products, integrated with Shopify, and monitored every week so someone is reading the chats, not just screenshotting the dashboard. The honest math behind the $99 a month is that it includes that monitoring time. A bot you do not maintain drifts. A bot someone watches improves.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Resolution rate vs deflection rate comes down to one idea: deflection counts conversations the bot got rid of, while resolution counts problems the bot solved. A vendor who leads with deflection is showing you the flattering number. The honest one is harder to fake and worth far more.</p>
+
+      <p>So before you pay for any chatbot, do three things. Ask what the quoted percentage actually counts. Ask to see real transcripts, including the bad ones. And once a bot is live, watch resolution, CSAT, handoff quality, and 48-hour re-contact instead of staring at deflection.</p>
+
+      <p>You do not need to track all four from day one. If you are just starting, watch confirmed resolution and CSAT, and skim a handful of transcripts each week. That alone puts you ahead of most stores, which never look past the headline number.</p>
+
+      <p>A chatbot can be one of the highest-leverage tools a small Shopify store owns. It answers shipping questions at 2am, recovers carts, and frees you from the same ten emails. But that only happens when it resolves, not just deflects. The number on the demo slide is not the goal. A customer who got what they came for, and came back, is.
+
+      <div class="cta-block">
+        <h3>When you'd rather not audit this yourself</h3>
+        <p>The Studio Niza AI chatbot service is built on resolution, not deflection. Custom-trained on your products, integrated with Shopify, and monitored weekly so someone is actually reading the transcripts. Setup from $599, $99/month all-in.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See how it works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>What is a good resolution rate for an ecommerce chatbot?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It depends on your catalog and how complex your questions are. Older rule-based bots often resolve only 10% to 30% of what they touch, while modern AI agents that can look up real order data resolve much more. Watch your own number trend upward over time rather than chasing someone else's benchmark.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>What is the difference between containment rate and deflection rate?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Deflection rate counts every conversation the bot handled without a human, including ones where the customer gave up. Containment rate is a slightly higher bar that excludes customers who asked for an agent, but it still does not confirm the problem was solved. Neither one proves resolution, which is why you track resolution and CSAT alongside them.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can a chatbot have a high deflection rate and still be bad?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes, and this is the core trap. A conversation counts as deflected the moment the customer stops talking to the bot, even if they left with no answer. A bot can post a 90% deflection rate while resolving closer to 40% of problems, so a high deflection rate alone tells you very little.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How do I check if my chatbot's deflection number is real?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Read the transcripts and watch the re-contact rate. If a large share of resolved customers come back about the same issue within 24 to 48 hours, the resolutions were not real. Pairing the deflection number with CSAT and a weekly transcript review is the fastest way to catch a bot that is failing quietly.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>What CSAT score should a Shopify chatbot aim for?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Aim for 80% or higher. Ecommerce satisfaction scores tend to run in the low 80s, so anything well below that signals customers are leaving conversations unhappy. A high containment rate sitting next to a low CSAT is a clear sign the bot is ending chats by frustrating people rather than helping them.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Does a small Shopify store really need to track all of these metrics?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No, not at the start. If you are early, watch confirmed resolution rate and CSAT, and skim a handful of real transcripts each week. You can add handoff quality and re-contact rate once you have steady chat volume.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="chatbot-resolution-vs-deflection-rate">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
