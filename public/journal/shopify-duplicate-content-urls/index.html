@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Duplicate Content: Why Variant & Tag URLs Hurt SEO</title>
+<meta name="description" content="Shopify duplicate content comes from variant, collection, and tag URLs. What the canonical tag fixes, what it does not, and a 15-minute audit.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-duplicate-content-urls/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Shopify Duplicate Content: Why Variant and Tag URLs Quietly Hurt Your SEO">
+<meta property="og:description" content="Where Shopify's duplicate variant and tag URLs come from, what canonical tags fix, and a 15-minute audit.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-duplicate-content-urls/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-duplicate-content-urls/shopify-duplicate-content-urls.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify Duplicate Content: Variant and Tag URLs by Studio Niza">
+<meta property="article:published_time" content="2026-06-13T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Duplicate Content: Why Variant and Tag URLs Quietly Hurt Your SEO">
+<meta name="twitter:description" content="Why Shopify variant and tag URLs dilute SEO, and a 15-minute fix audit.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-duplicate-content-urls/shopify-duplicate-content-urls.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify Duplicate Content", "item": "https://studioniza.com/journal/shopify-duplicate-content-urls/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Shopify Duplicate Content: Why Variant and Tag URLs Quietly Hurt Your SEO",
+  "description": "How Shopify generates duplicate variant, collection, and tag URLs, what the canonical tag does and does not solve, when to noindex, and a 15-minute audit for new stores.",
+  "image": "https://studioniza.com/journal/shopify-duplicate-content-urls/shopify-duplicate-content-urls.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-06-13T10:00:00+08:00",
+  "dateModified": "2026-06-13T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-duplicate-content-urls/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-duplicate-content-urls/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Shopify duplicate content cause a Google penalty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google has stated for years that there is no duplicate content penalty for normal stores. The real costs of Shopify duplicate content are signal dilution across copies and wasted crawl time, both of which can quietly hold a page back without being a formal penalty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Shopify add canonical tags automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Modern Shopify themes add a canonical tag to product pages that points variant URLs and collection-scoped URLs back to the clean base product URL. The gap is usually on collection tag and filter pages, where the default canonical often does not point to the parent collection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the variant URL hurt my Shopify SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not. Shopify canonicalizes variant URLs to the base product page, so for shopify variant url seo there is rarely anything to fix. It is worth a 30-second check: switch a variant and confirm the canonical tag in the page source still points to the clean product URL."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I noindex my Shopify tag pages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on search demand. Thin tag or filter pages that nobody searches for can be set to noindex to cut clutter and save crawl budget. Tag pages that do have real search demand should become proper collection pages instead, so they can rank on their own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does “Alternate page with proper canonical tag” mean in Search Console?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means Google found duplicate URLs and is correctly indexing the canonical version you specified, so in most cases it is normal and needs no action. Check it only if a page you want indexed is listed there, or if the count is huge next to your real page count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I edit Shopify's robots.txt to fix duplicate URLs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Shopify lets you edit a robots.txt.liquid template to stop crawling of certain parameter URLs, but it is an advanced step that is easy to get wrong. For most small stores, using noindex on thin pages and pointing internal links at canonical URLs solves the duplicate content problem without touching robots.txt."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify Duplicate Content</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">June 13, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>10 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Shopify Duplicate Content: Why Variant and Tag URLs Quietly Hurt Your SEO</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-duplicate-content-urls/shopify-duplicate-content-urls-hero.webp" alt="One product casting duplicate shadows, showing Shopify duplicate content from variant URLs" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Shopify duplicate content is rarely something you created on purpose. One product can live at five or six URLs. Here is where those come from, what the canonical tag fixes, and a 15-minute audit you can run this weekend.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-is-shopify-duplicate-content">What counts as duplicate content?</a></li>
+        <li><a href="#where-shopify-creates-duplicate-urls">Where Shopify generates duplicate URLs</a></li>
+        <li><a href="#what-canonical-tag-does">What the canonical tag does (and doesn't)</a></li>
+        <li><a href="#noindex-vs-canonicalize">When to noindex vs canonicalize</a></li>
+        <li><a href="#15-minute-audit">The 15-minute audit</a></li>
+        <li><a href="#where-to-start">Where to start</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+
+      <p>Type site:yourstore.myshopify.com into Google and count the results. If you sell 200 products but Google shows a few thousand pages, you have just met Shopify duplicate content. You did not create those extra pages on purpose. Shopify made them for you, quietly, every time a product sits in more than one collection, every time a shopper picks a variant, and every time someone filters a collection by tag.</p>
+
+      <p>Here is the part that trips people up: this is not a penalty. Google does not hand out a duplicate content penalty to honest stores, and it has said so for years. What duplicate URLs actually do is split your ranking signals across copies of the same page and waste the time Google spends crawling your store. Both can hold a page back from the position it deserves, which feels like a penalty even though it is not one.</p>
+
+      <p>This post covers where Shopify generates duplicate paths, what the canonical tag fixes on its own, where it falls short, when to noindex instead of canonicalize, and a 15-minute audit you can run this weekend. It is written for stores with a lot of variants, filters, or tag pages: the ones wondering why their rankings feel diluted. You will not need a developer for most of it.</p>
+
+      <h2 id="what-is-shopify-duplicate-content">What counts as duplicate content?</h2>
+
+      <p>Duplicate content is the same (or nearly the same) page reachable at more than one URL. On Shopify, that usually is not stolen text or copied descriptions. It is one real product or collection that the platform serves under several different web addresses.</p>
+
+      <p>The myth worth killing first: there is no duplicate content penalty for normal stores. <a href="https://developers.google.com/search/blog/2008/09/demystifying-duplicate-content-penalty" target="_blank" rel="noopener noreferrer">Google's own guidance</a> has said this since 2008, and it still holds. Google treats the same content under different URLs as benign in most cases and simply picks one version to show.</p>
+
+      <p>So if it is not a penalty, why care? Two reasons, both quiet. First, deduplication: when Google finds several copies, it <a href="https://www.practicalecommerce.com/how-google-detects-duplicate-content" target="_blank" rel="noopener noreferrer">indexes one and filters the rest</a> out of results. If it picks the wrong copy, the URL you wanted to rank gets buried. Second, signal dilution: links, internal links, and relevance signals get spread across the copies instead of pooling on one page.</p>
+
+      <p>There is a third cost for larger catalogs: crawl waste. Googlebot has to crawl a URL before it knows the content is a duplicate, so a store with thousands of duplicate paths spends Google's crawl time on copies instead of new products. For a store with a few hundred clean pages this rarely matters. For a store generating tens of thousands of URLs, it does.</p>
+
+      <h2 id="where-shopify-creates-duplicate-urls">Where Shopify generates duplicate URLs</h2>
+
+      <p>Most Shopify duplicate content comes from five built-in behaviors. None of them are bugs. They exist for good reasons (cleaner navigation, working filters, useful tracking) and they create extra URLs as a side effect.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-duplicate-content-urls/shopify-duplicate-content-urls-url-multiplication.webp" alt="Diagram of one Shopify product at many duplicate URLs all consolidating to one canonical URL" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Variant URLs (?variant=)</h3>
+
+      <p>When a shopper picks a size or color, Shopify adds a parameter like ?variant=44710 to the URL. A product with five sizes and eight colors can produce forty of these. The good news for shopify variant url seo: modern themes already point the canonical tag on every variant URL back to the clean base product URL, so this one is usually handled for you.</p>
+
+      <h3>Collection-scoped product URLs</h3>
+
+      <p>When a product lives in more than one collection, Shopify can build a different URL for each path, such as /collections/summer/products/linen-dress and /collections/sale/products/linen-dress. Same product, same page, two addresses. This comes from the within: collection Liquid filter that themes use to keep the collection name in the breadcrumb. Shopify's canonical points them all to /products/linen-dress, but your internal links often still point at the collection-scoped versions.</p>
+
+      <h3>Tag and filter URLs</h3>
+
+      <p>This is the one that catches stores off guard. Filtering a collection by tag creates URLs like /collections/all/red or /collections/dresses?filter.p.tag=linen. Each one shows a slice of the same collection, and Shopify does not always canonicalize these the way it does variants. This is why shopify tag pages indexed shows up as a real complaint: people find dozens of thin tag pages in Google they never meant to publish. Your <a href="/journal/shopify-collection-page-seo/">collection page SEO</a> work is wasted if ten tag slices of it compete with the page itself.</p>
+
+      <h3>/collections/all and pagination</h3>
+
+      <p>Every Shopify store has a /collections/all page listing every product, which overlaps heavily with your real collections. Long collections also split into ?page=2, ?page=3, and so on. These are not always a problem, but on a large catalog they add up.</p>
+
+      <h3>Tracking and recommendation parameters</h3>
+
+      <p>Email links, ads, and Shopify's own product recommendations append parameters like ?utm_source= or ?pr_prod_strat=. Each one is technically a new URL with identical content.</p>
+
+      <p>A small catalog turns into a large crawl surface fast. Here is what one product can become:</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Example path</th>
+            <th>Roughly how many</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Clean product URL</td><td>/products/linen-dress</td><td>1 per product</td></tr>
+          <tr><td>Collection-scoped copies</td><td>/collections/summer/products/linen-dress</td><td>1 per collection it lives in</td></tr>
+          <tr><td>Variant URLs</td><td>/products/linen-dress?variant=44710</td><td>1 per variant</td></tr>
+          <tr><td>Tag and filter slices</td><td>/collections/all/red</td><td>1 per active tag combination</td></tr>
+          <tr><td>Tracking and recommendation</td><td>/products/linen-dress?pr_prod_strat=...</td><td>Effectively unlimited</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>A store of 500 products, where each one sits in 3 collections and has 3 variants, is already several thousand crawlable URLs for 500 real pages. One side effect worth flagging: when you later merge variant listings or retire a product, the reviews attached to those old URLs can get <a href="/journal/migrate-reviews-discontinued-shopify-product/">orphaned</a>. That is a separate cleanup, but it starts with the same messy-URL problem.</p>
+
+      <h2 id="what-canonical-tag-does">What the canonical tag does (and doesn't)</h2>
+
+      <p>The canonical tag is one line in a page's head that names the preferred version of a page using rel="canonical". It tells search engines: of all the URLs that show this content, this is the one to index and credit. <a href="https://www.shopify.com/blog/duplicate-content" target="_blank" rel="noopener noreferrer">Shopify themes add this automatically</a> for most stores.</p>
+
+      <p>Here is what most people get wrong about the canonical tag on Shopify. It is a hint, not a command. <a href="https://searchengineland.com/myth-duplicate-content-penalty-259657" target="_blank" rel="noopener noreferrer">Google treats it as one signal among several</a> (internal links, sitemaps, redirects) and can choose a different URL if your other signals disagree. If every internal link points to /collections/sale/products/linen-dress but your canonical says /products/linen-dress, you are sending mixed messages.</p>
+
+      <p>What Shopify's canonical tag handles well out of the box: variant URLs point back to the base product (good for shopify variant url seo), and collection-scoped product URLs point to the clean /products/ URL.</p>
+
+      <p>Where it falls short: tag and filter pages often canonicalize to themselves or to a tagged URL instead of the parent collection, so thin slices can still get indexed. And /collections/all and parameter junk are not always pointed anywhere useful.</p>
+
+      <p>The honest takeaway: for product pages, the default canonical tag on a modern Shopify theme is usually doing its job. For collection tag and filter pages, it frequently is not, and that is where the real work lives.</p>
+
+      <h2 id="noindex-vs-canonicalize">When to noindex vs canonicalize</h2>
+
+      <p>Two tools, two jobs. A canonical tag consolidates duplicates that still have a reason to exist. A noindex tag removes a page from search entirely while letting Google keep crawling its links. Picking the wrong one is the most common mistake here.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-duplicate-content-urls/shopify-duplicate-content-urls-noindex-vs-canonical.webp" alt="Decision diagram for when to canonicalize Shopify URLs versus noindex thin tag pages" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Canonicalize when the duplicate has genuine value to a user but should not be its own search result: collection-scoped product URLs, variant URLs, and paginated pages pointing to the main collection. These are mostly handled by your theme already.</p>
+
+      <p>Noindex when the page has little or no standalone search value: thin tag pages with a handful of products, internal search results, and pure parameter URLs. <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/hide-a-page-from-search-engines" target="_blank" rel="noopener noreferrer">Shopify documents the method</a>: you add a small condition to theme.liquid that prints a robots noindex tag for the templates you choose.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>If the URL is...</th>
+            <th>Do this</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>A variant or collection-scoped product copy</td><td>Leave it (theme canonical handles it)</td><td>Already consolidated to the base product</td></tr>
+          <tr><td>A paginated collection page (?page=2)</td><td>Leave it to the theme</td><td>Part of one collection series</td></tr>
+          <tr><td>A thin tag page with real search demand</td><td>Build a proper collection instead</td><td>Earns its own page and can rank</td></tr>
+          <tr><td>A thin tag or filter page with no demand</td><td>noindex</td><td>Removes clutter, saves crawl</td></tr>
+          <tr><td>Internal search results</td><td>noindex</td><td>Never useful in Google</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>But here is the fix that moves the needle more than any tag: point your <a href="/journal/shopify-internal-linking/">internal links</a> at the canonical URL. When your navigation, related-product blocks, and blog links all point to /products/linen-dress instead of the collection-scoped copies, every signal lines up and Google has no reason to pick the wrong page. This is unglamorous, manual work, which is exactly why most cheap, template-based SEO services skip it. It does not copy and paste across a hundred stores.</p>
+
+      <p>You can also edit Shopify's robots.txt.liquid template to stop crawling of certain parameter URLs, but that is an advanced step and easy to get wrong. For most small stores, noindex on the thin pages plus clean internal links is enough.</p>
+
+      <h2 id="15-minute-audit">The 15-minute audit</h2>
+
+      <p>You do not need software for a first pass. Here is a 15-minute audit that surfaces the worst of your Shopify duplicate content.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-duplicate-content-urls/shopify-duplicate-content-urls-search-filtering.webp" alt="Search engine filtering duplicate Shopify URLs and keeping one canonical page during an audit" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>1. Check a product page's canonical (2 minutes)</h3>
+
+      <p>Open a product through a collection path (like /collections/sale/products/linen-dress). View the page source (right-click, then View Page Source) and search for "canonical". It should point to the clean /products/linen-dress URL. Then switch a variant and confirm the canonical stays the same. If both check out, your shopify variant url seo basics are solid.</p>
+
+      <h3>2. Compare canonicals in Search Console (4 minutes)</h3>
+
+      <p>In Google Search Console, run URL Inspection on an important product. Compare the user-declared canonical (your tag) with the Google-selected canonical (Google's choice). If they match, good. If Google picked a collection-scoped or tagged version, your internal links are probably arguing with your canonical. Pages that never get indexed at all are a related signal worth <a href="/journal/shopify-pages-not-indexed-google/">checking too</a>.</p>
+
+      <h3>3. Read the "Alternate page with proper canonical tag" report (3 minutes)</h3>
+
+      <p>In Search Console, open Indexing, then Pages, then the row labeled "Alternate page with proper canonical tag". This status is usually normal: it means Google found duplicates and is correctly indexing your canonical. Scan the list anyway. If a page you want indexed is sitting in there, its canonical points at the wrong place. If the count is enormous next to your real page count, that points to a structural problem.</p>
+
+      <h3>4. Find indexed tag pages (3 minutes)</h3>
+
+      <p>Search Google for site:yourstore.com inurl:collections. Skim for tag and filter slices that should not be there. This is the fastest way to see whether you have a shopify tag pages indexed problem. Make a short list of the thin ones to noindex.</p>
+
+      <h3>5. Spot-check your internal links (3 minutes)</h3>
+
+      <p>Hover over the product links in your nav and on a collection page. Do they read /products/handle or /collections/x/products/handle? If it is the latter, that is your highest-value cleanup.</p>
+
+      <h2 id="where-to-start">Where to start</h2>
+
+      <p>Shopify duplicate content is rarely the disaster it feels like when you first see thousands of URLs in a site: search. It is almost never a penalty. It is signal dilution and wasted crawl time, and both are fixable without touching most of your store.</p>
+
+      <p>Start with the audit. If your product canonicals are clean and Google is selecting the URLs you expect, you may be in better shape than you feared, and your time is better spent elsewhere. If Google is choosing collection-scoped or tagged copies, fix your internal links first, then noindex the thin tag and filter pages that have no search demand. Turn the tag pages that do have demand into real collections so they earn their place.</p>
+
+      <p>The honest limit: this gets you most of the way there. Themes vary, some apps add their own parameters, and a large catalog can need a more careful pass and sometimes a robots.txt.liquid edit. If you want the bigger picture of your store's technical health, a fuller <a href="/journal/shopify-seo-audit-checklist/">Shopify SEO audit</a> covers the rest. For most stores with a lot of variants or tags, though, the 15-minute pass above finds the leaks that matter. You can do the first one this weekend.</p>
+
+
+      <div class="cta-block">
+        <h3>Want someone to find the duplicate URLs for you?</h3>
+        <p>Studio Niza's Shopify SEO work includes a technical crawl that catches duplicate variant, collection, and tag URLs, sets the right canonicals, noindexes the thin pages, and points your internal links at one clean URL. Pricing starts at $499 one-time.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See pricing & services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Does Shopify duplicate content cause a Google penalty?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Google has stated for years that there is no duplicate content penalty for normal stores. The real costs of Shopify duplicate content are signal dilution across copies and wasted crawl time, both of which can quietly hold a page back without being a formal penalty.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does Shopify add canonical tags automatically?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. Modern Shopify themes add a canonical tag to product pages that points variant URLs and collection-scoped URLs back to the clean base product URL. The gap is usually on collection tag and filter pages, where the default canonical often does not point to the parent collection.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Will the variant URL hurt my Shopify SEO?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Usually not. Shopify canonicalizes variant URLs to the base product page, so for shopify variant url seo there is rarely anything to fix. It is worth a 30-second check: switch a variant and confirm the canonical tag in the page source still points to the clean product URL.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Should I noindex my Shopify tag pages?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It depends on search demand. Thin tag or filter pages that nobody searches for can be set to noindex to cut clutter and save crawl budget. Tag pages that do have real search demand should become proper collection pages instead, so they can rank on their own.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>What does “Alternate page with proper canonical tag” mean in Search Console?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It means Google found duplicate URLs and is correctly indexing the canonical version you specified, so in most cases it is normal and needs no action. Check it only if a page you want indexed is listed there, or if the count is huge next to your real page count.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can I edit Shopify's robots.txt to fix duplicate URLs?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. Shopify lets you edit a robots.txt.liquid template to stop crawling of certain parameter URLs, but it is an advanced step that is easy to get wrong. For most small stores, using noindex on thin pages and pointing internal links at canonical URLs solves the duplicate content problem without touching robots.txt.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-duplicate-content-urls">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
