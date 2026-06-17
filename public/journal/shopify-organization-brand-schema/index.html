@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Organization Schema: The Entity Signal for AI</title>
+<meta name="description" content="How to add Organization and Brand schema to your Shopify store so Google and AI search recognize it as a real brand. The JSON-LD, sameAs, and validation.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-organization-brand-schema/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Organization and Brand Schema for Shopify: The Entity Signal AI Search Needs">
+<meta property="og:description" content="Make Google and AI search see your Shopify store as a real brand entity, not just a set of product pages.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-organization-brand-schema/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-organization-brand-schema/shopify-organization-brand-schema.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Organization and Brand Schema for Shopify by Studio Niza">
+<meta property="article:published_time" content="2026-06-17T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Organization and Brand Schema for Shopify: The Entity Signal AI Search Needs">
+<meta name="twitter:description" content="Wire Organization and Brand schema into your Shopify store, and why AI search cares.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-organization-brand-schema/shopify-organization-brand-schema.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Organization & Brand Schema", "item": "https://studioniza.com/journal/shopify-organization-brand-schema/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Organization and Brand Schema for Shopify: The Entity Signal AI Search Needs",
+  "description": "How to add Organization and Brand schema to a Shopify store so Google and AI engines recognize it as a real entity, including the JSON-LD block, sameAs, and how to validate it.",
+  "image": "https://studioniza.com/journal/shopify-organization-brand-schema/shopify-organization-brand-schema.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-06-17T10:00:00+08:00",
+  "dateModified": "2026-06-17T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-organization-brand-schema/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-organization-brand-schema/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Shopify add Organization schema automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your theme. Many Shopify themes output a basic Organization block with your store name and logo, but it is often thin and rarely includes the sameAs links that matter most for entity recognition. Check your homepage source or run it through a validator before adding your own, so you do not end up with two conflicting blocks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need Brand schema if I only sell my own products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not as a separate entity. For a single-brand store, your Organization schema already represents the brand, and you can name your brand inside your Product schema using the brand property. A distinct Brand entity is mainly useful when you sell multiple brands and need to keep them apart."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will Organization schema get me a Google knowledge panel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not on its own. A knowledge panel only appears once Google treats your brand as a known entity, which is driven mostly by mentions, press, and entries on sites like Wikipedia or Wikidata. Organization schema influences which logo, name, and description Google uses, but it does not create the panel by itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What goes in the sameAs property for a Shopify store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "URLs to other official pages about your brand that you control: your Instagram, TikTok, LinkedIn, YouTube, and any Wikipedia, Wikidata, or Crunchbase entry if one exists. Only include profiles that genuinely belong to your brand, since sameAs is how search engines merge those sources into one entity record."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do I put Organization schema on Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In one place, not on every page. Google recommends your homepage or a single page that describes your business, like your About page. On Shopify, the clean method is adding the JSON-LD block once to theme.liquid before the closing head tag, set to load only on the homepage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can duplicate or wrong Organization schema hurt my store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conflicting entity data can confuse search engines more than having none, so two Organization blocks that disagree on name, logo, or URL is a real problem. Markup that misrepresents your business can also draw a manual action from Google. Keep one clean block, and make sure every detail matches what is visible and true on your site."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Organization & Brand Schema</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">June 17, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Organization and Brand Schema for Shopify: The Entity Signal AI Search Needs</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-organization-brand-schema/shopify-organization-brand-schema-hero.webp" alt="Laptop showing a Shopify brand-name search with a Google entity panel on a calm magenta-lit desk" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">You marked up your products. But you never told search engines who sells them. Here is the Organization and Brand schema that makes your Shopify store a real entity, the exact JSON-LD block, and how to check it works.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-is-an-entity">What an entity means in 2026 search</a></li>
+        <li><a href="#why-product-schema-isnt-enough">Why Product schema isn't enough on its own</a></li>
+        <li><a href="#organization-vs-brand">Organization schema vs Brand schema</a></li>
+        <li><a href="#the-json-ld-block">The Organization and sameAs JSON-LD block</a></li>
+        <li><a href="#knowledge-panel-and-ai">Knowledge panels and AI brand recognition</a></li>
+        <li><a href="#where-to-put-it-and-validate">Where to put it on Shopify and how to validate</a></li>
+        <li><a href="#where-to-start">Where to start this week</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>Your Shopify theme already outputs Product schema. Every product page tells Google the name, price, and availability of what you sell. That part is handled. What most stores never add is the schema that says <em>who is doing the selling</em>. That gap is what Shopify Organization schema fills, and in 2026 it matters more than it used to.</p>
+
+      <p>Here is the short version. Search has shifted from matching keywords to recognizing entities: real things in the world, like a person, a place, or a brand. Google and the AI tools people now use to shop (ChatGPT, Perplexity, Gemini, Claude) are trying to figure out whether your store is a real, distinct brand or just another page of products. Organization and Brand schema is how you answer that question in a language they read directly.</p>
+
+      <p>This sits one level deeper than marking up your products or your FAQs. It is the layer that ties everything together: this store, this founder, these social profiles, all one brand. Get it right and you influence how your name, logo, and description show up. Skip it and you leave that to guesswork.</p>
+
+      <p>This post covers what an entity actually is, why Product schema alone leaves a hole, the difference between Organization and Brand schema, the exact JSON-LD block to use on Shopify, what it can and cannot do for a knowledge panel, and how to validate it. Nothing you cannot act on. You will be able to start this week.</p>
+
+      <h2 id="what-is-an-entity">What an entity means in 2026 search</h2>
+
+      <p>An entity is a specific thing search engines can identify and tell apart from everything else: a person, a company, a product line, a place. Your brand is an entity. So is your founder. So is each product you sell.</p>
+
+      <p>For years, ranking was mostly about keywords on a page. That changed. Google now reads a query, works out which entities it refers to, and maps how they relate to each other. SEO people call this entity SEO, and it is the foundation of what gets called topical authority.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-organization-brand-schema/shopify-organization-brand-schema-entity-graph.webp" alt="Diagram of a brand entity graph linked by sameAs to founder, products, and social profiles" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Picture it as a graph. Your brand sits in the middle as one node. Lines run out from it to your founder, your products, your social profiles, your reviews. Each confirmed connection makes the brand more legible. The more clearly those lines are drawn, the more confident a search engine is that your store is a real, known thing and not a lookalike.</p>
+
+      <p>AI shopping assistants work the same way, just with a different output. When a buyer asks an AI tool where to buy what you sell, the tool is choosing between entities it recognizes. A store it can resolve cleanly to a real brand is easier to mention than one it has to guess about. Entity recognition is quietly becoming the next decade of organic traffic, and most Shopify stores have not started on it.</p>
+
+      <p>Schema markup is how you draw those lines on purpose instead of hoping Google infers them. That is the whole job of Organization and Brand schema.</p>
+
+      <h2 id="why-product-schema-isnt-enough">Why Product schema isn't enough on its own</h2>
+
+      <p>Product schema describes things you sell. It tells Google this page is a product, here is its price, here is its rating, here is whether it is in stock. That earns you merchant listings and the occasional rich result. It is necessary, and you should keep it.</p>
+
+      <p>But Product schema never describes the seller. It says nothing about who you are as a business, where you operate, what your brand is called, or how to reach you. A search engine reading only your product pages sees a pile of items with no clear owner.</p>
+
+      <p>That is the hole. You can have perfect Product markup on 80 listings and still be invisible as a brand. The same is true for FAQ markup. <a href="/journal/shopify-faq-schema/">FAQ schema on Shopify</a> helps AI engines quote your answers, but it does not tell them who is answering.</p>
+
+      <p>Organization schema closes the gap by naming the business itself as an entity and pointing to everything that proves it is real. It is the one block that says, in machine-readable terms: this whole store belongs to this one brand, run by this person, reachable here, and also present on these other sites.</p>
+
+      <p>If you have ever wondered <a href="/journal/shopify-store-chatgpt-visibility/">why your store isn't showing up in ChatGPT</a> even though your products are indexed, a missing entity layer is often part of the answer. The AI has your products. It just is not sure they add up to a brand worth naming.</p>
+
+      <h2 id="organization-vs-brand">Organization schema vs Brand schema</h2>
+
+      <p>These two get confused constantly, so here is the plain distinction.</p>
+
+      <p><strong>Organization schema</strong> describes the business entity that operates your website: the company, the studio, the shop. It carries your name, logo, contact details, founder, and the links that prove you exist elsewhere on the web.</p>
+
+      <p><strong>Brand schema</strong> describes the label behind a product. On a product page, the brand property says which brand made or sells this item. It is most useful for retailers that carry many brands, or for a company that sells under several brand names.</p>
+
+      <p>For most readers here, you run a single-brand, direct-to-consumer store. Your company and your brand are the same name. In that case, Organization schema does the heavy lifting, and Brand mostly shows up as a small property inside your Product schema, naming your own brand as the maker. You do not need an elaborate separate Brand entity. You need a complete Organization entity, plus your brand named consistently on your products.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Schema type</th>
+            <th>What it describes</th>
+            <th>When a Shopify store needs it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Organization</strong> (or OnlineStore)</td>
+            <td>The business that runs the store: name, logo, contact, founder, profiles</td>
+            <td>Every store. Place it once, sitewide.</td>
+          </tr>
+          <tr>
+            <td><strong>Brand</strong></td>
+            <td>The label behind a product</td>
+            <td>Named inside Product schema. A separate entity only if you sell multiple brands.</td>
+          </tr>
+          <tr>
+            <td><strong>Product</strong></td>
+            <td>A single item for sale: price, availability, rating</td>
+            <td>Every product page. Your theme usually handles this.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>The practical rule: get Organization right first. Add the brand property to your products so each item points back to your brand by name. Only build out a distinct Brand entity if you actually sell multiple brands and need to keep them apart.</p>
+
+      <h2 id="the-json-ld-block">The Organization and sameAs JSON-LD block</h2>
+
+      <p>Here is the block. Google recommends using the most specific type that fits, so for an online store, use <strong>OnlineStore</strong>, which is a subtype of Organization. Replace the example values with yours.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <pre><code>&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;OnlineStore&quot;,
+  &quot;@id&quot;: &quot;https://yourstore.com/#organization&quot;,
+  &quot;name&quot;: &quot;Your Store Name&quot;,
+  &quot;url&quot;: &quot;https://yourstore.com/&quot;,
+  &quot;logo&quot;: &quot;https://yourstore.com/cdn/shop/files/logo.png&quot;,
+  &quot;description&quot;: &quot;A short, true description of what you sell, who you sell to, and where you ship.&quot;,
+  &quot;email&quot;: &quot;hello@yourstore.com&quot;,
+  &quot;foundingDate&quot;: &quot;2024&quot;,
+  &quot;founder&quot;: {
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;name&quot;: &quot;Founder Name&quot;
+  },
+  &quot;contactPoint&quot;: {
+    &quot;@type&quot;: &quot;ContactPoint&quot;,
+    &quot;contactType&quot;: &quot;Customer Service&quot;,
+    &quot;email&quot;: &quot;hello@yourstore.com&quot;
+  },
+  &quot;sameAs&quot;: [
+    &quot;https://www.instagram.com/yourstore&quot;,
+    &quot;https://www.tiktok.com/@yourstore&quot;,
+    &quot;https://www.linkedin.com/company/yourstore&quot;,
+    &quot;https://www.youtube.com/@yourstore&quot;
+  ]
+}
+&lt;/script&gt;</code></pre>
+      </div>
+
+      <p>A few notes on the properties that carry the most weight.</p>
+
+      <p><strong>name and url</strong> identify the brand and its home. Use the same name you use everywhere else, exactly. Consistency is the signal.</p>
+
+      <p><strong>logo</strong> is the image Google may show in search results and a knowledge panel. Per <a href="https://developers.google.com/search/docs/appearance/structured-data/organization" target="_blank" rel="noopener noreferrer">Google's Organization documentation</a>, it must be at least 112 by 112 pixels, crawlable, and readable on a white background.</p>
+
+      <p><strong>sameAs</strong> is the property most stores skip, and it is the one that does the most for entity recognition. It is an array of URLs to other pages about the same brand: your Instagram, your TikTok, your LinkedIn, your YouTube, and any Wikipedia, Wikidata, or Crunchbase entry if you have one. Google and AI systems use these links to merge information from different sources into one entity record. Without sameAs, Google has to guess that your Instagram and your store are the same brand, and that guess often goes wrong.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-organization-brand-schema/shopify-organization-brand-schema-json-ld.webp" alt="Annotated Shopify Organization schema JSON-LD block labeling name, logo, sameAs, and founder" style="margin-bottom: 16px; float: none;"></div>
+
+      <p><strong>contactPoint and founder</strong> add real-world detail. A contact email and a named founder make the entity look like what it is: a real business run by a real person. If you sell your own products, you can also name your brand inside your Product schema using the brand property, which ties the two together.</p>
+
+      <p>One caution before you paste anything. Your schema must match what is actually visible and true on your site. Google's <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener noreferrer">structured data guidelines</a> are explicit that markup has to be a true representation of the page, and content that misleads can draw a manual action. Do not invent an address you do not have or a founder who does not exist.</p>
+
+      <h2 id="knowledge-panel-and-ai">Knowledge panels and AI brand recognition</h2>
+
+      <p>Here is where I have to be straight with you, because a lot of posts are not.</p>
+
+      <p>Adding Organization schema will not, by itself, summon a Google knowledge panel. That is the box that appears on the right of search results for a brand name. A panel only shows up when Google already treats your brand as a known entity in its Knowledge Graph, and that recognition is earned mostly off your own site: <a href="https://www.practicalecommerce.com/SEO-How-to-Optimize-Knowledge-Graph-for-Your-Brand" target="_blank" rel="noopener noreferrer">mentions across the web, coverage from publishers, a Wikipedia or Wikidata entry, awards</a>. A brand-new store with no press is unlikely to get one yet, and that is normal. As <a href="https://www.shopify.com/blog/knowledge-panel" target="_blank" rel="noopener noreferrer">Shopify notes</a>, small stores usually get a Google Business Profile in that spot instead.</p>
+
+      <p>So what does the schema actually do? It controls the details. When Google does build an entity record for you, your Organization markup is how you influence which logo, which name, and which description it uses, and which social profiles it ties to you. It is the difference between Google guessing and Google reading.</p>
+
+      <p>For AI search, the payoff is more immediate. Google has said structured data gives pages an advantage in results, and Microsoft has <a href="https://searchengineland.com/schema-markup-ai-search-no-hype-472339" target="_blank" rel="noopener noreferrer">confirmed that schema helps its AI understand content</a> for Copilot. The exact mechanics are not public, but the pattern is consistent: a clean, complete entity is easier for an AI to recognize, trust, and mention than one it has to assemble from scraps. AI engines also lean on your description almost word for word, so write a real one.</p>
+
+      <p>This is the same groundwork behind <a href="/journal/geo-for-shopify/">getting your store cited in ChatGPT, Perplexity, and Claude</a>. Entity schema does not guarantee a citation. It makes you legible enough to be a candidate.</p>
+
+      <h2 id="where-to-put-it-and-validate">Where to put it on Shopify and how to validate</h2>
+
+      <p>Organization schema belongs in one place, not on every page. Google recommends putting it on your home page or a single page that describes your business, like your About page. You do not repeat it across every product.</p>
+
+      <p>On Shopify, the clean way is to add the JSON-LD block once to your theme's main layout file, theme.liquid, just before the closing head tag, wrapped so it loads only on the homepage. If editing theme code is not your thing, several SEO apps will inject Organization schema for you, though many ship a thin version without sameAs.</p>
+
+      <h3>Watch for duplicate schema</h3>
+
+      <p>Here is the most common mistake. Many themes and apps already output a basic Organization block. If you add a second one, you now have two entity records that may disagree on name, logo, or URL, and conflicting entity data confuses search engines more than no data does. Before you add anything, check what your store already outputs, then either edit the existing block or remove it before adding yours. One clean Organization entity beats two competing ones.</p>
+
+      <h3>How to validate it</h3>
+
+      <p>Once it is live, test it. Three checks, in order.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-organization-brand-schema/shopify-organization-brand-schema-validation.webp" alt="Three-step validation of Shopify Organization schema: Rich Results Test, Schema validator, Search Console" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Run Google's <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer">Rich Results Test</a> on your homepage URL to confirm Google can read the block with no critical errors. Then run the same page through the <a href="https://validator.schema.org/" target="_blank" rel="noopener noreferrer">Schema.org Markup Validator</a>, which checks your markup against the full vocabulary. Finally, watch the Enhancements and structured-data reports in Google Search Console over the following weeks, since Google can take days to recrawl and reflect changes.</p>
+
+      <p>If all three are clean and your details match what is visible on your site, you have done the part that is in your control. The rest is time and real-world signals. This is also one line item on <a href="/journal/shopify-seo-audit-checklist/">a wider Shopify SEO audit</a>, so if you are wiring this in, it is worth checking the rest while you are in there.</p>
+
+      <h2 id="where-to-start">Where to start this week</h2>
+
+      <p>You do not need to do all of this at once. The order that matters:</p>
+
+      <p>First, check what Organization schema your store already outputs, so you do not create a duplicate. Second, write a real one-paragraph description of your brand: what you sell, who you serve, where you ship. AI engines read it closely, so make it accurate and specific. Third, gather your sameAs URLs, every official profile you actually control, and build the OnlineStore block above. Fourth, place it once on your homepage and validate it with the two testing tools.</p>
+
+      <p>That is a focused afternoon of work, and it is the kind of foundational SEO that keeps paying off quietly. It will not transform your traffic overnight, and any post that promises that is selling you something. What it does is make your store legible as a brand, to Google and to the AI tools more buyers reach for every month.</p>
+
+      <p>The honest limit: schema is the part you can control. A knowledge panel and AI citations also depend on the web talking about you, which takes real-world traction you build over time. Wiring the entity layer correctly just means that when that traction comes, the recognition lands on a clean, accurate record instead of a guess.</p>
+
+      <p>If you would rather not hand-edit theme.liquid and chase validation errors, that is a reasonable place to bring in help.</p>
+
+      <div class="cta-block">
+        <h3>Want the entity layer wired in for you?</h3>
+        <p>Studio Niza's SEO work includes real Organization, Brand, and sameAs schema, validated and placed once across your store, not template fill-ins. Pricing starts at $499 one-time.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See SEO & GEO pricing <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Does Shopify add Organization schema automatically?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It depends on your theme. Many Shopify themes output a basic Organization block with your store name and logo, but it is often thin and rarely includes the sameAs links that matter most for entity recognition. Check your homepage source or run it through a validator before adding your own, so you do not end up with two conflicting blocks.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Do I need Brand schema if I only sell my own products?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Usually not as a separate entity. For a single-brand store, your Organization schema already represents the brand, and you can name your brand inside your Product schema using the brand property. A distinct Brand entity is mainly useful when you sell multiple brands and need to keep them apart.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Will Organization schema get me a Google knowledge panel?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not on its own. A knowledge panel only appears once Google treats your brand as a known entity, which is driven mostly by mentions, press, and entries on sites like Wikipedia or Wikidata. Organization schema influences which logo, name, and description Google uses, but it does not create the panel by itself.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>What goes in the sameAs property for a Shopify store?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>URLs to other official pages about your brand that you control: your Instagram, TikTok, LinkedIn, YouTube, and any Wikipedia, Wikidata, or Crunchbase entry if one exists. Only include profiles that genuinely belong to your brand, since sameAs is how search engines merge those sources into one entity record.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Where do I put Organization schema on Shopify?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>In one place, not on every page. Google recommends your homepage or a single page that describes your business, like your About page. On Shopify, the clean method is adding the JSON-LD block once to theme.liquid before the closing head tag, set to load only on the homepage.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can duplicate or wrong Organization schema hurt my store?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Conflicting entity data can confuse search engines more than having none, so two Organization blocks that disagree on name, logo, or URL is a real problem. Markup that misrepresents your business can also draw a manual action from Google. Keep one clean block, and make sure every detail matches what is visible and true on your site.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-organization-brand-schema">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
