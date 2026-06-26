@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot Brand Voice: Keep AI Support On-Brand</title>
+<meta name="description" content="How to give your Shopify chatbot a real brand voice: the tone attributes to define, how to encode them, and the guardrails that protect accuracy.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-chatbot-brand-voice/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Chatbot Tone and Brand Voice: How to Keep AI Support On-Brand">
+<meta property="og:description" content="How to give your Shopify chatbot a real brand voice, and keep it accurate while you do it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-chatbot-brand-voice/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-chatbot-brand-voice/shopify-chatbot-brand-voice.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chatbot Tone and Brand Voice by Studio Niza">
+<meta property="article:published_time" content="2026-06-26T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chatbot Tone and Brand Voice: How to Keep AI Support On-Brand">
+<meta name="twitter:description" content="How to give your Shopify chatbot a real brand voice without breaking accuracy.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-chatbot-brand-voice/shopify-chatbot-brand-voice.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Chatbot Brand Voice", "item": "https://studioniza.com/journal/shopify-chatbot-brand-voice/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Chatbot Tone and Brand Voice: How to Keep AI Support On-Brand",
+  "description": "How to give a Shopify chatbot a real brand voice: the tone attributes to define, how to encode them in a system prompt, and the guardrails that keep it accurate.",
+  "image": "https://studioniza.com/journal/shopify-chatbot-brand-voice/shopify-chatbot-brand-voice.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-06-26T10:00:00+08:00",
+  "dateModified": "2026-06-26T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-chatbot-brand-voice/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-chatbot-brand-voice/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I give my Shopify chatbot a brand voice without coding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. On modern LLM-based chatbots, brand voice is set through the system prompt and tone settings, which are plain-language instructions, not code. You describe the voice, list words to use and avoid, and add a few example replies. The technical work is in connecting the bot to your store data, not in the tone itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a custom tone make my chatbot less accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not if you add guardrails. Tone and accuracy are configured separately. The bot's voice comes from the system prompt, while accuracy comes from grounding it in your real store information and instructing it to admit when it does not know. A well-built bot is both on-brand and honest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should my Shopify chatbot use emojis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your brand and where the chat appears. Define the rule on purpose rather than leaving it to the model's default, which tends to overuse them. A casual lifestyle brand might allow one emoji when a customer is happy, while a professional or technical store may use none. Consistency matters more than the choice itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I keep my chatbot on-brand during long conversations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Language models drift toward generic defaults the longer a chat runs. The fix is to repeat a short version of the persona and tone rules inside the conversation context, so the bot is reminded who it is on every turn. Reviewing real transcripts and tightening the rules also keeps tone from slipping over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a Friendly tone preset enough for brand voice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Presets like Friendly or Professional are a starting point, not a brand voice. They cannot capture the difference between your store and a competitor that picked the same preset. Real brand voice needs defined attributes, word choices, and example replies written specifically for your store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I review my chatbot's tone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Closely in the first 30 days, then periodically after that. The first weeks of real conversations reveal where the tone slips or the bot guesses, which is where the most useful edits come from. After that, a monthly check on transcripts is usually enough for a small store."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Chatbot Brand Voice</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">June 26, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Chatbot Tone and Brand Voice: How to Keep AI Support On-Brand</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-brand-voice/shopify-chatbot-brand-voice-hero.webp" alt="Shopify store owner at a laptop reviewing a chatbot's brand voice in a chat window" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Default AI support sounds like every other bot. Here is how to define your store's voice, encode it in a system prompt, and keep tone consistent without breaking accuracy.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#why-default-ai-tone-feels-generic">Why default AI tone feels generic</a></li>
+        <li><a href="#voice-vs-tone">Voice and tone are not the same thing</a></li>
+        <li><a href="#voice-attributes-to-define">The voice attributes worth defining first</a></li>
+        <li><a href="#encode-voice-system-prompt">How to encode brand voice in a system prompt</a></li>
+        <li><a href="#guardrails-tone-accuracy">The guardrails that keep tone from breaking accuracy</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>You configured a chatbot for your Shopify store, opened a test chat, and felt something go slightly wrong. The answers were correct. The tone was not yours. It sounded polite, capable, and completely generic, like it could belong to any store selling anything. That gap has a name. It is your <strong>chatbot brand voice</strong>, and right now your bot does not have one.</p>
+
+      <p>This is a reasonable thing to worry about. A chatbot is often the first thing a customer interacts with after they land on your store. If it sounds like a call-center script, it quietly tells people your brand is a template, and shoppers notice. In a 2026 survey of 6,000 people across the US, UK, and Canada, <a href="https://www.answerconnect.com/blog/business-tips/45-ai-customer-experience-statistics/" target="_blank" rel="noopener noreferrer">45% said AI support responses felt too generic or unhelpful</a>.</p>
+
+      <p>The good news: tone is controllable. As Shopify chatbots have moved from rigid decision-tree scripts to large language models, the personality of the bot became something you configure on purpose, not something you accept by default. The hard part is knowing what to define and how to lock it in without the bot drifting or, worse, sounding friendly while giving wrong answers.</p>
+
+      <p>This post covers why default AI tone feels flat, the voice attributes worth defining, how to encode them in a system prompt, and the guardrails that keep tone consistent without breaking accuracy. It is written for brand-conscious Shopify owners who want a bot that sounds like their store, not like every other store.</p>
+
+      <h2 id="why-default-ai-tone-feels-generic">Why does default AI tone feel generic?</h2>
+
+      <p>A fresh language model has read an enormous slice of the internet. Left to its own defaults, it answers the way the average of that writing answers: courteous, hedged, a little corporate, agreeable to a fault. That average is the problem. Your brand is not the average of the internet.</p>
+
+      <p>Most chatbot platforms try to solve this with tone presets. You pick "Friendly" or "Professional" from a dropdown and move on. Those presets are a starting point, not a voice. "Friendly" can mean warm and calm, or it can mean chatty and full of exclamation points. A dropdown cannot tell the difference between your store and a competitor that also picked "Friendly," so both bots end up sounding the same.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-brand-voice/shopify-chatbot-brand-voice-before-after.webp" alt="Side-by-side chat replies: a generic default bot answer versus an on-brand answer" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>This matters more than it used to. Customer patience for generic AI support is thin and getting thinner. <a href="https://www.answerconnect.com/blog/news/consumers-turning-away-from-ai-customer-service/" target="_blank" rel="noopener noreferrer">Reported frustration with AI agents rose to 59% in early 2026</a>, up from 54% the year before, and 71% of people said human agents show more empathy. A bot that sounds like a script confirms the fear people already carry into the conversation.</p>
+
+      <p>On-brand tone is the cheapest way to push against that. When the bot sounds like the rest of your store, the same emails, the same product pages, the same packaging insert, the customer relaxes. Consistency reads as competence.</p>
+
+      <h2 id="voice-vs-tone">Voice and tone are not the same thing</h2>
+
+      <p>Before you configure anything, separate two ideas that get mixed up constantly: voice and tone. Getting this right is what keeps a bot consistent without sounding robotic.</p>
+
+      <p><strong>Voice is your brand's fixed personality.</strong> It does not change. If your store is warm, plainspoken, and a little playful, the bot is warm, plainspoken, and a little playful in every message it sends.</p>
+
+      <p><strong>Tone is how that voice adjusts to context.</strong> The voice stays the same; the register shifts. A customer asking which size to order gets a light, helpful tone. A customer whose package arrived broken gets the same voice, but a calmer, more careful tone that leads with the apology.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-brand-voice/shopify-chatbot-brand-voice-voice-vs-tone.webp" alt="Diagram showing brand voice as a fixed core and tone as a dial that shifts by context" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Think of voice as the instrument and tone as how hard you play it. A warm, direct brand stays warm and direct whether it is recommending a product or handling a complaint. It just leads with enthusiasm in one and with empathy in the other.</p>
+
+      <p>This distinction is practical, not academic. When you write your bot's configuration, you define the voice once, then you write a few tone rules for the situations that actually come up: a happy question, a confused customer, a complaint, an order problem, and a request the bot cannot handle. Five contexts cover most of what a small Shopify store sees.</p>
+
+      <h2 id="voice-attributes-to-define">The voice attributes worth defining first</h2>
+
+      <p>"Sound like us" is not something a bot can act on. You have to break voice into attributes you can actually write down. Four of them carry most of the weight for a Shopify store.</p>
+
+      <h3>Formality</h3>
+
+      <p>Where does your brand sit between "Hey there" and "Good afternoon"? A skincare brand for twenty-somethings and a supplier of professional dental tools do not talk the same way. Pick a point on that line and hold it. The fastest way to sound off-brand is to swing between casual and stiff inside the same conversation.</p>
+
+      <h3>Warmth</h3>
+
+      <p>Warmth is how much the bot acknowledges the person before solving the problem. High warmth opens with "That sounds frustrating, let me sort it out." Low warmth goes straight to the fix. Neither is wrong. A meditation brand wants high warmth; a tools-and-parts store may want efficient and direct. Decide on purpose.</p>
+
+      <h3>Emoji and punctuation</h3>
+
+      <p>This is where bots most often betray themselves. Does your brand use emoji? One, sparingly, or never? Exclamation points, or full stops? These small habits are a large part of how a brand sounds in text. Write the rule down, because a model left to its defaults tends to reach for the cheerful exclamation point every time.</p>
+
+      <h3>Apology and escalation style</h3>
+
+      <p>When something goes wrong, what does the bot say, and when does it hand off to you? A good apology style is short, takes responsibility without over-grovelling, and moves to the next step. The escalation rule matters just as much: the bot should know the moment to stop trying and offer a human. Knowing its own limits is part of the voice.</p>
+
+      <p>Here is what those attributes look like applied to a single warm, plainspoken store, next to the default a bot reaches for on its own.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Situation</th>
+            <th>Default bot</th>
+            <th>On-brand bot</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Greeting</td>
+            <td>Hello! How may I assist you today?</td>
+            <td>Hi, what can I help you find?</td>
+          </tr>
+          <tr>
+            <td>Out of stock</td>
+            <td>That item is currently unavailable.</td>
+            <td>That one is sold out right now. Want me to flag you when it is back?</td>
+          </tr>
+          <tr>
+            <td>Complaint</td>
+            <td>I apologize for the inconvenience.</td>
+            <td>Sorry about that, it is not the experience we want. Let me make it right.</td>
+          </tr>
+          <tr>
+            <td>Cannot answer</td>
+            <td>I am unable to help with that request.</td>
+            <td>I am not sure on that one. I will pass you to a person who can answer properly.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="encode-voice-system-prompt">How do you encode brand voice in a system prompt?</h2>
+
+      <p>All of the above lives in one place: the system prompt. That is the block of instructions the model reads before every conversation. On an LLM-based chatbot, the system prompt is where brand voice becomes real. Here is what belongs in it.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-brand-voice/shopify-chatbot-brand-voice-system-prompt.webp" alt="Labeled anatomy of a chatbot system prompt with persona, tone rules, and an escape hatch" style="margin-bottom: 16px; float: none;"></div>
+
+      <p><strong>A persona statement.</strong> One or two sentences telling the bot who it is and who it serves. "You are the support assistant for [store], a [type] brand. You help shoppers find products and resolve order questions." That grounds everything that follows, and it covers the everyday work an <a href="/journal/shopify-ai-chatbot/">AI chatbot actually does</a> on a store.</p>
+
+      <p><strong>The voice attributes, written plainly.</strong> Turn the four attributes above into direct rules. "Tone: warm but efficient. Use contractions. One emoji maximum, only when the customer is happy. Never use exclamation points in apologies."</p>
+
+      <p><strong>Do and do-not word lists.</strong> Models follow concrete examples better than adjectives. List a handful of words and phrases to use, and a handful to avoid. If "no worries" is on-brand and "kindly" is not, say so.</p>
+
+      <p><strong>Tone-by-context rules.</strong> Spell out the five situations from earlier. A short line each: how to greet, how to handle a complaint, how to say no, and when to escalate.</p>
+
+      <p><strong>A few worked examples.</strong> Show the bot two or three sample exchanges written in your voice. Examples teach tone faster than description does. This is the single highest-leverage thing you can add. The first message a customer sees sets the tone for everything after, which is why the <a href="/journal/shopify-chatbot-welcome-flow/">welcome message</a> is worth getting right on its own.</p>
+
+      <p>One more practical note: voice fades over long conversations. Models drift back toward their defaults the longer a chat runs. The fix is to repeat a short version of the persona and tone rules inside the running context, so the bot is reminded who it is on every turn rather than only at the start.</p>
+
+      <h2 id="guardrails-tone-accuracy">The guardrails that keep tone from breaking accuracy</h2>
+
+      <p>Here is the part most tone advice skips. A friendly bot that confidently makes things up is worse than a stiff one that gets the facts right. Personality without accuracy is a liability, and a few public cases prove it.</p>
+
+      <p>In 2024, Air Canada was held responsible after its chatbot described a refund policy that did not exist. In April 2026, <a href="https://masterofcode.com/blog/hallucinations-in-llms-what-you-need-to-know-before-integration" target="_blank" rel="noopener noreferrer">a coding tool's support bot invented a subscription rule outright</a>, and customers cancelled over it. Both bots sounded confident. Confident and wrong is the failure mode you are guarding against.</p>
+
+      <p>The guardrails are not complicated, and they matter more than the tone rules.</p>
+
+      <h3>Ground the bot in your real information</h3>
+
+      <p>The bot should answer from your actual store data, your products, policies, and FAQs, not from its general training. This is usually called retrieval, and it means the bot looks up the answer in your documents before it replies. If the answer is not in your information, the bot should not invent one.</p>
+
+      <h3>Give it an honest escape hatch</h3>
+
+      <p>Add an explicit instruction: if you are not sure, say so and offer a human. A line as simple as "If you do not know the answer, do not guess. Say you will pass it to the team." removes most of the risk. A bot that admits uncertainty in your brand voice is more trustworthy than one that bluffs.</p>
+
+      <h3>Keep the human handoff close</h3>
+
+      <p>The tone rules and the accuracy rules meet at escalation. The bot should hand off cleanly when it hits its limits, and it should do so in your voice. Most shoppers are fine with a bot for simple questions as long as a person is reachable when it matters. <a href="https://www.prnewswire.com/news-releases/75-of-consumers-left-frustrated-by-ai-customer-service-302644290.html" target="_blank" rel="noopener noreferrer">68% of people say a complete resolution matters more than a fast one</a>.</p>
+
+      <p>This is also where a configured, managed bot earns its keep over a default install. Writing the system prompt is the visible part. The ongoing part, watching real conversations, catching where tone slips or the bot guesses, and tightening the rules, is the work that keeps it on-brand month after month. If you want to see how that is set up and maintained, here is how the <a href="/services/ai-chatbots/">Studio Niza AI Chatbots service</a> handles it. The tradeoffs between doing this yourself and having it managed are covered in the guide on <a href="/journal/how-to-pick-shopify-chatbot/">picking a Shopify chatbot</a>.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>A chatbot does not have to sound like a robot. The tone is yours to set, and on an LLM-based bot it comes down to a handful of decisions you can make in an afternoon: define your voice as concrete attributes, write tone rules for the five situations that actually come up, and put it all in the system prompt with a few worked examples.</p>
+
+      <p>Then comes the part that protects you. Ground the bot in your real store information, give it permission to say "I am not sure," and keep a human handoff one step away. Tone makes the bot feel like your store. Guardrails make it safe to trust. You need both, and the second one is not optional.</p>
+
+      <p>If you set this up yourself, start with the worked examples and watch the first week of real conversations closely. That is where you will see the tone slip and the bot guess, and that is where the useful edits come from. A bot that sounds like you and tells the truth is a genuinely good first impression. A bot that sounds like everyone else is a missed one.</p>
+
+      <div class="cta-block">
+        <h3>Want a chatbot that sounds like your store?</h3>
+        <p>Studio Niza configures the system prompt, tone rules, and guardrails so your bot stays on-brand and accurate, then monitors real conversations as they come in. Setup from $599, then $99/month all-in.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See how AI Chatbots works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Can I give my Shopify chatbot a brand voice without coding?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. On modern LLM-based chatbots, brand voice is set through the system prompt and tone settings, which are plain-language instructions, not code. You describe the voice, list words to use and avoid, and add a few example replies. The technical work is in connecting the bot to your store data, not in the tone itself.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Will a custom tone make my chatbot less accurate?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not if you add guardrails. Tone and accuracy are configured separately. The bot's voice comes from the system prompt, while accuracy comes from grounding it in your real store information and instructing it to admit when it does not know. A well-built bot is both on-brand and honest.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Should my Shopify chatbot use emojis?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It depends on your brand and where the chat appears. Define the rule on purpose rather than leaving it to the model's default, which tends to overuse them. A casual lifestyle brand might allow one emoji when a customer is happy, while a professional or technical store may use none. Consistency matters more than the choice itself.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How do I keep my chatbot on-brand during long conversations?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Language models drift toward generic defaults the longer a chat runs. The fix is to repeat a short version of the persona and tone rules inside the conversation context, so the bot is reminded who it is on every turn. Reviewing real transcripts and tightening the rules also keeps tone from slipping over time.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Is a Friendly tone preset enough for brand voice?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Presets like Friendly or Professional are a starting point, not a brand voice. They cannot capture the difference between your store and a competitor that picked the same preset. Real brand voice needs defined attributes, word choices, and example replies written specifically for your store.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How often should I review my chatbot's tone?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Closely in the first 30 days, then periodically after that. The first weeks of real conversations reveal where the tone slips or the bot guesses, which is where the most useful edits come from. After that, a monthly check on transcripts is usually enough for a small store.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-chatbot-brand-voice">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
