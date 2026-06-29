@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Track AI Search Traffic to Your Shopify Store</title>
+<meta name="description" content="AI search is sending shoppers to Shopify stores in 2026. Here is how to track AI search traffic in GA4 and Shopify, plus what a realistic share looks like.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/track-ai-search-traffic-shopify/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="How to Track Whether AI Search Is Sending Shoppers to Your Shopify Store">
+<meta property="og:description" content="How to tell if ChatGPT, Perplexity, and Gemini are actually sending shoppers to your Shopify store.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/track-ai-search-traffic-shopify/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/track-ai-search-traffic-shopify/track-ai-search-traffic-shopify.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tracking AI search traffic to your Shopify store by Studio Niza">
+<meta property="article:published_time" content="2026-06-29T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Track Whether AI Search Is Sending Shoppers to Your Shopify Store">
+<meta name="twitter:description" content="How to track whether AI search is sending shoppers to your Shopify store.">
+<meta name="twitter:image" content="https://studioniza.com/journal/track-ai-search-traffic-shopify/track-ai-search-traffic-shopify.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Track AI Search Traffic", "item": "https://studioniza.com/journal/track-ai-search-traffic-shopify/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Track Whether AI Search Is Sending Shoppers to Your Shopify Store",
+  "description": "How to track AI search traffic to a Shopify store in 2026: which AI engines pass a referrer, how to set up a GA4 channel and a Shopify Agentic view, and a quarterly manual citation check.",
+  "image": "https://studioniza.com/journal/track-ai-search-traffic-shopify/track-ai-search-traffic-shopify.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-06-29T10:00:00+08:00",
+  "dateModified": "2026-06-29T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/track-ai-search-traffic-shopify/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/track-ai-search-traffic-shopify/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does GA4 track ChatGPT traffic automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As of May 2026, GA4 has a native AI Assistant channel that automatically tags traffic from ChatGPT, Gemini, and Claude when the visit arrives with an intact referrer. It does not catch sessions where the referrer was stripped, and it does not backfill data from before mid-May 2026. For a complete view you still want a custom channel group alongside it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my AI search traffic show up as Direct in GA4?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many AI apps and in-app browsers strip the referrer before the click reaches your site, so GA4 sees no source and files the visit under Direct, the same bucket as someone typing your URL. Estimates put the share of AI sessions arriving with no referrer between 35% and 70%. This is a limit of how the platforms pass data, not a setup mistake you can fully fix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see what someone asked ChatGPT before they clicked to my store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The referrer carries the source domain, like chatgpt.com, but never the prompt or the query behind it. No standard analytics tool can recover the question that surfaced your link. The closest substitute is a manual citation check, where you run likely buyer queries yourself and see which ones cite your store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What referrer domains do AI search engines use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main ones are chatgpt.com and chat.openai.com for ChatGPT, perplexity.ai for Perplexity, gemini.google.com for Gemini, claude.ai for Claude, and copilot.microsoft.com for Copilot. ChatGPT also appends utm_source=chatgpt.com to many of its links, which is the most reliable single signal. Review your regex each quarter, since new engines like DeepSeek and Grok keep appearing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much of my Shopify traffic should come from AI search in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most stores it is still low single digits as a share of total traffic, even though AI sessions are growing more than 80% year over year. Do not treat a small share as failure. The signal that matters is whether the trend climbs each quarter and whether those visitors convert above your site average."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Shopify show AI sales separately from GA4?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Shopify's Agentic Storefronts channel, in your admin under Settings then Sales channels, reports orders that come through AI platforms like ChatGPT, Copilot, and Google AI Mode. Reports then Sales by sales channel breaks them out by AI source. This captures sales that close inside the AI and never appear as a normal GA4 session."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a paid tool to track AI referral traffic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. GA4's native AI Assistant channel, one custom channel group, and Shopify's built-in Agentic reporting cover what most stores need to start. Paid AI visibility tools can save time on the manual citation check and add brand-mention monitoring, but they are not required to get a useful read. Start free, then add tools only if the volume justifies it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I run a manual AI citation check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once a quarter is enough for most stores. Run the same set of buyer-style queries across each engine, log whether you are mentioned and linked, and compare against the previous quarter. A quarterly cadence catches the trend without turning into busywork."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Track AI Search Traffic</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">June 29, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>10 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>How to Track Whether AI Search Is Sending Shoppers to Your Shopify Store</h1>
+      <div style="text-align: center;"><img src="/journal/track-ai-search-traffic-shopify/track-ai-search-traffic-shopify-hero.webp" alt="Shopify owner reviewing an analytics dashboard with AI search traffic shown as its own channel" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">You optimized for AI search. Now you want proof it is working. Here is how to track AI search traffic in GA4 and inside Shopify, which engines you can actually see, and what a realistic share looks like in 2026.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#why-ai-traffic-is-hard">Why AI search traffic is hard to measure</a></li>
+        <li><a href="#which-tools-pass-referrer">Which AI tools pass a referrer</a></li>
+        <li><a href="#ga4-setup">Set up a GA4 channel for AI referrals</a></li>
+        <li><a href="#shopify-agentic-channel">Check the Shopify Agentic sales channel</a></li>
+        <li><a href="#manual-citation-check">The quarterly manual citation check</a></li>
+        <li><a href="#realistic-traffic-share">What a realistic AI traffic share looks like</a></li>
+        <li><a href="#wrapping-up">How to start this weekend</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+
+      <p>You added FAQ schema, rewrote your headings to answer real questions, and maybe checked whether ChatGPT mentions your store. Now you want the part nobody explains: proof. If you cannot tell whether AI search is sending shoppers to your Shopify store, you cannot tell whether any of that work paid off.</p>
+
+      <p>Here is the honest starting point. You can track AI search traffic in 2026, but only partly. Some of it shows up cleanly in your analytics. A large chunk arrives with no label at all, and some of your most valuable AI exposure produces no visit you can measure. That is not a setup problem you can fix. It is how the plumbing works right now.</p>
+
+      <p>This post covers the part you can control. Which AI tools actually pass a referrer (and which quietly drop it), how to set up a Google Analytics 4 channel and segment so AI visits stop hiding in your other numbers, where Shopify now reports AI sales on its own, and a simple quarterly check that catches what the dashboards miss. If you are still working on <a href="/journal/geo-for-shopify/">getting your store cited in ChatGPT, Perplexity, and Claude</a> in the first place, start there. This post assumes the citations exist and you want to measure them. No tool purchase required to begin.</p>
+
+      <h2 id="why-ai-traffic-is-hard">Why AI search traffic is hard to measure (and what you can actually see)</h2>
+
+      <p>AI traffic is hard to measure because most analytics tools identify a visit by reading the referrer, a small piece of data the browser passes that names the site the click came from. When someone clicks a citation inside an AI answer and lands on your store, that referrer is supposed to say chatgpt.com or perplexity.ai. Often it does. Often it does not.</p>
+
+      <p>The first gap is the stripped referrer. The AI tool's mobile app or in-app browser drops the referrer before the click reaches you, so the visit looks identical to someone typing your URL by hand and lands in <strong>Direct</strong>. <a href="https://gs.statcounter.com/" target="_blank" rel="noopener noreferrer">Statcounter data from March 2026</a> suggests somewhere between 35% and 70% of AI referral sessions arrive with no referrer at all, depending on the platform and the month.</p>
+
+      <p>The second gap is bigger and quieter. A lot of AI influence never produces a click that points back to the AI. Someone asks ChatGPT for the best organic cotton baby onesies, sees your brand named, then opens a new tab and Googles you or types your URL directly. That sale gets credited to branded search or direct, not to AI. The exposure was real. The attribution was not.</p>
+
+      <p>The third gap is the zero-click answer. When an AI cites your store but the reader gets what they need from the answer itself, no visit happens at all. A <a href="https://sparktoro.com/" target="_blank" rel="noopener noreferrer">SparkToro analysis from early 2026</a> found that only 12% to 18% of Perplexity citations result in a click through to the source. The other 82% to 88% are brand exposure you will never see in a dashboard.</p>
+
+      <p>So here is the principle to hold onto: track the trend, not the absolute number. Your AI traffic count will always undercount reality. What it can tell you reliably is whether AI traffic is growing, which pages get cited, and how those visitors behave once they land. That is enough to make decisions.</p>
+
+      <h2 id="which-tools-pass-referrer">Which AI tools pass a referrer and which don't</h2>
+
+      <p>Each AI platform handles the referrer differently, so before you build anything, know which engines you can actually see. This table is the short version.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>AI tool</th>
+            <th>Referrer domains</th>
+            <th>Passes a referrer?</th>
+            <th>Notes for tracking</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ChatGPT</td>
+            <td>chatgpt.com, chat.openai.com</td>
+            <td>Usually on web, often stripped in the app</td>
+            <td>Also appends utm_source=chatgpt.com to many links, the most reliable AI signal you get</td>
+          </tr>
+          <tr>
+            <td>Perplexity</td>
+            <td>perplexity.ai</td>
+            <td>Web yes, app often no</td>
+            <td>No consistent UTM tag; web visits are trackable</td>
+          </tr>
+          <tr>
+            <td>Google Gemini</td>
+            <td>gemini.google.com, bard.google.com</td>
+            <td>Usually</td>
+            <td>No UTM parameters</td>
+          </tr>
+          <tr>
+            <td>Claude</td>
+            <td>claude.ai</td>
+            <td>Often not, frequently sent with no referrer</td>
+            <td>Hard to attribute; assume it contributes proportionally</td>
+          </tr>
+          <tr>
+            <td>Microsoft Copilot</td>
+            <td>copilot.microsoft.com, bing.com/chat</td>
+            <td>Inconsistent</td>
+            <td>No reliable UTM tag</td>
+          </tr>
+          <tr>
+            <td>Google AI Mode</td>
+            <td>appears as google.com</td>
+            <td>Looks like normal Google organic</td>
+            <td>Cannot be cleanly separated from regular organic in GA4</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>ChatGPT is the one you can track best, which is convenient because it is also the biggest. By <a href="https://gs.statcounter.com/" target="_blank" rel="noopener noreferrer">Statcounter's March 2026 figures</a>, ChatGPT drives roughly 78% of measurable AI referral traffic, with Gemini around 9%, Perplexity around 7%, and Copilot and Claude near 3% each. Those shares move, so do not memorize them. The point is that if you only ever track ChatGPT cleanly, you have captured most of what is visible.</p>
+
+      <p>Two engines deserve a flag. Claude often sends visitors with the referrer stripped, so its traffic tends to hide in Direct with no clean way to attribute it. Google AI Mode is worse for measurement: clicks from it look exactly like normal Google organic, so there is no way to split them out in GA4 alone. For those two, the manual check later in this post is your only real read.</p>
+
+      <div style="text-align: center;"><img src="/journal/track-ai-search-traffic-shopify/track-ai-search-traffic-shopify-referrer-flow.webp" alt="Diagram of an AI answer click reaching a Shopify store with the referrer either surviving or stripped" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="ga4-setup">How to set up a GA4 channel and segment for AI referrals</h2>
+
+      <p>The fastest way to stop AI visits from hiding in your other numbers is to give them their own channel in GA4. There are two layers, and you want both: the free native channel Google built, and a custom one that catches what it misses.</p>
+
+      <h3>The native AI Assistant channel (the free part)</h3>
+
+      <p>On May 13, 2026, Google added a built-in AI Assistant channel to GA4's default channel group, as <a href="https://www.searchenginejournal.com/google-analytics-adds-ai-assistant-as-default-channel-group/574974/" target="_blank" rel="noopener noreferrer">Search Engine Journal reported</a>. When a visit arrives with a referrer from a recognized AI domain, GA4 now tags it automatically and files it under AI Assistant with no setup from you. To see it, open Reports, then Acquisition, then Traffic acquisition, and switch the primary dimension to Session default channel group. If you have had AI traffic since mid-May, an AI Assistant row will be there.</p>
+
+      <p>Two limits to know. The native channel recognizes ChatGPT, Gemini, and Claude, and Google has not published the full list, so Perplexity and Copilot are not reliably included. And it does not backfill, so anything before mid-May 2026 stays where GA4 originally filed it. It is a useful baseline, not the whole picture.</p>
+
+      <h3>A custom channel group for everything it misses</h3>
+
+      <p>To catch Perplexity, Copilot, and any engine Google has not added, build your own channel group. In GA4, go to Admin, then Data display, then Channel groups, and create a new group called something like AI Search (custom). Add a channel named AI Search, set the rule to Source matches regex, and paste a pattern that covers the major engines:</p>
+
+      <p><strong>chatgpt\.com|chat\.openai\.com|perplexity\.ai|claude\.ai|gemini\.google\.com|copilot\.microsoft\.com|deepseek\.com|grok\.com</strong></p>
+
+      <p>One detail makes or breaks this: drag your AI channel <strong>above</strong> the Referral channel in the list. GA4 reads the rules top to bottom, so if AI Search sits below Referral, your AI visits get scooped into generic referral traffic before the AI rule is ever checked. Custom channel groups also do not backfill, so they start counting from the day you create them. To see AI traffic from before that, use a free-form exploration in the Explore tab instead.</p>
+
+      <h3>Add the landing page so you can see what gets cited</h3>
+
+      <p>A channel tells you how much. The landing page tells you what. In your AI traffic report or a free-form exploration, add Landing page as a secondary dimension. Now you can see exactly which pages AI engines send people to, which is the most useful output of the whole exercise. It shows you which content is earning citations and which is being ignored.</p>
+
+      <p>Pages with clean answer-first structure tend to show up here first, which is part of why <a href="/journal/shopify-faq-schema/">FAQ schema works as an AI citation signal</a> even now that Google has retired its FAQ rich results. If a page ranks well in Google but never appears in this AI report, it is usually missing the extractable, quotable structure that AI engines pull from.</p>
+
+      <div style="text-align: center;"><img src="/journal/track-ai-search-traffic-shopify/track-ai-search-traffic-shopify-ga4-channel.webp" alt="Before and after of GA4 grouping where AI search traffic moves out of Direct into its own AI Search channel" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="shopify-agentic-channel">Check the Shopify side too: the Agentic sales channel</h2>
+
+      <p>GA4 measures clicks to your site. Shopify now measures something GA4 cannot see at all: sales that close through an AI. If you only watch GA4, you can miss real AI revenue entirely.</p>
+
+      <p>In March 2026, Shopify turned on <a href="https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts" target="_blank" rel="noopener noreferrer">Agentic Storefronts</a> for eligible stores that sell to US shoppers. It is a sales channel that puts your catalog directly inside AI shopping surfaces such as ChatGPT, Microsoft Copilot, Google AI Mode, and Gemini, so a shopper can discover and, on some platforms, buy without ever landing on your storefront. You manage it in your Shopify admin under Settings, then Sales channels, in the Agentic section.</p>
+
+      <p>Here is why it matters for measurement. When a sale closes through Copilot or Google's embedded checkout, the customer never visits your site, so GA4 records nothing. Shopify does. <a href="https://www.shopify.com/blog/how-agentic-commerce-works" target="_blank" rel="noopener noreferrer">Orders flow into your admin with channel attribution</a>, and Reports, then Sales by sales channel, breaks ChatGPT, Copilot, and the rest out as their own lines.</p>
+
+      <p>So the two tools answer different questions. GA4 tells you who clicked through from an AI answer to your store. Shopify's Agentic reporting tells you which AI channels produced actual orders, including the ones that never touched your site. Watch both. A store can have quiet GA4 referral numbers and still be making AI sales it would otherwise miss.</p>
+
+      <div style="text-align: center;"><img src="/journal/track-ai-search-traffic-shopify/track-ai-search-traffic-shopify-two-surfaces.webp" alt="Two-box diagram contrasting GA4 referral clicks to the site with Shopify Agentic sales that close inside the AI" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="manual-citation-check">The quarterly manual citation check</h2>
+
+      <p>Because analytics misses zero-click answers and stripped referrers, the most honest read on your AI visibility is still a manual one. Do it once a quarter and it takes about an hour.</p>
+
+      <p>The routine is simple. Open each engine you care about (ChatGPT, Perplexity, Gemini, Claude, and Copilot) and ask 5 to 10 buyer-style questions a real shopper in your category would type. Not best products, but the specific ones: best waterproof hiking socks for wide feet, affordable lab-grown diamond studs under 300 dollars, whatever fits your store. For each query, note three things: are you mentioned, are you cited with a source, and is there a clickable link to your store.</p>
+
+      <p>Keep it in a plain spreadsheet. One row per query, one column per engine, the date at the top. Run the same queries next quarter and you have a trend you can actually see, including for Claude and Google AI Mode where the analytics give you almost nothing. This is the leading indicator: citations usually show up here before referral traffic shows up in GA4.</p>
+
+      <p>If you run this check and find you are not mentioned anywhere, that is its own answer. It usually means <a href="/services/blog-content/">the content AI engines actually cite</a> is not on your site yet, or the pages you have are not structured to be quoted. If your store is missing from ChatGPT specifically, there is a separate diagnostic for <a href="/journal/shopify-store-chatgpt-visibility/">why your Shopify store isn't showing in ChatGPT</a> and how to fix it.</p>
+
+      <h2 id="realistic-traffic-share">What a realistic AI traffic share looks like in 2026</h2>
+
+      <p>For most Shopify stores in 2026, AI search is still a small slice of total traffic. That is normal, and it is not the number to obsess over.</p>
+
+      <p>Across the broad web, AI-assisted sessions are still in the low single digits as a share of total traffic, even though they are growing more than 80% year over year by <a href="https://www.similarweb.com/blog/marketing/geo/gen-ai-stats/" target="_blank" rel="noopener noreferrer">Similarweb's 2026 analysis</a>. So if AI is one or two percent of your traffic, you are not behind. You are on time.</p>
+
+      <p>The more interesting numbers are about behavior. <a href="https://www.shopify.com/blog/how-agentic-commerce-works" target="_blank" rel="noopener noreferrer">Shopify's own data on AI commerce</a> shows AI-referred shoppers convert at nearly 50% higher rates than organic search visitors, spend about 14% more per order, and land directly on a product page more than half the time, versus roughly 20% for organic search. Across Shopify stores, AI referral sessions have grown more than 8x year over year, and orders from them close to 13x. The traffic is small, but it arrives with intent.</p>
+
+      <p>So what is a realistic target? Do not expect AI to be your biggest channel this year. Expect it to be small, high-intent, and growing. If your AI share is under a few percent of traffic but the trend line climbs each quarter and those visitors convert above your site average, the work is paying off. Watch the slope, not the size.</p>
+
+      <p>One honest caveat: there is not strong store-by-store benchmark data yet. Samples are small and results vary by category and price point. Use your own GA4 numbers to learn your store's normal, then measure it against itself.</p>
+
+      <h2 id="wrapping-up">How to start this weekend</h2>
+
+      <p>Three steps and you have a working setup. Confirm GA4's native AI Assistant channel is showing in your Traffic acquisition report. Build one custom channel group with the regex above and drag it above Referral. Then open Shopify's Agentic section so you know whether AI sales are happening off-site. That foundation takes well under an hour.</p>
+
+      <p>After that, add the slow, honest layer: a quarterly manual citation check in a spreadsheet you reuse every three months. The dashboards will undercount, always. The manual check fills the gap, and together they tell you whether your GEO work is moving.</p>
+
+      <p>The one mindset shift worth keeping is this. You are not trying to capture a perfect AI traffic number, because that number does not exist yet. You are trying to see a direction. A small AI share that converts well and grows each quarter is exactly what a healthy 2026 store looks like. If the line is flat after a couple of quarters of GEO work, that is your signal to look at which content is getting cited, not at your tracking.</p>
+
+
+      <div class="cta-block">
+        <h3>Want the GEO work and the measurement handled?</h3>
+        <p>The Studio Niza SEO and GEO service covers the content that earns AI citations plus the GA4 channel setup and reporting, so you can see whether AI search is actually sending you shoppers. Pricing starts at $499.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See SEO &amp; GEO services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Does GA4 track ChatGPT traffic automatically?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>As of May 2026, GA4 has a native AI Assistant channel that automatically tags traffic from ChatGPT, Gemini, and Claude when the visit arrives with an intact referrer. It does not catch sessions where the referrer was stripped, and it does not backfill data from before mid-May 2026. For a complete view you still want a custom channel group alongside it.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Why does my AI search traffic show up as Direct in GA4?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Many AI apps and in-app browsers strip the referrer before the click reaches your site, so GA4 sees no source and files the visit under Direct, the same bucket as someone typing your URL. Estimates put the share of AI sessions arriving with no referrer between 35% and 70%. This is a limit of how the platforms pass data, not a setup mistake you can fully fix.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can I see what someone asked ChatGPT before they clicked to my store?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. The referrer carries the source domain, like chatgpt.com, but never the prompt or the query behind it. No standard analytics tool can recover the question that surfaced your link. The closest substitute is a manual citation check, where you run likely buyer queries yourself and see which ones cite your store.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>What referrer domains do AI search engines use?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>The main ones are chatgpt.com and chat.openai.com for ChatGPT, perplexity.ai for Perplexity, gemini.google.com for Gemini, claude.ai for Claude, and copilot.microsoft.com for Copilot. ChatGPT also appends utm_source=chatgpt.com to many of its links, which is the most reliable single signal. Review your regex each quarter, since new engines like DeepSeek and Grok keep appearing.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How much of my Shopify traffic should come from AI search in 2026?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>For most stores it is still low single digits as a share of total traffic, even though AI sessions are growing more than 80% year over year. Do not treat a small share as failure. The signal that matters is whether the trend climbs each quarter and whether those visitors convert above your site average.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does Shopify show AI sales separately from GA4?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. Shopify's Agentic Storefronts channel, in your admin under Settings then Sales channels, reports orders that come through AI platforms like ChatGPT, Copilot, and Google AI Mode. Reports then Sales by sales channel breaks them out by AI source. This captures sales that close inside the AI and never appear as a normal GA4 session.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Do I need a paid tool to track AI referral traffic?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. GA4's native AI Assistant channel, one custom channel group, and Shopify's built-in Agentic reporting cover what most stores need to start. Paid AI visibility tools can save time on the manual citation check and add brand-mention monitoring, but they are not required to get a useful read. Start free, then add tools only if the volume justifies it.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How often should I run a manual AI citation check?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Once a quarter is enough for most stores. Run the same set of buyer-style queries across each engine, log whether you are mentioned and linked, and compare against the previous quarter. A quarterly cadence catches the trend without turning into busywork.</p>
+              </div>
+            </div>
+          </details>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="track-ai-search-traffic-shopify">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
