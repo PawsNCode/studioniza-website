@@ -64,6 +64,9 @@
       },
       "mainEntity": {
         "@id": "https://studioniza.com/#niza-ravelo"
+      },
+      "mentions": {
+        "@id": "https://sweetiespawprints.com/#store"
       }
     },
     {
@@ -73,7 +76,7 @@
       "givenName": "Niza",
       "familyName": "Ravelo",
       "jobTitle": "Founder and Solo Practitioner, Studio Niza",
-      "description": "Founder of Studio Niza. Twelve years of experience in digital marketing, content, and ecommerce, with Shopify as the focus since 2015. Specializes in Shopify SEO, GEO, content writing, AI chatbots, and reviews management for solo founders and small Shopify stores.",
+      "description": "Founder of Studio Niza. Twelve years of experience in digital marketing, content, and ecommerce, with Shopify as the focus since 2015. Specializes in Shopify SEO, GEO, content writing, AI chatbots, and reviews management for solo founders and small Shopify stores. She also operates her own Shopify store, Sweeties Pawprints, as a live testing ground for the services she offers.",
       "url": "https://studioniza.com/about/",
       "knowsAbout": [
         "Shopify ecommerce",
@@ -145,6 +148,16 @@
       },
       "priceRange": "$$",
       "image": "https://studioniza.com/images/studio-niza-home.png"
+    },
+    {
+      "@type": ["Organization", "OnlineStore"],
+      "@id": "https://sweetiespawprints.com/#store",
+      "name": "Sweeties Pawprints",
+      "url": "https://sweetiespawprints.com/",
+      "description": "A digital-goods Shopify store founded and run by Niza Ravelo, used as a working proving ground for Studio Niza's Shopify SEO, content, and AI chatbot services.",
+      "founder": {
+        "@id": "https://studioniza.com/#niza-ravelo"
+      }
     },
     {
       "@type": "WebSite",
@@ -293,6 +306,8 @@ a:hover { opacity: 0.7; }
 .origin-prose { font-size: 1.0625rem; line-height: 1.7; color: var(--dark-gray); }
 .origin-prose p { margin-bottom: 24px; }
 .origin-prose p:last-child { margin-bottom: 0; }
+.origin-prose a, .studio-prose a { color: var(--magenta); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+.origin-prose a:hover, .studio-prose a:hover { opacity: 0.7; }
 
 /* WHY GRID (services and how-i-work blocks) */
 .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
@@ -437,7 +452,8 @@ footer { padding: 56px 0 32px; border-top: 1px solid var(--gray-line); }
     <div class="origin-prose">
       <p>I started freelancing in 2014, doing eBay listings. From there, the work expanded across most of the major ecommerce platforms: Amazon, then Shopify around 2015, then Etsy, BigCommerce, Magento, and a handful of smaller ones along the way. Each platform taught me something different about how online stores actually work, and where the gaps tend to live.</p>
       <p>Of all of them, Shopify stuck. It's the platform built for solopreneurs and small brands, and the more I worked with it, the more I found myself recommending it to almost every client building from scratch. The combination of solid defaults, a thriving app ecosystem, and a learning curve that doesn't punish beginners is hard to beat.</p>
-      <p>Somewhere along the way, I realized the best way to actually understand Shopify was to use it for myself. So I built my own Shopify store from the ground up: products, photography, listings, SEO, content, the chatbot, the email flows, every layer of it. The store eventually went on pause when client work picked up enough that I couldn't sustain both at the standard I wanted, and a rebrand has been in the works ever since. But that hands-on experience permanently changed how I work with clients. There's a difference between recommending an SEO strategy you've read about and recommending one you've personally watched move your own numbers.</p>
+      <p>Somewhere along the way, I realized the best way to actually understand Shopify was to use it for myself. So I built my own store from the ground up: products, photography, listings, SEO, content, the chatbot, the email flows, every layer of it.</p>
+      <p>The first version paused when client work picked up, and the rebrand is now live as <a href="https://sweetiespawprints.com/" target="_blank" rel="noopener noreferrer">Sweeties Pawprints</a>, a small digital-goods shop I run as my own proving ground. It's where I test every service before recommending it to a client, including the AI chatbot you can talk to on the storefront right now. That hands-on experience permanently changed how I work: there's a difference between recommending an SEO strategy you've read about and recommending one you've personally watched move your own numbers.</p>
       <p>I went full-time freelance once the freelance income consistently exceeded my day-job salary, working evenings and weekends to keep up. Studio Niza is the result of those years narrowing in on what I do best: focused Shopify growth work, four services, no generic agency menu.</p>
     </div>
   </div>
