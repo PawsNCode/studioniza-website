@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Review Request Automation: The Full Setup</title>
+<meta name="description" content="Set up Shopify review request automation that triggers off delivery, follows up without nagging, and stays FTC-compliant. Judge.me and Loox inside.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-review-request-automation/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="How to Build a Shopify Review Request Flow That Runs on Autopilot">
+<meta property="og:description" content="Set up a Shopify review request flow that triggers off delivery, follows up politely, and stays FTC-compliant.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-review-request-automation/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-review-request-automation/shopify-review-request-automation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify Review Request Automation by Studio Niza">
+<meta property="article:published_time" content="2026-07-11T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Reviews">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Build a Shopify Review Request Flow That Runs on Autopilot">
+<meta name="twitter:description" content="Set-and-forget Shopify review requests: delivery triggers, polite follow-ups, compliant copy.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-review-request-automation/shopify-review-request-automation.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Review Request Automation", "item": "https://studioniza.com/journal/shopify-review-request-automation/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Build a Shopify Review Request Flow That Runs on Autopilot",
+  "description": "How to build a Shopify review request automation that triggers off delivery, follows up without nagging, and stays FTC-compliant. Includes Judge.me and Loox setup and a manual fallback.",
+  "image": "https://studioniza.com/journal/shopify-review-request-automation/shopify-review-request-automation.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-07-11T10:00:00+08:00",
+  "dateModified": "2026-07-11T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-review-request-automation/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-review-request-automation/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I send Shopify review requests based on order date or delivery date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delivery date, whenever your carrier reports it to Shopify, because the customer actually has the product and the experience is fresh. When delivery can't be confirmed, fall back to sending a set number of days after fulfillment so requests never stall. Both Judge.me and Loox support delivery triggers with a fulfillment fallback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many review request follow-up emails should I send?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One or two reminders after the initial request, spaced about five to seven days apart, for three touches at most. The first email collects the bulk, the reminders recover the customers who meant to review and forgot, and past three touches you mostly gain unsubscribes. The app automatically stops emailing anyone who has already reviewed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it against FTC rules to offer a discount for a review?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, as long as the discount is offered for any review rather than a positive one. Conditioning the reward on a good or five-star review breaks the FTC's Consumer Reviews and Testimonials Rule, whether you say it directly or just imply it. Keep the incentive neutral and disclose it, and you stay compliant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Judge.me send automated review requests on the free plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Judge.me's forever-free tier schedules automated review requests and reminders after fulfillment or delivery, which is why it is a common default for Shopify stores under $200K a year. The paid Awesome tier adds extras like a third reminder and per-reminder templates, but the free plan covers the core review request automation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I automate review requests without a paid app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The free tiers of Judge.me and Loox automate requests and reminders at no cost, so you rarely need to build anything custom. You can run a manual version with a saved template and a delivery-tied reminder, but it is error-prone and can't skip customers who already reviewed. For most stores, the free app is simpler than a manual system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why aren't my Judge.me review requests sending?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common cause is that delivery was never confirmed to Shopify, so a delivery-based request stays stuck waiting for delivery and never fires. Add tracking and carrier details at fulfillment, or turn on the fulfillment fallback so those orders send anyway. A blocked send can also mean your DKIM and return-path aren't verified, which can stop emails to Gmail addresses."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Review Request Automation</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Reviews</span>
+        <span class="post-date">July 11, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>How to Build a Shopify Review Request Flow That Runs on Autopilot</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-review-request-automation/shopify-review-request-automation-hero.webp" alt="A hands-off post-purchase review request flow from a delivered order to a published review" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">You send review requests by hand, and half of them slip. Here is how to wire a Shopify review request automation that fires off delivery, follows up without nagging, and stays on the right side of the FTC rule.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#trigger-off-delivery">Trigger off delivery, not the order date</a></li>
+        <li><a href="#follow-up-cadence">A follow-up cadence that doesn't nag</a></li>
+        <li><a href="#ftc-compliant-wording">Wording that satisfies the FTC review rule</a></li>
+        <li><a href="#app-setup">Automate review requests in Judge.me or Loox</a></li>
+        <li><a href="#manual-fallback">Still on manual email? A compliant fallback</a></li>
+        <li><a href="#first-two-weeks">What to check in the first two weeks</a></li>
+        <li><a href="#getting-it-running">Getting the flow running</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>You mean to ask for reviews. Some weeks you remember, most weeks you don't, and the requests you do send often go out before the box has landed on the doorstep. That gap is where reviews quietly disappear, and the fix is not more discipline. It is a <strong>Shopify review request automation</strong>: a flow you set once that asks at the right moment, follows up on its own, and stops when it should.</p>
+
+      <p>Done well, it runs in the background while you handle everything else the store needs. This is written for solo Shopify owners and newer stores, the ones where the reviews team is also the founder, the packer, and the support desk. If that is you, an hour of setup buys back a chore you were never going to do consistently anyway.</p>
+
+      <p>This post is the build, not the theory. We will map the trigger to the delivery date instead of the order date, set a follow-up cadence that lifts response without turning into nagging, write the request so it satisfies the FTC review rule, and walk the exact settings in Judge.me and Loox. If you are still sending requests from your own inbox, there is a compliant fallback at the end that gets you most of the way there for free.</p>
+
+      <h2 id="trigger-off-delivery">Trigger off delivery, not the order date</h2>
+
+      <p>Most review apps let you fire the request off one of several order events: created, paid, fulfilled, or delivered. The common default is fulfillment, which means the email can go out the moment you print the label, days before the customer has the product in hand. Asking someone to review a thing they haven't touched is how you get thin, low-star, or ignored requests.</p>
+
+      <p><strong>Trigger off delivery whenever you can.</strong> Delivery means the package is confirmed at the door, the experience is fresh, and the request lands when the customer actually has something to say. For the full breakdown of the ideal window by product type, see the companion piece on <a href="/journal/best-time-send-review-request-shopify/">the best time to send a review request</a>. This post is about wiring it.</p>
+
+      <p>Delivery-based sending depends on one thing: Shopify has to know the order arrived. That status comes through the carrier's tracking. Carriers like USPS, UPS, FedEx, Canada Post, and Sendle report delivery straight to Shopify when you add the tracking number and carrier at fulfillment. Other carriers need a tracking app (Judge.me and Loox both integrate with <a href="https://www.aftership.com/" target="_blank" rel="noopener noreferrer">AfterShip</a>) to pass the delivered status through.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-review-request-automation/shopify-review-request-automation-trigger-timeline.webp" alt="Review request timeline: order, fulfilled, delivered, short wait, then request, with delivery highlighted" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>The catch: if a carrier never reports delivered, a delivery-only trigger waits forever and the request never sends. That is what the fallback is for. Both apps let you send the request a set number of days after fulfillment when delivery is never confirmed, so nothing stalls. Turn that fallback on. It is the difference between a flow that runs and a flow that silently drops orders.</p>
+
+      <h3>What if you sell digital or made-to-order goods?</h3>
+
+      <p>No shipment means no delivery event, so delivery-based timing has nothing to fire on. For digital downloads, gift cards, or services, trigger off the paid or fulfilled event instead and add a short delay that matches when the customer would have used the thing. A print-on-demand mug still ships, so it follows the delivery rule. A downloadable planner does not, so a two or three day delay after purchase is usually right.</p>
+
+      <h2 id="follow-up-cadence">A follow-up cadence that doesn't nag</h2>
+
+      <p>One request is not a strategy. Plenty of happy customers fully intend to leave a review and then get pulled into their day and forget. A single send captures the eager few. The follow-up captures the ones who meant to.</p>
+
+      <p>The pattern that works is <strong>three touches at most</strong>: the initial request, then one or two reminders spaced about five to seven days apart. The first email does most of the work, the reminders recover a meaningful slice on top, and past the third touch you are mostly buying unsubscribes and irritation instead of reviews. Stores that add a reminder or two reliably collect several times more reviews than stores that send once and stop.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-review-request-automation/shopify-review-request-automation-cadence.webp" alt="Three-touch review request cadence: initial email plus two spaced reminders, then a stop marker" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>A few rules keep the reminders from feeling like pestering:</p>
+
+      <ul>
+        <li><strong>Space them out.</strong> Five to seven days between touches gives people room. Same-week double-taps read as desperate.</li>
+        <li><strong>Skip anyone who already reviewed.</strong> Judge.me and Loox both drop a customer from the sequence the moment they submit, so no one gets asked twice for a review they already left.</li>
+        <li><strong>Change the subject line on the reminder.</strong> A fresh line gives the second email its own chance to be opened.</li>
+        <li><strong>Stop at two to three total.</strong> Then let it go. The order that was never going to review is not going to review on the fourth ask.</li>
+      </ul>
+
+      <p>One honest note on measuring this: do not judge the flow by open rates. Apple's Mail Privacy Protection pre-loads email images, which inflates opens and makes that number close to meaningless. Watch the submission rate instead, reviews collected divided by requests sent. That is the only number that pays your conversion rate.</p>
+
+      <h2 id="ftc-compliant-wording">Wording that satisfies the FTC review rule</h2>
+
+      <p>The automation makes this easy to get right, and easy to get badly wrong at scale. Since <a href="https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials" target="_blank" rel="noopener noreferrer">October 21, 2024</a>, the FTC's Rule on the Use of Consumer Reviews and Testimonials has been in force, with civil penalties that can reach $51,744 per violation. A review request template that quietly breaks the rule breaks it on every order until you fix it.</p>
+
+      <p><strong>The core trap is conditioning anything on a positive review.</strong> You are allowed to offer an incentive for a review. You are not allowed to offer it for a <em>good</em> review. "Leave a review and get 10% off" is fine. "Loved your order? Get 10% off for five stars" is not, because it ties the reward to the sentiment, and the FTC counts that whether you say it outright or just imply it. Keep the ask neutral: invite the review, not the rating.</p>
+
+      <p>Two more things the automation should get right by default:</p>
+
+      <ul>
+        <li><strong>Ask every buyer, not just the happy ones.</strong> An all-orders flow that emails everyone who received a product is inherently safer than hand-picking customers you think will be kind. Routing unhappy customers to a private feedback form while sending happy ones to public reviews is a suppression risk under the same rule.</li>
+        <li><strong>Only real buyers.</strong> The flow triggers off actual orders, so requests only reach verified purchasers. Do not seed it with reviews from yourself, staff, or family. Insider reviews are allowed only with a clear and conspicuous disclosure of the relationship.</li>
+      </ul>
+
+      <p>For the deeper walk through the rule, including copy you can paste, see the guide on <a href="/journal/ask-customers-reviews-ftc-compliant/">asking customers for reviews without breaking the FTC rules</a>.</p>
+
+      <h3>Can you still offer a discount for a review?</h3>
+
+      <p>Yes. A neutral incentive that goes to anyone who leaves a review, positive or not, is allowed, and it does lift response. The two guardrails: the reward cannot depend on the review being favorable, and if you give one, the resulting review should disclose that an incentive was involved. Set the offer once in the template, keep the wording free of sentiment, and the automation stays compliant on every send.</p>
+
+      <h2 id="app-setup">Automate review requests in Judge.me or Loox</h2>
+
+      <p>Both apps do this well, and both have a free-enough entry point that a store under $200K a year rarely needs anything pricier. Judge.me's forever-free tier runs automated requests and reminders, which makes it my default recommendation for newer stores. If a free tool covers the job, use the free tool.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-review-request-automation/shopify-review-request-automation-app-setup.webp" alt="Two review app settings panels feeding into one scheduled, sent review request email" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Judge.me</h3>
+
+      <p>In Judge.me, go to <strong>Settings, then Request scheduling</strong>. Open the order trigger dropdown and choose <strong>Delivered</strong>. Right below it, tick <strong>if not delivered send after fulfilment</strong> and set a fallback delay, so orders that never get a delivery ping still send. Set your wait time (anywhere from 0 to 60 days after the trigger) and, if you want every request landing at a sensible hour, turn on the custom send time so emails go out in your store's timezone rather than whenever the order happened to be placed.</p>
+
+      <p>Reminders live in the same area. The standard setup sends the initial request plus a couple of reminders, and the paid Awesome tier lets you run up to three and use a different template for each. Judge.me sends a separate request per product, up to seven line items per order, so a customer who bought three things can review all three. If you would rather send from your own email or SMS tool, enable the Shopify Flow integration and use the Review request ready trigger to hand the timing off to your platform.</p>
+
+      <h3>Loox</h3>
+
+      <p>In Loox, open <strong>Collect Reviews, then Emails and scheduling</strong>. The default is 14 days after fulfillment, and you can set anything from 1 to 70 days. To switch to delivery-based timing, open the timing dropdown and choose <strong>Delivery</strong>. Note that delivery-based sending sits on the Scale plan and up, and it needs Shopify's shipment status or the AfterShip integration to know an order arrived. Set a fallback timing here too, for orders where delivery is never reported.</p>
+
+      <p>Loox bundles one email per order rather than one per product, which keeps the customer's inbox tidier if your average order has several items. It sends two reminders by default, and it times sends around each customer's local hours to catch them awake. As with Judge.me, you can route the actual send through Klaviyo or Omnisend if you already run your email there.</p>
+
+      <p>Here is how the two compare on the settings that matter for automation:</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Judge.me</th>
+            <th>Loox</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Delivery-based trigger</td>
+            <td>Yes, native carriers report free</td>
+            <td>Scale plan and up</td>
+          </tr>
+          <tr>
+            <td>Timing range</td>
+            <td>0 to 60 days after trigger</td>
+            <td>1 to 70 days after trigger</td>
+          </tr>
+          <tr>
+            <td>Fulfillment fallback</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Reminders</td>
+            <td>2 standard, up to 3 on Awesome</td>
+            <td>2 by default</td>
+          </tr>
+          <tr>
+            <td>Email grouping</td>
+            <td>One request per product, up to 7</td>
+            <td>One bundled email per order</td>
+          </tr>
+          <tr>
+            <td>Hand off to your email tool</td>
+            <td>Shopify Flow trigger</td>
+            <td>Klaviyo or Omnisend</td>
+          </tr>
+          <tr>
+            <td>Free-tier automation</td>
+            <td>Yes</td>
+            <td>Requests yes, delivery timing paid</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>For a fuller side-by-side that also brings in Stamped and Yotpo, there is <a href="/journal/judge-me-vs-loox-vs-stamped-vs-yotpo/">an honest comparison of the review apps</a>.</p>
+
+      <h2 id="manual-fallback">Still on manual email? A compliant fallback</h2>
+
+      <p>Maybe you are not on a review app yet, or you send from your own inbox because that is what you have always done. Manual works until it doesn't, and the ways it fails are predictable: you forget half the sends, the timing drifts, there is no systematic follow-up, and you have no clean way to skip customers who already reviewed.</p>
+
+      <p>If you want to stay manual for now, at least make it a system. Save one neutral request template so you are not rewriting it each time. Tie the send to delivery by working from your tracking, not the order date. And send a single follow-up about a week later to anyone who hasn't responded. That is a lighter version of the same three-touch logic, run by hand.</p>
+
+      <p><strong>The honest recommendation, though, is to skip the manual stage.</strong> The free tier of Judge.me or Loox automates everything above at no cost, and it does the two things a human inbox cannot: it never forgets, and it drops people from the sequence the instant they review. Manual is a fine bridge for a week while you install an app. It is a poor destination.</p>
+
+      <p>One exception worth naming: if your store is brand new and has no orders yet, there is nothing to automate. In that case the first job is seeding, not scheduling, and the compliant ways to do that are covered in the guide on <a href="/journal/get-reviews-new-shopify-store-no-sales/">getting your first reviews with zero sales</a>.</p>
+
+      <h2 id="first-two-weeks">What to check in the first two weeks</h2>
+
+      <p>A review flow can look on in the settings and still send nothing. Give it a two-week shakedown before you trust it.</p>
+
+      <ul>
+        <li><strong>Confirm delivery status is reaching Shopify.</strong> If requests pile up as waiting for delivery and never send, the carrier isn't reporting delivered status. Check the delivery column on your orders, and make sure the fulfillment fallback is on so those orders send anyway.</li>
+        <li><strong>Verify your email authentication.</strong> If your DKIM and return-path aren't set up, Gmail can quietly block review emails to Gmail addresses, which is a large share of most customer lists. Both apps flag this. Fix it before it costs you a fortnight of sends.</li>
+        <li><strong>Track the submission rate, not opens.</strong> Reviews collected over requests sent is the number that matters. If it is low, the usual causes are timing (too early, before delivery) or a request that asks for too much.</li>
+        <li><strong>Tune the wait window by product type.</strong> Consumables, skincare, and anything with a break-in period need more days before the ask, because the customer needs to actually use the thing to have an opinion worth publishing.</li>
+      </ul>
+
+      <h2 id="getting-it-running">Getting the flow running</h2>
+
+      <p>The whole system comes down to three levers. Trigger off delivery so the ask lands when the product is in hand. Follow up once or twice, then stop, so you lift response without wearing out your welcome. And keep the wording neutral so the FTC rule is a non-issue on every send.</p>
+
+      <p>Set that up once in Judge.me or Loox and the chore you kept forgetting turns into a background process that quietly builds your social proof while you do anything else. It is not a huge project. It is an afternoon of settings and a two-week check that it is actually sending.</p>
+
+      <p>The reviews themselves still depend on things you can't automate: a product worth reviewing and customers who are glad they bought. What the automation guarantees is that every one of those happy customers actually gets asked, at the right time, in a way that stays compliant. That is the part that was slipping, and now it won't.
+
+      <div class="cta-block">
+        <h3>Want this flow built and monitored for you?</h3>
+        <p>The Reviews Management service sets up the exact flow in this post: delivery-based triggers, a compliant follow-up cadence, and a reply to every review that lands. I handle the systematic execution so you can keep running the store. From $299 setup, $199/month.</p>
+        <a href="/services/reviews-management/" class="cta-button">See how Reviews Management works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Should I send Shopify review requests based on order date or delivery date?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Delivery date, whenever your carrier reports it to Shopify, because the customer actually has the product and the experience is fresh. When delivery can't be confirmed, fall back to sending a set number of days after fulfillment so requests never stall. Both Judge.me and Loox support delivery triggers with a fulfillment fallback.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How many review request follow-up emails should I send?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>One or two reminders after the initial request, spaced about five to seven days apart, for three touches at most. The first email collects the bulk, the reminders recover the customers who meant to review and forgot, and past three touches you mostly gain unsubscribes. The app automatically stops emailing anyone who has already reviewed.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Is it against FTC rules to offer a discount for a review?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No, as long as the discount is offered for any review rather than a positive one. Conditioning the reward on a good or five-star review breaks the FTC's Consumer Reviews and Testimonials Rule, whether you say it directly or just imply it. Keep the incentive neutral and disclose it, and you stay compliant.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does Judge.me send automated review requests on the free plan?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. Judge.me's forever-free tier schedules automated review requests and reminders after fulfillment or delivery, which is why it is a common default for Shopify stores under $200K a year. The paid Awesome tier adds extras like a third reminder and per-reminder templates, but the free plan covers the core review request automation.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can I automate review requests without a paid app?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>The free tiers of Judge.me and Loox automate requests and reminders at no cost, so you rarely need to build anything custom. You can run a manual version with a saved template and a delivery-tied reminder, but it is error-prone and can't skip customers who already reviewed. For most stores, the free app is simpler than a manual system.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Why aren't my Judge.me review requests sending?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>The most common cause is that delivery was never confirmed to Shopify, so a delivery-based request stays stuck waiting for delivery and never fires. Add tracking and carrier details at fulfillment, or turn on the fulfillment fallback so those orders send anyway. A blocked send can also mean your DKIM and return-path aren't verified, which can stop emails to Gmail addresses.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-review-request-automation">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
