@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Chatbot Order Tracking: Answering WISMO Solo</title>
+<meta name="description" content="How a Shopify chatbot pulls order and tracking status securely, verifies the customer, words delays honestly, and knows when to hand off to you.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-chatbot-order-tracking-wismo/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="How a Shopify Chatbot Handles “Where Is My Order?” Without a Human">
+<meta property="og:description" content="How a Shopify chatbot answers order and tracking questions securely, and where it hands off to you.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-chatbot-order-tracking-wismo/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-chatbot-order-tracking-wismo/shopify-chatbot-order-tracking-wismo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How a Shopify Chatbot Handles Where Is My Order by Studio Niza">
+<meta property="article:published_time" content="2026-07-22T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How a Shopify Chatbot Handles “Where Is My Order?” Without a Human">
+<meta name="twitter:description" content="How a Shopify chatbot handles order tracking safely, and where it hands off to a human.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-chatbot-order-tracking-wismo/shopify-chatbot-order-tracking-wismo.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Chatbot Order Tracking", "item": "https://studioniza.com/journal/shopify-chatbot-order-tracking-wismo/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How a Shopify Chatbot Handles “Where Is My Order?” Without a Human",
+  "description": "How a Shopify chatbot pulls order and tracking status securely, verifies the customer with a second identifier, words delays honestly, and hands the hard cases to a human.",
+  "image": "https://studioniza.com/journal/shopify-chatbot-order-tracking-wismo/shopify-chatbot-order-tracking-wismo.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-07-22T10:00:00+08:00",
+  "dateModified": "2026-07-22T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-chatbot-order-tracking-wismo/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-chatbot-order-tracking-wismo/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a Shopify chatbot track orders without any apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It needs live access to your order data, which comes through Shopify's Admin API or an integration. The free built-in chat tools can answer general questions, but they cannot pull a specific order's live status on their own, so some form of order-data connection is required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to let a chatbot show order details to customers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as long as it verifies identity first and shows only what the question needs. Require the order number plus a second identifier like the email or postal code used at checkout, and return the status rather than the full address unless it is actually needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does chatbot order tracking work for guest checkout customers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The order number and the email from the confirmation are enough to look up and verify an order, so customers do not need an account. This is the same pair of details Shopify itself can use to confirm identity on the order status page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a chatbot say when an order is lost or stuck in transit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It should state the real status honestly and then hand the case to a human, because a lost or stuck order needs a decision, not just a lookup. A good bot collects the details, pulls up the order, and passes a clean summary to you rather than inventing an outcome."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a chatbot different from Shopify's order status page?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopify's order status page shows carrier tracking data for a single order. A chatbot answers in plain language, verifies who it is talking to, handles related questions like your return window, and can pass the conversation to a human when needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a Shopify chatbot get rid of WISMO emails completely?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and any tool that promises that is overselling. A well-scoped order-status flow clears the routine half of your shipping questions, while the exceptions like lost packages, damage, and refunds still reach you."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Chatbot Order Tracking</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">July 22, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>How a Shopify Chatbot Handles “Where Is My Order?” Without a Human</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-order-tracking-wismo/shopify-chatbot-order-tracking-wismo-hero.webp" alt="Solo Shopify owner at a laptop calmly reviewing an order-status chat instead of a full inbox" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Order-status questions are the biggest, most repetitive part of your inbox. Here is how a chatbot clears the routine half securely, where it should hand off to you, and how much of the shipping inbox you can realistically expect it to take.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#why-wismo">Why &quot;where is my order?&quot; takes over your inbox</a></li>
+        <li><a href="#how-it-works">How a chatbot pulls order and tracking status</a></li>
+        <li><a href="#identity-check">The identity check that keeps it safe</a></li>
+        <li><a href="#honest-delay">How to word a delay honestly</a></li>
+        <li><a href="#handoff">Where the bot should hand off to a human</a></li>
+        <li><a href="#how-much">How much of the shipping inbox does this clear?</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>If your Shopify inbox feels like the same message on repeat, it probably is. "Where is my order?" is the most common question in ecommerce support, and for a lot of small stores it is most of the queue. Industry estimates put order-status questions at somewhere between 30 and 50 percent of all support tickets, and higher during a busy season.</p>
+
+      <p>The frustrating part is that you are not solving anything when you answer one. The information the customer wants already lives in Shopify. You are copying a status from the admin into a reply, one message at a time, for the tenth time that day.</p>
+
+      <p>That is exactly the kind of work a chatbot is good at. Not because it is clever, but because the answer is a lookup, not a judgment call. This post walks through how a Shopify chatbot pulls order and tracking status, the identity check that keeps it safe, how to word a delay so it reads as honest instead of evasive, the point where it should hand the message to you, and a realistic figure for how much of the shipping inbox this actually clears. No overpromising, just the mechanics and the limits.</p>
+
+      <h2 id="why-wismo">Why "where is my order?" takes over your inbox</h2>
+
+      <p>Order-status questions pile up for a simple reason: there is a gap between what your carrier knows and what your customer can see. The moment someone clicks buy, a countdown starts in their head. When the confirmation email goes quiet and the tracking page reads something like "label created" with no movement, they do the natural thing and ask you.</p>
+
+      <p>Most of these are not angry. They are anxious. A shopper will check a tracking link several times for one order before they give up and message the store, which is how a queue that looks small on paper never actually empties.</p>
+
+      <p>For a solo founder, the real cost is not dollars per ticket the way a call center would count it. It is your attention. Five minutes here, three minutes there, all day, on a question that has the same shape every time: find the order, read the status, reply in plain words.</p>
+
+      <p>There is a quieter driver worth naming too. Vague delivery promises create more of these messages than slow shipping does. "Ships in 5 to 10 business days" invites a ticket on day six, because you left the definition of "on time" to the customer's imagination. <a href="https://www.salesforce.com/commerce/wismo/" target="_blank" rel="noopener noreferrer">A firm window generates fewer questions than a fuzzy one</a>, which is the cheapest fix on this whole list.</p>
+
+      <p>None of this means you did something wrong. It means the routine half of your inbox is answerable from data you already have. That is the part worth automating first, and it is why order status is usually the safest place to let a chatbot earn its keep. If you want the wider picture, here is <a href="/journal/shopify-ai-chatbot/">what a Shopify AI chatbot actually does</a> before you decide.</p>
+
+      <h2 id="how-it-works">How a chatbot pulls order and tracking status</h2>
+
+      <p>A chatbot that answers order-status questions is doing one specific thing: reading your live order data and turning it into a sentence. It is not guessing, and it should not be.</p>
+
+      <h3>What the bot actually reads</h3>
+
+      <p>The connection runs through Shopify's Admin API, the secure back door to your store's data. For order tracking, the bot only needs permission to read orders (the read_orders scope), nothing that lets it change anything. When a customer asks about an order, it looks up that specific record and reads the fulfillment status and tracking details.</p>
+
+      <p>Shopify already recognizes tracking numbers from hundreds of carriers and <a href="https://help.shopify.com/en/manual/fulfillment/setup/order-status-page/order-tracking" target="_blank" rel="noopener noreferrer">generates a clickable tracking link automatically</a> once a tracking number is on the fulfillment. It moves an order through a small set of plain statuses: confirmed, on its way, out for delivery, delivered, and attempted delivery. The bot's job is to translate that into something human. Instead of "fulfillment status: in transit," the customer reads "Your order shipped Tuesday and is on its way, expected by Friday. Here is your tracking link."</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-order-tracking-wismo/shopify-chatbot-order-tracking-wismo-lookup-flow.webp" alt="Flow of a chatbot order lookup: question, verify, read Shopify order, return status to customer" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Why the answer has to come from real data</h3>
+
+      <p>This is what separates a useful bot from an embarrassing one. If a chatbot answers order questions from your FAQ page instead of the live order record, all it can do is recite your general shipping policy. That is not what the customer asked. They want the status of their order, not a reminder that you ship in three to five days.</p>
+
+      <p>So the rule is simple: the status comes from the live order lookup, and everything else the bot says (your return window, your delay policy, what happens next) comes from your real, written policies. A bot <a href="/journal/train-shopify-chatbot-knowledge-base/">trained on your own policies and order data</a> answers correctly or says it is not sure. A bot improvising does neither.</p>
+
+      <h2 id="identity-check">The identity check that keeps it safe</h2>
+
+      <p>Here is the risk nobody mentions when they tell you to "just add a bot." Order numbers are easy to guess. They are often short and run in sequence, so #1043 sits right after #1042. If your chatbot will read out a name, address, and tracking link to anyone who types an order number, you have built a way for a stranger to pull a customer's details. That is a privacy incident waiting to happen.</p>
+
+      <p>The fix is a second identifier. The bot should ask for the order number and one more thing the real customer would know: the email address or postal code used at checkout. It cross-references both against the order. If they match, it shows the status. If they do not, it says it could not find that order and offers to connect the person to you. Two matching details raise the cost of a guessing attempt enough to make it not worth trying.</p>
+
+      <p>This is not an exotic pattern. It is the same rule Shopify already uses. On <a href="https://help.shopify.com/en/manual/fulfillment/setup/order-status-page/understanding-order-status-pages" target="_blank" rel="noopener noreferrer">Shopify's own order status page</a>, a customer without an account can be asked to confirm their identity with the email or phone number plus the order number before full details show. A good chatbot mirrors that behavior instead of working around it.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-order-tracking-wismo/shopify-chatbot-order-tracking-wismo-identity-check.webp" alt="Identity gate showing only order status returned while the shipping address stays hidden" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>There is a second habit that keeps things tight: only return what the question needs. If someone asks "has it shipped yet," the honest answer is a status and maybe an ETA. It does not need to include their home address. In fact, Shopify redacts sensitive fields like name, address, and tracking number until a viewer is verified, and <a href="https://shopify.dev/docs/apps/build/customer-accounts/order-status-page" target="_blank" rel="noopener noreferrer">shows only public order data otherwise</a>. Returning the smallest useful set of fields is both safer and less awkward for the customer.</p>
+
+      <p>One more thing if you sell into the UK, EU, or California: your chat transcripts are customer data too. If someone asks you to delete their data, the conversation history counts. It is a small point, but it is the kind of detail that separates a bot set up carefully from one bolted on in an afternoon.</p>
+
+      <h2 id="honest-delay">How to word a delay honestly</h2>
+
+      <p>A chatbot handling order status will eventually meet a delayed order. How it words that moment matters more than almost anything else it says.</p>
+
+      <p>The instinct some owners have is to keep the bot vague, as if a soft answer will keep the customer calm. It does the opposite. People can tell when they are being managed. The better move is the one every good support team already uses: say it plainly, give a realistic new date, and name the reason in a sentence.</p>
+
+      <p>A realistic new ETA is the <a href="https://flodesk.com/tips/shipping-delay-templates" target="_blank" rel="noopener noreferrer">single piece of information the customer actually wants</a>. After that, a short reason helps ("a carrier delay in transit," "a warehouse backlog after a busy weekend") so they know you are aware of what is happening. You do not need to over-explain. You need to <a href="https://www.loopreturns.com/blog/shipping-delay-email-examples-what-to-say-to-customers/" target="_blank" rel="noopener noreferrer">be clear and upfront</a>.</p>
+
+      <p>What a delay message should never do is promise a date the bot cannot stand behind. <a href="https://warespace.com/articles/shipping-and-packaging-insights/how-to-handle-shipping-delays" target="_blank" rel="noopener noreferrer">Breaking a delivery promise costs more trust than the delay itself</a>. So if there is no firm new date yet, the honest script is to say that, tell the customer you are on it, and offer to have a human follow up rather than inventing a timeline.</p>
+
+      <p>Here is the difference in practice.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Instead of this</th>
+            <th>Have the bot say this</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Your order is still processing. Thank you for your patience.</td>
+            <td>Your order is running late. It is stuck in transit with the carrier and now looks likely to arrive by June 16 instead of June 12. I am sorry about that. Want me to have someone check on it directly?</td>
+          </tr>
+          <tr>
+            <td>Your order will arrive soon.</td>
+            <td>Your order is delayed and I do not have a firm new date yet. I have flagged it, and someone will follow up today with an update.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>The honest versions are longer, and they work, because they answer the real question (when) and admit the real situation (late). There is a payoff beyond good manners: customers who are told about a delay proactively are <a href="https://www.omnisend.com/blog/how-to-communicate-shipping-delays/" target="_blank" rel="noopener noreferrer">far less likely to open a ticket about it</a> than customers who discover it themselves. Honesty is also the lower-volume option.</p>
+
+      <h2 id="handoff">Where the bot should hand off to a human</h2>
+
+      <p>The whole system works because there is a clear line between what the bot answers and what it hands to you. Get that line right and the bot is a relief. Get it wrong and it becomes the thing customers complain about.</p>
+
+      <p>The line is this: the bot answers questions, and a human makes decisions. Reading a status, sharing a tracking link, confirming a return window, telling someone their order shipped: these are answers, and they are safe to automate because there is one correct response and it comes from your data.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-order-tracking-wismo/shopify-chatbot-order-tracking-wismo-handoff-line.webp" alt="Split path: bot answers status and tracking, human takes lost, damaged, and refund cases" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>The moment a message involves money, a judgment call, or an upset customer, it should go to you. A few clear triggers to hand off:</p>
+
+      <ul>
+        <li>The order is lost, or the tracking has not moved in days.</li>
+        <li>It shows as delivered, but the customer does not have it.</li>
+        <li>They want to change the shipping address or cancel.</li>
+        <li>They are asking for a refund or a replacement.</li>
+        <li>The item arrived damaged.</li>
+      </ul>
+
+      <p>None of these are lookups. They are decisions, and a bot that tries to make them is the bot that issues the wrong refund or promises a reship you did not approve. Let it collect the details, pull up the order, and pass a tidy summary to you. You make the call.</p>
+
+      <p>There is one more rule that protects you even on the "safe" questions: a confidence check. If the bot is not sure it has the right answer, it should hand off rather than guess. A confident wrong answer about your return window does more damage than a slightly slower correct one. Handing off is not the bot failing. It is the bot knowing its job.</p>
+
+      <p>Mechanically, this lands wherever you already work. The chatbots I set up pass conversations into a live-agent inbox like Gorgias or Zendesk, so the customer moves from bot to human without starting over and you pick up with the full thread in front of you. If you want the full framework, here is how to design <a href="/journal/shopify-chatbot-human-handoff/">when a chatbot should hand off to a human</a>.</p>
+
+      <h2 id="how-much">How much of the shipping inbox does this clear?</h2>
+
+      <p>Here is the honest version, because the inflated one helps no one. You will see very high automation rates quoted for order tracking, and for large brands with everything wired in, some of those numbers are real. For a small Shopify store, aim your expectations at a plainer target: a well-scoped order-status flow clears the routine half of your shipping questions.</p>
+
+      <p>That framing matters. If "where is my order" is your biggest category, and the bot reliably handles the on-track statuses, the simple "did it ship" checks, and the tracking-link requests, it is taking the largest, most repetitive slice off your plate. The exceptions (lost, damaged, refund, address change) stay with you. Those are the minority by count but the majority of the real work, which is exactly why you want your attention on them and not on copy-pasting statuses.</p>
+
+      <p>Two things make the number better without touching the bot. Firm delivery windows at checkout prevent questions before they start. And your Shopify shipping notification emails already do real prevention: every "your order shipped" and "out for delivery" message is one the customer did not have to ask about. <a href="https://www.blog.shippypro.com/en/how-to-reduce-wismo-tickets-in-ecommerce-the-complete-guide" target="_blank" rel="noopener noreferrer">Proactive updates are one of the biggest reducers of order-status contacts</a>. The bot handles what slips past those.</p>
+
+      <p>When you measure it, watch the difference between two numbers that sound alike. Deflection rate counts conversations that did not reach you. Resolution rate counts the ones the bot actually solved. A customer who gives up on a confusing bot and never messages you counts as "deflected" but was not helped. The number that matters is resolution. I broke that down further in a separate post on <a href="/journal/chatbot-resolution-vs-deflection-rate/">resolution rate versus deflection rate</a>.</p>
+
+      <p>Set up well, this is the clearest first win automation offers a Shopify store: a big, boring, repetitive category, handled safely, with the hard cases still coming to you.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>If your inbox is mostly "where is my order," you are looking at the best possible place to start with automation. Not because it is impressive, but because it is a lookup, not a decision, and lookups are what a bot does without drama.</p>
+
+      <p>Three things you can do this week, even before you decide on a bot. First, count your real numbers: look at your last 100 support messages and mark how many are order status. That percentage tells you how much a bot could actually take, and most owners are surprised how high it is.</p>
+
+      <p>Second, tighten the front end. Set firm delivery windows at checkout instead of vague ranges, and make sure your Shopify shipping notification emails are on. A lot of these questions disappear before they reach anyone.</p>
+
+      <p>Third, design the safety before the speed. If you do add a chatbot for order tracking, insist on two things from day one: the two-identifier check before it shows any details, and a clear handoff line for lost, damaged, and refund cases. Speed without those two is how a bot embarrasses you.</p>
+
+      <p>Done in that order, order tracking becomes the quiet win it should be. The routine half of your inbox handled, honestly, around the clock, with your attention freed for the messages that genuinely need a person.</p>
+
+      <div class="cta-block">
+        <h3>Want this handled without hiring?</h3>
+        <p>The Studio Niza AI Chatbots service sets up a secure order-status flow on your store, with the identity check, honest delay wording, and a clean handoff to you built in. Setup starts at $599, then $99/month for hosting, monitoring, and tuning.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See how the chatbot works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Can a Shopify chatbot track orders without any apps?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It needs live access to your order data, which comes through Shopify's Admin API or an integration. The free built-in chat tools can answer general questions, but they cannot pull a specific order's live status on their own, so some form of order-data connection is required.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Is it safe to let a chatbot show order details to customers?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes, as long as it verifies identity first and shows only what the question needs. Require the order number plus a second identifier like the email or postal code used at checkout, and return the status rather than the full address unless it is actually needed.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does chatbot order tracking work for guest checkout customers?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. The order number and the email from the confirmation are enough to look up and verify an order, so customers do not need an account. This is the same pair of details Shopify itself can use to confirm identity on the order status page.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>What does a chatbot say when an order is lost or stuck in transit?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It should state the real status honestly and then hand the case to a human, because a lost or stuck order needs a decision, not just a lookup. A good bot collects the details, pulls up the order, and passes a clean summary to you rather than inventing an outcome.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How is a chatbot different from Shopify's order status page?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Shopify's order status page shows carrier tracking data for a single order. A chatbot answers in plain language, verifies who it is talking to, handles related questions like your return window, and can pass the conversation to a human when needed.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Will a Shopify chatbot get rid of WISMO emails completely?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No, and any tool that promises that is overselling. A well-scoped order-status flow clears the routine half of your shipping questions, while the exceptions like lost packages, damage, and refunds still reach you.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-chatbot-order-tracking-wismo">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
