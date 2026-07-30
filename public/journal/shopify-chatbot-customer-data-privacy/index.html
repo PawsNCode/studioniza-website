@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Chatbot Privacy: What to Disclose in 2026</title>
+<meta name="description" content="A plain-English guide to Shopify chatbot privacy: what data your bot touches, what to disclose, and how to stay GDPR and CCPA compliant.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-chatbot-customer-data-privacy/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Shopify Chatbot Privacy: What to Disclose and How to Stay Compliant in 2026">
+<meta property="og:description" content="What your Shopify support bot collects, what to disclose, and how to stay compliant. For solo store owners.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-chatbot-customer-data-privacy/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-chatbot-customer-data-privacy/shopify-chatbot-customer-data-privacy.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify Chatbot Privacy and Customer Data by Studio Niza">
+<meta property="article:published_time" content="2026-07-30T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Chatbot Privacy: What to Disclose and How to Stay Compliant in 2026">
+<meta name="twitter:description" content="What your Shopify support bot collects, what to disclose, and how to stay compliant.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-chatbot-customer-data-privacy/shopify-chatbot-customer-data-privacy.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify Chatbot Privacy", "item": "https://studioniza.com/journal/shopify-chatbot-customer-data-privacy/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Shopify Chatbot Privacy: What to Disclose and How to Stay Compliant in 2026",
+  "description": "What data a Shopify support chatbot collects, where it is stored, what to disclose, and how to stay GDPR and CCPA compliant. A practical guide for solo store owners.",
+  "image": "https://studioniza.com/journal/shopify-chatbot-customer-data-privacy/shopify-chatbot-customer-data-privacy.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-07-30T10:00:00+08:00",
+  "dateModified": "2026-07-30T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-chatbot-customer-data-privacy/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-chatbot-customer-data-privacy/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I have to tell customers my Shopify chatbot is AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in most cases. The EU AI Act requires an AI disclosure from August 2, 2026 for bots that serve EU customers, and California's B.O.T. Act has required it for commercial bots since 2019. The simplest approach is to disclose globally with a one-line note at the start of the chat, so you do not have to guess where each shopper is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my chatbot's chat transcript considered personal data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually yes. If the transcript contains anything that can identify a person, such as a name, an email, an order number, or even an IP address, it counts as personal data under GDPR and personal information under CCPA. That means you are responsible for storing it securely and deleting it on request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is responsible if my chatbot vendor has a data breach, me or them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both, but the customer's relationship is with you. You are the data controller, so you are accountable for how the data was handled, while the vendor is the processor bound by your data processing agreement. Under GDPR, a serious breach has to be reported within 72 hours, so you want a vendor who will tell you fast."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should I keep chatbot conversations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no fixed legal number. The rule is to keep transcripts only as long as you need them for support, then delete them. Many small stores set an auto-delete window of 30 to 90 days, which handles follow-up questions while keeping your stored data small."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a cookie consent banner for my Shopify chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the chat widget sets non-essential cookies or collects personal data before a visitor agrees, then EU and UK shoppers need to consent first. The cleanest fix is to connect the widget to the same consent tool that gates your analytics, so the bot does not run until the shopper accepts. A banner that loads after the tracking already fired does not count as valid consent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a small Shopify store really need to worry about GDPR for a chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you have any EU or UK visitors. GDPR applies based on where your shoppers are, not where your store is or how small it is. For a small store, enforcement usually looks like being told to fix a problem rather than a large fine, but the obligation is still real."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify Chatbot Privacy</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">July 30, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Shopify Chatbot Privacy: What to Disclose and How to Stay Compliant in 2026</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-customer-data-privacy/shopify-chatbot-customer-data-privacy-hero.webp" alt="Shopify store owner reviewing chatbot privacy and data settings on a laptop" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">What a support chatbot collects, where it is stored and for how long, the privacy-policy lines to add, and the settings that keep customer transcripts safe.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-data-chatbot-touches">What data a support chatbot touches</a></li>
+        <li><a href="#where-stored-how-long">Where conversations are stored, and for how long</a></li>
+        <li><a href="#privacy-policy-lines">The privacy-policy lines to add</a></li>
+        <li><a href="#consent-ai-disclosure-notice">When to show a consent or AI-disclosure notice</a></li>
+        <li><a href="#gdpr-ccpa-chatbot">How GDPR and CCPA apply</a></li>
+        <li><a href="#settings-keep-transcripts-safe">The settings that keep transcripts safe</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+
+      <p>You added a chatbot to answer "where is my order" at 2 a.m., or to catch a question while you were asleep. Fair. What most Shopify owners miss is that the moment it went live, it became a data-collection point with its own compliance surface. Every message a shopper types, their name, their email, the reason they want a refund, now lands in a log somewhere. And <strong>shopify chatbot privacy</strong> is not a topic anyone raises when they sell you the bot.</p>
+
+      <p>This matters more in 2026 than it did last year. Privacy expectations tightened, AI-disclosure rules came into force, and a bot quietly saving conversations is a real exposure most stores never think about. The EU AI Act's transparency rules land on August 2, 2026, and they include a plain duty: if a person is talking to AI, tell them.</p>
+
+      <p>Here is the good news. You do not need a legal team to get this right. You need to understand three things: what your bot collects, where it goes, and what you owe the customer in return. In practice that is three small pieces: an AI disclosure, a consent moment, and a few honest lines in your privacy policy.</p>
+
+      <p>This guide walks through each one for a small Shopify store. What a support bot touches, where it is stored and for how long, the privacy-policy lines to add, when to show a notice, how GDPR and CCPA apply, and the settings that keep transcripts safe. No panic, no scare tactics about million-dollar fines. Just what to do.</p>
+
+      <h2 id="what-data-chatbot-touches">What data a support chatbot actually touches</h2>
+
+      <p>Before you can disclose anything, you need to know what the bot is holding. It helps to split it into three buckets.</p>
+
+      <h3>What the shopper types</h3>
+
+      <p>This is the obvious one. A support conversation can contain a name, an email, an order number, a shipping address, and sometimes far more: the reason for a return, a complaint about a product, occasionally health or financial details a customer volunteers without being asked. If you want a refresher on <a href="/journal/shopify-ai-chatbot/">what a Shopify chatbot actually does</a>, the short version is that it answers questions, and answering them often means the shopper hands over identifying details.</p>
+
+      <h3>What the bot pulls from your store</h3>
+
+      <p>To tell someone their order shipped, the bot reads order data through Shopify's API: status, tracking, sometimes the full customer record. That is customer data flowing into a third-party tool. Keep this separate in your head from the <a href="/journal/train-shopify-chatbot-knowledge-base/">store knowledge the bot is trained on</a>, your product pages, policies, and FAQs, which is not personal data at all.</p>
+
+      <h3>The transcript itself</h3>
+
+      <p>The whole conversation gets saved as a log. Under GDPR and CCPA, a transcript that contains anything that can identify a person (a name, an email, even an IP address) counts as personal data. So the log is not a harmless record. It is a file you are now responsible for.</p>
+
+      <p>The principle that ties this together is <strong>data minimization</strong>: collect only what you need for the task. Shopify's own <a href="https://shopify.dev/docs/apps/launch/protected-customer-data" target="_blank" rel="noopener noreferrer">protected customer data requirements</a> are built on it, and so is GDPR (<a href="https://gdpr-info.eu/art-5-gdpr/" target="_blank" rel="noopener noreferrer">Article 5</a>). A support bot needs an order number and basic verification. It does not need a date of birth. The most common finding in chatbot privacy reviews is over-collection: asking for data you never use, simply because the widget allows it.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-customer-data-privacy/shopify-chatbot-customer-data-privacy-data-flow.webp" alt="Diagram of what a Shopify chatbot collects: typed details, store order data, and the saved transcript" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="where-stored-how-long">Where those conversations are stored, and for how long</h2>
+
+      <p>Once the bot saves a transcript, it lives somewhere. Usually that is the chatbot vendor's cloud database, not your Shopify admin. Three questions decide your exposure.</p>
+
+      <h3>Who is actually responsible</h3>
+
+      <p>Under privacy law, you are the <strong>data controller</strong>: you decided to collect the data and why. The chatbot app is a <strong>processor</strong> acting on your behalf, and the AI model behind it is usually a <strong>sub-processor</strong>. This matters because you cannot outsource the responsibility. If the vendor mishandles a transcript, the customer's complaint still lands on you.</p>
+
+      <p>That relationship should be written down in a <strong>Data Processing Agreement</strong> (DPA), which GDPR requires between a controller and a processor. Most reputable chatbot vendors offer one. If yours cannot produce a DPA, that is a real answer about how seriously they take this.</p>
+
+      <h3>Where the data physically sits</h3>
+
+      <p>Region matters. If you have EU or UK shoppers and the transcripts sit on US servers, you have a cross-border transfer, which is allowed only with the right safeguards in place. When you are <a href="/journal/how-to-pick-shopify-chatbot/">picking a Shopify chatbot</a>, ask the plain question: where is our data stored, and can we keep it in a specific region? Shopify holds app developers to <a href="https://shopify.dev/docs/apps/launch/protected-customer-data" target="_blank" rel="noopener noreferrer">encryption at rest and in transit</a> for protected customer data, and your vendor should meet the same bar.</p>
+
+      <h3>How long it is kept</h3>
+
+      <p>Most tools keep transcripts until you tell them to stop. There is no fixed legal retention number under GDPR or CCPA. The rule is simpler and stricter: keep personal data only as long as you need it for the stated purpose, then delete it. For a support bot, that is usually short. Many stores set auto-delete at 30 to 90 days, which is long enough to resolve follow-ups and short enough to shrink the risk if anything ever leaks.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-customer-data-privacy/shopify-chatbot-customer-data-privacy-storage-chain.webp" alt="Chatbot data chain: store as controller, chat app as processor, AI model as sub-processor, with region and retention" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="privacy-policy-lines">The privacy-policy lines you actually need to add</h2>
+
+      <p>Your privacy policy is where you make all of this official. If it does not mention the chatbot at all, that is the gap to close first. You do not need dense legalese. You need a short, honest section a customer could actually read. An effective <strong>ai support privacy policy</strong> section covers these points.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>What to disclose</th>
+            <th>A plain example line</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The chatbot as a data point</td>
+            <td>"We use an AI chat assistant to answer questions and help with orders."</td>
+          </tr>
+          <tr>
+            <td>What it collects</td>
+            <td>"It may collect your name, email, order number, and the contents of your messages."</td>
+          </tr>
+          <tr>
+            <td>Why you collect it</td>
+            <td>"To answer support questions, look up orders, and improve our help."</td>
+          </tr>
+          <tr>
+            <td>Who processes it</td>
+            <td>"Conversations are handled by our chat provider and the AI model it runs on, acting on our behalf."</td>
+          </tr>
+          <tr>
+            <td>How long it is kept</td>
+            <td>"We keep chat transcripts for 90 days, then delete them."</td>
+          </tr>
+          <tr>
+            <td>Your rights</td>
+            <td>"You can ask us to access or delete your data at any time."</td>
+          </tr>
+          <tr>
+            <td>Where it goes</td>
+            <td>"Data may be processed outside your country under standard safeguards."</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Two things make this section trustworthy rather than boilerplate. First, name the sub-processors, or at least the categories, so a reader knows the AI vendor exists. Second, match the retention number to what your bot is actually set to. Writing "90 days" while the tool keeps everything forever is worse than saying nothing, because it is a promise you are breaking.</p>
+
+      <p>GDPR's <a href="https://gdpr-info.eu/art-17-gdpr/" target="_blank" rel="noopener noreferrer">right to erasure</a> also means you need a real way to honor a deletion request, not just a sentence claiming you will. If you already published a privacy policy when you launched, this is usually a paragraph added to an existing page, not a new document.</p>
+
+      <h2 id="consent-ai-disclosure-notice">When to show a consent or AI-disclosure notice</h2>
+
+      <p>This is where owners get confused, because two different notices get lumped together. They are not the same, and you may need both.</p>
+
+      <h3>The AI disclosure: tell people it is a bot</h3>
+
+      <p>If a shopper could reasonably think they are talking to a human, you have to tell them they are not. This is now written into law in more than one place. The EU AI Act's <a href="https://artificialintelligenceact.eu/article/50/" target="_blank" rel="noopener noreferrer">Article 50</a> requires that people be told they are interacting with AI, and it applies from August 2, 2026, including to stores outside the EU whose bot serves EU customers. In California, the <a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180SB1001" target="_blank" rel="noopener noreferrer">B.O.T. Act</a> has required disclosure for commercial bots since 2019, and Colorado's AI Act adds a similar duty in 2026. The fix is tiny: a first message that says the assistant is automated. (One nuance worth knowing: California's newer companion-bot law, SB 243, does not apply here, since it exempts ordinary customer-service bots.)</p>
+
+      <h3>The consent moment: do not collect before "yes"</h3>
+
+      <p>The second notice is about data, not identity. If your chat widget sets non-essential cookies or starts logging personal data, EU and UK visitors need to agree before that happens. A consent banner that loads after the tracking already fired is not valid consent.</p>
+
+      <p>Practically, this means wiring the chat widget into the same consent tool that gates your analytics, so nothing runs until the visitor accepts. Shopify's <a href="https://help.shopify.com/en/manual/privacy-and-security/privacy/customer-privacy-settings/understanding-customer-privacy-settings" target="_blank" rel="noopener noreferrer">customer privacy settings</a> and Customer Privacy API exist to route those signals correctly. The same logic applies at the moment the bot <a href="/journal/shopify-chatbot-human-handoff/">hands a conversation to a human</a>, since that transfer moves the transcript to a new set of eyes.</p>
+
+      <h2 id="gdpr-ccpa-chatbot">How GDPR and CCPA apply to your chatbot</h2>
+
+      <p>The two rules most likely to touch a small Shopify store are the EU's GDPR and California's CCPA and CPRA. Neither cares how small you are.</p>
+
+      <h3>GDPR, even if you are not in Europe</h3>
+
+      <p>GDPR applies to any business that processes the personal data of people in the EU or UK, wherever the business itself is based. If a shopper in Berlin chats with your bot, you are in scope. It asks for a lawful basis to process (usually legitimate interest for basic support, or consent for anything beyond that), data minimization, and the ability to delete data on request. It also requires reporting a serious data breach within 72 hours. Fines run up to 20 million euros or 4% of global turnover, though enforcement against a small store looks more like an order to fix things than a headline penalty. This is what makes <strong>gdpr chatbot ecommerce</strong> a real topic and not a scare tactic.</p>
+
+      <h3>CCPA and CPRA in California</h3>
+
+      <p>California's <a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener noreferrer">CCPA</a> gives shoppers the right to know what you collected, to delete it, to correct it, and to opt out of it being sold or shared. A chat transcript with a name or email is personal information under that law too. For most stores the practical work overlaps with GDPR: if you can honor an EU deletion request, you can usually honor a California one.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>For your chatbot</th>
+            <th>GDPR (EU and UK)</th>
+            <th>CCPA and CPRA (California)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Who it protects</td>
+            <td>People in the EU and UK</td>
+            <td>California residents</td>
+          </tr>
+          <tr>
+            <td>Transcript status</td>
+            <td>Personal data</td>
+            <td>Personal information</td>
+          </tr>
+          <tr>
+            <td>Key rights</td>
+            <td>Access, deletion, correction</td>
+            <td>Know, delete, correct, opt out of sharing</td>
+          </tr>
+          <tr>
+            <td>Consent model</td>
+            <td>Opt in before collection</td>
+            <td>Opt out of sale or sharing</td>
+          </tr>
+          <tr>
+            <td>Breach reporting</td>
+            <td>Within 72 hours</td>
+            <td>Without unreasonable delay</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="settings-keep-transcripts-safe">The settings that keep transcripts safe</h2>
+
+      <p>Most of this is not writing, it is toggling. Nearly every capable chatbot tool already has these controls. The work is turning them on and checking them.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-customer-data-privacy/shopify-chatbot-customer-data-privacy-settings-checklist.webp" alt="Chatbot privacy settings to check: retention limit, data region, no model training, PII masking, and access limits" style="margin-bottom: 16px; float: none;"></div>
+
+      <p><strong>Set a retention limit.</strong> Turn on auto-delete so transcripts clear after 30 to 90 days instead of piling up forever. This single setting shrinks your risk more than anything else on the list.</p>
+
+      <p><strong>Check the data region.</strong> If you sell to the EU or UK, confirm the vendor can store data in an appropriate region, or that a valid transfer safeguard is in place.</p>
+
+      <p><strong>Turn off model training on your data.</strong> Some tools feed conversations back into model training by default. Look for the "do not train on our data" option, or a zero-retention setting on the AI side, so a customer's message never becomes training material.</p>
+
+      <p><strong>Mask or redact sensitive fields.</strong> Better tools can strip things like card numbers before they are logged. Turn that on.</p>
+
+      <p><strong>Limit who can read transcripts.</strong> If you have a VA or a small team, give transcript access only to the people who need it.</p>
+
+      <p><strong>Sign the DPA and wire up consent.</strong> Get the data processing agreement on file, and connect the widget to your consent banner so it respects a shopper's choice.</p>
+
+      <p>None of these is hard on day one. The harder part is that they drift. A tool updates, a setting resets, a new integration quietly starts collecting more. That is why the <a href="/journal/shopify-chatbot-first-30-days/">first 30 days of monitoring</a> matter, and why a bot that someone actually watches stays compliant longer than one you set up once and forget. Honest scope beats impressive scope here too: it is better to run a small bot you fully control than a feature-packed one you never audit.</p>
+
+      <h2 id="getting-this-right">Getting this right without a legal team</h2>
+
+      <p>Strip away the acronyms and shopify chatbot privacy comes down to a short list. You are the data controller, so the buck stops with you. Collect only what the bot needs, disclose it plainly, and set a retention limit so transcripts do not live forever. Add the three notices: a line telling shoppers the assistant is AI, a consent moment before non-essential data collection, and a short section in your privacy policy that names the chatbot and its sub-processors.</p>
+
+      <p>The reason this is worth the hour it takes is not only the rules. A store that handles data carefully is a store people trust with their card, and trust is what turns a browser into a buyer. Doing this well is quietly a conversion move, not just a compliance chore.</p>
+
+      <p>The honest catch is that none of it stays fixed by itself. Settings reset, laws shift (the EU's AI-disclosure duty arriving in August 2026 is a live example), and a bot that was compliant in July can drift by autumn. If you want the short version to act on this week: find your retention setting, add the AI disclosure line, and update your privacy policy. Those three cover most of the exposure for a small store.</p>
+
+
+      <div class="cta-block">
+        <h3>Want a chatbot that ships compliant?</h3>
+        <p>The Studio Niza AI Chatbot service sets retention, disclosure, and consent up correctly, then monitors it monthly so it stays that way. $599 setup, $99/month all-in.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See how the chatbot service works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Do I have to tell customers my Shopify chatbot is AI?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes, in most cases. The EU AI Act requires an AI disclosure from August 2, 2026 for bots that serve EU customers, and California's B.O.T. Act has required it for commercial bots since 2019. The simplest approach is to disclose globally with a one-line note at the start of the chat, so you do not have to guess where each shopper is.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Is my chatbot's chat transcript considered personal data?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Usually yes. If the transcript contains anything that can identify a person, such as a name, an email, an order number, or even an IP address, it counts as personal data under GDPR and personal information under CCPA. That means you are responsible for storing it securely and deleting it on request.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Who is responsible if my chatbot vendor has a data breach, me or them?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Both, but the customer's relationship is with you. You are the data controller, so you are accountable for how the data was handled, while the vendor is the processor bound by your data processing agreement. Under GDPR, a serious breach has to be reported within 72 hours, so you want a vendor who will tell you fast.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How long should I keep chatbot conversations?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>There is no fixed legal number. The rule is to keep transcripts only as long as you need them for support, then delete them. Many small stores set an auto-delete window of 30 to 90 days, which handles follow-up questions while keeping your stored data small.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Do I need a cookie consent banner for my Shopify chatbot?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>If the chat widget sets non-essential cookies or collects personal data before a visitor agrees, then EU and UK shoppers need to consent first. The cleanest fix is to connect the widget to the same consent tool that gates your analytics, so the bot does not run until the shopper accepts. A banner that loads after the tracking already fired does not count as valid consent.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does a small Shopify store really need to worry about GDPR for a chatbot?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes, if you have any EU or UK visitors. GDPR applies based on where your shoppers are, not where your store is or how small it is. For a small store, enforcement usually looks like being told to fix a problem rather than a large fine, but the obligation is still real.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-chatbot-customer-data-privacy">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
