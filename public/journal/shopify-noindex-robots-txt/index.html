@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify No Index and Robots.txt: What to Block</title>
+<meta name="description" content="A safe guide to Shopify no index and robots.txt. What to block, what Shopify already handles, and the one edit that can deindex your whole store.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-noindex-robots-txt/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Noindex and Robots.txt on Shopify: What to Block and What to Never Touch">
+<meta property="og:description" content="What to keep out of Google on Shopify, and the one robots.txt edit that can deindex your store.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-noindex-robots-txt/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-noindex-robots-txt/shopify-noindex-robots-txt.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Noindex and Robots.txt on Shopify by Studio Niza">
+<meta property="article:published_time" content="2026-08-02T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Noindex and Robots.txt on Shopify: What to Block and What to Never Touch">
+<meta name="twitter:description" content="What to block on Shopify, what Shopify already handles, and the edit that deindexes stores.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-noindex-robots-txt/shopify-noindex-robots-txt.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify Noindex and Robots.txt", "item": "https://studioniza.com/journal/shopify-noindex-robots-txt/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Noindex and Robots.txt on Shopify: What to Block and What to Never Touch",
+  "description": "A careful guide to Shopify noindex and robots.txt: what to block, what Shopify already handles, noindex vs canonical, and the edits that can deindex a store.",
+  "image": "https://studioniza.com/journal/shopify-noindex-robots-txt/shopify-noindex-robots-txt.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-08-02T10:00:00+08:00",
+  "dateModified": "2026-08-02T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-noindex-robots-txt/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-noindex-robots-txt/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I edit robots.txt on Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Shopify has allowed robots.txt edits through a robots.txt.liquid theme template since 2021. That said, the default file is already tuned for SEO, so most stores should leave it alone and only edit it with a clear, specific reason."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a noindex tag remove my Shopify page from Google immediately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google has to recrawl the page to see the noindex tag, which can take a few days to a few weeks depending on how often the page is crawled. You can speed it up by requesting indexing in Google Search Console, but the page will not disappear instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does adding noindex on Shopify also remove the page from my sitemap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if you use the seo.hidden metafield method, which removes the page from your XML sitemap and internal search as well. A noindex meta tag added through theme.liquid does not touch your sitemap, so the page stays listed there and sends Google a mixed signal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does “Indexed, though blocked by robots.txt” mean in Search Console?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means Google found your URL, usually through a link, but could not crawl it because robots.txt blocks it, so it indexed the URL without content. If it is a page Shopify blocks by default, this is usually normal and needs no action. If it is a page you want gone, allow crawling and add a noindex tag instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I block my Shopify internal search from Google?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopify already blocks its default internal search at /search, so you usually do not need to. The exception is if you use a search app that serves results at a different URL, in which case those pages can get crawled and you may want to block that specific path."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to delete Shopify's default robots.txt rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Shopify maintains and updates those default rules to keep SEO best practices applied over time. Replacing them with your own plain-text version freezes the file and risks blocking pages you need indexed, which can cost real traffic."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify Noindex and Robots.txt</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">August 2, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>10 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Noindex and Robots.txt on Shopify: What to Block and What to Never Touch</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-noindex-robots-txt/shopify-noindex-robots-txt-hero.webp" alt="Shopify theme code editor open to a robots.txt file on a laptop, for safe Shopify no index setup" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">You read that you should hide some pages from Google. Here is what is safe to block on Shopify, what the platform already handles for you, and the one edit that can deindex your whole store overnight.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-robots-txt-controls">What robots.txt actually controls</a></li>
+        <li><a href="#what-shopify-already-blocks">What Shopify already blocks for you</a></li>
+        <li><a href="#pages-worth-blocking">The pages worth keeping out of Google</a></li>
+        <li><a href="#how-to-noindex-shopify">How to noindex a page safely</a></li>
+        <li><a href="#noindex-vs-canonical">Noindex vs canonical</a></li>
+        <li><a href="#edits-that-wreck-rankings">The edits that wreck rankings</a></li>
+        <li><a href="#safe-order-of-operations">A safe order of operations</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+
+      <p>Somewhere in a Shopify SEO checklist, you read a line like "hide certain pages from Google." Maybe it was about tag pages, your internal search, or a duplicate collection. So now you are staring at your robots.txt file and your theme code, one edit away from either fixing a small problem or deindexing your whole store by accident.</p>
+
+      <p>Here is the reassuring part first. On a Shopify store, most of the "hide this from Google" work is already done for you. Shopify ships a default robots.txt that blocks the pages that should never be indexed, and it adds canonical tags automatically. For most new stores, the correct move is to change nothing.</p>
+
+      <p>The risky part is that Shopify lets you edit robots.txt yourself, and the internet is full of advice telling you to. That advice is where stores get hurt. One wrong line under <strong>User-agent: *</strong> can tell Google to stop crawling your entire site, and the traffic can take months to come back.</p>
+
+      <p>This post is the careful version. You will learn what robots.txt actually controls (it is not what most people think), what Shopify already blocks for you, the handful of pages genuinely worth keeping out of Google, and how to noindex a page safely. We will also sort out the difference between noindex and canonical, since mixing those up is where most "shopify no index" searches begin. By the end, you will know exactly what to touch and what to leave alone.</p>
+
+      <h2 id="what-robots-txt-controls">What robots.txt actually controls (and what it doesn't)</h2>
+
+      <p>Robots.txt controls crawling, not indexing. That one distinction explains almost every mistake in this topic.</p>
+
+      <p>Crawling is when a search engine bot reads the code on your page. Indexing is when that page becomes eligible to appear in search results. They sound like the same thing, but they are two separate steps, and robots.txt only touches the first one.</p>
+
+      <p>Google is blunt about this in its own <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro" target="_blank" rel="noopener noreferrer">robots.txt documentation</a>: the file manages crawler traffic, and it is not a way to keep a page out of Google. If another site links to a page you blocked in robots.txt, Google can still index that URL. It just shows up with no description, because Google was never allowed to read the content.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-noindex-robots-txt/shopify-noindex-robots-txt-crawl-vs-index.webp" alt="Diagram showing crawling as a bot reading a page and indexing as the page entering search results" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>So if your goal is "keep this page out of search results," robots.txt is the wrong tool. The right tool is a noindex tag, which we will get to. If your goal is "stop wasting crawl budget on junk URLs," robots.txt is exactly right, and Shopify has already handled most of it.</p>
+
+      <h2 id="what-shopify-already-blocks">What Shopify already blocks for you</h2>
+
+      <p>Before you edit anything, look at what Shopify already does. Every store ships with a default robots.txt that blocks the pages no store wants indexed. You can see yours right now by adding <strong>/robots.txt</strong> to your domain.</p>
+
+      <p>Here is what the default file keeps crawlers away from, according to <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt" target="_blank" rel="noopener noreferrer">Shopify's own documentation</a>:</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>URL pattern</th>
+            <th>What it is</th>
+            <th>Why it's blocked</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/cart</td>
+            <td>The shopping cart</td>
+            <td>Unique per visitor, nothing to index</td>
+          </tr>
+          <tr>
+            <td>/checkout, /orders</td>
+            <td>Checkout and order pages</td>
+            <td>Private, no search value</td>
+          </tr>
+          <tr>
+            <td>/account</td>
+            <td>Customer account pages</td>
+            <td>Private to each customer</td>
+          </tr>
+          <tr>
+            <td>/search</td>
+            <td>Internal search results</td>
+            <td>Endless low-value URLs</td>
+          </tr>
+          <tr>
+            <td>/collections/*+*</td>
+            <td>Stacked filter pages</td>
+            <td>Duplicate, thin content</td>
+          </tr>
+          <tr>
+            <td>/collections/*sort_by*</td>
+            <td>Sorted collection views</td>
+            <td>Same products, different order</td>
+          </tr>
+          <tr>
+            <td>/policies/</td>
+            <td>Auto-generated policy pages</td>
+            <td>Near-identical across stores</td>
+          </tr>
+          <tr>
+            <td>/admin</td>
+            <td>Store admin</td>
+            <td>Not public anyway</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>This is why a common panic is misplaced. On r/shopify, new owners regularly find their robots.txt "full of Disallow lines" and assume something is broken. It is not. Those lines are Shopify's defaults, tuned for SEO, and they are supposed to be there.</p>
+
+      <p>Shopify updates these default rules over time so best practices stay applied. For the large majority of new stores, this file needs no changes at all. In practice, the studio touches it for maybe one client in twenty, and only for a specific, tested reason.</p>
+
+      <h2 id="pages-worth-blocking">The pages actually worth keeping out of Google</h2>
+
+      <p>Most stores never need to block anything beyond the defaults. A few situations are the real exceptions. Here is where a deliberate block earns its place.</p>
+
+      <p><strong>Thin tag and filter pages.</strong> Shopify's blog tag pages (like /blogs/news/tagged/sale) and some filtered collection URLs create thin, near-duplicate pages. Shopify blocks stacked filters by default, but a custom filter setup or an app can generate URLs the default rules miss. If Google is indexing dozens of these, they compete with your real pages. Our breakdown of <a href="/journal/shopify-blog-url-structure-tags-seo/">Shopify's tag pages and blog URL structure</a> covers this in detail.</p>
+
+      <p><strong>A custom internal search that changed the URL.</strong> Shopify blocks /search by default. But many stores install a search app that serves results at a different path, like /pages/search or an /apps/ route. Once that happens, the default rule no longer protects you, and Google can start crawling infinite query pages.</p>
+
+      <p><strong>A/B test duplicates and staging pages.</strong> If you clone a landing page to test two versions, you do not want Google indexing both. The same goes for any "draft" or "temp" page you published to preview.</p>
+
+      <p><strong>Genuinely private content you still published.</strong> A wholesale page, a hidden gift guide, a page you only share by direct link. These need real hiding, not just a robots.txt line.</p>
+
+      <p>Notice the pattern. Almost every one of these is better solved with a noindex tag than a robots.txt block, because you want the page kept out of results, not merely uncrawled. That is the next section.</p>
+
+      <h2 id="how-to-noindex-shopify">How to noindex a page on Shopify (the safe way)</h2>
+
+      <p>A noindex tag tells search engines to drop a page from their results, even if other sites link to it. It is the honest way to hide a page. On Shopify you have three ways to add one, and one of them is clearly the safest.</p>
+
+      <h3>Method 1: The seo.hidden metafield (recommended, no code)</h3>
+
+      <p>Shopify supports a built-in metafield called seo.hidden. Set it to 1 on a product, page, or blog post, and Shopify applies a noindex tag, removes the page from your XML sitemap, and hides it from internal search, all at once. Shopify's own team <a href="https://www.shopify.com/blog/noindex-shopify-page" target="_blank" rel="noopener noreferrer">documents this method</a>, and it is the cleanest option because it keeps every signal consistent. To reverse it, delete the value and save.</p>
+
+      <h3>Method 2: A conditional tag in theme.liquid (code, more control)</h3>
+
+      <p>If you need to noindex by rule (say, every page matching a certain handle), you can add a conditional meta tag in your theme's head. Shopify's <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/hide-a-page-from-search-engines" target="_blank" rel="noopener noreferrer">help docs</a> show the exact snippet. The catch: a meta tag alone does not remove the page from your sitemap, so you send Google a mixed signal (noindex on the page, but still listed in the sitemap). It also means editing core theme files, where one typo can break your layout.</p>
+
+      <h3>Method 3: Unlisted product status</h3>
+
+      <p>For products specifically, Shopify's Unlisted status hides the product from search, the Shopify Catalog, and your sitemap, while keeping it reachable by direct URL. Good for a link-only product.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>No code</th>
+            <th>Removes from sitemap</th>
+            <th>Best for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>seo.hidden metafield</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Most pages, most owners</td>
+          </tr>
+          <tr>
+            <td>theme.liquid meta tag</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Rule-based noindex</td>
+          </tr>
+          <tr>
+            <td>Unlisted status</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Link-only products</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>For most owners, the metafield is the answer. It is reversible, it does not touch theme code, and it keeps your sitemap honest.</p>
+
+      <p>One more thing that trips people up: noindex is not instant. Google has to recrawl the page to see the tag, which can take days to weeks. You can speed it up by requesting a recrawl in Google Search Console, but the page will not vanish overnight.</p>
+
+      <h2 id="noindex-vs-canonical">Noindex vs canonical: they do different jobs</h2>
+
+      <p>This is where "shopify no index" searches often go wrong. Noindex and canonical both deal with pages you would rather Google not spotlight, but they solve different problems.</p>
+
+      <p>A <strong>canonical tag</strong> says: these near-duplicate URLs are the same page, count them as one, and rank this version. The page stays indexable. You are consolidating signals, not hiding anything. Shopify adds canonical tags automatically for variant and tag URLs, which is why you rarely need to think about them. We wrote a full breakdown of how <a href="/journal/shopify-duplicate-content-urls/">variant and tag URLs create duplicate content</a> and what the canonical tag does about it.</p>
+
+      <p>A <strong>noindex tag</strong> says: drop this page from the index entirely. Nothing gets consolidated. The page simply leaves search results.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-noindex-robots-txt/shopify-noindex-robots-txt-noindex-vs-canonical.webp" alt="Diagram contrasting a canonical tag consolidating two URLs with a noindex tag removing one page" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Here is the simple rule. If two URLs show basically the same content and you want the stronger one to rank, that is a canonical job, and Shopify usually handles it. If a page should not be in Google at all, that is a noindex job, and you add it yourself.</p>
+
+      <p>Do not make them fight each other. A noindex tag combined with a canonical pointing to a different page sends Google mixed instructions. For a page you want gone, a plain noindex (with the self-referencing canonical Shopify already provides) is enough.</p>
+
+      <h2 id="edits-that-wreck-rankings">The edits that wreck rankings overnight</h2>
+
+      <p>Now the part that keeps store owners up at night. These are the mistakes that actually cost traffic, in rough order of how much damage they do.</p>
+
+      <p><strong>1. Disallowing your whole site.</strong> A single line, Disallow: / under User-agent: *, tells every crawler to stay off your entire store. Stores have done this by accident and dropped out of Google within days. Shopify warns in its docs that incorrect robots.txt edits can result in the loss of all traffic, and they mean it.</p>
+
+      <p><strong>2. Blocking a page you also want deindexed.</strong> This is the most common one, and it is counterintuitive. If you add a noindex tag to a page and also block that page in robots.txt, Google can never crawl the page to see the noindex tag. So it stays indexed, often showing up as "Indexed, though blocked by robots.txt" in Search Console. <a href="https://developers.google.com/search/docs/crawling-indexing/block-indexing" target="_blank" rel="noopener noreferrer">Google is explicit</a> that a noindex tag only works if the page can be crawled. The fix is to allow crawling and let the noindex do its job. If your pages are stuck this way, our <a href="/journal/shopify-pages-not-indexed-google/">diagnostic for Shopify pages not getting indexed</a> walks through it.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-noindex-robots-txt/shopify-noindex-robots-txt-disallow-conflict.webp" alt="Diagram of a crawler blocked by robots.txt never reaching the noindex tag on a page" style="margin-bottom: 16px; float: none;"></div>
+
+      <p><strong>3. Deleting Shopify's default rules.</strong> The default robots.txt is maintained and updated by Shopify. If you replace it with your own plain-text version, you freeze it in time and lose those updates. Shopify <a href="https://shopify.dev/docs/storefronts/themes/seo/robots-txt" target="_blank" rel="noopener noreferrer">recommends against this</a> for exactly that reason.</p>
+
+      <p><strong>4. Accidentally blocking AI crawlers.</strong> In 2026, some SEO and security apps add broad Disallow rules that catch AI crawlers like OAI-SearchBot, PerplexityBot, and ClaudeBot along with everything else. If you care about being cited in ChatGPT or Perplexity, an over-broad block quietly cuts you off. Check what your apps have added before you assume your robots.txt is clean.</p>
+
+      <p><strong>The golden rule:</strong> never put a Disallow and a noindex on the same page. Pick one. To keep a page out of Google, use noindex and let Google crawl it. To save crawl budget on junk URLs, use Disallow and skip the noindex.</p>
+
+      <h2 id="safe-order-of-operations">Wrapping up: a safe order of operations</h2>
+
+      <p>Most of the fear around "shopify no index" comes from treating robots.txt like an on-off switch for Google. It is not. Here is the order that keeps you safe.</p>
+
+      <p>Start by changing nothing. Check your /robots.txt and confirm it looks like Shopify's defaults. If it does, and your pages are indexing fine, you are done. A <a href="/journal/shopify-seo-audit-checklist/">weekend SEO audit</a> will tell you far more than a robots.txt edit ever will.</p>
+
+      <p>When you do have a page that genuinely should not be in Google, reach for the seo.hidden metafield first. It is reversible, needs no code, and keeps your sitemap consistent. Save robots.txt edits for the rare case of real crawl-budget waste, and test every change in Google Search Console before you trust it.</p>
+
+      <p>And remember the one rule that prevents the worst outcomes: noindex to remove a page, Disallow to save crawl budget, never both on the same page. Get that right and you will not deindex anything by accident.</p>
+
+      <p>If you are still unsure whether a page should be hidden at all, that hesitation is usually correct. Most pages earn their place in search. If you are not sure which ones matter most, our <a href="/journal/shopify-seo-checklist/">Shopify SEO checklist</a> covers the pages worth optimizing first. When in doubt, leave it indexed and ask.</p>
+
+
+      <div class="cta-block">
+        <h3>Rather not risk the robots.txt edit?</h3>
+        <p>The Studio Niza SEO service handles index coverage the safe way: the right pages noindexed, your sitemap and canonicals set correctly, and robots.txt left alone unless it truly needs a change. Pricing starts at $499 one-time.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See pricing and services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Can I edit robots.txt on Shopify?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. Shopify has allowed robots.txt edits through a robots.txt.liquid theme template since 2021. That said, the default file is already tuned for SEO, so most stores should leave it alone and only edit it with a clear, specific reason.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Will a noindex tag remove my Shopify page from Google immediately?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Google has to recrawl the page to see the noindex tag, which can take a few days to a few weeks depending on how often the page is crawled. You can speed it up by requesting indexing in Google Search Console, but the page will not disappear instantly.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does adding noindex on Shopify also remove the page from my sitemap?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Only if you use the seo.hidden metafield method, which removes the page from your XML sitemap and internal search as well. A noindex meta tag added through theme.liquid does not touch your sitemap, so the page stays listed there and sends Google a mixed signal.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>What does “Indexed, though blocked by robots.txt” mean in Search Console?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It means Google found your URL, usually through a link, but could not crawl it because robots.txt blocks it, so it indexed the URL without content. If it is a page Shopify blocks by default, this is usually normal and needs no action. If it is a page you want gone, allow crawling and add a noindex tag instead.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Should I block my Shopify internal search from Google?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Shopify already blocks its default internal search at /search, so you usually do not need to. The exception is if you use a search app that serves results at a different URL, in which case those pages can get crawled and you may want to block that specific path.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Is it safe to delete Shopify's default robots.txt rules?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Shopify maintains and updates those default rules to keep SEO best practices applied over time. Replacing them with your own plain-text version freezes the file and risks blocking pages you need indexed, which can cost real traffic.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-noindex-robots-txt">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>

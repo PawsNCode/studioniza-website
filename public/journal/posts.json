@@ -428,5 +428,10 @@
     "slug": "shopify-blog-images-seo",
     "title": "Shopify Blog Image SEO: What Every Image Should Do, and How to Do It Right",
     "url": "/journal/shopify-blog-images-seo/"
+  },
+  {
+    "slug": "shopify-noindex-robots-txt",
+    "title": "Noindex and Robots.txt on Shopify: What to Block and What to Never Touch",
+    "url": "/journal/shopify-noindex-robots-txt/"
   }
 ]
