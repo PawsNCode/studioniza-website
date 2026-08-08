@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Universal Commerce Protocol: What It Changed</title>
+<meta name="description" content="Shopify turned the Universal Commerce Protocol on by default. What UCP is, what changed in your admin, and the three checks worth doing this week.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-universal-commerce-protocol/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Shopify Universal Commerce Protocol: What UCP Means for Your Store">
+<meta property="og:description" content="What Shopify's Universal Commerce Protocol changed, and three checks worth doing in your admin this week.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-universal-commerce-protocol/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-universal-commerce-protocol/shopify-universal-commerce-protocol.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify Universal Commerce Protocol explained by Studio Niza">
+<meta property="article:published_time" content="2026-08-08T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Universal Commerce Protocol: What UCP Means for Your Store">
+<meta name="twitter:description" content="What Shopify's UCP changed, and three checks worth doing in your admin this week.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-universal-commerce-protocol/shopify-universal-commerce-protocol.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify Universal Commerce Protocol", "item": "https://studioniza.com/journal/shopify-universal-commerce-protocol/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Shopify Universal Commerce Protocol: What UCP Means for Your Store",
+  "description": "A plain-English guide to the Shopify Universal Commerce Protocol: what UCP is, what being on by default changed, a walkthrough of the Agentic section in the Shopify admin, the five product-data signals agents read, and three checks for new store owners.",
+  "image": "https://studioniza.com/journal/shopify-universal-commerce-protocol/shopify-universal-commerce-protocol.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-08-08T10:00:00+08:00",
+  "dateModified": "2026-08-08T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-universal-commerce-protocol/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-universal-commerce-protocol/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to do anything to turn on the Universal Commerce Protocol for my Shopify store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Shopify enabled both the Universal Commerce Protocol and Shopify Catalog by default for eligible merchants, so there is nothing to install or configure. Your job is making sure your products meet the eligibility requirements and that your product data is complete enough for an agent to represent you accurately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Shopify UCP the same thing as Shopify Catalog?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Shopify Catalog is the structured product data that AI agents search, covering titles, prices, options, availability, and images. UCP is the open protocol that defines how an agent acts on that data through discovery, cart building, and checkout. Catalog is what agents read. UCP is how they transact."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I stop AI agents from showing my products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In Sales channels then Agentic, turn off the setting called Allow Shopify to manage for me, then deactivate Shopify Catalog access for the channels you want out of. Changes can take up to seven days to take effect, and turning off Catalog access also turns off direct checkout for that channel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI channels does the Shopify Universal Commerce Protocol cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopify lists ChatGPT, Microsoft Copilot, AI Mode in Google Search, the Gemini app, and Shop, plus a grouped option covering smaller and emerging shopping agents. New channels get added over time, and you are enrolled in them automatically unless you turn that setting off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my Shopify Catalog show zero products?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually an eligibility problem rather than a bug. Your store has to be on the Starter plan or higher and not password-protected, and each product needs a title, at least one image, a price above zero, shipping to the United States or Canada, a published product URL, and a status that is not Unlisted or hidden from search engines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does UCP replace regular Shopify SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and the signals overlap heavily. Complete descriptions, real images, clean variant data, and filled-in policy pages help you in both places. Traditional search still sends most of the traffic for most stores under $200K a year, so treat agent readiness as an extension of your SEO work rather than a replacement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does agentic checkout mean I lose the customer relationship?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Orders placed inside an AI channel still land in your Shopify admin, and you still fulfill them, own the customer record, and handle returns. What changes is that discovery and comparison happened somewhere you do not control, which is why your product data has to do the persuading."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Universal Commerce Protocol worth caring about for a brand-new Shopify store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is worth about forty-five minutes, not a project. The product-data work that helps agents represent you accurately is the same work that helps you in ordinary search, so it pays off either way. Skip the panic, fix your top three products, and check the performance panel again in a month."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify Universal Commerce Protocol</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">August 8, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Shopify Universal Commerce Protocol: What UCP Means for Your Store</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-universal-commerce-protocol/shopify-universal-commerce-protocol-hero.webp" alt="Laptop on a calm desk showing a Shopify admin sidebar with a new agentic sales channel" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Shopify turned the Universal Commerce Protocol on by default, so AI shopping agents can already read your catalog and build carts. Here is what actually changed, what the new Agentic section does, and the three checks worth doing this week.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-is-ucp">What the Universal Commerce Protocol actually is</a></li>
+        <li><a href="#on-by-default">What being on by default changed for your store</a></li>
+        <li><a href="#agentic-section">The Agentic section in your admin, walked through</a></li>
+        <li><a href="#listing-quality">The five product-data signals agents read</a></li>
+        <li><a href="#should-you-opt-out">Should you opt out?</a></li>
+        <li><a href="#three-checks">Three checks worth doing this week</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+
+      <p>If you opened your Shopify admin in the last few weeks and found a new item in the sidebar called <strong>Agentic</strong>, you have already met the Shopify Universal Commerce Protocol. Nobody asked your permission. Nothing broke. But the way your products reach shoppers did change, and it is worth about ten minutes of your attention.</p>
+
+      <p>The short version: Shopify and Google co-developed an open standard called UCP that lets AI shopping assistants read your catalog, build a cart, and complete a purchase. Shopify switched it on for every eligible store instead of asking merchants to opt in. Then in the <a href="https://www.shopify.com/news/spring-26-edition-merchant" target="_blank" rel="noopener noreferrer">Spring &#39;26 Edition</a> on June 17, Shopify gave it a dedicated section in the admin, which is why a lot of owners are noticing it only now even though it has been running since spring.</p>
+
+      <p>The reaction in the Shopify Community forums was predictable and fair. Merchants asked why a sales channel was switched on without a prompt, whether their product photos were being fed somewhere they had not agreed to, and where the off switch was. Several of those threads are months old and the controls have changed since.</p>
+
+      <p>So: what the Shopify Universal Commerce Protocol is, what being on by default changed, a walkthrough of the new Agentic section, the five product-data signals Shopify scores you on, and three checks worth doing this week. No panic, no jargon.</p>
+
+      <h2 id="what-is-ucp">What the Universal Commerce Protocol actually is</h2>
+
+      <p>The Universal Commerce Protocol is an open standard, <a href="https://shopify.engineering/UCP" target="_blank" rel="noopener noreferrer">co-developed by Shopify and Google</a>, that gives AI shopping agents one shared language for talking to a store. Discovery, cart building, checkout, and the post-purchase handoff all run through the same set of rules.</p>
+
+      <p>Before UCP, every AI assistant needed a custom integration with every merchant, so in practice only the largest retailers got wired up. The closest comparison is what sitemaps did for search crawlers. You never made a private deal with Google. You published in a format the crawler understood and the crawler did the rest. A shared protocol does the same thing for agents, which is why a two-person store is now included by default rather than by negotiation.</p>
+
+      <h3>Is UCP the same thing as Shopify Catalog?</h3>
+
+      <p>No, and the two get mixed up constantly. <strong>Shopify Catalog is the data. UCP is the protocol.</strong> Catalog is a structured dataset of titles, prices, options, availability, and images that agents can search. UCP is the ruleset an agent follows to act on what it finds there.</p>
+
+      <p>Shopify describes Catalog as syndicating product details to ChatGPT, Copilot, the Shop app, and others with no extra apps and no manual feeds. Both pieces are enabled by default for Shopify merchants, which is the sentence that started most of the forum arguments.</p>
+
+      <h3>Why this is worth ten minutes and not zero</h3>
+
+      <p>Adobe, which tracks over a trillion visits to US retail sites, found that <a href="https://business.adobe.com/blog/ai-traffic-surge-retail-sites-not-machine-readable" target="_blank" rel="noopener noreferrer">traffic from AI sources grew 393 percent year over year</a> in Q1 2026. More interesting than the volume: in March 2026 it converted 42 percent better than non-AI traffic, a reversal from March 2025, when it converted 38 percent worse.</p>
+
+      <p>Shopify&#39;s own <a href="https://www.shopify.com/enterprise/blog/ai-search-insights" target="_blank" rel="noopener noreferrer">Q1 2026 commerce data</a> points the same way. AI-referred sessions on Shopify storefronts grew more than 8x year over year, AI-referred orders grew nearly 13x, and those orders carried 14 percent higher average order values.</p>
+
+      <p>Read those numbers honestly. They are platform-wide and heavily weighted by large stores. If you are doing 40 orders a month, 13x of a very small number is still a small number. The reason to care is that the work required to be readable by agents is work you were going to do anyway, and it is cheaper to do before the channel matters than after. For the wider version of that argument, I wrote about <a href="/journal/geo-for-shopify/">how to get your Shopify store cited in ChatGPT, Perplexity, and Claude</a>.</p>
+
+      <h2 id="on-by-default">What being on by default changed for your store</h2>
+
+      <p>Three things, concretely.</p>
+
+      <p><strong>Your eligible products were added to Shopify Catalog.</strong> That structured data is what ChatGPT, Microsoft Copilot, AI Mode in Google Search, the Gemini app, and the Shop app read when a shopper asks for a recommendation in your category.</p>
+
+      <p><strong>Direct checkout is active wherever the channel supports it.</strong> A shopper can finish a purchase inside the AI conversation without ever landing on your store. The order still arrives in your admin, and you still fulfill it, own the customer record, and handle the return.</p>
+
+      <p><strong>You are enrolled automatically in new agentic storefronts as Shopify adds them.</strong> This is the setting most owners did not know existed, and the one that deserves a deliberate decision.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-universal-commerce-protocol/shopify-universal-commerce-protocol-agent-flow.webp" alt="Diagram of how a shopper request moves through an AI agent to a Shopify store catalog and checkout" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Which of your products actually made it in</h3>
+
+      <p>Not all of them, necessarily. Shopify publishes an <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog/requirements" target="_blank" rel="noopener noreferrer">eligibility list for Shopify Catalog</a>, and a fair number of small stores fail at least one line of it:</p>
+
+      <ul>
+        <li>Your store is on the Starter plan or higher and is not password-protected.</li>
+        <li>Every product has a title, at least one image, and a price above $0. Free products are excluded.</li>
+        <li>Products ship to the United States or Canada.</li>
+        <li>Products are published to the online store, Hydrogen, or Headless channels, with an identifiable product URL.</li>
+        <li>Products are not set to Unlisted status and are not hidden from search engines.</li>
+        <li>Products do not contain sensitive or mature content.</li>
+      </ul>
+
+      <p>That second-to-last line catches more stores than you would expect. If a product page is hidden from search engines, it is hidden from agents too. The two are not separate switches.</p>
+
+      <h2 id="agentic-section">The Agentic section in your admin, walked through</h2>
+
+      <p>Go to <strong>Sales channels</strong>, then <strong>Agentic</strong>. Four things live there.</p>
+
+      <p><strong>1. Channel management.</strong> A setting called <em>Allow Shopify to manage for me</em> is on by default. While it is on, every agentic storefront has Catalog access, direct checkout is active where supported, and you are enrolled in new channels automatically. Turn it off and you get per-channel controls plus a separate toggle for auto-enrollment.</p>
+
+      <p><strong>2. Performance data.</strong> Per AI channel you get sales, orders, online store sessions, and online store conversion, plus a combined total sales report. One caveat worth knowing upfront: <a href="https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/agentic-home" target="_blank" rel="noopener noreferrer">Shopify says this reporting is not yet available for headless stores</a>.</p>
+
+      <p><strong>3. A search preview tool.</strong> You type a query and see how your products rank inside Shopify Catalog search. Shopify&#39;s own note on this is refreshingly blunt: agentic storefronts re-rank results using their own logic, so treat the preview as a directional signal, not a prediction.</p>
+
+      <p><strong>4. Listing quality per product.</strong> Each product gets a quality meter and a breakdown of specific insights. This is the most useful part of the section, and it gets its own heading below.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-universal-commerce-protocol/shopify-universal-commerce-protocol-admin-walkthrough.webp" alt="Layout of the Agentic section in the Shopify admin showing channel toggles and performance panels" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Why your Catalog might show zero products</h3>
+
+      <p>This is the most common confusion in Shopify Community threads about the Agentic section: the dashboard is right there, reporting that nothing is in Catalog. Walk the eligibility list above from the top. For small stores the usual culprits are a password-protected storefront, $0 products, products that do not ship to the US or Canada, and products left in Unlisted status.</p>
+
+      <p>If your products are eligible and still are not appearing anywhere, the problem sits upstream of Catalog. I covered that diagnostic separately in <a href="/journal/shopify-store-chatgpt-visibility/">why your store isn&#39;t showing up in ChatGPT</a>.</p>
+
+      <h2 id="listing-quality">The five product-data signals agents read</h2>
+
+      <p>This is the part that actually matters, and it is why the Shopify Universal Commerce Protocol is a content problem rather than a technical one. Shopify scores every product on five listing quality signals and tells you which ones are weak.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Signal</th>
+            <th>What Shopify measures</th>
+            <th>What to do about it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Description completeness</td>
+            <td>Word count of the description, because AI channels match descriptions to natural-language questions</td>
+            <td>Write for the question, not the product. Materials, sizing, fit, compatibility, what is included, who it is for</td>
+          </tr>
+          <tr>
+            <td>Image coverage</td>
+            <td>The number of product images</td>
+            <td>Add angles and context shots. One packshot is not enough for an agent to represent the product across different surfaces</td>
+          </tr>
+          <tr>
+            <td>Product reviews</td>
+            <td>Average rating and review count, counted only from sources Shopify treats as verified</td>
+            <td>Run a real review request flow. This is the one signal you cannot write your way into</td>
+          </tr>
+          <tr>
+            <td>Variant and option completeness</td>
+            <td>Variants and options, their in-stock status, and whether option names use acronyms or bare numbers agents struggle to read</td>
+            <td>Rename &quot;OS&quot; and &quot;Free Size&quot; to plain words. Keep option sets consistent across products</td>
+          </tr>
+          <tr>
+            <td>Shop policy completeness</td>
+            <td>Whether shipping, returns, refund, and other store policies are present</td>
+            <td>Fill in every policy page. Shopify says policies signal that a store is legitimate</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Notice what is not on that list. Nothing about theme code, nothing about apps, nothing you can buy your way out of. Four of the five are writing tasks and the fifth is a process.</p>
+
+      <p>The variant signal is the sneaky one. An agent has to map a shopper&#39;s phrasing onto your option names, and &quot;One Size,&quot; &quot;OS,&quot; and &quot;Free Size&quot; scattered across a catalog are three different strings to a machine and one concept to a human. Same problem with sizes encoded as bare numbers with no unit attached.</p>
+
+      <p>Reviews are the only signal here that depends on your customers rather than your keyboard, and Shopify counts them only from verified sources, so the app you pick has consequences. I compared the two common value-tier options in <a href="/journal/judge-me-vs-stamped-shopify/">Judge.me vs Stamped</a>.</p>
+
+      <p>Descriptions are where the standard rose. A crawler could rank a thin description as long as the title carried the keyword. An agent asked for a waterproof jacket for a weekend hike under $200 has to decide whether your product answers that question, using only what you wrote. My approach is in <a href="/journal/shopify-product-description-seo/">writing product descriptions that rank and convert</a>.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-universal-commerce-protocol/shopify-universal-commerce-protocol-listing-quality.webp" alt="One product listing feeding five listing quality signal meters at different fill levels" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Adobe&#39;s Q1 report also scored how much of a retail page is readable by language models. Homepages averaged 75 percent across the US retail sector and FAQ pages scored 80 percent. Individual product pages came in lowest, at 66 percent. The pages carrying the buying decision are the pages least ready to be read by the thing making it.</p>
+
+      <p>Shopify is careful to say that listing quality only covers what you directly control. Relevance also depends on popularity, engagement, and brand recognition, which a new store accumulates slowly and cannot shortcut. That is the honest ceiling here, and the reason I would not promise anyone that fixing five fields puts them at the top of an AI answer.</p>
+
+      <h2 id="should-you-opt-out">Should you opt out?</h2>
+
+      <p>For most stores doing under $200K a year, no. But the objections merchants raised are not silly, so here they are fairly.</p>
+
+      <p>The strongest one is consent. Every other sales channel on Shopify waits for you to opt in. This one did not, and merchants selling under supplier agreements that restrict where products may be listed had a legitimate reason to be alarmed. If you have a distribution contract with channel restrictions in it, that is a contract question rather than a marketing question, and it is worth reading the clause instead of guessing.</p>
+
+      <p>The second objection is presentation. Your product gets summarized by a model, in an interface you did not design, next to competitors you did not choose. That is real. It is also what marketplace listings and shopping results have done for twenty years. The response that works is better source data, not withdrawal.</p>
+
+      <h3>What turning it off actually costs</h3>
+
+      <p>Switch off Shopify Catalog access and your products stop reaching those channels through the structured route. They can still be found by ordinary web crawling. But Shopify reports that AI searches powered by Catalog convert at twice the rate of searches relying on scraped data, so you would be trading the good path for the mediocre one.</p>
+
+      <p>Three practical details if you do change something:</p>
+
+      <ul>
+        <li>Turning off Catalog access can take up to seven days to take effect.</li>
+        <li>Turning off Catalog access for a channel also turns off direct checkout for that channel.</li>
+        <li>Shop is handled separately. You cannot deactivate Catalog access for Shop from the Agentic section. You manage it from the Shop sales channel settings instead.</li>
+      </ul>
+
+      <p>One workaround circulating in the forums deserves a warning. Setting products to Unlisted does hide them from agents, and it also hides them from Google and from your own storefront search. That is not an opt-out, it is a delisting. If you want out of AI channels but still in search results, Unlisted is the wrong tool.</p>
+
+      <h2 id="three-checks">Three checks worth doing this week</h2>
+
+      <p>This is a forty-five minute pass, not a project. Do it once, then leave it alone for a month.</p>
+
+      <h3>Check one: confirm you are actually in Catalog</h3>
+
+      <p>Open Sales channels, then Agentic, and check whether your products are listed. If the count is zero, walk the eligibility list from earlier. Password protection and $0 products catch new stores most often.</p>
+
+      <h3>Check two: search the way a customer talks</h3>
+
+      <p>In the search preview, type three queries phrased the way a shopper would say them out loud, not the way you named the product. Something like &quot;gift for someone who just moved into their first apartment&quot; rather than &quot;ceramic mug set.&quot; Note which products appear and what the listing quality meter says about the ones that missed.</p>
+
+      <h3>Check three: fix the weakest signal on your top three products</h3>
+
+      <p>Sort by revenue, take the top three, and fix one signal on each. Usually that is a description that answers the buying question, or option names a machine can interpret. Then set a reminder for thirty days out to open the performance panel and see whether anything moved. For a fuller measurement setup, I wrote about <a href="/journal/track-ai-search-traffic-shopify/">tracking whether AI search is sending shoppers to your store</a>.</p>
+
+      <p>Resist the urge to fix all 80 products this week. The scoring is per product, the effort is per product, and your revenue is not spread evenly across them.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Three things to take away.</p>
+
+      <p>First, the Shopify Universal Commerce Protocol is not something you install, configure, or buy an app for. It is already running on your store. The only real decisions are whether to stay enrolled and how good your product data is.</p>
+
+      <p>Second, the work is writing. Descriptions that answer real buying questions, option names a machine can read, policy pages that are actually filled in, and a reviews process that runs without you. Four of the five signals come out of a text editor, which is either good news or annoying news depending on how you feel about writing.</p>
+
+      <p>Third, the numbers are real but early. AI-referred orders growing nearly 13x on Shopify says something true about direction. It is not a promise about your next quarter, and anyone telling you otherwise is selling something.</p>
+
+      <p>What I would not do is treat this as urgent. The queries are new, the competition is thin, and the fix is the same product-data work that has always paid off in ordinary search. Doing it now just means it counts twice.</p>
+
+
+      <div class="cta-block">
+        <h3>Want your product data agent-ready?</h3>
+        <p>The Studio Niza SEO &amp; GEO service covers the product data agents actually read: descriptions written per product, clean variant naming, image SEO, real schema, and the policy pages that signal you are a legitimate store. Pricing starts at $499 one-time.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See pricing &amp; services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Do I need to do anything to turn on the Universal Commerce Protocol for my Shopify store?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Shopify enabled both the Universal Commerce Protocol and Shopify Catalog by default for eligible merchants, so there is nothing to install or configure. Your job is making sure your products meet the eligibility requirements and that your product data is complete enough for an agent to represent you accurately.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Is Shopify UCP the same thing as Shopify Catalog?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Shopify Catalog is the structured product data that AI agents search, covering titles, prices, options, availability, and images. UCP is the open protocol that defines how an agent acts on that data through discovery, cart building, and checkout. Catalog is what agents read. UCP is how they transact.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can I stop AI agents from showing my products?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. In Sales channels then Agentic, turn off the setting called Allow Shopify to manage for me, then deactivate Shopify Catalog access for the channels you want out of. Changes can take up to seven days to take effect, and turning off Catalog access also turns off direct checkout for that channel.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Which AI channels does the Shopify Universal Commerce Protocol cover?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Shopify lists ChatGPT, Microsoft Copilot, AI Mode in Google Search, the Gemini app, and Shop, plus a grouped option covering smaller and emerging shopping agents. New channels get added over time, and you are enrolled in them automatically unless you turn that setting off.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Why does my Shopify Catalog show zero products?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Usually an eligibility problem rather than a bug. Your store has to be on the Starter plan or higher and not password-protected, and each product needs a title, at least one image, a price above zero, shipping to the United States or Canada, a published product URL, and a status that is not Unlisted or hidden from search engines.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does UCP replace regular Shopify SEO?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No, and the signals overlap heavily. Complete descriptions, real images, clean variant data, and filled-in policy pages help you in both places. Traditional search still sends most of the traffic for most stores under $200K a year, so treat agent readiness as an extension of your SEO work rather than a replacement.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does agentic checkout mean I lose the customer relationship?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Orders placed inside an AI channel still land in your Shopify admin, and you still fulfill them, own the customer record, and handle returns. What changes is that discovery and comparison happened somewhere you do not control, which is why your product data has to do the persuading.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Is the Universal Commerce Protocol worth caring about for a brand-new Shopify store?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It is worth about forty-five minutes, not a project. The product-data work that helps agents represent you accurately is the same work that helps you in ordinary search, so it pays off either way. Skip the panic, fix your top three products, and check the performance panel again in a month.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-universal-commerce-protocol">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
