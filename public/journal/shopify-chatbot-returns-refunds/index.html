@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot Returns and Refunds on Shopify: What to Automate</title>
+<meta name="description" content="A chatbot returns and refunds setup for Shopify that automates the status checks and keeps the judgment calls human. Five moments, split honestly.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-chatbot-returns-refunds/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Can a Shopify Chatbot Handle Returns and Refunds? What to Automate and What Not To">
+<meta property="og:description" content="The five moments in a Shopify returns conversation, which ones a chatbot handles safely, and which need you.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-chatbot-returns-refunds/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-chatbot-returns-refunds/shopify-chatbot-returns-refunds.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify Chatbot Returns and Refunds by Studio Niza">
+<meta property="article:published_time" content="2026-08-13T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Can a Shopify Chatbot Handle Returns and Refunds? What to Automate and What Not To">
+<meta name="twitter:description" content="Which parts of a Shopify returns conversation a chatbot can safely handle, and which need you.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-chatbot-returns-refunds/shopify-chatbot-returns-refunds.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Chatbot Returns and Refunds", "item": "https://studioniza.com/journal/shopify-chatbot-returns-refunds/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Can a Shopify Chatbot Handle Returns and Refunds? What to Automate and What Not To",
+  "description": "The five moments in a Shopify returns conversation, which ones a chatbot handles safely, which need a human every time, and the return policy prep that makes the automation trustworthy.",
+  "image": "https://studioniza.com/journal/shopify-chatbot-returns-refunds/shopify-chatbot-returns-refunds.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-08-13T10:00:00+08:00",
+  "dateModified": "2026-08-13T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-chatbot-returns-refunds/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-chatbot-returns-refunds/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a Shopify chatbot issue a refund by itself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically yes. Agent-style tools with write access to the Shopify Admin API can create a refund without a human clicking anything. For a store doing under a few hundred orders a month, I don't recommend it. A refund is the one action in your store that cannot be undone from your side, and the time you save on the click is smaller than the cost of one wrong call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my store legally responsible if the chatbot gives wrong return information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In Moffatt v. Air Canada, the British Columbia Civil Resolution Tribunal rejected the argument that a chatbot is a separate entity from the company running it and held the airline to what its bot said. Your chatbot is part of your storefront the same way your policy page is. Anything it states about your return window, fees, or refund timing is a representation your store has to stand behind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a returns app for chatbot returns and refunds to work on Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Shopify's built-in self-serve returns and return rules are free and cover the return window, final-sale exclusions, and return fees. That is enough structure for a chatbot to answer eligibility questions accurately. A dedicated returns app earns its cost once you are handling roughly forty returns a month or you want automated exchanges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should my chatbot say a refund takes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Give your real operational range plus the bank's processing time, stated separately. Something like: we inspect within two business days of delivery, then the refund is issued, then your bank posts it in five to ten business days. Never let the bot name a specific date the money will appear, because the last leg is not yours to promise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should a chatbot handle exchanges differently from refunds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it should offer the exchange first. An exchange keeps the revenue in your store and is a lower-risk action than a refund because nothing leaves your account. A chatbot that opens with the exchange option and treats the refund as the fallback recovers money that a refund-first flow gives away by default."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What percentage of returns tickets can a chatbot actually resolve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Realistically about half to two thirds of the message volume, not of the returns themselves. The bot clears the policy questions, eligibility checks, and refund-status pings, which are the bulk of the messages. The actual decisions still come to you, so plan for fewer messages rather than fewer returns."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Chatbot Returns and Refunds</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">August 13, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Can a Shopify Chatbot Handle Returns and Refunds? What to Automate and What Not To</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-returns-refunds/shopify-chatbot-returns-refunds-hero.webp" alt="Opened return parcel beside a laptop showing a Shopify chatbot handling a refund question" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Returns are the highest-emotion, highest-risk tickets in your queue. Here is the honest split: the three moments a trained bot handles better than you do, the two that need a person every time, and the policy work that has to happen first.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#why-returns-are-different">Why returns tickets are different from every other ticket</a></li>
+        <li><a href="#five-moments">The five moments in a returns conversation</a></li>
+        <li><a href="#safe-to-automate">The three moments a trained bot handles safely</a></li>
+        <li><a href="#needs-a-human">What needs a human every time</a></li>
+        <li><a href="#policy-page-prep">The policy page prep that makes automation trustworthy</a></li>
+        <li><a href="#escalation-script">The escalation script for the angry customer</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>Returns are the second-biggest ticket pile in most Shopify stores. "Where is my order?" is first, and a chatbot handles that one cleanly because the answer is a tracking number sitting in Shopify. Returns are different. Every returns ticket has money in it, an unhappy person behind it, and a policy you wrote once and may not actually want to enforce this particular time.</p>
+
+      <p>That's why the question of whether a chatbot can handle returns and refunds on Shopify gets answered badly in both directions. Vendors say yes to all of it. Owners who have been burned say no to all of it. Neither answer survives a real returns queue.</p>
+
+      <p>The useful answer is that a returns conversation is not one thing. It is five separate moments, and they carry wildly different risk. Three of them are lookups a trained bot does better than you do at 11pm on a Sunday. One is a handoff. One is a judgment call where automation reliably turns an annoyed customer into an angry one.</p>
+
+      <p>This post splits the returns conversation into those five moments, gives you the verdict on each, covers the policy page work that has to happen before any of it is safe, and ends with the escalation script for the customer who is already angry when they open the chat.</p>
+
+      <h2 id="why-returns-are-different">Why returns tickets are different from every other ticket</h2>
+
+      <p>A "where is my order?" ticket has one correct answer, that answer already lives in Shopify, and the customer wants information. Those three conditions are why <a href="/journal/shopify-chatbot-order-tracking-wismo/">WISMO automation works as well as it does</a> and why it should be the first thing any store hands to a bot.</p>
+
+      <p>Returns tickets fail all three. The answer often isn't in Shopify yet, because nothing has physically moved. The customer wants money, not information. And the correct answer depends on a written policy plus your discretion about it. Three things make this pile expensive.</p>
+
+      <p><strong>The volume is structural, not seasonal.</strong> The National Retail Federation and Happy Returns put the 2025 ecommerce return rate at <a href="https://nrf.com/research/2025-retail-returns-landscape" target="_blank" rel="noopener noreferrer">19.3% of online sales</a>. At 200 orders a month, that's roughly 40 returns, and each one generates one to four messages before it closes. It also concentrates: the January after Black Friday is the heaviest returns month of the year for most stores, which is worth planning for alongside the rest of your <a href="/journal/shopify-chatbot-bfcm-prep/">holiday chatbot prep</a>.</p>
+
+      <p><strong>The emotional stakes are higher than the dollar value.</strong> In the same NRF research, 71% of consumers said they are less likely to shop with a retailer again after a poor returns experience, up from 67% the year before, and four out of five said they tell friends and family about it. A returns ticket handled badly costs you the next order, not just this one.</p>
+
+      <p><strong>You are legally on the hook for what the bot says.</strong> Most vendor pages skip this. Your chatbot is part of your storefront in the same way your policy page is, and the section below covers what that means.</p>
+
+      <h2 id="five-moments">The five moments in a returns conversation</h2>
+
+      <p>"Can a chatbot handle returns?" has no clean answer because the question bundles five different jobs together. Split them and it gets obvious.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Moment</th>
+            <th>What the customer types</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. The policy question</td>
+            <td>"What's your return policy?" or "Can I return this if it doesn't fit?"</td>
+            <td>Automate</td>
+          </tr>
+          <tr>
+            <td>2. The eligibility check</td>
+            <td>"Can I still return order #1042?"</td>
+            <td>Automate, read-only</td>
+          </tr>
+          <tr>
+            <td>3. The label request</td>
+            <td>"How do I send it back?"</td>
+            <td>Automate the handoff, not the label</td>
+          </tr>
+          <tr>
+            <td>4. The refund status</td>
+            <td>"I posted it back a week ago. Where's my money?"</td>
+            <td>Automate, read-only</td>
+          </tr>
+          <tr>
+            <td>5. The exception plea</td>
+            <td>"I know it's day 38, but I was away."</td>
+            <td>Human every time</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-returns-refunds/shopify-chatbot-returns-refunds-five-moments.webp" alt="The five moments of a Shopify returns conversation, with the last two flagged for human handling" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>There's useful consumer research behind this split. <a href="https://www.surveymonkey.com/curiosity/customer-service-statistics/" target="_blank" rel="noopener noreferrer">SurveyMonkey's customer service study</a> found that 79% of Americans strongly prefer a human over an AI agent in general, yet 59% said they'd be happy using AI specifically to return an item. Those numbers look contradictory until you notice people are answering about different moments. They want the mechanical parts fast and self-serve, and a person for the parts where someone has to decide something.</p>
+
+      <h2 id="safe-to-automate">The three moments a trained bot handles safely</h2>
+
+      <p>One principle governs all three: <strong>the bot reads, it does not write.</strong> It can look up anything in your store and quote anything in your policy. It cannot change an order, issue money, or grant an exception.</p>
+
+      <h3>Moment 1: the policy question</h3>
+
+      <p>This is the highest-volume, lowest-risk moment, and it happens before the purchase as often as after. Baymard Institute found that <a href="https://baymard.com/blog/current-state-ecommerce-product-page-ux" target="_blank" rel="noopener noreferrer">60% of shoppers look for return policy information on the product page</a>, and a policy they can't find is a reason they leave.</p>
+
+      <p>The rule here: the bot quotes, it doesn't summarise. A model that paraphrases your 30-day window into "about a month" has just created a claim you didn't write. Train it on the policy text and instruct it to answer with the policy's own wording, then link to the full page. This is the same discipline that makes a <a href="/journal/shopify-faq-chatbot-self-serve/">self-serve FAQ chatbot</a> trustworthy: extract, don't invent.</p>
+
+      <h3>Moment 2: the eligibility check</h3>
+
+      <p>Once the bot can see the order, it can compare the delivery date to your return window, check whether the item is tagged final sale, and tell the customer where they stand. Shopify's <a href="https://help.shopify.com/en/manual/fulfillment/managing-orders/returns/return-rules" target="_blank" rel="noopener noreferrer">return and cancellation rules</a> hold all of this in a machine-readable form already, which is what makes the answer reliable rather than guessed.</p>
+
+      <p>One phrasing rule matters a lot: the bot reports eligibility, it doesn't grant approval. "This order is within the 30-day window, so it qualifies under our policy. Start the request here and it comes to us for approval" is safe. "Yes, you're approved" is not, because you haven't seen the item yet.</p>
+
+      <h3>Moment 4: the refund status</h3>
+
+      <p>This is WISMO for money, and the most underrated automation on the list. Once a return is moving, the customer's anxiety shifts from the parcel to their bank account.</p>
+
+      <p>The bot should be able to state which stage the return is at: request received, label sent, parcel in transit, item received, refund issued. Give the stage plus your operational timing, and stop there. Never let it name a date the money will land, because the last leg belongs to the customer's bank.</p>
+
+      <h3>And the half-automated one: the label request</h3>
+
+      <p>Moment 3 is the one people get wrong. The instinct is to have the bot generate a label in chat. The better design hands the customer to Shopify's <a href="https://help.shopify.com/en/manual/fulfillment/managing-orders/returns/self-serve-returns/setup" target="_blank" rel="noopener noreferrer">self-serve returns portal</a>, which is free, already enforces your return rules, and creates a clean record in your admin. The bot gets them there with the order identified. The portal does everything after that.</p>
+
+      <h2 id="needs-a-human">What needs a human every time</h2>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-returns-refunds/shopify-chatbot-returns-refunds-read-write-boundary.webp" alt="Diagram of a Shopify chatbot with open read access to order data and a gate blocking refund actions" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Moment 5 is the exception plea, and it needs a person for a reason that has nothing to do with the bot's capability. It's a discretionary decision about your own money, and both answers are bad coming from software. If the bot says no, it is enforcing the policy correctly and the customer reads it as a machine refusing them. If the bot says yes, you have created a precedent you're bound by.</p>
+
+      <p>The second case that always needs eyes is the damaged or wrong-item claim. It means looking at a photo and deciding whether it's a warehouse error, a courier problem, or something else. A bot can collect the photo and the order number. It shouldn't rule on them.</p>
+
+      <p>Zendesk's 2026 CX Trends research, covering more than 11,000 consumers and business leaders, found roughly three quarters of customers prefer a human agent for issues that are complex, sensitive, or emotionally driven. The exception plea is all three at once.</p>
+
+      <h3>Should the bot ever push the refund button?</h3>
+
+      <p>Agent-style tools can now do this. Connect one to the Shopify Admin API with write access and it will create refunds without a human touching anything. For stores under a few hundred orders a month, the answer is still no. A refund is the only action in your store you cannot reverse from your side. The click takes four seconds. The wrong call costs you the money, the inventory, and often a chargeback fight anyway.</p>
+
+      <p>This is why Studio Niza's chatbot builds get read access to orders and no write access to refunds on the Basic and Advanced tiers. It isn't a technical limit, it's a scope decision: only advertise what you can confidently deliver. There is a reasonable middle version, where the bot does all the work and stops at "shall I process this?" for one-click approval. That is still a human approving it.</p>
+
+      <p>The liability point sits here too. In <a href="https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot" target="_blank" rel="noopener noreferrer">Moffatt v. Air Canada</a>, a customer relied on a chatbot's statement about refund eligibility, the statement was wrong, and the airline argued it wasn't responsible because the chatbot was a separate entity. The British Columbia Civil Resolution Tribunal rejected that outright and held the airline to what its bot said. The damages were small. The principle is not: whatever your bot states about returns is a representation your store has to honour.</p>
+
+      <h2 id="policy-page-prep">The policy page prep that makes automation trustworthy</h2>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-returns-refunds/shopify-chatbot-returns-refunds-policy-anatomy.webp" alt="Anatomy of a Shopify return policy page structured so a chatbot can quote it accurately" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Here's the part nobody sells you, because it isn't software. Most returns automation fails on the policy, not the bot. If your policy page is vague, the model fills the gap, and a filled gap is a hallucinated policy.</p>
+
+      <p>Before you connect anything, your return policy needs to state six things in plain sentences a bot can quote:</p>
+
+      <p><strong>1. The window, and what day it starts.</strong> "30 days" is ambiguous. Thirty days from order, from dispatch, or from delivery? Pick one and write it. Shopify's return rules let you start the clock on delivery of an item or delivery of the last item in the order, so match your written policy to whichever you set.</p>
+
+      <p><strong>2. What's excluded, by name.</strong> Final sale, custom or personalised items, opened hygiene products, gift cards. Tag these as final sale in Shopify so the rule and the sentence agree.</p>
+
+      <p><strong>3. Who pays return shipping,</strong> and whether that flips when the item arrived faulty or wrong. It almost always should.</p>
+
+      <p><strong>4. Restocking or return fees, with the number.</strong> Not "a small fee." The amount.</p>
+
+      <p><strong>5. What condition the item has to be in.</strong> Tags attached, original packaging, unworn. Be specific enough that a customer can self-assess.</p>
+
+      <p><strong>6. How long the refund takes, in two parts.</strong> Your inspection and issuing time, then the bank's posting time. Keeping them separate is what stops "where's my money" tickets on day three.</p>
+
+      <p>Two legal floors sit underneath all of this and your policy cannot go below them. In the US, the FTC's <a href="https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule" target="_blank" rel="noopener noreferrer">Mail, Internet, or Telephone Order Merchandise Rule</a> requires refunds on third-party credit card purchases within seven working days of the right to a refund vesting. In the UK, the <a href="https://www.which.co.uk/consumer-rights/regulation/consumer-contracts-regulations-ajWHC8m21cAk" target="_blank" rel="noopener noreferrer">Consumer Contracts Regulations</a> give buyers 14 days from delivery to cancel for any reason, and require the refund within 14 days of the goods coming back or proof of postage, whichever is sooner. Selling into both? Write to the stricter one.</p>
+
+      <p>A simple test before you train anything: read each of the six items out loud as one sentence. If you can't, the bot can't either. This is the same groundwork that goes into <a href="/journal/train-shopify-chatbot-knowledge-base/">training a chatbot on your own policies</a>, and it's usually two hours of writing that saves a month of bad answers.</p>
+
+      <h2 id="escalation-script">The escalation script for the angry customer</h2>
+
+      <p>Some returns conversations open hot. The customer has already decided the answer is unfair and is typing in the tone that goes with that. The bot's entire job here is to not make it worse and to get a person involved fast. Four rules govern the script.</p>
+
+      <p><strong>Don't argue.</strong> The bot never defends the policy to an angry person. Defence reads as dismissal.</p>
+
+      <p><strong>Don't re-explain.</strong> They've read the policy. Repeating it is the single fastest way to escalate the tone further.</p>
+
+      <p><strong>Name the handoff, and say it's a person.</strong> Not "let me connect you to our team." A human being, explicitly.</p>
+
+      <p><strong>Give a window you can actually hit.</strong> An overpromised response time turns one angry message into three.</p>
+
+      <p>The script itself, which should fire on the anger triggers rather than after another round of Q&amp;A:</p>
+
+      <p><em>"I'm sorry, that sounds frustrating and I don't want to make you repeat it. I'm passing this to Niza directly with your order number and everything you've told me. She'll reply from a real inbox within one business day. If it's easier, you can also reach her at contact@studioniza.com."</em></p>
+
+      <p>Set the triggers to fire early. Useful ones: any message containing "chargeback," "dispute," "PayPal claim," "lawyer," or "review"; a second message on the same order within a short window; sustained capitals; and any explicit request for a human. That last one should be unconditional. A bot that makes someone ask twice has already lost the interaction.</p>
+
+      <p>Two things make the script work rather than just sound nice. First, the handoff has to land somewhere you check: <a href="/journal/shopify-inbox-review/">Shopify Inbox</a> is free and fine at low volume, Gorgias and Zendesk are worth it once returns are a daily event. Second, the escalation logic has to be designed rather than assumed, which is a topic of its own in <a href="/journal/shopify-chatbot-human-handoff/">designing the human handoff</a>. Getting it wrong costs more than the sale. An angry returns thread is one of the most common origins of <a href="/journal/negative-reviews-shopify/">a negative review you then have to answer publicly</a>.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Three things to take away.</p>
+
+      <p>First, the honest scope for chatbot returns and refunds on Shopify is: automate the status checks, keep the judgment calls human. Moments one, two, and four are safe and high-volume. Moment three hands off to Shopify's free portal. Moment five is yours, always. Any vendor promising full automation of all five is selling you the version that generates the angry emails.</p>
+
+      <p>Second, read and write permissions are not the same decision. Generous reads make the bot useful. Gated writes keep it safe. Most of the value here comes from the reading, which is the part nobody demos because it looks unimpressive.</p>
+
+      <p>Third, the policy page is the actual project. A chatbot trained on a vague policy doesn't stay vague, it improvises, and you're bound by the improvisation. Two hours spent making six statements unambiguous will do more for your returns queue than any tool you connect afterwards.</p>
+
+      <p>What none of this does is reduce your return rate. That's a photography, sizing, and description problem, and it's a different piece of work. What it does is take the repetitive two thirds of the messages off your desk, so the returns that need your attention get it at the moment a customer is deciding whether to order from you again.</p>
+
+      <div class="cta-block">
+        <h3>Want the returns flow built and tested?</h3>
+        <p>The Studio Niza chatbot service covers the policy training, the eligibility logic, the refund-status lookup, and the escalation path into your inbox. Setup is $599 one-time, then $99/month. The bot never touches the refund button.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See how the chatbot service works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Can a Shopify chatbot issue a refund by itself?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Technically yes. Agent-style tools with write access to the Shopify Admin API can create a refund without a human clicking anything. For a store doing under a few hundred orders a month, I don't recommend it. A refund is the one action in your store that cannot be undone from your side, and the time you save on the click is smaller than the cost of one wrong call.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Is my store legally responsible if the chatbot gives wrong return information?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. In Moffatt v. Air Canada, the British Columbia Civil Resolution Tribunal rejected the argument that a chatbot is a separate entity from the company running it and held the airline to what its bot said. Your chatbot is part of your storefront the same way your policy page is. Anything it states about your return window, fees, or refund timing is a representation your store has to stand behind.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Do I need a returns app for chatbot returns and refunds to work on Shopify?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Shopify's built-in self-serve returns and return rules are free and cover the return window, final-sale exclusions, and return fees. That is enough structure for a chatbot to answer eligibility questions accurately. A dedicated returns app earns its cost once you are handling roughly forty returns a month or you want automated exchanges.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How long should my chatbot say a refund takes?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Give your real operational range plus the bank's processing time, stated separately. Something like: we inspect within two business days of delivery, then the refund is issued, then your bank posts it in five to ten business days. Never let the bot name a specific date the money will appear, because the last leg is not yours to promise.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Should a chatbot handle exchanges differently from refunds?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes, and it should offer the exchange first. An exchange keeps the revenue in your store and is a lower-risk action than a refund because nothing leaves your account. A chatbot that opens with the exchange option and treats the refund as the fallback recovers money that a refund-first flow gives away by default.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>What percentage of returns tickets can a chatbot actually resolve?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Realistically about half to two thirds of the message volume, not of the returns themselves. The bot clears the policy questions, eligibility checks, and refund-status pings, which are the bulk of the messages. The actual decisions still come to you, so plan for fewer messages rather than fewer returns.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-chatbot-returns-refunds">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
