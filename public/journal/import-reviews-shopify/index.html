@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Import Reviews to Shopify Legally</title>
+<meta name="description" content="How to import reviews to Shopify the legal way. The three import scenarios ranked by risk, the CSV walkthrough, and the line you never cross.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/import-reviews-shopify/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="How to Import Reviews to Shopify Without Breaking the Rules">
+<meta property="og:description" content="The three ways to import reviews to Shopify, ranked by risk. What is fine, what is arguable, what is banned.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/import-reviews-shopify/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/import-reviews-shopify/import-reviews-shopify.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Import Reviews to Shopify Without Breaking the Rules by Studio Niza">
+<meta property="article:published_time" content="2026-08-14T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Reviews">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Import Reviews to Shopify Without Breaking the Rules">
+<meta name="twitter:description" content="The three ways to import reviews to Shopify, ranked by risk. Plus the CSV walkthrough.">
+<meta name="twitter:image" content="https://studioniza.com/journal/import-reviews-shopify/import-reviews-shopify.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Import Reviews to Shopify", "item": "https://studioniza.com/journal/import-reviews-shopify/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Import Reviews to Shopify Without Breaking the Rules",
+  "description": "The three review import scenarios for Shopify stores ranked by risk, with a CSV migration walkthrough, an honest look at AliExpress imports, and the FTC rules that make the difference.",
+  "image": "https://studioniza.com/journal/import-reviews-shopify/import-reviews-shopify.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-08-14T10:00:00+08:00",
+  "dateModified": "2026-08-14T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/import-reviews-shopify/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/import-reviews-shopify/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it legal to import AliExpress reviews to Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The FTC's final rule on consumer reviews did not include the review hijacking provision it originally proposed, so there is no line in 16 CFR Part 465 that names AliExpress imports specifically. Section 465.2 still prohibits presenting reviews in a way that misrepresents whether the reviewer actually experienced the product or business being reviewed. In practice that means displaying a supplier's reviews as if they came from your own verified customers is the part that creates exposure, and most importer widgets do exactly that by default."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I lose my reviews if I switch Shopify review apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not if you export first. Reviews live inside the review app, not inside Shopify, so uninstalling the old app before exporting deletes them permanently. Export the full CSV, confirm the file opens and has every row you expect, then uninstall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do imported reviews count as verified reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on what verification data comes across in the file. Reviews imported from another Shopify review app can often be verified if the export includes the matching order or customer data. Reviews imported from AliExpress are not marked verified by Judge.me because AliExpress does not supply verification data that meets its standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can imported reviews show star ratings in Google search results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only reviews that carry proper verification and structured data are eligible for the product ratings feed that powers stars in Google Shopping and rich results. Judge.me's own documentation notes that reviews verified through metaobjects appear in the Product Ratings feed while unverified ones do not. This is the practical reason unverified imports are worth less than the raw count suggests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the FTC fine for fake reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The maximum civil penalty is 53,088 dollars per violation as of 2026, following the FTC's January 2025 inflation adjustment. The number that matters is what counts as one violation: a campaign that produces fifty fake reviews can be treated as fifty separate violations rather than one. That math is why the rule is consequential even for a store doing modest revenue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I import my Amazon or Etsy reviews into Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, when those reviews were written by your own customers about the same product you now sell on Shopify. Export what the platform gives you, map the columns to your review app's import format, and keep the original reviewer names and dates intact. Reviews of a similar product sold by someone else are a different situation entirely."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Import Reviews to Shopify</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Reviews</span>
+        <span class="post-date">August 14, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>How to Import Reviews to Shopify Without Breaking the Rules</h1>
+      <div style="text-align: center;"><img src="/journal/import-reviews-shopify/import-reviews-shopify-hero.webp" alt="Desk with a laptop showing a spreadsheet of product reviews ready to import to Shopify" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Three ways to import reviews to Shopify, ranked by risk. The CSV walkthrough for the safe one, an honest read on AliExpress imports, and the line that carries a 53,088 dollar penalty.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#three-scenarios">The three import scenarios, ranked by risk</a></li>
+        <li><a href="#import-your-own-reviews">Scenario 1: Moving your own reviews</a></li>
+        <li><a href="#aliexpress-supplier-reviews">Scenario 2: Can you import AliExpress reviews?</a></li>
+        <li><a href="#buying-reviews">Scenario 3: The line you never cross</a></li>
+        <li><a href="#zero-reviews-alternative">If importing was your fix for zero reviews</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>Search for how to import reviews to Shopify and you will find a dozen tutorials that all answer the same question: which button do I click. Almost none of them answer the question sitting underneath it, which is whether you are allowed to import the reviews you are about to import.</p>
+
+      <p>That gap matters, because the three things people mean by "importing reviews" carry wildly different risk. Moving your own reviews from one app to another is routine housekeeping. Pulling a supplier's AliExpress reviews onto products you resell is a judgment call with real downside. Buying reviews or generating them is a federal violation carrying civil penalties of up to 53,088 dollars each.</p>
+
+      <p>The apps will not sort this out for you. A one-click importer looks identical whether it is pulling your own customers' words out of Loox or strangers' words off a marketplace listing. The button is the same. The exposure is not.</p>
+
+      <p>This post ranks the three scenarios by risk, gives you the CSV walkthrough for the safe one, and explains honestly what the other two cost you. If you are switching review apps this week, the second section is your checklist. If you are hovering over a one-click AliExpress import, read the third section before you press it.</p>
+
+      <h2 id="three-scenarios">The three import scenarios, ranked by risk</h2>
+
+      <p>Almost every question about how to import reviews to Shopify is really one of these three, and they are not close to equivalent.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>What you are moving</th>
+            <th>Where it stands</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Your own reviews, app to app or store to store</td>
+            <td>Reviews your customers wrote about your products</td>
+            <td>Legitimate. No rule touches it.</td>
+            <td>Do it. Just export before you uninstall anything.</td>
+          </tr>
+          <tr>
+            <td>Supplier or AliExpress reviews for products you resell</td>
+            <td>Strangers' reviews of a similar listing on another marketplace</td>
+            <td>Not named in the final FTC rule, but exposed under Section 5 if presented as your own customers</td>
+            <td>Risky, and it costs you more than it gains.</td>
+          </tr>
+          <tr>
+            <td>Bought, sentiment-conditioned, or AI-generated reviews</td>
+            <td>Words from people who never bought anything</td>
+            <td>Prohibited outright. Penalties up to 53,088 dollars per violation.</td>
+            <td>Never.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>The rule doing most of the work here is the FTC's <a href="https://www.ftc.gov/legal-library/browse/rules/rule-use-consumer-reviews-testimonials" target="_blank" rel="noopener noreferrer">Rule on the Use of Consumer Reviews and Testimonials</a>, 16 CFR Part 465, which took effect on October 21, 2024. It bans six categories of conduct: fake or false reviews including AI-generated ones and reviews from people with no actual experience, buying reviews conditioned on sentiment, undisclosed insider reviews, company-controlled review sites posing as independent, review suppression, and fake indicators of social media influence.</p>
+
+
+      <div style="text-align: center;"><img src="/journal/import-reviews-shopify/import-reviews-shopify-risk-ladder.webp" alt="Three-tier risk ladder for importing reviews to Shopify, from safe migration to prohibited" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="import-your-own-reviews">Scenario 1: Moving your own reviews between apps or stores</h2>
+
+      <p>This is the common case and it is completely fine. Your customers wrote those reviews about your products. Changing which software displays them changes nothing about their truth. Nobody at the FTC cares which vendor renders your star widget.</p>
+
+      <p>What goes wrong here is never legal. It is operational, and it is usually one of three things.</p>
+
+      <h3>Export before you uninstall anything</h3>
+
+      <p>Reviews do not live in Shopify. They live in the review app's database, which is why <a href="https://help.shopify.com/en/manual/online-sales-channels/shop/product-reviews/sync-partner-apps" target="_blank" rel="noopener noreferrer">Shopify's own documentation</a> states that reviews collected through a partner app must be managed in that app, and that you need to transfer everything before uninstalling the current one.</p>
+
+      <p>Uninstall first and the reviews are gone. Not hidden, not recoverable from a Shopify backup. Gone. Every review app has a CSV export somewhere in its admin, usually under Reviews or Settings. Pull it, open the file, confirm the row count matches what your dashboard says, and only then touch the uninstall button.</p>
+
+      <p>Give yourself a week of overlap with both apps installed. One extra month of an app you are leaving is cheaper than losing three years of social proof.</p>
+
+      <h3>The CSV cleanup step everyone skips</h3>
+
+      <p>The column that breaks migrations is the product identifier. Apps variously key reviews to a product handle, a SKU, or a Shopify product ID, and those do not survive a move between stores or a re-platform. When Judge.me documents <a href="https://judge.me/help/en/articles/13045740-migrating-reviews-between-two-shopify-stores" target="_blank" rel="noopener noreferrer">migrating reviews between two Shopify stores</a>, it walks users through manual product mapping by reference column precisely because the identifiers will not match automatically.</p>
+
+      <p>Two more details that catch people out. First, verification toggles change your data. Judge.me's <a href="https://judge.me/help/en/articles/10826547-migrating-reviews-from-loox-to-judge-me" target="_blank" rel="noopener noreferrer">Loox migration guide</a> notes that enabling verification on import pulls reviewer names from matching Shopify customer records instead of from the CSV, so any customer record missing a first or last name renders on your storefront as a generic "Customer." Fill in those names first or import without the toggle.</p>
+
+      <p>Second, media is fragile. Photos travel as URLs and generally survive. Videos usually do not import and have to be re-uploaded review by review afterward. Budget an hour if photo and video reviews are a meaningful part of your product pages.</p>
+
+      <p>A workable pre-import checklist: confirm every row has a product identifier that exists in the destination store, standardize the date format, check ratings are integers in the expected range, and spot-check ten rows by hand before uploading.</p>
+
+      <div style="text-align: center;"><img src="/journal/import-reviews-shopify/import-reviews-shopify-csv-flow.webp" alt="Three-step flow for a Shopify review migration: export, clean the CSV, then import" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Import, verify, and check what survived</h3>
+
+      <p>After the upload, read the import log rather than trusting the success message. Most apps report failed rows with a reason, and failed rows are fixable if you catch them while you still have the source app installed.</p>
+
+      <p>Then check verification status, because it is not cosmetic. Judge.me's <a href="https://judge.me/help/en/articles/10826029-migrating-reviews-from-yotpo-to-judge-me" target="_blank" rel="noopener noreferrer">Yotpo migration documentation</a> explains that reviews verified through metaobjects appear in the Product Ratings feed used for Google Shopping, while unverified imports do not. A migration that technically succeeded but stripped verification from 800 reviews has quietly cost you your star ratings in shopping results.</p>
+
+      <p>Finally, reinstall your widgets. Star badges, review widgets, and the all-reviews page are app-specific theme blocks and need placing again after the switch. Then run one product URL through Google's Rich Results Test to confirm the new app is emitting review structured data.</p>
+
+      <p>The same export-and-remap mechanic is what makes it possible to preserve reviews when you retire a SKU, which is worth reading about separately if you sunset products regularly: <a href="/journal/migrate-reviews-discontinued-shopify-product/">migrating reviews when you discontinue a product</a>. And if you are still choosing a destination app, <a href="/journal/judge-me-vs-stamped-shopify/">comparing Judge.me and Stamped</a> covers the tradeoffs at this store size.</p>
+
+      <h2 id="aliexpress-supplier-reviews">Scenario 2: Can you import AliExpress reviews?</h2>
+
+      <p>This is the question that actually drives the search volume, and the honest answer is more complicated than either side of the argument admits. It is not clearly illegal. It is also not clean, and it costs you more than the review count is worth.</p>
+
+      <h3>What the law actually says</h3>
+
+      <p>When the FTC finalized Part 465, it dropped the review hijacking provision it had proposed, which would have prohibited taking reviews for one product and re-displaying them for a substantially different product. As <a href="https://www.crowell.com/en/insights/client-alerts/final-rule-announced-the-ftc-strengthens-its-enforcement-capacity-against-deceptive-reviews-and-testimonials" target="_blank" rel="noopener noreferrer">Crowell &amp; Moring's analysis</a> records, the Commission said it could not resolve commenters' concerns about defining "substantially different product" on that rulemaking record, and left the door open to revisiting it later.</p>
+
+      <p>So no line in the rule names AliExpress imports. That is the strongest thing anyone can say in their favor, and people say it constantly.</p>
+
+      <p>Here is the other half. Section 465.2 still prohibits reviews that misrepresent, expressly or by implication, that the reviewer had experience with the product or business being reviewed. Nothing about that turns on where the file came from. If your widget labels those imports as customer reviews of your store, or shows them under a verified badge, or sits beside a headline about what your customers say, the misrepresentation is live regardless of what the dropped provision would have covered.</p>
+
+      <p>The FTC has also already litigated repurposed reviews without needing Part 465. In its first review hijacking case, the Commission ordered The Bountiful Company to pay <a href="https://www.ftc.gov/news-events/news/press-releases/2023/04/ftc-approves-final-order-against-bountiful-company-first-case-alleging-hijacking-online-product" target="_blank" rel="noopener noreferrer">600,000 dollars in consumer redress</a> for merging new supplements onto established Amazon listings so the new products appeared to carry ratings and badges they had not earned.</p>
+
+      <p>That is not a settled question you can rely on either way. It is an unsettled one, which is a different and worse thing to build a store on.</p>
+
+      <h3>What it costs you even if nobody ever complains</h3>
+
+      <p>Set the legal argument aside and the practical case falls apart on its own.</p>
+
+      <p>Start with verification. Judge.me's own <a href="https://judge.me/help/en/articles/8227047-importing-reviews-from-aliexpress" target="_blank" rel="noopener noreferrer">AliExpress import documentation</a> states plainly that reviews imported from AliExpress are not marked as verified, because AliExpress does not provide verification data meeting their standard. That is the vendor who built the importer telling you what the reviews are worth.</p>
+
+      <p>Unverified reviews are generally excluded from the product ratings feeds that put stars next to your listings in shopping results. So the imports inflate the number on your product page while contributing nothing to the place where reviews actually earn clicks.</p>
+
+      <p>Then there is what shoppers see. Imported marketplace reviews carry tells: reviewer names from markets you do not ship to, translated phrasing that reads slightly off, photos of a colorway you do not stock, and timestamps that predate your store's launch. A shopper who spots one stops trusting all of them, including the real ones you collect later.</p>
+
+      <p>And your support workflow breaks. You cannot meaningfully reply to a review from someone who is not your customer, cannot resolve their complaint, and cannot use their feedback to fix anything. <a href="/journal/reply-to-positive-reviews-shopify/">Replying to reviews</a> is one of the higher-leverage things a small store does, and imported reviews make the whole practice theater.</p>
+
+      <p>Studio Niza does not import supplier reviews for clients, and it is not a moral stance. Three hundred reviews that mean nothing convert worse than fifteen that do.</p>
+
+      <div style="text-align: center;"><img src="/journal/import-reviews-shopify/import-reviews-shopify-verified-badge.webp" alt="Comparison of a verified Shopify review versus an unverified imported review" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="buying-reviews">Scenario 3: The line you never cross</h2>
+
+      <p>Buying reviews, paying for a particular sentiment, or generating reviews with AI is not a gray area, a risk tradeoff, or an aggressive growth tactic. It is a rule violation with a number attached.</p>
+
+      <p>Part 465 covers it from several directions at once. Section 465.2 prohibits fake or false reviews, explicitly including AI-generated ones and reviews from people who never used the product. Section 465.4 prohibits compensation or incentives conditioned on the review expressing a particular sentiment, whether that condition is stated outright or merely implied, and a reviewer disclosing that they were paid does not cure it. Section 465.5 covers insider reviews from officers, employees, agents, or their immediate relatives without clear disclosure of the connection.</p>
+
+      <p>The penalty is where it gets real for a small store. The FTC's <a href="https://www.ftc.gov/news-events/news/press-releases/2025/02/ftc-publishes-inflation-adjusted-civil-penalty-amounts-2025" target="_blank" rel="noopener noreferrer">January 2025 inflation adjustment</a> raised the maximum civil penalty for the relevant FTC Act provisions from 51,744 to 53,088 dollars per violation, and that figure remains in force for 2026. One outreach campaign that produces fifty conditioned reviews is not one violation. It is potentially fifty.</p>
+
+      <p>For a first-year Shopify store the practical translation is short. Asking your sister to leave a review without disclosing that she is your sister is covered. Offering a discount code specifically for five-star reviews is covered. Having a language model write twenty product reviews and uploading them by CSV is covered, and it is the version most likely to happen by accident because it feels like copywriting rather than fabrication.</p>
+
+      <p>Two things that are fine, for contrast: asking every customer for a review, and offering the same small incentive to everyone who reviews regardless of what they say. The distinction is sentiment, not money. <a href="/journal/ask-customers-reviews-ftc-compliant/">Asking your own customers for reviews without breaking the FTC rules</a> walks through the compliant version of that request in detail.</p>
+
+      <p>If the reviews you are worried about are ones a competitor left on your store rather than ones you are tempted to add, that is a removal problem instead: <a href="/journal/remove-fake-review-shopify/">how to remove a fake review the right way</a>.</p>
+
+      <h2 id="zero-reviews-alternative">If importing was your fix for zero reviews, fix that instead</h2>
+
+      <p>Most people who search for how to import reviews to Shopify are not doing app migration. They are staring at empty product pages and looking for a shortcut past the cold start. That is a real problem and importing is a bad answer to it.</p>
+
+      <p>The unglamorous version works better than it sounds. Set the automated request to fire a set number of days after delivery rather than after payment, so the customer has actually used the thing. Ask for a photo in the same email, since photo reviews carry disproportionate weight on a thin product page. Then personally email your first twenty customers, because a founder's note outperforms a template while your order volume still makes that possible.</p>
+
+      <p>Judge.me's free tier handles all of this and remains the default recommendation for Shopify stores under 200,000 dollars a year in revenue. You do not need to pay for review software at this stage, and anyone telling you otherwise is selling something.</p>
+
+      <p>Fifteen real reviews on a product page outperform three hundred imported ones, because the real ones are specific, answer objections a shopper actually has, and hold up when someone reads three of them closely. <a href="/journal/get-reviews-new-shopify-store-no-sales/">Getting reviews for a brand-new store with zero sales</a> covers the pre-first-order version of this problem.</p>
+
+      <p>One honest note on expectations. Nobody can promise you a number of reviews per month, because volume depends on your order count, product quality, and customer willingness, none of which a service provider controls. What can be guaranteed is that the request goes out every time, on schedule, in compliant form.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Three things to carry out of this.</p>
+
+      <p>Moving your own reviews is safe and mostly a data problem. Export before you uninstall, map product identifiers deliberately, watch verification status, and read the import log instead of the success banner. Do that and a migration costs an afternoon and nothing else.</p>
+
+      <p>Importing supplier or AliExpress reviews sits in unsettled territory. The final rule dropped the provision that would have addressed it directly, but the misrepresentation sections did not go anywhere, and the reviews you gain are unverified, ineligible where stars matter most, and visibly foreign to your storefront. The upside is a bigger number. The downside is that the number stops meaning anything, including for the real reviews beside it.</p>
+
+      <p>Buying or generating reviews is simply off the table at up to 53,088 dollars per violation, with each review potentially counting separately.</p>
+
+      <p>None of this makes the cold start less frustrating. If you have twelve products and four reviews, the honest path is slower than the one-click path and still the one worth taking. The store that spends six months collecting real reviews ends up with an asset. The store that imports three hundred ends up with a decoration.</p>
+
+      <div class="cta-block">
+        <h3>Want your review migration handled cleanly?</h3>
+        <p>Studio Niza Reviews Management covers app migration with no review loss, verification recovered wherever the source data allows it, and a request system that earns reviews the compliant way. Scoped and priced upfront, no calls.</p>
+        <a href="/services/reviews-management/" class="cta-button">See pricing & services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Is it legal to import AliExpress reviews to Shopify?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>The FTC's final rule on consumer reviews did not include the review hijacking provision it originally proposed, so there is no line in 16 CFR Part 465 that names AliExpress imports specifically. Section 465.2 still prohibits presenting reviews in a way that misrepresents whether the reviewer actually experienced the product or business being reviewed. In practice that means displaying a supplier's reviews as if they came from your own verified customers is the part that creates exposure, and most importer widgets do exactly that by default.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Will I lose my reviews if I switch Shopify review apps?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not if you export first. Reviews live inside the review app, not inside Shopify, so uninstalling the old app before exporting deletes them permanently. Export the full CSV, confirm the file opens and has every row you expect, then uninstall.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Do imported reviews count as verified reviews?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It depends on what verification data comes across in the file. Reviews imported from another Shopify review app can often be verified if the export includes the matching order or customer data. Reviews imported from AliExpress are not marked verified by Judge.me because AliExpress does not supply verification data that meets its standard.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can imported reviews show star ratings in Google search results?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Only reviews that carry proper verification and structured data are eligible for the product ratings feed that powers stars in Google Shopping and rich results. Judge.me's own documentation notes that reviews verified through metaobjects appear in the Product Ratings feed while unverified ones do not. This is the practical reason unverified imports are worth less than the raw count suggests.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>What is the FTC fine for fake reviews?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>The maximum civil penalty is 53,088 dollars per violation as of 2026, following the FTC's January 2025 inflation adjustment. The number that matters is what counts as one violation: a campaign that produces fifty fake reviews can be treated as fifty separate violations rather than one. That math is why the rule is consequential even for a store doing modest revenue.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can I import my Amazon or Etsy reviews into Shopify?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes, when those reviews were written by your own customers about the same product you now sell on Shopify. Export what the platform gives you, map the columns to your review app's import format, and keep the original reviewer names and dates intact. Reviews of a similar product sold by someone else are a different situation entirely.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="import-reviews-shopify">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
