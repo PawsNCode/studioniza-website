@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify 301 Redirects: Fix 404s and Deleted Pages</title>
+<meta name="description" content="How to set up Shopify 301 redirects for deleted products and renamed pages, where they live in admin, and when leaving a 404 alone is the better call.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-301-redirects/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Shopify 301 Redirects: How to Fix Broken Links, 404s, and Deleted Product Pages">
+<meta property="og:description" content="Where Shopify 301 redirects live, where to point a deleted product URL, and when to leave a 404 alone.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-301-redirects/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-301-redirects/shopify-301-redirects.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify 301 Redirects for Broken Links and 404s by Studio Niza">
+<meta property="article:published_time" content="2026-08-20T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify 301 Redirects: How to Fix Broken Links, 404s, and Deleted Product Pages">
+<meta name="twitter:description" content="Where Shopify 301 redirects live, and where to point a deleted product URL.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-301-redirects/shopify-301-redirects.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify 301 Redirects", "item": "https://studioniza.com/journal/shopify-301-redirects/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Shopify 301 Redirects: How to Fix Broken Links, 404s, and Deleted Product Pages",
+  "description": "A practical guide to Shopify 301 redirects for new store owners: where they live in admin, the decision tree for deleted products, finding existing 404s free in Search Console, the bulk CSV method, and the mistakes that create redirect chains.",
+  "image": "https://studioniza.com/journal/shopify-301-redirects/shopify-301-redirects.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-08-20T10:00:00+08:00",
+  "dateModified": "2026-08-20T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-301-redirects/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-301-redirects/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Shopify use 301 or 302 redirects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopify's built-in URL redirect feature creates permanent redirects, and there is no setting to switch a native redirect to a temporary 302. Shopify's own documentation refers to them as 301 redirects when it explains caching behaviour. That is the right default for deleted products and renamed handles, because a permanent redirect tells Google to show the new page in search results instead of the old one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an app to create Shopify 301 redirects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything most stores need is native: single redirects, bulk CSV import, export, filtering, and bulk editing. A paid redirect app earns its fee when you need continuous 404 monitoring across thousands of URLs or pattern-based rules. For a store under a few hundred products, the free stack of Shopify's redirect table plus Google Search Console covers it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my Shopify redirect not working?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common cause is that the source URL still loads a real page. Shopify only applies a redirect when the old URL is genuinely broken, so a live product or a visible collection will simply ignore the rule. Check for typos in both fields, confirm the path is not a reserved Shopify prefix, and test in a private browser window because 301 redirects get cached."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I redirect a Shopify URL that still works?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly. You need to make the URL return a 404 first, which you do by setting the product to draft, removing it from all sales channels, or changing a collection's online store visibility to hidden. Once the URL is broken, the redirect takes effect. Note that if you later make the collection visible again, Shopify deletes the redirect automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many URL redirects can a Shopify store have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stores on standard plans can hold up to 100,000 URL redirects. Shopify Plus stores can hold up to 20,000,000. These caps are fixed and cannot be raised, but almost no small store will get near them, even after a full platform migration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I redirect deleted products to my homepage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and this is the mistake worth avoiding above all others. When Google follows a redirect and lands somewhere unrelated to the URL it requested, it treats the result as a soft 404, ignores the redirect, and drops the old URL from the index anyway. Send the URL to the closest relevant live page, or let it return an honest 404 if nothing fits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Shopify 301 redirects work across international market subfolders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A single redirect automatically applies to every language and market subfolder set up through Shopify's international tools. If your Canadian market lives at example.com/en-ca, one redirect from a deleted product to a collection covers both the primary market and the subfolder. You only need separate redirects when you want a different destination per market."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should I keep a 301 redirect in place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keep it indefinitely unless you have a specific reason to remove it, because a redirect costs you nothing to leave running. At minimum, give it a year before you consider deleting it, and longer for any URL that earned backlinks. Removing a redirect too early can put the old URL back in the index in a weaker state."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify 301 Redirects</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">August 20, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>12 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Shopify 301 Redirects: How to Fix Broken Links, 404s, and Deleted Product Pages</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-301-redirects/shopify-301-redirects-hero.webp" alt="Desk with a laptop showing a Shopify 301 redirects table and a notebook of URL mappings" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Every store accumulates dead URLs. Here is where Shopify 301 redirects live in your admin, how to decide where each broken URL should point, and the two mistakes that quietly make things worse.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-a-301-does">What a 301 redirect actually does</a></li>
+        <li><a href="#where-redirects-live">Where do URL redirects live in Shopify admin?</a></li>
+        <li><a href="#deleted-product-decision-tree">Deleted a product? Here's the decision tree</a></li>
+        <li><a href="#find-your-404s">How to find the 404s you already have, for free</a></li>
+        <li><a href="#bulk-csv-redirects">The bulk CSV method for migrations</a></li>
+        <li><a href="#redirect-mistakes">Two mistakes that create redirect chains</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>Somewhere in your store there is a product you deleted. Maybe it sold out permanently, maybe the supplier disappeared, maybe you renamed the handle to something that reads better. The product is gone from your admin. The URL is not gone from the internet.</p>
+
+      <p>Google still has it. Someone's Pinterest board still points at it. A customer who bought it last year still has the link in their confirmation email. Every one of those paths now ends at a 404 page.</p>
+
+      <p>Shopify 301 redirects are the fix, and they are already built into your admin. No app, no code, no monthly fee. What almost nobody gets right is not how to make a redirect. It is where to point it.</p>
+
+      <p>Point a dead product URL at the wrong destination and Google quietly throws the redirect away, which leaves you with the same lost traffic plus the false comfort of thinking you fixed it. So this post covers where Shopify 301 redirects live, the decision tree for deleted products, how to find your existing 404s for free, the bulk CSV method, and the two mistakes that build redirect chains. Most of it takes an afternoon, once.</p>
+
+      <h2 id="what-a-301-does">What a 301 redirect actually does</h2>
+
+      <p>A 301 is a permanent instruction. When a browser or a crawler asks for the old URL, your server answers "that moved, permanently, go here instead" and sends them on. The visitor usually never notices it happened.</p>
+
+      <p>The permanent part is what matters for search. <a href="https://developers.google.com/search/docs/crawling-indexing/301-redirects" target="_blank" rel="noopener noreferrer">Google's documentation on redirects</a> draws a clean line: permanent redirects tell Google to show the new target in search results, while temporary redirects (302) tell it to keep showing the original page.</p>
+
+      <p>Shopify's native redirect feature creates permanent redirects, with no toggle for 302. That is fine, because for deleted products and renamed handles permanent is what you want.</p>
+
+      <p>Redirects are also the strongest signal you can send about which URL is the real one. In <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank" rel="noopener noreferrer">Google's ranking of canonicalization methods</a>, redirects sit above <a href="/journal/shopify-canonical-tags/">canonical tags</a> and well above sitemap inclusion. If you have been cleaning up <a href="/journal/shopify-duplicate-content-urls/">variant and tag URLs that create duplicates</a>, a redirect is the heavier tool.</p>
+
+      <h3>Does a 404 hurt my rankings?</h3>
+
+      <p>Not directly, and it is worth saying plainly because a lot of redirect apps market on the opposite assumption. Google has been consistent for years that 404s are a normal part of the web and are not a negative quality signal.</p>
+
+      <p>What a 404 costs you is specific and local: the traffic that one URL was getting, and the value of any links pointing at it. If nothing linked to it and nobody visited it, the 404 costs you nothing. If it was pulling 200 sessions a month and had a backlink from a gift guide, that is a different conversation.</p>
+
+      <p><strong>The goal is not zero 404s. The goal is zero valuable 404s.</strong> That reframing is what keeps this project down to an afternoon instead of a month.</p>
+
+      <h2 id="where-redirects-live">Where do URL redirects live in Shopify admin?</h2>
+
+      <p>Content &gt; Menus &gt; View URL redirects &gt; Create URL redirect. That is the whole path, and it is why so many owners can't find it: older tutorials still say Online Store &gt; Navigation, which is where it used to live. Shopify's <a href="https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect" target="_blank" rel="noopener noreferrer">help doc on URL redirects</a> has the current route.</p>
+
+      <p>Two fields. <strong>Redirect from</strong> is the old path. <strong>Redirect to</strong> is where it should go. Use a relative path like <em>/collections/tees</em> for anything on your own domain, and a full URL only when you are sending traffic off-site. To send someone to your homepage, the destination is a single forward slash. Redirects start working immediately, with no publish step.</p>
+
+      <h3>The checkbox most owners miss</h3>
+
+      <p>If you are renaming rather than deleting, you never need that screen. Open the product or collection, scroll to the search engine listing section, click edit, change the handle, and tick the "Create a URL redirect for..." box before you save. Shopify builds the redirect for you.</p>
+
+      <p>Leave that box unticked and the old URL becomes a dead end with no warning. This is the single most common way a new store generates a pile of 404s: a bulk handle cleanup done quickly, on an SEO app's recommendation, with the box unchecked. It is what most stores do at this stage, and it is fixable after the fact.</p>
+
+      <h3>The rule that breaks most redirects</h3>
+
+      <p>You can only redirect from a URL that is already broken. If the old URL still loads a real page, Shopify accepts the redirect and then does nothing with it. No error, no warning, just silence.</p>
+
+      <p>That trips people up when you want to retire a collection but keep the products. Set the collection's online store visibility to hidden first. The URL starts returning a 404, which makes it eligible, and the redirect takes effect. Products work the same way through draft status or removal from all sales channels.</p>
+
+      <p>One catch before you rely on it. If you later switch that collection back to visible, Shopify deletes the redirect automatically, because redirects only exist for URLs that 404. You will need to recreate it next season.</p>
+
+      <p>Some paths can never be redirected at all. Anything beginning with <em>/apps</em>, <em>/application</em>, <em>/cart</em>, <em>/carts</em>, <em>/orders</em>, <em>/services</em>, or <em>/shop</em> is off limits, and so are the fixed paths <em>/products</em>, <em>/collections</em>, and <em>/collections/all</em>. You can redirect <em>/collections/summer-2025</em>. Not <em>/collections</em> itself.</p>
+
+      <h2 id="deleted-product-decision-tree">Deleted a product? Here's the decision tree</h2>
+
+      <p>Four destinations. Pick based on what the visitor was actually looking for when they clicked, not on what is convenient for you.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Situation</th>
+            <th>Send it to</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>You replaced the product with a newer version or a merged listing</td>
+            <td>The new product page</td>
+            <td>A true one-to-one match, and the case that passes the most value.</td>
+          </tr>
+          <tr>
+            <td>Product is gone, but a close alternative is live</td>
+            <td>The closest live product</td>
+            <td>The shopper still gets something they can buy, and Google reads it as a real replacement.</td>
+          </tr>
+          <tr>
+            <td>Discontinued, and the category is still active</td>
+            <td>The parent collection</td>
+            <td>No single product matches, but the intent does. The safe default.</td>
+          </tr>
+          <tr>
+            <td>Seasonal or one-off, nothing comparable, no traffic and no links</td>
+            <td>Nothing. Let it 404</td>
+            <td>An honest 404 is correct when there is no replacement.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>The one destination that is almost always wrong is your homepage. When Google follows a redirect and lands on a page with nothing to do with the URL it asked for, it treats the whole thing as a soft 404. The redirect gets ignored, no value transfers, and the old URL drops out of the index anyway. You do the work and get none of the benefit.</p>
+
+      <p>The rule that keeps you out of trouble: <strong>a redirect should read as an answer to the request, not a dismissal of it.</strong> If a person clicking that old link would be confused by where they landed, Google is making the same judgment.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-301-redirects/shopify-301-redirects-decision-tree.webp" alt="Decision tree for where to point Shopify 301 redirects after deleting a product" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>One more thing that gets missed when a product goes away. The URL is not the only asset attached to it. So are the reviews. A listing with 60 reviews and a 4.8 average carries real conversion weight, and deleting the product orphans every one of them. While you are in the admin, that is the moment to also <a href="/journal/migrate-reviews-discontinued-shopify-product/">migrate the reviews off the discontinued listing</a> to whatever you pointed the URL at. Same event, two consequences, and most stores fix neither.</p>
+
+      <h2 id="find-your-404s">How to find the 404s you already have, for free</h2>
+
+      <p>Shopify's admin will not tell you which of your URLs are being crawled and failing. Google will. If you have not already <a href="/journal/google-search-console-shopify-setup/">set up Google Search Console for your store</a>, start there, because the rest of this section depends on it.</p>
+
+      <p>In Search Console, go to Indexing &gt; Pages, scroll to "Why pages aren't indexed," and open the <strong>Not found (404)</strong> row. That is every URL Google tried to crawl and could not find. Export it. Check the <strong>Soft 404</strong> row too, since that is where badly aimed redirects surface.</p>
+
+      <p>Then triage. Three questions per URL:</p>
+
+      <ol>
+        <li><strong>Did it get traffic?</strong> Check the Performance report filtered by page. Impressions in the last six months means it is worth a redirect.</li>
+        <li><strong>Does anything link to it?</strong> Open the Links report. A backlink pointing at a dead URL is the clearest case for a 301.</li>
+        <li><strong>Is there an obvious replacement live right now?</strong> If you cannot name one in five seconds, the parent collection is the answer.</li>
+      </ol>
+
+      <p>If all three answers are no, leave it alone. A 404 that nobody visits and nobody links to is the correct response. In practice, most stores under a few hundred SKUs find the actionable list is 10 to 30 URLs, not the hundreds the report first suggests.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-301-redirects/shopify-301-redirects-finding-404s.webp" alt="Triaging a Search Console 404 list into fix, redirect, and leave alone buckets" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Search Console will not show you one important category: broken links inside your own site. Your main menu, a collection description, a blog post from March, all still pointing at URLs you retired. Google reports the destination as a 404 but will not tell you where the link lives. Click through your menu, footer, and five most-visited posts by hand. It is the same audit you would do for <a href="/journal/shopify-internal-linking/">internal linking</a> anyway.</p>
+
+      <p>An honest note on tools, since this is where the upsells start. Most stores at this stage do not need a paid redirect app. Shopify's native table plus Search Console is free and covers discovery, single redirects, bulk import, and export. Apps become worth paying for at continuous monitoring across thousands of URLs. Under a few hundred products, the free stack is the whole job.</p>
+
+      <h2 id="bulk-csv-redirects">The bulk CSV method for migrations</h2>
+
+      <p>If you are moving from WooCommerce, Etsy, Squarespace, or Magento, or restructuring several hundred handles at once, do not create redirects one at a time. Click <strong>Import</strong> instead of Create URL redirect, and upload a two-column CSV: redirect from, redirect to. Shopify publishes a <a href="https://help.shopify.com/csv/sample-redirect-template.csv" target="_blank" rel="noopener noreferrer">sample redirect CSV template</a> you can download and fill in, which saves an argument with the importer over column headers. <a href="https://www.practicalecommerce.com/how-to-create-and-manage-301-redirects-with-shopify" target="_blank" rel="noopener noreferrer">Practical Ecommerce's walkthrough</a> covers the same flow.</p>
+
+      <p>Four things that save time on a real migration:</p>
+
+      <ul>
+        <li><strong>Always use relative paths starting with a forward slash.</strong> Paths without one get auto-formatted, which is how you end up with 300 redirects all pointing somewhere slightly wrong.</li>
+        <li><strong>Import in batches of around 1,000.</strong> Finding one failed row in a batch of 1,000 is a task. Finding it in a batch of 8,000 is a day.</li>
+        <li><strong>Export what already exists first.</strong> Shopify has probably built redirects for you from every handle edit where the checkbox was ticked.</li>
+        <li><strong>Build the map in a spreadsheet first.</strong> Old URL in column A, new URL in column B, your reasoning in column C. That third column is what makes this reviewable in six months.</li>
+      </ul>
+
+      <p>On limits: standard plans hold up to 100,000 redirects and Plus holds up to 20,000,000. Neither is a real ceiling for a small store, even after a full platform move.</p>
+
+      <p>If you sell internationally, one redirect covers all your market subfolders automatically. Shoppers hitting the Canadian subfolder version of a dead product URL get sent to the Canadian version of the collection. You only need per-locale redirects when you want a different destination for each market.</p>
+
+      <p>For ongoing maintenance, Shopify Flow has a <a href="https://help.shopify.com/en/manual/shopify-flow/reference/actions/create-redirect-url" target="_blank" rel="noopener noreferrer">Create redirect URL action</a> that fires when a product is deleted. One caveat: the workflow builds the old URL from the product title, so if the product had a customized handle, the redirect may point at the wrong source. Treat it as a safety net under a real redirect map, not a replacement for one.</p>
+
+      <h2 id="redirect-mistakes">Two mistakes that create redirect chains</h2>
+
+      <p>A redirect chain is A pointing to B pointing to C. Every hop adds latency for the shopper, and Google stops following after a handful. Chains are rarely deliberate. They come from two specific habits.</p>
+
+      <h3>Renaming the same page twice</h3>
+
+      <p>You rename a handle in March and tick the redirect box. You rename it again in July and tick it again. Now the original URL points at the March version, which points at the July version. Nobody chose that; it accumulated.</p>
+
+      <p>The fix is to point every old URL directly at the final destination. Shopify helps: it rejects a new redirect whose destination is already the source of another redirect, so you cannot build a fresh chain by hand. What it will not do is retroactively flatten chains you already created through the handle-edit checkbox. After any second rename, open the redirect table and check.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-301-redirects/shopify-301-redirects-chain-vs-direct.webp" alt="Comparison of a three-hop redirect chain and a direct Shopify 301 redirect" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Leaving your own links pointing at the old URL</h3>
+
+      <p>The redirect works, so the page loads, so it looks fine. But every visitor arriving from your own menu, footer, or blog post takes an unnecessary hop, and you are telling Google the old URL is still the one you consider current. After any redirect goes live, update the links you control.</p>
+
+      <p>Three shorter ones worth knowing:</p>
+
+      <ul>
+        <li><strong>Using a temporary redirect where a permanent one belongs.</strong> Not possible natively, but some apps offer both. A 302 keeps the old URL in the index, the opposite of what a deleted product needs.</li>
+        <li><strong>Removing a redirect too early.</strong> There is no cost to leaving one running, and pulling it early can put the old URL back in the index in a weaker state.</li>
+        <li><strong>Redirecting a URL that still resolves.</strong> Covered above, but worth repeating: it accounts for most of the "my redirect isn't working" threads on the Shopify forums.</li>
+      </ul>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Three things to take away. Shopify 301 redirects are native and free, and live at Content &gt; Menus &gt; View URL redirects, so nothing stands between you and the fix except knowing where the screen is. The destination matters more than the mechanic, and the homepage is almost never it. And most of your 404s do not need fixing at all, which is why triage comes before you create a single redirect.</p>
+
+      <p>The work that remains is yours to do. Pulling the Not found list, checking which URLs had traffic or links, and deciding where each should point takes judgment about your own catalogue that no tool can make for you. Budget an afternoon for a couple of hundred products, and a day or two after a platform migration.</p>
+
+      <p>Then keep the habit that prevents the next pile: every time you delete a product or rename a handle, create the redirect in the same sitting. The gap between deleting and redirecting is where all of this accumulates, and closing it costs about thirty seconds each time. If you finish the triage and find 400 dead URLs from a migration you inherited, that is a mapping project rather than an afternoon, and it is reasonable to hand it off. Either way, every month those URLs sit there is another month of shoppers hitting a wall on their way to something you still sell.</p>
+
+      <div class="cta-block">
+        <h3>Want the redirect cleanup handled?</h3>
+        <p>Studio Niza's SEO work includes a full 404 audit, a redirect map built from your actual Search Console data, and the bulk import done for you. The Starter tier is $499 one-time.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See pricing & services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Does Shopify use 301 or 302 redirects?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Shopify's built-in URL redirect feature creates permanent redirects, and there is no setting to switch a native redirect to a temporary 302. Shopify's own documentation refers to them as 301 redirects when it explains caching behaviour. That is the right default for deleted products and renamed handles, because a permanent redirect tells Google to show the new page in search results instead of the old one.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Do I need an app to create Shopify 301 redirects?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Everything most stores need is native: single redirects, bulk CSV import, export, filtering, and bulk editing. A paid redirect app earns its fee when you need continuous 404 monitoring across thousands of URLs or pattern-based rules. For a store under a few hundred products, the free stack of Shopify's redirect table plus Google Search Console covers it.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Why is my Shopify redirect not working?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>The most common cause is that the source URL still loads a real page. Shopify only applies a redirect when the old URL is genuinely broken, so a live product or a visible collection will simply ignore the rule. Check for typos in both fields, confirm the path is not a reserved Shopify prefix, and test in a private browser window because 301 redirects get cached.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can I redirect a Shopify URL that still works?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not directly. You need to make the URL return a 404 first, which you do by setting the product to draft, removing it from all sales channels, or changing a collection's online store visibility to hidden. Once the URL is broken, the redirect takes effect. Note that if you later make the collection visible again, Shopify deletes the redirect automatically.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How many URL redirects can a Shopify store have?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Stores on standard plans can hold up to 100,000 URL redirects. Shopify Plus stores can hold up to 20,000,000. These caps are fixed and cannot be raised, but almost no small store will get near them, even after a full platform migration.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Should I redirect deleted products to my homepage?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No, and this is the mistake worth avoiding above all others. When Google follows a redirect and lands somewhere unrelated to the URL it requested, it treats the result as a soft 404, ignores the redirect, and drops the old URL from the index anyway. Send the URL to the closest relevant live page, or let it return an honest 404 if nothing fits.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Do Shopify 301 redirects work across international market subfolders?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. A single redirect automatically applies to every language and market subfolder set up through Shopify's international tools. If your Canadian market lives at example.com/en-ca, one redirect from a deleted product to a collection covers both the primary market and the subfolder. You only need separate redirects when you want a different destination per market.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How long should I keep a 301 redirect in place?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Keep it indefinitely unless you have a specific reason to remove it, because a redirect costs you nothing to leave running. At minimum, give it a year before you consider deleting it, and longer for any URL that earned backlinks. Removing a redirect too early can put the old URL back in the index in a weaker state.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-301-redirects">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>

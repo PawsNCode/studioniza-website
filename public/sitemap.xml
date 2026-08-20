@@ -49,6 +49,12 @@
   <!-- Blog posts -->
   <!-- ADD NEW BLOGS HERE (BLOCK 3) -->
   <url>
+    <loc>https://studioniza.com/journal/shopify-301-redirects/</loc>
+    <lastmod>2026-08-20T10:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://studioniza.com/journal/first-blog-posts-new-shopify-store/</loc>
     <lastmod>2026-08-19T10:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
