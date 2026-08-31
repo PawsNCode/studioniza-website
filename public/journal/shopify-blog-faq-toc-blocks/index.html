@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Add FAQ and a Table of Contents to Shopify Blogs</title>
+<meta name="description" content="Three ways to add FAQ blocks to a Shopify blog post, plus a copy-paste table of contents with jump links. No app required.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-blog-faq-toc-blocks/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="How to Add FAQ Blocks and a Table of Contents to Shopify Blog Posts">
+<meta property="og:description" content="Three ways to add FAQ blocks to a Shopify blog post, plus a copy-paste table of contents.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-blog-faq-toc-blocks/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-blog-faq-toc-blocks/shopify-blog-faq-toc-blocks.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to add FAQ blocks and a table of contents to Shopify blog posts by Studio Niza">
+<meta property="article:published_time" content="2026-08-31T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Content">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Add FAQ Blocks and a Table of Contents to Shopify Blog Posts">
+<meta name="twitter:description" content="Three ways to add FAQ blocks to a Shopify blog post, plus a copy-paste TOC.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-blog-faq-toc-blocks/shopify-blog-faq-toc-blocks.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "FAQ Blocks and Table of Contents", "item": "https://studioniza.com/journal/shopify-blog-faq-toc-blocks/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Add FAQ Blocks and a Table of Contents to Shopify Blog Posts",
+  "description": "Three ways to add FAQ blocks to a Shopify blog post, ranked by effort, plus a copy-paste anchor-link table of contents and the schema parity rules that keep both honest.",
+  "image": "https://studioniza.com/journal/shopify-blog-faq-toc-blocks/shopify-blog-faq-toc-blocks.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-08-31T10:00:00+08:00",
+  "dateModified": "2026-08-31T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-blog-faq-toc-blocks/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-blog-faq-toc-blocks/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need an app to add FAQ to a Shopify blog post?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The details and summary elements are native HTML and work in Shopify's blog editor today with no app and no JavaScript. Paste them through the Edit code button in the editor toolbar. An app is only worth considering if you want non-technical staff editing FAQ content across dozens of posts without touching HTML."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will Shopify's editor strip my FAQ HTML when I save?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It may rewrite parts of it. Shopify's rich text editor runs HTML sanitization that automatically corrects markup it considers malformed or risky. Simple details and summary blocks usually survive intact, but always check the live storefront page rather than the editor preview after saving. If a piece of markup keeps getting rewritten, move it into your theme code instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FAQ schema still do anything now that Google removed the rich result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It no longer produces anything visible in Google Search. FAQ rich results were retired on May 7, 2026, and FAQPage markup now generates no SERP feature at all. The markup is still valid schema.org and is still parsed by Bing and other retrieval crawlers, but nobody has proven it improves AI citation rates, so treat that claim as unconfirmed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should a blog post be before a table of contents is worth adding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roughly 1,200 words with at least four distinct sections. Below that, a table of contents adds visual clutter without giving readers anything they could not get by scrolling. Reference-style posts and step-by-step guides benefit most, since readers often want one specific section rather than the whole article."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I put the same FAQ block on every blog post?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can, but it usually is not worth it. A block of shipping and returns questions repeated across thirty posts is duplicated content that answers nothing specific to the article. Write two to six questions that relate to the post's actual topic instead, and keep your store-wide policy questions on a dedicated FAQ page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my table of contents links jump to the wrong place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The two common causes are a sticky header covering the heading and duplicate id values on the page. Add scroll-margin-top to your headings in the theme stylesheet to account for the header height, and confirm no two elements share an id. If the links do nothing at all, theme or app JavaScript is probably intercepting the click."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">FAQ Blocks and Table of Contents</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Content</span>
+        <span class="post-date">August 31, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>12 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>How to Add FAQ Blocks and a Table of Contents to Shopify Blog Posts</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-blog-faq-toc-blocks/shopify-blog-faq-toc-blocks-hero.webp" alt="Laptop showing a long Shopify blog post with a section index and collapsed FAQ panels" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Shopify's blog editor has no FAQ block and no table of contents. Here are three ways to add FAQ to a Shopify blog post, ranked by effort, plus the anchor-link table of contents you can paste in today.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#editor-gap">Why Shopify's blog editor has neither</a></li>
+        <li><a href="#wrong-reason">The reason most people add FAQ blocks stopped working in May 2026</a></li>
+        <li><a href="#three-routes">Three ways to add FAQ to a Shopify blog post</a></li>
+        <li><a href="#table-of-contents">How to add a table of contents with jump links</a></li>
+        <li><a href="#faq-schema">Matching FAQ schema to what the reader sees</a></li>
+        <li><a href="#what-goes-wrong">What goes wrong, and what to check first</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>You read that FAQ sections and jump links help both readers and search engines. Then you opened the Shopify blog post editor and found a text box with headings, bold, a link button, and a table. No FAQ block. No table of contents. Nothing that collapses.</p>
+
+      <p>That gap is in the product, not in your knowledge. Shopify's blog editor has never shipped an accordion or a table of contents widget, and the newest generation of themes did not add one.</p>
+
+      <p>So the question of how to add FAQ to a Shopify blog post has three real answers, not one, and they differ by how much theme code you are willing to touch. This post walks all three in order of effort, then hands you the anchor-link table of contents you can paste in today. Everything here works on a free theme with no app installed.</p>
+
+      <p>One correction first, because it changes what you should expect. If you are building an FAQ block to chase the expandable dropdown in Google search results, that feature no longer exists. It was retired in May 2026. The block is still worth building. The reason is just different from the one most tutorials repeat, and the real reason changes how you write the questions.</p>
+
+      <h2 id="editor-gap">Why Shopify's blog editor has neither</h2>
+
+      <p>Blog posts, pages, product descriptions, and collection descriptions all run through the same rich text editor, built on TinyMCE. Two things in <a href="https://help.shopify.com/en/manual/shopify-admin/productivity-tools/rich-text-editor" target="_blank" rel="noopener noreferrer">Shopify's documentation for that editor</a> shape everything you can do inside it: a hard 64 KB content limit, and automatic HTML sanitization that corrects markup it considers risky or malformed.</p>
+
+      <p>Shopify's own recommendation is to work with those corrections rather than fight them, and to move anything the editor keeps rewriting into your theme code instead. Keep that in mind before you spend an hour on markup the editor will quietly undo.</p>
+
+      <p>The toolbar gives you headings, blockquote, bold, italic, underline, lists, indentation, alignment, text color, a table builder, links, images, and video embeds. That is the full list. No accordion, no jump-link generator. There is one more button though, and it is the reason this post has three routes instead of zero: Edit code, which flips the editor into raw HTML view. Shopify documents it for pasting embed codes. It works just as well for a hand-built FAQ block.</p>
+
+      <p>The theme side has its own limit. Horizon-era themes are built on nested theme blocks, which is why you can restructure a homepage by dragging. The Blog post section is more fixed. There is an <a href="https://community.shopify.dev/t/horizon-shopify-theme-devs-please-allow-apps-to-insert-blocks-into-the-blog-post-section/22696" target="_blank" rel="noopener noreferrer">open request in Shopify's developer community</a> asking for blocks to be insertable alongside the article title and content. Until that lands, you cannot drop an FAQ block into the middle of an article the way you can on a landing page.</p>
+
+      <p>Two doors, then: the HTML view, or the theme files.</p>
+
+      <h2 id="wrong-reason">The reason most people add FAQ blocks stopped working in May 2026</h2>
+
+      <p>This is the part most guides on adding an FAQ section to a blog post have not caught up with, and it matters before you spend an afternoon on implementation.</p>
+
+      <p>In August 2023, Google announced it was <a href="https://developers.google.com/search/blog/2023/08/howto-faq-changes" target="_blank" rel="noopener noreferrer">reducing the visibility of FAQ rich results</a>, limiting them to well-known, authoritative government and health websites. For every commercial store, the expandable dropdown quietly stopped appearing that month.</p>
+
+      <p>On May 7, 2026, Google finished the job. <a href="https://www.searchenginejournal.com/google-drops-faq-rich-results-from-search/574429/" target="_blank" rel="noopener noreferrer">FAQ rich results stopped appearing for every site</a>, including the government and health sites that had kept them. The search appearance filter and Rich Results Test support went in June 2026, and Search Console API support goes in August 2026.</p>
+
+      <p>What did not change: FAQPage is still a valid schema.org type, and Google's position is that structured data it does not use causes no problems for Search. Your markup is not penalized. It just produces nothing visible in Google.</p>
+
+      <p>So why build the block? Three reasons hold up, and one popular one does not.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-blog-faq-toc-blocks/shopify-blog-faq-toc-blocks-three-routes.webp" alt="Three implementation routes for adding FAQ to a Shopify blog post, ranked by effort" style="margin-bottom: 16px; float: none;"></div>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Reason</th>
+            <th>Does it hold up in 2026?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Readers get answers without scrolling or emailing you</td>
+            <td>Yes. Always the strongest reason, and unaffected by anything Google did.</td>
+          </tr>
+          <tr>
+            <td>Question headings are a keyword surface of their own</td>
+            <td>Yes. A question written the way a customer types it matches on-page whether or not schema exists.</td>
+          </tr>
+          <tr>
+            <td>Machine-readable question and answer pairing for non-Google crawlers</td>
+            <td>Partly. Bing, Perplexity, and other retrieval crawlers still parse it. Nobody outside those companies can measure the effect.</td>
+          </tr>
+          <tr>
+            <td>FAQ schema gets you cited by ChatGPT, Perplexity, or AI Overviews</td>
+            <td>Not proven. Google's own generative search guidance says no special schema is required for AI Overviews or AI Mode. Treat any confident claim here as marketing.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>I would rather say that plainly than sell you a benefit I cannot measure. Our <a href="/journal/shopify-faq-schema/">post on why FAQ schema still earns its place</a> has the longer version of the argument.</p>
+
+      <p>The demand is real even without the rich result. That FAQ schema post pulled 190 impressions and 5 clicks at an average position of 19.8, making it the second most clicked page on this site after the homepage. The query <em>faq pages seo 2026</em> shows up in our Search Console data at 18 impressions and position 42, meaning we barely rank for it and it still finds us.</p>
+
+      <h2 id="three-routes">Three ways to add FAQ to a Shopify blog post</h2>
+
+      <h3>Route 1: The details tag, in the editor today</h3>
+
+      <p>No theme code, no app, and it works in the blog editor right now. The <code>details</code> and <code>summary</code> elements are native HTML. Every current browser collapses and expands them with zero JavaScript, and screen readers treat them as expandable regions.</p>
+
+      <p>Open the post, click Edit code in the editor toolbar, and paste this at the end of your content.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Paste into the HTML view of the Shopify blog post editor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><pre>&lt;div class="sn-faq"&gt;
+  &lt;h2 id="post-faq"&gt;Frequently asked questions&lt;/h2&gt;
+
+  &lt;details&gt;
+    &lt;summary&gt;How long does shipping take?&lt;/summary&gt;
+    &lt;p&gt;Orders ship within two business days. Delivery is
+    three to five business days inside the US.&lt;/p&gt;
+  &lt;/details&gt;
+
+  &lt;details&gt;
+    &lt;summary&gt;Can I return an opened item?&lt;/summary&gt;
+    &lt;p&gt;Yes, within 30 days, as long as the item is unused
+    and you still have the original packaging.&lt;/p&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</pre></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Save, then check the live post rather than the editor, since sanitization happens on save and the preview is not the storefront. If the markup came back changed, simplify it rather than paste it back in a fight you will lose.</p>
+
+      <p>Unstyled, this renders as a small triangle next to bold text. Functional, plain. To make it look intentional, add the CSS once to your theme stylesheet instead of pasting a style block into every article. Thirty posts times one style block is thirty copies eating your 64 KB budget.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Add once to your theme stylesheet, not to each post</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><pre>.sn-faq details {
+  border-bottom: 1px solid #E8E8E8;
+  padding: 20px 0;
+}
+.sn-faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+.sn-faq summary::-webkit-details-marker { display: none; }
+.sn-faq summary::after {
+  content: "+";
+  float: right;
+  color: #801D5C;
+  transition: transform 0.2s ease;
+}
+.sn-faq details[open] summary::after { transform: rotate(45deg); }</pre></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p><strong>Best for:</strong> stores publishing under two posts a month, or anyone who wants an FAQ block live in the next ten minutes.</p>
+
+      <h3>Route 2: A theme block for Horizon-era themes</h3>
+
+      <p>If you are on Horizon or another recent Online Store 2.0 theme, you can build the FAQ as a proper theme block instead of pasting HTML into each post. <a href="https://github.com/Shopify/horizon" target="_blank" rel="noopener noreferrer">Horizon's source</a> is built around theme blocks, so a new block file becomes available in the block picker once you save it.</p>
+
+      <p>The shape of the work: create a new file in the theme's <code>blocks/</code> directory, give it a schema so its settings appear in the editor, and write the Liquid and CSS it needs. Do not edit Horizon's core block files directly. Horizon updates often and your changes get overwritten when it does.</p>
+
+      <p>The honest catch: because the Blog post section does not currently accept arbitrary blocks alongside the article body, your FAQ block sits above or below the content section rather than inside it. For most posts that is fine, since the FAQ belongs at the end anyway. If you want it mid-article, Route 1 is still your only option.</p>
+
+      <p><strong>Best for:</strong> stores on a current theme, publishing weekly, comfortable adding one file and not touching the rest.</p>
+
+      <h3>Route 3: Template-level FAQ for stores publishing on a schedule</h3>
+
+      <p>Worth building once you publish two or more posts a week. Instead of writing the FAQ into the post body, you store it as an article metafield and render it from the template.</p>
+
+      <p>Set it up once under Settings, then Custom data, then Blog posts, and add a metafield definition. The <a href="https://shopify.dev/docs/api/liquid/objects/article" target="_blank" rel="noopener noreferrer">Shopify article object</a> exposes those metafields in Liquid, so your template can loop over them and render the block.</p>
+
+      <p>The reason this route earns its setup cost has nothing to do with convenience. The visible FAQ and the JSON-LD render from the same field, so they cannot drift apart. Every mismatch problem in the next section disappears at the template level.</p>
+
+      <p><strong>Best for:</strong> two or more posts a week, or anyone who has already caught their schema saying something different from their page.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Setup time</th>
+            <th>Per-post effort</th>
+            <th>Survives a theme change?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Details tag in the editor</td>
+            <td>10 minutes</td>
+            <td>5 minutes per post</td>
+            <td>Yes. The HTML lives in the post content, not the theme.</td>
+          </tr>
+          <tr>
+            <td>2. Theme block</td>
+            <td>2 to 4 hours, or a developer</td>
+            <td>2 minutes per post</td>
+            <td>No. You rebuild the block on the new theme.</td>
+          </tr>
+          <tr>
+            <td>3. Article metafield plus template</td>
+            <td>3 to 6 hours, or a developer</td>
+            <td>2 minutes per post</td>
+            <td>Data survives. The rendering code does not.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="table-of-contents">How to add a table of contents with jump links</h2>
+
+      <p>A Shopify table of contents is simpler than the FAQ block. It is a list of links pointing at ids you are about to add. No app, no JavaScript, three steps.</p>
+
+      <h3>Step 1: Give every H2 an id</h3>
+
+      <p>In the HTML view, add an <code>id</code> attribute to each section heading. Keep them short, lowercase, and hyphenated, and make sure no two match. The id is what the link points at, so <code>id="measuring"</code> pairs with <code>href="#measuring"</code>.</p>
+
+      <h3>Step 2: Paste the table of contents</h3>
+
+      <p>Put this after your opening paragraph rather than before it. Readers want a sentence of context before they get a menu.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>A copy-paste table of contents with Shopify blog jump links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><pre>&lt;nav class="sn-toc" aria-label="Table of contents"&gt;
+  &lt;p&gt;&lt;strong&gt;In this post&lt;/strong&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#why-fit-matters"&gt;Why fit matters more than size&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#measuring"&gt;How to measure at home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#between-sizes"&gt;What to do if you are between sizes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#post-faq"&gt;Frequently asked questions&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h2 id="why-fit-matters"&gt;Why fit matters more than size&lt;/h2&gt;
+&lt;p&gt;Your section copy goes here.&lt;/p&gt;
+
+&lt;h2 id="measuring"&gt;How to measure at home&lt;/h2&gt;
+&lt;p&gt;Your section copy goes here.&lt;/p&gt;</pre></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Swap the labels and ids for your own sections. If you write to a consistent structure this becomes mechanical, which is one reason we use <a href="/journal/shopify-blog-post-template/">the same blog post template for every article</a>: the ids and the table of contents entries come from one outline, so they cannot fall out of step.</p>
+
+      <h3>Step 3: Fix the sticky header offset</h3>
+
+      <p>Almost nobody warns you about this one. If your theme has a sticky header, a jump link scrolls the heading to the very top of the viewport, where the sticky bar covers it. The reader lands a line below where they expected and assumes the link is broken.</p>
+
+      <p>One CSS property fixes it. Add <code>scroll-margin-top</code> to your headings in the theme stylesheet, roughly your header height plus breathing room. <a href="https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/" target="_blank" rel="noopener noreferrer">CSS-Tricks has the full explanation</a> of why this beats the old negative-margin tricks.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Add to your theme stylesheet once</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><pre>html { scroll-behavior: smooth; }
+
+.article h2[id],
+.article h3[id] { scroll-margin-top: 100px; }</pre></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div style="text-align: center;"><img src="/journal/shopify-blog-faq-toc-blocks/shopify-blog-faq-toc-blocks-anchor-link-anatomy.webp" alt="How a table of contents jump link connects to a heading id with a sticky header offset" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="faq-schema">Matching FAQ schema to what the reader sees</h2>
+
+      <p>If you add FAQ schema on top of the visible block, one rule matters more than every technical detail: the schema must say what the page says, word for word.</p>
+
+      <p>Google's structured data guidelines have always required markup to reflect visible content, and that requirement did not leave with the rich result. Bing and the retrieval crawlers apply similar logic. A schema block full of questions that do not appear on the page is worse than no schema at all. Two rules follow.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-blog-faq-toc-blocks/shopify-blog-faq-toc-blocks-schema-parity.webp" alt="Visible FAQ block on the left matched question by question to structured data on the right" style="margin-bottom: 16px; float: none;"></div>
+
+      <p><strong>Use JSON-LD only.</strong> Put a single <code>FAQPage</code> block in the page head or template, and do not also add microdata attributes to your visible details elements. Doing both describes the same content twice and reports as a duplicate structured data warning. JSON-LD is the easier one to maintain.</p>
+
+      <p><strong>Generate both from one source where you can.</strong> This is the argument for Route 3. When the visible block and the JSON-LD come from the same metafield, they cannot disagree. When you hand-write both, they eventually will, usually because you edited an answer on the page and forgot the schema. The same parity rule applies to <a href="/journal/shopify-product-schema/">product schema on Shopify</a>.</p>
+
+      <h2 id="what-goes-wrong">What goes wrong, and what to check first</h2>
+
+      <p>Most of these have nothing to do with your HTML being wrong. They are environment problems, which is why they are hard to debug from inside the editor.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Symptom</th>
+            <th>Likely cause</th>
+            <th>What to do</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Your HTML looks different after you hit save</td>
+            <td>TinyMCE sanitization corrected it</td>
+            <td>Simplify the markup. If it keeps happening, move that piece into your theme.</td>
+          </tr>
+          <tr>
+            <td>Jump links do nothing when clicked</td>
+            <td>Theme or app JavaScript is intercepting anchor clicks</td>
+            <td>Test the same links on a duplicate theme with apps disabled. Common on stores that added custom scripts for popups.</td>
+          </tr>
+          <tr>
+            <td>Jump links land one line too low</td>
+            <td>Sticky header covering the heading</td>
+            <td>Add scroll-margin-top, as above.</td>
+          </tr>
+          <tr>
+            <td>The wrong section opens</td>
+            <td>Two elements share the same id</td>
+            <td>Ids must be unique across the page, including your theme's own markup.</td>
+          </tr>
+          <tr>
+            <td>The editor refuses to save</td>
+            <td>You hit the 64 KB content ceiling</td>
+            <td>Move CSS out of the post and into the theme stylesheet.</td>
+          </tr>
+          <tr>
+            <td>Nobody uses the table of contents</td>
+            <td>The post is too short to need one</td>
+            <td>Under roughly 1,200 words, skip it. Clutter, no navigation value.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>That last row deserves a note. A table of contents earns its place on a long, sectioned, reference-style post. It does not help a 900-word update. We covered <a href="/journal/shopify-blog-post-length/">how long a Shopify blog post should actually be</a> if you want the ranges by post type.</p>
+
+      <p>One more use for the questions once you have them. They are the same ones landing in your inbox, which makes them the answers a support bot should already know, so <a href="/journal/shopify-faq-chatbot-self-serve/">turning your FAQ into a chatbot</a> is the natural next step for the same content.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Two things to take away. First, add FAQ to your Shopify blog posts for the reader and for the question wording, not for a search feature that stopped existing in May 2026. If a question did not come from a real customer, it does not belong in the block, and no amount of schema changes that.</p>
+
+      <p>Second, pick the route that matches how often you publish. If you post twice a month, Route 1 is not a compromise, it is the right answer. Pasting a details block into the HTML view takes five minutes and costs nothing. Spending an afternoon on a theme block to save three minutes a month is work you do not need to do yet. Move up when the per-post effort starts to hurt, not before.</p>
+
+      <p>The part I will not pretend is easy is writing the questions. The implementation here is an hour at most. Deciding which six questions genuinely deserve the page, phrased the way a customer types them rather than the way you describe your own policy, is what determines whether any of this does anything. Pull them from your support inbox, chat transcripts, and product page questions. If you cannot find six, use four. A short FAQ block of real questions beats a long one padded with questions nobody asked.</p>
+
+      <p>Start with the table of contents on your longest existing post and the details block on your next new one. Twenty minutes of work, and enough to see whether readers use them before you build anything bigger.</p>
+
+      <div class="cta-block">
+        <h3>Want the whole post structured this way?</h3>
+        <p>Blog Content at Studio Niza ships every post with the FAQ block, the table of contents, and matching schema already built in, so nothing needs retrofitting after you hit publish. $449 per month, two to three posts a week.</p>
+        <a href="/services/blog-content/" class="cta-button">See how Blog Content works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Do I need an app to add FAQ to a Shopify blog post?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. The details and summary elements are native HTML and work in Shopify's blog editor today with no app and no JavaScript. Paste them through the Edit code button in the editor toolbar. An app is only worth considering if you want non-technical staff editing FAQ content across dozens of posts without touching HTML.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Will Shopify's editor strip my FAQ HTML when I save?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It may rewrite parts of it. Shopify's rich text editor runs HTML sanitization that automatically corrects markup it considers malformed or risky. Simple details and summary blocks usually survive intact, but always check the live storefront page rather than the editor preview after saving. If a piece of markup keeps getting rewritten, move it into your theme code instead.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does FAQ schema still do anything now that Google removed the rich result?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It no longer produces anything visible in Google Search. FAQ rich results were retired on May 7, 2026, and FAQPage markup now generates no SERP feature at all. The markup is still valid schema.org and is still parsed by Bing and other retrieval crawlers, but nobody has proven it improves AI citation rates, so treat that claim as unconfirmed.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How long should a blog post be before a table of contents is worth adding?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Roughly 1,200 words with at least four distinct sections. Below that, a table of contents adds visual clutter without giving readers anything they could not get by scrolling. Reference-style posts and step-by-step guides benefit most, since readers often want one specific section rather than the whole article.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can I put the same FAQ block on every blog post?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>You can, but it usually is not worth it. A block of shipping and returns questions repeated across thirty posts is duplicated content that answers nothing specific to the article. Write two to six questions that relate to the post's actual topic instead, and keep your store-wide policy questions on a dedicated FAQ page.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Why do my table of contents links jump to the wrong place?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>The two common causes are a sticky header covering the heading and duplicate id values on the page. Add scroll-margin-top to your headings in the theme stylesheet to account for the header height, and confirm no two elements share an id. If the links do nothing at all, theme or app JavaScript is probably intercepting the click.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-blog-faq-toc-blocks">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
