@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Should You Block AI Crawlers on Shopify? An Honest Answer</title>
+<meta name="description" content="Blocking AI crawlers on Shopify is usually the wrong call in 2026. What GPTBot, ClaudeBot, and PerplexityBot actually do, and the robots.txt setup to use.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-ai-crawlers-robots/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="AI Crawlers on Shopify: Should You Block GPTBot, ClaudeBot, and PerplexityBot?">
+<meta property="og:description" content="What each AI crawler actually does, what blocking really costs a Shopify catalog, and the robots.txt setup to use.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-ai-crawlers-robots/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-ai-crawlers-robots/shopify-ai-crawlers-robots.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Should You Block AI Crawlers on Shopify by Studio Niza">
+<meta property="article:published_time" content="2026-09-01T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Crawlers on Shopify: Should You Block GPTBot, ClaudeBot, and PerplexityBot?">
+<meta name="twitter:description" content="What blocking AI crawlers really costs a Shopify store, and the robots.txt setup to use.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-ai-crawlers-robots/shopify-ai-crawlers-robots.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify AI Crawlers", "item": "https://studioniza.com/journal/shopify-ai-crawlers-robots/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Crawlers on Shopify: Should You Block GPTBot, ClaudeBot, and PerplexityBot?",
+  "description": "A practical guide to blocking or allowing AI crawlers on Shopify. What GPTBot, ClaudeBot, PerplexityBot, and the retrieval bots each do, what blocking costs a product catalog, and how to check and edit your robots.txt.",
+  "image": "https://studioniza.com/journal/shopify-ai-crawlers-robots/shopify-ai-crawlers-robots.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-09-01T10:00:00+08:00",
+  "dateModified": "2026-09-01T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-ai-crawlers-robots/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-ai-crawlers-robots/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does blocking AI crawlers on Shopify help my Google rankings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google Search rankings are governed by Googlebot, which is a separate crawler from every AI bot named in robots.txt. Blocking GPTBot, ClaudeBot, or PerplexityBot has no effect on your Google position, positive or negative. The one Google-related rule to be careful with is Googlebot itself, which you should never disallow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I block GPTBot and still appear in ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. OpenAI documents GPTBot, OAI-SearchBot, and ChatGPT-User as independently controllable, so you can disallow GPTBot for training while allowing the other two. That combination keeps your store eligible to be cited in ChatGPT search results while opting your content out of future model training runs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Shopify block AI crawlers by default?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Shopify's default robots.txt does not name any AI crawler. It sets rules under a single wildcard group and disallows administrative paths like cart, checkout, account, and certain collection filter URLs. If your store is blocking AI crawlers, a person or an app added that rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will allowing AI crawlers slow down my Shopify store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is unlikely to be an issue, because Shopify hosts the infrastructure and absorbs crawl load. If a specific bot does get aggressive, several operators including Anthropic support the non-standard Crawl-delay directive in robots.txt, which asks the bot to slow down rather than stop entirely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can AI crawlers copy my product descriptions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anything on a public page can be read by anything that can load that page. Robots.txt controls the behavior of well-behaved declared bots, not determined scrapers, and Cloudflare has documented at least one AI company using undeclared crawlers to reach blocked content. The realistic goal is influencing compliant systems, not achieving secrecy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an app to edit my Shopify robots.txt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Editing robots.txt on Shopify means adding a robots.txt.liquid template in your theme's Templates folder, which is free and takes about fifteen minutes. Apps exist for owners who would rather not open Liquid code, but they are a convenience rather than a requirement. Note that the template is an unsupported customization, so duplicate your theme before editing."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify AI Crawlers</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">September 1, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>AI Crawlers on Shopify: Should You Block GPTBot, ClaudeBot, and PerplexityBot?</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-ai-crawlers-robots/shopify-ai-crawlers-robots-hero.webp" alt="Laptop on a calm desk showing a plain robots.txt file open in a code editor" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">The advice to block AI crawlers was written for a different internet. Here is what each bot actually does, what blocking really costs a product catalog, and the narrow cases where it still makes sense.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#who-crawls-your-store">The AI crawlers hitting your store in 2026</a></li>
+        <li><a href="#training-vs-retrieval">Training bots vs retrieval bots</a></li>
+        <li><a href="#what-blocking-costs">What blocking actually costs you</a></li>
+        <li><a href="#when-blocking-makes-sense">When does blocking make sense?</a></li>
+        <li><a href="#check-your-robots-txt">How to check your Shopify robots.txt</a></li>
+        <li><a href="#allow-configuration">The allow-with-eyes-open setup</a></li>
+        <li><a href="#what-robots-txt-cant-do">What robots.txt can't do for you</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>Somewhere in the last two years, "block the AI scrapers" became default advice. It shows up in Shopify Facebook groups, in Reddit threads, and in blog posts that were written in 2023 and never revisited. Someone pastes a snippet into their store's robots.txt file, feels protected, and never checks what it did.</p>
+
+      <p>Here is the problem with that advice. It was written for publishers who sell access to words. You sell products.</p>
+
+      <p>If you block AI crawlers, Shopify stores give up something measurable in exchange for something theoretical. Shopify's own commerce data from Q1 2026 put <a href="https://www.shopify.com/enterprise/blog/ai-search-insights" target="_blank" rel="noopener noreferrer">AI-referred sessions at more than 8x year over year</a>, with those shoppers converting nearly 50 percent better than organic search visitors on product pages and spending about 14 percent more per order. Blocking the crawlers that feed ChatGPT, Claude, and Perplexity answers does not protect your catalog. It takes you off the shortlist.</p>
+
+      <p>That does not mean you allow everything without reading anything. There is a real difference between the bots that collect training data and the bots that fetch your page to answer a shopper's question right now, and you can treat those two groups differently. Most store owners who want to block AI crawlers on Shopify only object to the first group, then accidentally block both.</p>
+
+      <p>This post covers who is actually crawling your store, what blocking each bot really prevents, the narrow cases where blocking still makes sense, how to check what your robots.txt allows today, and the configuration I would use. If you want the wider picture on <a href="/journal/geo-for-shopify/">getting your store cited in ChatGPT, Perplexity, and Claude</a>, that post pairs with this one.</p>
+
+      <h2 id="who-crawls-your-store">The AI crawlers actually hitting your Shopify store in 2026</h2>
+
+      <p>The first thing to understand is that "AI crawlers" is not one thing. Every major AI company now runs several bots with separate names, separate jobs, and separate consequences when you block them.</p>
+
+      <p>This matters more than it sounds. A rule that blocks one name has no effect on the others, and the names are close enough that people mix them up constantly.</p>
+
+      <h3>OpenAI runs three bots</h3>
+
+      <p><a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener noreferrer">OpenAI's crawler documentation</a> lists three user agents and states plainly that each setting is independent of the others. GPTBot collects content that may be used to train future models. OAI-SearchBot builds the index behind ChatGPT's search feature. ChatGPT-User fetches a specific page when a person asks ChatGPT to look at it.</p>
+
+      <p>You can block GPTBot and stay fully visible in ChatGPT search. That combination is the most common configuration among brands that want citations without contributing to training runs.</p>
+
+      <h3>Anthropic runs three bots</h3>
+
+      <p>Anthropic split its crawlers the same way in early 2026. <a href="https://privacy.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" target="_blank" rel="noopener noreferrer">Its crawler documentation</a> lists ClaudeBot for training, Claude-SearchBot for search indexing, and Claude-User for pages fetched during a live conversation.</p>
+
+      <p>The documentation is unusually direct about the trade. As <a href="https://www.searchenginejournal.com/anthropics-claude-bots-make-robots-txt-decisions-more-granular/568253/" target="_blank" rel="noopener noreferrer">Search Engine Journal reported</a>, Anthropic states that disabling Claude-SearchBot stops its system from indexing your content, which may reduce your site's visibility and accuracy in user search results. That is the vendor telling you what a block costs, in writing.</p>
+
+      <h3>Perplexity, Google, and the rest</h3>
+
+      <p>Perplexity documents two agents: PerplexityBot for indexing, and Perplexity-User for fetches triggered by a person. <a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers" target="_blank" rel="noopener noreferrer">Perplexity's crawler docs</a> also cover firewall allow-listing, which tells you something about how often these bots get blocked by security settings nobody remembers configuring.</p>
+
+      <p>Google is the one to be careful with. Googlebot handles crawling for Google Search, and Google's AI Overviews and AI Mode draw on that same index. There is no separate AI Overviews crawler to block. Google-Extended is a different thing entirely: it is a control token covering Gemini training and grounding, and Google states it does not affect a site's inclusion in Search. Blocking Google-Extended is a training opt-out, not an AI opt-out.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>User agent</th>
+            <th>Run by</th>
+            <th>What it does</th>
+            <th>What blocking it costs you</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GPTBot</td>
+            <td>OpenAI</td>
+            <td>Collects content that may train future models</td>
+            <td>Nothing immediate. Future content stays out of training</td>
+          </tr>
+          <tr>
+            <td>OAI-SearchBot</td>
+            <td>OpenAI</td>
+            <td>Builds the index behind ChatGPT search</td>
+            <td>Your store stops being eligible as a cited source in ChatGPT</td>
+          </tr>
+          <tr>
+            <td>ChatGPT-User</td>
+            <td>OpenAI</td>
+            <td>Fetches a page when a person asks ChatGPT to read it</td>
+            <td>ChatGPT cannot open your product page on a shopper's request</td>
+          </tr>
+          <tr>
+            <td>ClaudeBot</td>
+            <td>Anthropic</td>
+            <td>Collects content that may train Claude models</td>
+            <td>Nothing immediate. Future content excluded from training</td>
+          </tr>
+          <tr>
+            <td>Claude-SearchBot</td>
+            <td>Anthropic</td>
+            <td>Indexes content for Claude's search results</td>
+            <td>Anthropic says this may reduce visibility in search answers</td>
+          </tr>
+          <tr>
+            <td>Claude-User</td>
+            <td>Anthropic</td>
+            <td>Retrieves pages during a live Claude conversation</td>
+            <td>Claude cannot pull your page in response to a question</td>
+          </tr>
+          <tr>
+            <td>PerplexityBot</td>
+            <td>Perplexity</td>
+            <td>Indexes pages for Perplexity answers and citations</td>
+            <td>You drop out of Perplexity's citation pool</td>
+          </tr>
+          <tr>
+            <td>Perplexity-User</td>
+            <td>Perplexity</td>
+            <td>Fetches a page a Perplexity user asked for</td>
+            <td>Perplexity treats this as user-directed, so results vary</td>
+          </tr>
+          <tr>
+            <td>Googlebot</td>
+            <td>Google</td>
+            <td>Crawls for Google Search, AI Overviews, and AI Mode</td>
+            <td>Everything. Never block this one</td>
+          </tr>
+          <tr>
+            <td>Google-Extended</td>
+            <td>Google</td>
+            <td>Controls Gemini training and grounding use</td>
+            <td>Gemini training only. No effect on Google Search</td>
+          </tr>
+          <tr>
+            <td>Bingbot</td>
+            <td>Microsoft</td>
+            <td>Crawls for Bing, which feeds Microsoft Copilot</td>
+            <td>Bing rankings and Copilot answers at the same time</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="training-vs-retrieval">Training bots vs retrieval bots: the split that decides your answer</h2>
+
+      <p>Once you see the table, the decision gets simpler. There are two lanes, and you are allowed to have a different policy for each.</p>
+
+      <p><strong>Training bots</strong> read your pages so that a future model version knows more about the world. GPTBot, ClaudeBot, and Google-Extended sit here. Blocking them changes nothing about today's traffic. It is a values decision about whether your words feed the next model, and for most product catalogs there is very little at stake either way, because the content is product specifications and shipping policies rather than original reporting.</p>
+
+      <p><strong>Retrieval bots</strong> read your pages so an AI can answer a shopper's question this minute and link to you. OAI-SearchBot, Claude-SearchBot, PerplexityBot, and the three user-triggered fetchers sit here. Blocking these is what removes you from the answer.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-ai-crawlers-robots/shopify-ai-crawlers-robots-bot-lanes.webp" alt="Diagram of the two AI crawler lanes on a Shopify store: training and retrieval" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Almost every "block AI crawlers" snippet floating around was written before this split existed. Those snippets close both lanes at once, which means a store owner who only objected to training has also removed their products from the citation pool without knowing it.</p>
+
+      <p>The split also explains why AI traffic behaves the way it does. Shopify calls the effect journey compression: the AI does the comparing before the shopper ever arrives, so landing on your product page means your product already made the shortlist. That is the same shift driving <a href="/journal/shopify-universal-commerce-protocol/">what the Universal Commerce Protocol changes about product discovery</a>. A retrieval block cuts you out at the shortlist stage, before any of that can happen.</p>
+
+      <h2 id="what-blocking-costs">What blocking AI crawlers on Shopify actually costs you</h2>
+
+      <p>Here is the honest version of the numbers, including the part that most posts leave out.</p>
+
+      <p>Shopify's Q1 2026 figures were the headline: AI-referred sessions up more than 8x, AI-referred orders up nearly 13x, conversion nearly 50 percent better than organic search, average order value about 14 percent higher. The Q2 update was more modest, with <a href="https://www.shopify.com/enterprise/blog/ai-search-category-behavior" target="_blank" rel="noopener noreferrer">AI-referred sessions up 197 percent year over year</a> against a much larger base, while organic search grew 12 percent and still sends more sessions than every AI platform combined.</p>
+
+      <p>So the honest framing is not "AI search has replaced Google." It has not, and it will not this year. The honest framing is that this is a small, fast-growing channel with unusually good buyers, and the cost of participating is a text file edit.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-ai-crawlers-robots/shopify-ai-crawlers-robots-blocked-answer.webp" alt="Comparison of an AI answer with three cited sources and one with a missing source" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>There is a second cost that is harder to see. When an AI cannot read your store, it still answers the shopper's question. It just builds the answer from marketplaces, review aggregators, and your competitors. Cloudflare noted this in its own testing: when a crawler was successfully blocked, the answers it produced were less specific and missing details from the original source, but the answers still got produced.</p>
+
+      <p>Blocking does not create silence. It creates an answer about your category that does not include you.</p>
+
+      <p>Being crawlable is only half of it, of course. The crawler has to find something worth citing when it arrives, which is why policy pages, shipping details, and structured FAQ content matter as much as the robots.txt rule. <a href="/journal/shopify-knowledge-base-app-geo/">Shopify's Knowledge Base app</a> is a free way to give retrieval bots that kind of material.</p>
+
+      <h2 id="when-blocking-makes-sense">When does blocking AI crawlers make sense?</h2>
+
+      <p>There are real cases. They are narrower than the internet suggests.</p>
+
+      <h3>Content people pay to see</h3>
+
+      <p>If you sell a course, a members-only library, or a paid newsletter, keeping that content out of both training and retrieval is reasonable. You are protecting the product itself. Note that anything genuinely behind a login is not crawlable anyway, so this mostly applies to preview pages and sample chapters.</p>
+
+      <h3>Staging, preview, and internal URLs</h3>
+
+      <p>Preview theme URLs, unlisted pages, and internal search result pages should be disallowed for everyone, AI included. Shopify's default robots.txt already handles most of this, which is one more reason not to overwrite the file casually.</p>
+
+      <h3>Genuinely original editorial you monetize</h3>
+
+      <p>If your store's blog is doing original research nobody else has, blocking the training bots while leaving the retrieval bots open is a defensible position. You stay citable, you stay out of the training set. This is the "do not train on me, but do cite me" configuration, and it is the one I would pick for a store with real editorial investment.</p>
+
+      <p>Notice what none of these cases describe: a product catalog. Product titles, specifications, prices, materials, sizing, and shipping policies are facts that appear in a dozen other places. There is no protective value in hiding them, and a large cost to hiding them from the systems shoppers now use to compare options.</p>
+
+      <h2 id="check-your-robots-txt">How do you check what your Shopify robots.txt allows right now?</h2>
+
+      <p>Most owners have never looked. Do this before you change anything, because a surprising number of stores discover they were never blocking AI crawlers in the first place, or that they are blocking something they did not choose.</p>
+
+      <p><strong>Step one.</strong> Open <em>yourstore.com/robots.txt</em> in a browser. It is a plain text file. You do not need a tool.</p>
+
+      <p><strong>Step two.</strong> Search the page for the bot names in the table above. Shopify's default file does not name any AI crawler. It sets rules for everyone under a single wildcard group and disallows cart, checkout, admin, account, and some collection filter paths. If you see AI bot names in there, someone added them.</p>
+
+      <p><strong>Step three.</strong> Look for a broad <em>Disallow: /</em> under any user agent other than the ones you intended. This is the rule that quietly deletes a store from a channel.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-ai-crawlers-robots/shopify-ai-crawlers-robots-check-flow.webp" alt="Three-step flow for checking whether a Shopify robots.txt blocks AI crawlers" style="margin-bottom: 16px; float: none;"></div>
+
+      <p><strong>Step four.</strong> Check whether you have a <em>robots.txt.liquid</em> template at all. In your Shopify admin, go to Online Store, then Themes, then Edit code, and look in the Templates folder. If the file is not there, you are on Shopify's default and nothing has been customized.</p>
+
+      <p><strong>Step five.</strong> Check your apps. Some SEO and store-protection apps write rules into that template or filter unusual user agents at the middleware layer. If your file looks clean but AI engines still cannot see you, an app is a likely culprit, and so is a security preset from whoever set the store up.</p>
+
+      <p>If the file checks out and you are still invisible in AI answers, the problem is upstream of crawling. That is a different diagnosis, covered in <a href="/journal/shopify-store-chatgpt-visibility/">why your store isn't showing up in ChatGPT</a>.</p>
+
+      <h2 id="allow-configuration">The allow-with-eyes-open robots.txt setup for Shopify</h2>
+
+      <p>Shopify generates a solid default file, and <a href="https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt" target="_blank" rel="noopener noreferrer">Shopify's own help documentation</a> says it works for most stores. If you have not customized anything, the honest answer is that you may already be done. Open the file, confirm no AI bots are named, and go do something else.</p>
+
+      <p>If you want explicit rules so that intent is recorded and future theme changes do not surprise you, here is the configuration I use for stores that want AI visibility while opting out of training.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>User agent</th>
+            <th>Rule</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OAI-SearchBot</td>
+            <td>Allow: /</td>
+            <td>Eligibility to be cited in ChatGPT search</td>
+          </tr>
+          <tr>
+            <td>ChatGPT-User</td>
+            <td>Allow: /</td>
+            <td>Lets ChatGPT open your page for a real shopper</td>
+          </tr>
+          <tr>
+            <td>Claude-SearchBot</td>
+            <td>Allow: /</td>
+            <td>Eligibility to be cited in Claude search</td>
+          </tr>
+          <tr>
+            <td>Claude-User</td>
+            <td>Allow: /</td>
+            <td>Live retrieval during a Claude conversation</td>
+          </tr>
+          <tr>
+            <td>PerplexityBot</td>
+            <td>Allow: /</td>
+            <td>Perplexity citations and referral clicks</td>
+          </tr>
+          <tr>
+            <td>Perplexity-User</td>
+            <td>Allow: /</td>
+            <td>User-triggered fetches</td>
+          </tr>
+          <tr>
+            <td>Bingbot</td>
+            <td>Allow: /</td>
+            <td>Bing rankings, and Copilot runs on Bing's index</td>
+          </tr>
+          <tr>
+            <td>GPTBot</td>
+            <td>Your call</td>
+            <td>Training only. Disallow if you object, no traffic cost</td>
+          </tr>
+          <tr>
+            <td>ClaudeBot</td>
+            <td>Your call</td>
+            <td>Training only. Same trade as GPTBot</td>
+          </tr>
+          <tr>
+            <td>Google-Extended</td>
+            <td>Your call</td>
+            <td>Gemini training and grounding. Does not touch Search</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Two cautions before you touch anything. First, the Shopify robots.txt.liquid template is an unsupported customization, which means Shopify support cannot help you fix it. Second, if you add the template, you need to keep the Liquid that outputs Shopify's default rules, or you will wipe out protections you did want.</p>
+
+      <p><a href="https://shopify.dev/docs/storefronts/themes/seo/robots-txt" target="_blank" rel="noopener noreferrer">Shopify's developer documentation</a> shows how to add new rules alongside the default output rather than replacing it. Duplicate your theme first, edit the copy, preview it, then publish. That takes fifteen minutes and costs nothing. You do not need an app for this, though apps exist for people who would rather not open Liquid at all.</p>
+
+      <h2 id="what-robots-txt-cant-do">What robots.txt can't do for you</h2>
+
+      <p>This is the part most guides skip, and skipping it gives people false confidence.</p>
+
+      <p><strong>Robots.txt is a request, not a wall.</strong> Compliant bots honor it. Bots that do not care about your preferences ignore it and always have. In August 2025, <a href="https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/" target="_blank" rel="noopener noreferrer">Cloudflare published evidence</a> that Perplexity used undeclared crawlers with rotating identities to reach content on sites that had explicitly blocked its named bots. Perplexity disputed the characterization, arguing that user-triggered fetches are a different category from crawling. That argument has not been settled, and you should assume it will not be settled soon.</p>
+
+      <p><strong>Blocking is not retroactive.</strong> Disallowing GPTBot today does nothing about content already in a model. If your concern is content that has been crawled for the last two years, robots.txt is closing a door on an empty room.</p>
+
+      <p><strong>You do not control your own firewall.</strong> Publishers can block at the network layer. Shopify merchants generally cannot, because Shopify runs the infrastructure. That is a fair trade for not managing servers, but it means robots.txt really is your main control surface.</p>
+
+      <p><strong>Anything public is readable.</strong> If a product description is on a page a shopper can load, a determined scraper can load it too. The realistic goal is influencing well-behaved systems, not achieving actual secrecy.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Three things to carry out of this.</p>
+
+      <p>First, blocking AI crawlers on Shopify is two decisions, not one. Training and retrieval are separate lanes with separate user agents. If you object to model training, block the training bots and leave the retrieval bots open. Do not close both because a 2023 snippet told you to.</p>
+
+      <p>Second, check before you change. Shopify's default file names no AI crawlers, so if something is blocked, a person or an app did it. Fifteen minutes with your own robots.txt file will tell you more than another week of reading opinions about whether AI is stealing from you.</p>
+
+      <p>Third, be realistic about the size of this. AI referrals are still a small share of most stores' traffic, and organic search still sends far more. But the buyers arriving through AI convert better and spend more, the channel is growing quickly, and the entry fee is a free text edit. Very few SEO decisions have that shape.</p>
+
+      <p>The work that remains after this is the harder part: giving those crawlers something specific and accurate to cite when they arrive. That is content and structured data, not configuration. Once you have allowed the right bots, the next step is measurement, so you can see whether any of it is working. That process is covered in <a href="/journal/track-ai-search-traffic-shopify/">how to track whether AI search is actually sending you shoppers</a>.</p>
+
+      <div class="cta-block">
+        <h3>Want someone to check this for you?</h3>
+        <p>The Studio Niza SEO &amp; GEO service includes a crawler and indexing audit: what your robots.txt allows, what is actually reaching AI engines, and what is quietly blocked. The Starter tier is $499 one-time.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See pricing &amp; services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Does blocking AI crawlers on Shopify help my Google rankings?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Google Search rankings are governed by Googlebot, which is a separate crawler from every AI bot named in robots.txt. Blocking GPTBot, ClaudeBot, or PerplexityBot has no effect on your Google position, positive or negative. The one Google-related rule to be careful with is Googlebot itself, which you should never disallow.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can I block GPTBot and still appear in ChatGPT?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. OpenAI documents GPTBot, OAI-SearchBot, and ChatGPT-User as independently controllable, so you can disallow GPTBot for training while allowing the other two. That combination keeps your store eligible to be cited in ChatGPT search results while opting your content out of future model training runs.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Does Shopify block AI crawlers by default?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Shopify&#x27;s default robots.txt does not name any AI crawler. It sets rules under a single wildcard group and disallows administrative paths like cart, checkout, account, and certain collection filter URLs. If your store is blocking AI crawlers, a person or an app added that rule.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Will allowing AI crawlers slow down my Shopify store?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It is unlikely to be an issue, because Shopify hosts the infrastructure and absorbs crawl load. If a specific bot does get aggressive, several operators including Anthropic support the non-standard Crawl-delay directive in robots.txt, which asks the bot to slow down rather than stop entirely.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can AI crawlers copy my product descriptions?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Anything on a public page can be read by anything that can load that page. Robots.txt controls the behavior of well-behaved declared bots, not determined scrapers, and Cloudflare has documented at least one AI company using undeclared crawlers to reach blocked content. The realistic goal is influencing compliant systems, not achieving secrecy.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Do I need an app to edit my Shopify robots.txt?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Editing robots.txt on Shopify means adding a robots.txt.liquid template in your theme&#x27;s Templates folder, which is free and takes about fifteen minutes. Apps exist for owners who would rather not open Liquid code, but they are a convenience rather than a requirement. Note that the template is an unsupported customization, so duplicate your theme before editing.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-ai-crawlers-robots">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>

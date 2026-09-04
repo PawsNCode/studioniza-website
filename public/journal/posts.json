@@ -578,5 +578,15 @@
     "slug": "shopify-blog-faq-toc-blocks",
     "title": "How to Add FAQ Blocks and a Table of Contents to Shopify Blog Posts",
     "url": "/journal/shopify-blog-faq-toc-blocks/"
+  },
+  {
+    "slug": "shopify-ai-crawlers-robots",
+    "title": "AI Crawlers on Shopify: Should You Block GPTBot, ClaudeBot, and PerplexityBot?",
+    "url": "/journal/shopify-ai-crawlers-robots/"
+  },
+  {
+    "slug": "shopify-chatbot-mistakes",
+    "title": "7 Shopify Chatbot Mistakes That Quietly Lose Sales (and the Two-Minute Fixes)",
+    "url": "/journal/shopify-chatbot-mistakes/"
   }
 ]
