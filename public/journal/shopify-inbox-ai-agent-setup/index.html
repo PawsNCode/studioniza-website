@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Inbox AI Agent Setup: Tone, Rules, and Limits</title>
+<meta name="description" content="Shopify Inbox AI agent setup, step by step: the tone and rules to write, the questions it should never answer, and how to train it with ratings.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-inbox-ai-agent-setup/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="How to Set Up the Shopify Inbox AI Agent: Tone, Rules, and the Questions It Should Never Answer">
+<meta property="og:description" content="Set up the Shopify Inbox AI agent properly: what goes in the persona, where facts live, when to escalate.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-inbox-ai-agent-setup/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-inbox-ai-agent-setup/shopify-inbox-ai-agent-setup.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify Inbox AI agent setup guide by Studio Niza">
+<meta property="article:published_time" content="2026-09-04T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Set Up the Shopify Inbox AI Agent: Tone, Rules, and the Questions It Should Never Answer">
+<meta name="twitter:description" content="Shopify Inbox AI agent setup: what goes in the persona, and what never should.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-inbox-ai-agent-setup/shopify-inbox-ai-agent-setup.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify Inbox AI Agent Setup", "item": "https://studioniza.com/journal/shopify-inbox-ai-agent-setup/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Set Up the Shopify Inbox AI Agent: Tone, Rules, and the Questions It Should Never Answer",
+  "description": "A practical setup guide for the Shopify Inbox AI agent. What to check before turning it on, what to write in the persona, the questions it should hand to a human, and the metrics worth reading.",
+  "image": "https://studioniza.com/journal/shopify-inbox-ai-agent-setup/shopify-inbox-ai-agent-setup.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-09-04T10:00:00+08:00",
+  "dateModified": "2026-09-04T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-inbox-ai-agent-setup/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-inbox-ai-agent-setup/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the Shopify Inbox AI agent free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Shopify Inbox is a free app and the Inbox agent is included at no extra cost. The catch is not price, it is eligibility: Inbox requires a Basic, Grow, Advanced, or Shopify Plus plan, and Shopify's documentation still describes the Inbox agent as early access available only to certain merchants."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Shopify Inbox AI agent work with legacy customer accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Inbox agent requires new customer accounts. If your store still uses legacy customer accounts, your conversations stay with your staff until you upgrade in Settings under Customer accounts. This is the single most common reason a store owner cannot find the agent toggle in their admin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I stop the Shopify Inbox AI agent from handing off to a human?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and writing a persona instruction that tries to prevent all staff handoffs will not work. Shopify's documentation says persona instructions that conflict with Inbox settings or built-in safety behavior might not be followed. What you can control is your availability hours, which decide whether a handoff reaches your staff or sends the customer your email address instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to update my privacy policy before turning on the Inbox agent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you use Shopify's template privacy policy, the current version already includes the disclosures about AI-assisted chat. If you wrote a custom policy, Shopify says it should disclose that you use Shopify to power AI-assisted chat and that Shopify processes chat communications to generate responses and improve the agent. That is not legal advice, and a lawyer familiar with your market is the right check."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can customers tell they are chatting with AI on my Shopify store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Shopify displays a notice that the chat is powered by Shopify and that the customer is chatting with AI. The notice appears automatically and cannot be removed or customized. You do not need to add your own disclosure line to the greeting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the Shopify Inbox AI agent process a refund or cancel an order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Inbox agent answers questions, recommends products from your catalog, looks up orders once the customer signs in, and adds items to a cart. It does not take account actions like refunds, cancellations, or address changes. Those still reach you, which is the correct design for a store under a few hundred orders a month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many messages can the Shopify Inbox AI agent handle in one conversation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shopify caps a single conversation at 100 agent responses for customers who are not signed in and 1,000 for signed-in customers, and each customer can start up to 50 conversations per day. When a limit is reached the agent stops and hands the conversation to your staff if handoff is available. Your own Inbox is not limited."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my Inbox agent give the wrong answer even after I edited the persona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the persona controls voice, not facts. Shopify says facts added only to the persona are not treated as source information and might not be used consistently. Put the correct detail in the product page, the store policy, a published page, or a Knowledge Base FAQ, then re-test it in the Knowledge Base app."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify Inbox AI Agent Setup</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">September 4, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>12 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>How to Set Up the Shopify Inbox AI Agent: Tone, Rules, and the Questions It Should Never Answer</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-inbox-ai-agent-setup/shopify-inbox-ai-agent-setup-hero.webp" alt="Shopify store owner configuring the Shopify Inbox AI agent settings on a laptop" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">The Inbox agent answers your customers whether or not you configured it. Here is what to set, what to leave alone, and the questions it should hand to you instead.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-the-agent-is">What the Shopify Inbox AI agent actually is</a></li>
+        <li><a href="#before-you-turn-it-on">Check these five things before you turn it on</a></li>
+        <li><a href="#persona-vs-facts">Why the persona box is not where your facts go</a></li>
+        <li><a href="#writing-the-persona">What to actually write in the tone and rules fields</a></li>
+        <li><a href="#never-answer">The questions your agent should never answer alone</a></li>
+        <li><a href="#handoff">What happens when a customer asks for a human</a></li>
+        <li><a href="#training-and-metrics">Training with ratings, and the four numbers worth reading</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>The Shopify Inbox AI agent is probably already talking to your customers. Most owners flip it on, glance at the persona box, type something like "friendly and helpful," and get back to packing orders. Then a shopper asks whether the sweater runs small and the agent says something you would never have said.</p>
+
+      <p>Here is what to know before you touch a single setting. The persona box does not hold your facts. It holds your voice. Shopify's documentation is direct about this: facts added only to the persona <a href="https://help.shopify.com/en/manual/inbox/agent-persona" target="_blank" rel="noopener noreferrer">are not treated as source information</a> and might not be used consistently. Your return window, your shipping cutoff, your sizing notes: those live in your product pages, policies, and the Knowledge Base app. The persona decides how the Inbox agent sounds. Your store content decides whether it is right. Miss that split and you will spend a week rewriting the persona while the agent repeats the same wrong answer.</p>
+
+      <p>Shopify says roughly <a href="https://www.shopify.com/blog/ai-chatbot-customer-service" target="_blank" rel="noopener noreferrer">70 percent of Inbox conversations</a> happen while a customer is deciding whether to buy. A badly configured agent does not just embarrass you. It costs orders. Here is the setup, start to finish. If you are still weighing whether Inbox is the right tool at all, my <a href="/journal/shopify-inbox-review/">review of whether the free chat tool is enough for your store</a> covers that first.</p>
+
+      <h2 id="what-the-agent-is">What the Shopify Inbox AI agent actually is</h2>
+
+      <p>Shopify Inbox is a free app. The Inbox agent is the AI sales associate inside it, and it is opt-in: if you had Inbox before the agent existed, your conversations stayed with staff until you turned it on.</p>
+
+      <p>One caveat most write-ups skip. Shopify's help pages for the agent persona and training still carry an early access notice: the Inbox agent is available only to certain merchants. It is free, but still rolling out, so your admin may not match the screenshots you have seen.</p>
+
+      <h3>The three assignment modes</h3>
+
+      <p>The first real decision is when the Inbox agent answers at all. You pick one of three <a href="https://help.shopify.com/en/manual/inbox/assigning-your-ai-staff-member" target="_blank" rel="noopener noreferrer">assignment modes</a> under Sales channels, then Inbox. Switch any time; changes apply immediately to new conversations.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Mode</th>
+            <th>What it does</th>
+            <th>Who it suits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>All conversations</td>
+            <td>The Inbox agent takes every new chat automatically.</td>
+            <td>Solo founders with no support hours.</td>
+          </tr>
+          <tr>
+            <td>Only when your staff is unavailable</td>
+            <td>The agent answers outside your set availability hours. Inside them, customers reach you.</td>
+            <td>Owners who do pre-sales chat themselves but sleep sometimes.</td>
+          </tr>
+          <tr>
+            <td>Never</td>
+            <td>The agent is off. Default for stores that had Inbox before it shipped.</td>
+            <td>Stores with thin or outdated policy pages. Fix the content first.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>What it can and cannot do</h3>
+
+      <p>It answers product questions, recommends from your catalog, looks up an order once the customer signs in, adds items to a cart, and replies in the customer's language. It does not process refunds, cancel orders, or change addresses, and it cannot email on your behalf. Comparison posts saying Inbox only drafts replies for a human to send describe the older Shopify Magic behavior and are out of date.</p>
+
+      <h2 id="before-you-turn-it-on">Check these five things before you turn it on</h2>
+
+      <p>Turning the Inbox agent on takes eight seconds. The prep is the work, and skipping it is why stores end up with an agent that sounds fine and answers badly.</p>
+
+      <h3>Does your store even qualify?</h3>
+
+      <p>Four requirements, and the third disqualifies a lot of stores. You need Inbox installed, an active online store, <strong>new customer accounts</strong>, and a Basic, Grow, Advanced, or Plus plan. The Inbox agent does not work with legacy customer accounts at all. If you cannot find the toggle, check Settings, then Customer accounts, before assuming it is a bug.</p>
+
+      <h3>The other four</h3>
+
+      <p><strong>Your policy pages have to be current.</strong> The Shopify Inbox AI agent reads your catalog, policies, published pages, blog posts, and Knowledge Base facts. A return policy you copied from a template in month one is now customer-facing copy an AI will paraphrase confidently. Read it again.</p>
+
+      <p><strong>Install the Knowledge Base app.</strong> This is where facts your policies do not cover belong, and it is the fastest lever on answer quality. My post on <a href="/journal/shopify-knowledge-base-app-geo/">the Knowledge Base app as a free GEO tool</a> covers the search side of it.</p>
+
+      <p><strong>Check your privacy policy.</strong> Shopify's template already discloses AI-assisted chat. If you wrote your own, Shopify says it should state that you use Shopify to power AI-assisted chat and that Shopify processes chat communications to generate responses and improve the agent over time.</p>
+
+      <p><strong>Decide your customer sign-in setting.</strong> Customers can always chat with the Inbox agent without signing in, but an unsigned visitor shows up as a Shop visitor with no name, no cart, no order history, and no way for you to email them after they leave. Shopify added a middle option in late August 2026 under Chat settings: require sign-in, require name and email, or allow anonymous chats. Name and email is the sensible default for most new stores.</p>
+
+      <h2 id="persona-vs-facts">Why the persona box is not where your facts go</h2>
+
+      <p>This is the section I would read twice. The Inbox agent draws on two separate inputs. The <strong>persona</strong> shapes how it communicates: tone, wording, personality, service style. Your <strong>store sources</strong> supply what it says: product details, policies, published pages and blog posts, and Knowledge Base facts. Product facts always come from your store, never from the web.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-inbox-ai-agent-setup/shopify-inbox-ai-agent-setup-persona-vs-sources.webp" alt="Diagram: persona sets the Shopify Inbox AI agent voice, store sources supply the facts" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Write "we ship to Canada in three business days" into the persona and you have taught the agent nothing reliable. Shopify states plainly that store facts added only to the persona are not treated as source information and might not be used consistently. It might repeat it. It might not.</p>
+
+      <p>Put the same sentence in your shipping policy or as a <a href="https://help.shopify.com/en/manual/promoting-marketing/knowledge-base/managing-faqs" target="_blank" rel="noopener noreferrer">Knowledge Base FAQ</a> and it becomes a source the Inbox agent draws on every time.</p>
+
+      <h3>Where each thing belongs</h3>
+
+      <p>The filing rule: <em>how</em> the agent talks goes in the persona, <em>what is true</em> goes in a store source, and <em>when</em> the agent acts goes in Inbox settings.</p>
+
+      <p>Two Knowledge Base features earn their keep on day one. The FAQ query log lists the top unanswered questions customers are asking, a free map of the gaps in your content. And a test box lets you ask a question and see which resource the agent would match. Unanswered means write a two-sentence FAQ. Same discipline as any bot, which I covered in <a href="/journal/train-shopify-chatbot-knowledge-base/">training a Shopify chatbot on your own policies</a>.</p>
+
+      <h2 id="writing-the-persona">What to actually write in the tone and rules fields</h2>
+
+      <p>Activating the Inbox agent generates a default persona from your store content. Do not leave it as-is, and do not write an essay. The field takes two kinds of guidance. <strong>Tone and personality</strong> is how the agent sounds: casual, professional, warm, concise. <strong>Service style</strong> is how it handles a request, and Shopify's examples are good ones: acknowledge frustration before offering a solution, avoid pressure to buy.</p>
+
+      <h3>A persona you can adapt</h3>
+
+      <p>A starting point for a small store. Adjust the specifics, keep the shape.</p>
+
+      <p><em>Speak in short, plain sentences, warm but not chatty. Use the customer's words back to them. Never more than three sentences before asking what they need. Acknowledge frustration before offering a solution. Recommend a product only when the customer has described what they are looking for, and recommend one or two, never a list. If you are not confident about a detail, say so and offer to pass the question to a person rather than guessing. Do not use exclamation points. Do not describe products as amazing, perfect, or the best.</em></p>
+
+      <p>Notice what is not in there: no shipping times, no return windows, no prices. Those are facts. They go elsewhere.</p>
+
+      <p>A "Refine with Sidekick" button beside the persona suggests tone based on your business. Fine as a second opinion, though it runs warmer than most stores sound. If your brand voice is written down already, use that. My post on <a href="/journal/shopify-chatbot-brand-voice/">keeping an AI chatbot on-brand</a> covers writing that document.</p>
+
+      <h3>What gets quietly ignored</h3>
+
+      <p>Shopify says not to use the persona to force Inbox behavior, and names three examples: preventing all staff handoffs, requiring a product recommendation in every reply, and routing every conversation to one contact. Instructions that conflict with your settings or with built-in safety behavior might not be followed. Write "never transfer to a human" and you have disabled nothing. You have added a line the system may disregard.</p>
+
+      <h2 id="never-answer">The questions your agent should never answer alone</h2>
+
+      <p>Most guides hand you rules to paste into the persona. That advice half works, because a persona line is a preference, not a hard block. The useful version tells you where each guardrail actually holds.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>What it should not answer alone</th>
+            <th>Why</th>
+            <th>Where the guardrail belongs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"When exactly will this arrive?"</td>
+            <td>A promised date you cannot control becomes a complaint.</td>
+            <td>Shipping policy: ranges, not dates.</td>
+          </tr>
+          <tr>
+            <td>"Can you give me a discount?"</td>
+            <td>An invented code is a support ticket and a margin leak.</td>
+            <td>Knowledge Base FAQ with your real discount policy.</td>
+          </tr>
+          <tr>
+            <td>"I want a refund."</td>
+            <td>The Inbox agent cannot process one anyway.</td>
+            <td>Return policy page. Explain, then hand off.</td>
+          </tr>
+          <tr>
+            <td>"My order arrived damaged."</td>
+            <td>Needs a photo, a judgment call, and a human apology.</td>
+            <td>Availability hours, plus a Knowledge Base FAQ on what happens next.</td>
+          </tr>
+          <tr>
+            <td>"Is this safe for my skin condition?"</td>
+            <td>Health, allergy, and safety claims carry real liability.</td>
+            <td>Product page ingredients and warnings. Never the persona.</td>
+          </tr>
+          <tr>
+            <td>"Will this fit me?"</td>
+            <td>Confident sizing guesses drive returns.</td>
+            <td>A published sizing guide the agent can quote.</td>
+          </tr>
+          <tr>
+            <td>"Do you do wholesale?"</td>
+            <td>Terms vary per buyer. It is a sales conversation.</td>
+            <td>Knowledge Base FAQ pointing to your wholesale contact.</td>
+          </tr>
+          <tr>
+            <td>"Can you change my shipping address?"</td>
+            <td>The agent cannot take account actions.</td>
+            <td>Knowledge Base FAQ on the window, then handoff.</td>
+          </tr>
+          <tr>
+            <td>"Is your competitor's version better?"</td>
+            <td>You do not want AI improvising comparisons.</td>
+            <td>Persona line: do not compare against other brands.</td>
+          </tr>
+          <tr>
+            <td>"When is this back in stock?"</td>
+            <td>A guessed restock date is a broken promise.</td>
+            <td>Knowledge Base FAQ on your restock process, no dates.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Read down the third column and the pattern is obvious. Seven of the ten guardrails are content, not configuration. That is the honest answer to "how do I stop my Inbox agent saying the wrong thing," and it is why this post spends more time on your policy pages than on the settings screen. One line from Shopify's docs makes it stick: you are responsible for the accuracy of what the agent tells your customers. Not Shopify.</p>
+
+      <h2 id="handoff">What happens when a customer asks for a human</h2>
+
+      <p>When someone asks for a person, or the Inbox agent decides a conversation needs you, one of two things happens. Which one depends entirely on your availability hours.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-inbox-ai-agent-setup/shopify-inbox-ai-agent-setup-escalation-path.webp" alt="Flow diagram of the two Shopify Inbox AI agent handoff paths when a customer asks for a human" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>If staff handoff is available, the conversation moves to the Unassigned folder in your Inbox and the agent's prior context <a href="https://help.shopify.com/en/manual/inbox/conversations" target="_blank" rel="noopener noreferrer">carries over with it</a>, so the customer is not starting again.</p>
+
+      <p>If it is not, the customer receives your store's sender email address. The Inbox agent cannot email on your behalf, so they have to write it themselves, and a portion will not. That is the real cost of leaving your availability hours empty.</p>
+
+      <h3>You cannot switch handoff off</h3>
+
+      <p>People search for this, so let me answer plainly. There is no setting that removes human handoff from the Shopify Inbox AI agent, and telling it never to escalate in the persona is one of the exact examples Shopify gives of guidance that may not be followed.</p>
+
+      <p>That constraint is defensible. SurveyMonkey's 2025 research found 89 percent of consumers believe companies should always offer the option to speak to a human. A bot that traps people is worse than one that occasionally gets out of the way. If your goal was fewer escalations rather than none, the fix is better source content, not a blocked exit. More on that in <a href="/journal/shopify-chatbot-human-handoff/">designing the escalation moment</a>.</p>
+
+      <h3>The limits nobody tells you about</h3>
+
+      <p>In one conversation the Inbox agent responds to up to 100 messages for unsigned customers and 1,000 for signed-in ones, and each customer can start 50 conversations a day. Hit a limit and it stops and hands off if it can. Rate limiting, spam detection, and blocked-sender filtering run underneath, unconfigured.</p>
+
+      <h2 id="training-and-metrics">Training with ratings, and the four numbers worth reading</h2>
+
+      <p>There are two ways to <a href="https://help.shopify.com/en/manual/inbox/training-your-agent" target="_blank" rel="noopener noreferrer">train the Inbox agent</a>. Practice scenarios generate conversations from your catalog and persona and ask you to pick between two responses or write your own. Rating real conversations is a thumbs up or down on what it actually said. Both feed a system that proposes an updated persona for you to review, never applied automatically.</p>
+
+      <p>Here is the part the marketing copy blurs. Training changes voice, not knowledge. Rating a wrong answer does not correct the fact, and does not change the message the customer already saw. If the Inbox agent quoted your old return window, thumbs-down does nothing. Go edit the return policy.</p>
+
+      <h3>The Overview page</h3>
+
+      <p>Shopify reports four Inbox agent metrics: assisted sessions, assisted orders, satisfaction rate, and average response time. Assisted orders decides whether any of this was worth the afternoon. Satisfaction rate counts only rated responses, so treat it as directional until the sample is real.</p>
+
+      <p>Budget thirty minutes a month for transcripts, not just the dashboard. Sort by Shopify's topic tags, find the same question three times, turn it into a Knowledge Base FAQ. That loop is most of what a managed chatbot service does, and at your size you can run it yourself.</p>
+
+      <h3>When has a store outgrown the free agent?</h3>
+
+      <p>Three signals. You need it to take actions rather than answer, because refunds and address changes are eating your week. You need it on email, SMS, or social, not just the storefront widget. Or you need to take over mid-chat, which the current Inbox does not allow.</p>
+
+      <p>None of those apply to a store doing under a few hundred orders a month with clean policy pages. If that is you, the free Inbox agent is genuinely enough, and paying $300 a month for a managed bot right now would be early. I would rather say that than sell you something.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>The persona is your voice, not your facts. Nearly every "my Shopify Inbox AI agent said the wrong thing" problem is a content problem wearing a settings costume, and the fix lives in your product pages, your policies, and the Knowledge Base app.</p>
+
+      <p>Check eligibility before you plan around it. New customer accounts are required, the plan floor is Basic, and Shopify still calls the Inbox agent early access.</p>
+
+      <p>Set your availability hours honestly. They quietly decide whether an escalating customer reaches a person or gets handed an email address and left to write it themselves.</p>
+
+      <p>The work left is not glamorous: reread your shipping policy, write eight Knowledge Base FAQs from questions people actually ask, read transcripts monthly. That is the whole job, and it is doable in an afternoon plus half an hour a month after. Shopify is still shipping changes here, so check your settings again in a quarter.</p>
+
+      <div class="cta-block">
+        <h3>Want the guardrails set up properly?</h3>
+        <p>The Studio Niza AI Chatbots service covers the part the free agent leaves to you: the policy pages and Knowledge Base facts your agent actually reads, the escalation rules, and monthly transcript review. Setup is $599 with $99/month ongoing. If the free Inbox agent is enough for your stage, I will tell you that instead.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See how the chatbot service works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Is the Shopify Inbox AI agent free?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. Shopify Inbox is a free app and the Inbox agent is included at no extra cost. The catch is not price, it is eligibility: Inbox requires a Basic, Grow, Advanced, or Shopify Plus plan, and Shopify&#x27;s documentation still describes the Inbox agent as early access available only to certain merchants.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Does the Shopify Inbox AI agent work with legacy customer accounts?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. The Inbox agent requires new customer accounts. If your store still uses legacy customer accounts, your conversations stay with your staff until you upgrade in Settings under Customer accounts. This is the single most common reason a store owner cannot find the agent toggle in their admin.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can I stop the Shopify Inbox AI agent from handing off to a human?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No, and writing a persona instruction that tries to prevent all staff handoffs will not work. Shopify&#x27;s documentation says persona instructions that conflict with Inbox settings or built-in safety behavior might not be followed. What you can control is your availability hours, which decide whether a handoff reaches your staff or sends the customer your email address instead.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Do I need to update my privacy policy before turning on the Inbox agent?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>If you use Shopify&#x27;s template privacy policy, the current version already includes the disclosures about AI-assisted chat. If you wrote a custom policy, Shopify says it should disclose that you use Shopify to power AI-assisted chat and that Shopify processes chat communications to generate responses and improve the agent. That is not legal advice, and a lawyer familiar with your market is the right check.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can customers tell they are chatting with AI on my Shopify store?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. Shopify displays a notice that the chat is powered by Shopify and that the customer is chatting with AI. The notice appears automatically and cannot be removed or customized. You do not need to add your own disclosure line to the greeting.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Can the Shopify Inbox AI agent process a refund or cancel an order?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. The Inbox agent answers questions, recommends products from your catalog, looks up orders once the customer signs in, and adds items to a cart. It does not take account actions like refunds, cancellations, or address changes. Those still reach you, which is the correct design for a store under a few hundred orders a month.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>How many messages can the Shopify Inbox AI agent handle in one conversation?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Shopify caps a single conversation at 100 agent responses for customers who are not signed in and 1,000 for signed-in customers, and each customer can start up to 50 conversations per day. When a limit is reached the agent stops and hands the conversation to your staff if handoff is available. Your own Inbox is not limited.</p>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>Why does my Inbox agent give the wrong answer even after I edited the persona?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Because the persona controls voice, not facts. Shopify says facts added only to the persona are not treated as source information and might not be used consistently. Put the correct detail in the product page, the store policy, a published page, or a Knowledge Base FAQ, then re-test it in the Knowledge Base app.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-inbox-ai-agent-setup">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
