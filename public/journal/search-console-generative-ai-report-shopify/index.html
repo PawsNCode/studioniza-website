@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Console Generative AI Report: A Shopify Guide</title>
+<meta name="description" content="Search Console's generative AI report, explained for Shopify owners: what it shows, what it hides, and why the AI opt-out toggle should stay off.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/search-console-generative-ai-report-shopify/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Search Console's Generative AI Report: What It Shows for Your Shopify Store (and the Toggle to Leave Alone)">
+<meta property="og:description" content="Google's generative AI report is the first official count of how often your store shows up in AI answers.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/search-console-generative-ai-report-shopify/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/search-console-generative-ai-report-shopify/search-console-generative-ai-report-shopify.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Search Console Generative AI Report for Shopify Stores by Studio Niza">
+<meta property="article:published_time" content="2026-09-03T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Search Console's Generative AI Report: What It Shows for Your Shopify Store (and the Toggle to Leave Alone)">
+<meta name="twitter:description" content="What Search Console's generative AI report shows, hides, and why the toggle stays off.">
+<meta name="twitter:image" content="https://studioniza.com/journal/search-console-generative-ai-report-shopify/search-console-generative-ai-report-shopify.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Search Console Generative AI Report", "item": "https://studioniza.com/journal/search-console-generative-ai-report-shopify/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Search Console's Generative AI Report: What It Shows for Your Shopify Store (and the Toggle to Leave Alone)",
+  "description": "What Search Console's generative AI report shows for a Shopify store, what it still hides, how to read the page list as a citation scoreboard, and why the AI opt-out toggle should stay off.",
+  "image": "https://studioniza.com/journal/search-console-generative-ai-report-shopify/search-console-generative-ai-report-shopify.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-09-03T10:00:00+08:00",
+  "dateModified": "2026-09-03T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/search-console-generative-ai-report-shopify/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/search-console-generative-ai-report-shopify/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does my Shopify store have AI impressions but no extra traffic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because an impression in the search console generative AI report only means a link to your page appeared inside an AI answer. It does not mean anyone expanded that answer, saw your name, or clicked through. Ahrefs measured a 58% lower click-through rate for top-ranking pages when an AI Overview is present, so visibility without a visit is now the normal pattern rather than a sign that something is wrong with your store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are generative AI impressions added on top of my regular Search Console impressions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google's documentation says the generative AI report draws from the Web search type in your main Performance report, so those impressions are already inside your overall totals. It is a separate view of data you already had, not a new channel. Adding the two numbers together will double-count your visibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far back does the generative AI report data go?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Data begins on May 18, 2026, regardless of when your property gained access to the report. Google announced the report on June 3 and finished rolling it out worldwide on August 31, 2026, so most properties already have several months of history sitting there. Nothing before May 18 exists in this report."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see which prompts triggered my AI impressions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in Google. The report has no query dimension at all, so you can see which pages appeared and in which countries, but never what someone asked. Bing Webmaster Tools does show grounding queries, which are the phrases the AI generated internally to go find content, and those are the closest thing to prompt data any free tool offers right now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the AI opt-out toggle stop Google from training on my store's content?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Search generative AI control only governs whether your content can appear in and help ground AI Overviews, AI Mode, and generative features in Discover. Model training is handled by a separate robots.txt token called Google-Extended. Flipping the Search Console toggle does nothing to training, and blocking Google-Extended does nothing to AI Overviews."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pull the generative AI report through the Search Console API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not currently. The report has an export button that downloads both the chart and the table data, so you can pull it by hand, but it is not exposed through the Search Analytics API the way standard performance data is. If you want a running record, export it manually once a month and keep the files somewhere you will find them again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the generative AI report include Google Discover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Discover has its own separate generative AI performance report, listed underneath the Search one in the left menu. The two are not combined, and the Discover version carries fewer dimensions. Most Shopify stores get very little Discover traffic, so the Search report is the one worth checking monthly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My property does not show the generative AI report. What is wrong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually nothing. Google gives two reasons: the rollout has not reached your property, or your site has not received enough impressions in AI features for the search console generative AI report to populate. A third reason is worth checking too, which is whether the property has been excluded from Search generative AI features under Settings, because an excluded site receives no impressions to report."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Search Console Generative AI Report</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">September 3, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Search Console's Generative AI Report: What It Shows for Your Shopify Store (and the Toggle to Leave Alone)</h1>
+      <div style="text-align: center;"><img src="/journal/search-console-generative-ai-report-shopify/search-console-generative-ai-report-shopify-hero.webp" alt="Shopify store owner at a desk reviewing the Search Console generative AI report on a laptop" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Google's generative AI report is the first official count of how often your store appears inside AI Overviews and AI Mode. Here is what its four dimensions mean, what it still will not tell you, and why the opt-out toggle sitting beside it should stay where Google left it.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#where-to-find-it">Where the generative AI report lives (and why it showed up this summer)</a></li>
+        <li><a href="#four-dimensions">What the four dimensions actually show you</a></li>
+        <li><a href="#what-counts-as-an-impression">What counts as an impression in this report?</a></li>
+        <li><a href="#what-it-hides">What the report still hides</a></li>
+        <li><a href="#citation-scoreboard">How to read the page list as a citation scoreboard</a></li>
+        <li><a href="#ai-opt-out-toggle">Should you flip the AI opt-out toggle?</a></li>
+        <li><a href="#bing-ai-performance">Bing has had a deeper version of this since February</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>Your Search Console impressions have been climbing for months. Your clicks have not. If you have been staring at that gap wondering whether something broke, nothing broke. You are watching AI answers do exactly what they were built to do.</p>
+
+      <p>Until this summer there was no honest way to say how much of that gap was AI. You could guess, and you could run test searches. You could not point at a number that came from Google.</p>
+
+      <p>Now you can. On June 3, 2026, Google launched a dedicated <strong>search console generative AI report</strong>, and on August 31 it finished rolling out to every property worldwide. It is the first official count of how often links to your store appear inside AI Overviews and AI Mode.</p>
+
+      <p>It is also a softer number than it sounds like, and it arrived sitting next to a toggle that a lot of store owners are going to flip without reading what it does.</p>
+
+      <p>Here is my own report, because a real small-site number beats a case study. Since May 8, studioniza.com has logged 11,390 impressions and 54 clicks in Google, a 0.47% click-through rate across the property. One post, a four-way reviews comparison, sits at 670 impressions, average position 15.2, and zero clicks. Not one.</p>
+
+      <p>That is what visibility without traffic looks like on a real site. This post covers where the report lives, what its four dimensions mean, what it still hides, how to read the page list, and why the opt-out toggle beside it should stay exactly where Google left it.</p>
+
+      <h2 id="where-to-find-it">Where the generative AI report lives (and why it showed up this summer)</h2>
+
+      <p>Open Search Console, click <strong>Performance</strong>, and look for <strong>Generative AI</strong> underneath Search results. Discover has its own entry below that. If you have not done the basics yet, start with <a href="/journal/google-search-console-shopify-setup/">how to set up and read Google Search Console</a> and come back.</p>
+
+      <p>Google announced the reports on June 3, 2026, starting with a small group of UK sites. <a href="https://www.searchenginejournal.com/google-search-console-ai-reports-rolled-out-worldwide/587836/" target="_blank" rel="noopener noreferrer">Search Engine Journal reported</a> that the rollout reached every website worldwide on August 31, alongside the opt-out control that launched with it.</p>
+
+      <p>Data in the report backfills to May 18, 2026, no matter when your property gained access. So even if the tab appeared for you last week, you probably have three months of history sitting there already.</p>
+
+      <p>It is still labelled beta. Treat it as a first draft of a measurement tool, not a finished one.</p>
+
+      <p>If you do not see the report at all, <a href="https://support.google.com/webmasters/answer/16984139" target="_blank" rel="noopener noreferrer">Google's help page</a> gives two reasons: the rollout has not reached your property, or your site has not received enough impressions in AI features to populate it. There is a third worth checking, which is whether someone already excluded the property from generative AI features. More on that further down.</p>
+
+      <h2 id="four-dimensions">What the four dimensions actually show you</h2>
+
+      <p>The report has exactly one metric, impressions, and four ways to slice it.</p>
+
+      <p><strong>Pages</strong> groups your data by the page a user saw in an AI feature, using the final URL after any redirects. Like the rest of Search Console, it assigns the data to the canonical URL rather than a duplicate. On Shopify that matters more than it sounds, because collection and variant URLs get consolidated the same way here as everywhere else.</p>
+
+      <p><strong>Countries</strong> groups by where the search started. <strong>Devices</strong> splits desktop, tablet, and mobile. <strong>Dates</strong> groups by day, week, or month, all in Pacific Time. That is the whole report.</p>
+
+      <p>Two counting details will save you a confused afternoon. The chart aggregates by property, so if two of your pages appear in the same AI answer, the chart counts one impression. The table, when grouped by page, counts each URL separately. Chart totals and table totals will disagree, and that is the reason, not a bug.</p>
+
+      <p>The second detail is bigger. These impressions are not new. Google's documentation says the generative AI report draws from the Web search type in your main Performance report, which means those appearances were already counted in your regular totals all along. What is new is the dedicated view. Do not add the two numbers together and tell yourself your visibility doubled.</p>
+
+      <h2 id="what-counts-as-an-impression">What counts as an impression in this report?</h2>
+
+      <p>There is no number in Search Console with a softer definition than this one, and it is the single most misread part of the report.</p>
+
+      <p>Google's John Mueller has said an impression here means a URL appeared anywhere in an AI answer, and that it requires no action from the searcher. <a href="https://www.practicalecommerce.com/search-consoles-new-ai-data-is-a-start" target="_blank" rel="noopener noreferrer">Practical Ecommerce walked through what that means in practice</a>: AI Overviews collapse by default, and URLs that only appear after someone clicks "Show more" or "Show all" still count as impressions whether anyone expands them or not.</p>
+
+      <p>So the number is closer to "how often Google's answer machine reached for your page" than "how many shoppers saw your store's name." Those are different things, and only one of them is marketing.</p>
+
+      <p>That does not make the metric useless. It tells you the machine considers your page a reasonable source on a topic, which is worth knowing. It just is not an audience count, so do not report it to yourself as one.</p>
+
+      <p>This is the measurement version of <a href="/journal/zero-click-search-shopify-blog/">zero-click search</a>. The appearance and the visit have come apart, and Search Console now lets you watch the half that does not pay.</p>
+
+      <p>For scale on what that gap costs, Ahrefs re-ran a 300,000-keyword study using December 2025 data and found that the presence of an AI Overview <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update" target="_blank" rel="noopener noreferrer">correlates with a 58% lower click-through rate</a> for the top-ranking page. The effect softens further down the page, to roughly 51% at position two and 19% at position ten, but it never goes away.</p>
+
+      <h2 id="what-it-hides">What the report still hides</h2>
+
+      <p>Four things are missing, and three of them matter.</p>
+
+      <p><strong>No clicks.</strong> This is the big one. You cannot calculate an AI click-through rate for your store, and the reason is more interesting than "Google withheld it." The clicks exist. They are in your main Performance report, folded into a total that also contains every ordinary blue-link click you got. The numerator sits in one table, the denominator in another, with no key to join them on. Anyone who quotes you a precise AI-answer CTR is estimating.</p>
+
+      <p><strong>No queries.</strong> You know a page appeared in an AI answer. You do not know what anyone asked to trigger it.</p>
+
+      <p><strong>No surface split.</strong> AI Overviews and AI Mode are lumped together, and those are very different user journeys.</p>
+
+      <p><strong>No API access.</strong> The report has an export button, so you can pull it by hand, but it is not exposed through the Search Analytics API. Monthly manual exports are the whole workflow for now.</p>
+
+      <div style="text-align: center;"><img src="/journal/search-console-generative-ai-report-shopify/search-console-generative-ai-report-shopify-shows-vs-hides.webp" alt="Diagram of what the Search Console generative AI report shows and what it hides" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Some of this may change. The UK's Competition and Markets Authority, which pushed for these controls, has asked for click-through reporting and set a March 2027 deadline for page-level controls. Neither has shipped.</p>
+
+      <p>One thing to know before you panic at your own chart. Around August 12 to 14, 2026, site owners across many properties watched their generative AI impressions fall off a cliff, and Google confirmed a reporting issue rather than a real drop. Check the dates before you rewrite anything.</p>
+
+      <p>If what you want to know is whether AI search is sending shoppers to your store, this report is not the tool. That is a different job, covered in <a href="/journal/track-ai-search-traffic-shopify/">how to track whether AI search is sending shoppers to your Shopify store</a>.</p>
+
+      <h2 id="citation-scoreboard">How to read the page list as a citation scoreboard</h2>
+
+      <p>Ignore the headline impressions number. The page list is the part worth your time.</p>
+
+      <p>Switch to the Pages tab and sort by impressions. That is a ranked list of which pages Google's answer machine reaches for when it needs a source on your topics. No free tool gave you one before June.</p>
+
+      <p>The most useful move takes ten minutes. Download the top-traffic URLs from Performance, then the top-impression URLs from the Generative AI section, and line them up in a spreadsheet. Two lists fall out.</p>
+
+      <p><strong>High traffic, low AI impressions.</strong> People find these pages, but the machine does not quote them. Usually a structure problem: buried answers, no definition near the top, claims without a source.</p>
+
+      <p><strong>High AI impressions, low traffic.</strong> The machine quotes these but nobody visits. My four-way reviews comparison is exactly this, and the fix is ordinary SEO, because the page is already trusted on the topic and simply is not ranking well enough to be clicked.</p>
+
+      <h3>Three posts carry most of your AI impressions. Now what?</h3>
+
+      <p>That concentration is normal, and comparisons, listicles, and definitional pages usually carry it. Those formats match the shape of question an AI answer is built to resolve.</p>
+
+      <p>The honest answer for a store under a year old is: probably nothing yet. Forty impressions is a curiosity, not a strategy, and I tell clients the same thing. Wait until a page shows up across two or three monthly exports before you reorganise anything around it.</p>
+
+      <p>What you should not do is rewrite your zero-impression pages to sound more quotable. That road ends in thinner pages that rank worse in both places at once.</p>
+
+      <h2 id="ai-opt-out-toggle">Should you flip the AI opt-out toggle?</h2>
+
+      <p>For a Shopify store selling physical or digital products, no. Leave it alone.</p>
+
+      <p>The control sits under <strong>Settings &gt; Search generative AI</strong> and offers three choices: include your site, exclude it, or inherit from a parent property. Include is the default.</p>
+
+      <p>Excluding does what it says. <a href="https://support.google.com/webmasters/answer/16908024" target="_blank" rel="noopener noreferrer">Google's documentation</a> is blunt: your links and content will not appear in AI Overviews, AI Mode, or generative AI features in Discover, your crawled content cannot ground responses there, and you receive no traffic and no impressions from them.</p>
+
+      <p>Here is the part people skip. Opting out does not remove the AI answer. Google's own help page says content from other sites will still be available in those features, and that it may look similar to yours. The answer still gets written. Someone else supplies it and gets the citation.</p>
+
+      <p>Publishers have a defensible reason to consider this, because their product is the page view and an AI summary substitutes for it directly. Your product is a product. An AI answer that names your store and goes unclicked is still exposure that cost you nothing, which beats not being there at all.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>What the toggle touches</th>
+            <th>Effect of excluding</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI Overviews and AI Mode</td>
+            <td>Removed</td>
+            <td>No traffic and no impressions from either surface</td>
+          </tr>
+          <tr>
+            <td>Generative AI in Discover</td>
+            <td>Removed</td>
+            <td>The ordinary Discover feed is not affected</td>
+          </tr>
+          <tr>
+            <td>Standard search rankings</td>
+            <td>Unchanged</td>
+            <td>Google says the control is not a ranking or inclusion signal</td>
+          </tr>
+          <tr>
+            <td>AI model training</td>
+            <td>Unchanged</td>
+            <td>Handled separately by the Google-Extended token</td>
+          </tr>
+          <tr>
+            <td>Merchant Center and Google Ads</td>
+            <td>Unchanged</td>
+            <td>The control does not override those choices</td>
+          </tr>
+          <tr>
+            <td>The AI answer itself</td>
+            <td>Still written</td>
+            <td>Built from other sites instead of yours</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Do I lose my normal rankings if I opt out?</h3>
+
+      <p>No, and that is worth saying plainly because the fear is common. Google states the control is not used as a ranking or inclusion signal affecting other parts of Search, so your blue links stay put. It also does not override Merchant Center or Google Ads, and it has nothing to do with model training, which the Google-Extended robots token governs instead.</p>
+
+      <h3>The toggle is property-level, not page-level</h3>
+
+      <p>You cannot exclude one page. The setting applies to a whole verified property, and child properties inherit from the closest parent that stopped inheriting. If you have both a domain property and a URL-prefix property, setting it at the domain level sets it everywhere unless you override the child by hand.</p>
+
+      <p>Changes take about one to two days to take effect, and some content takes longer because of caching. Page-level controls are expected under the CMA timeline by March 2027, which is a reason to wait rather than a reason to move today.</p>
+
+      <div style="text-align: center;"><img src="/journal/search-console-generative-ai-report-shopify/search-console-generative-ai-report-shopify-opt-out-effect.webp" alt="Diagram showing an AI answer still forming after one site opts out of generative AI features" style="margin-bottom: 16px; float: none;"></div>
+
+      <h2 id="bing-ai-performance">Bing has had a deeper version of this since February</h2>
+
+      <p>Microsoft shipped AI Performance in Bing Webmaster Tools on February 10, 2026, four months before Google's version, and it is still the more informative of the two. <a href="https://searchengineland.com/bing-webmaster-tools-ai-performance-report-468751" target="_blank" rel="noopener noreferrer">Search Engine Land covered the launch</a>, which introduced total citations, average cited pages, grounding queries, page-level citation activity, and visibility trends over time.</p>
+
+      <p>Grounding queries are the interesting one: the phrases the AI generated internally to go find content, not what a person typed. Nobody else publishes that.</p>
+
+      <p>My own Bing data makes the point better than an explanation can. Across 83 query rows, the site logged 130 impressions and one click, and sixty of those queries run six words or longer: "judge.me yotpo stamped pricing shopify app 2026 india," "shopify free listings google merchant center trust signals 2026." No human types that. That is a machine restating a question before it goes looking.</p>
+
+      <p>Bing has no click data either, so the same gap exists on both sides. But it tells you more about which pages get pulled into AI answers, and roughly what for.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>What you get</th>
+            <th>Google generative AI report</th>
+            <th>Bing AI Performance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Launched</td>
+            <td>June 3, 2026</td>
+            <td>February 10, 2026</td>
+          </tr>
+          <tr>
+            <td>Core metric</td>
+            <td>Impressions</td>
+            <td>Citations</td>
+          </tr>
+          <tr>
+            <td>Page-level detail</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Query data</td>
+            <td>None</td>
+            <td>Grounding queries</td>
+          </tr>
+          <tr>
+            <td>Click data</td>
+            <td>None</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>Free</td>
+            <td>Free</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Worth caring about despite Bing's small search share, because that index feeds Microsoft Copilot and sits behind a chunk of what ChatGPT retrieves. Setup is free and takes about fifteen minutes, which I walked through in <a href="/journal/bing-webmaster-tools-shopify/">the Bing Webmaster Tools setup most stores skip</a>.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Three things to take away from the search console generative AI report.</p>
+
+      <p>First, it is a visibility count, not a traffic count. An impression here means Google's answer machine reached for your page. It does not mean a shopper saw your store's name, and it does not mean anyone is on their way. Read it beside your Performance report, never instead of it.</p>
+
+      <p>Second, the page list is the useful part. It shows which of your pages the machine already treats as a source. For most stores under a year old that list is short and unglamorous, and that is fine. Export it monthly, watch for pages that appear consistently, and let two or three months accumulate before you change your content plan.</p>
+
+      <p>Third, leave the toggle alone. Excluding your store does not stop the AI answer from being written. It stops your store from being in it, while a competitor who stayed in supplies the sentence instead. For a business whose product is a product, that trade loses on both ends.</p>
+
+      <p>And the honest limit, which nobody selling AI visibility tools will tell you: none of this shows whether AI answers are making you money. Nobody can calculate that from Search Console right now, me included, because the clicks and the impressions sit in two tables that do not join. What you can do this month is take a baseline, so that when Google ships click data you have something real to compare it against.
+
+      <div class="cta-block">
+        <h3>Want someone reading these reports for you?</h3>
+        <p>The Studio Niza SEO &amp; GEO service covers Search Console and Bing Webmaster Tools setup, the page structure that earns citations, and a monthly read of what actually changed in your numbers. Plans start at $499 one-time.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See SEO &amp; GEO pricing <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Why does my Shopify store have AI impressions but no extra traffic?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Because an impression in the search console generative AI report only means a link to your page appeared inside an AI answer. It does not mean anyone expanded that answer, saw your name, or clicked through. Ahrefs measured a 58% lower click-through rate for top-ranking pages when an AI Overview is present, so visibility without a visit is now the normal pattern rather than a sign that something is wrong with your store.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Are generative AI impressions added on top of my regular Search Console impressions?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Google&#x27;s documentation says the generative AI report draws from the Web search type in your main Performance report, so those impressions are already inside your overall totals. It is a separate view of data you already had, not a new channel. Adding the two numbers together will double-count your visibility.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How far back does the generative AI report data go?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Data begins on May 18, 2026, regardless of when your property gained access to the report. Google announced the report on June 3 and finished rolling it out worldwide on August 31, 2026, so most properties already have several months of history sitting there. Nothing before May 18 exists in this report.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can I see which prompts triggered my AI impressions?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not in Google. The report has no query dimension at all, so you can see which pages appeared and in which countries, but never what someone asked. Bing Webmaster Tools does show grounding queries, which are the phrases the AI generated internally to go find content, and those are the closest thing to prompt data any free tool offers right now.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Does the AI opt-out toggle stop Google from training on my store&#x27;s content?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. The Search generative AI control only governs whether your content can appear in and help ground AI Overviews, AI Mode, and generative features in Discover. Model training is handled by a separate robots.txt token called Google-Extended. Flipping the Search Console toggle does nothing to training, and blocking Google-Extended does nothing to AI Overviews.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can I pull the generative AI report through the Search Console API?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not currently. The report has an export button that downloads both the chart and the table data, so you can pull it by hand, but it is not exposed through the Search Analytics API the way standard performance data is. If you want a running record, export it manually once a month and keep the files somewhere you will find them again.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Does the generative AI report include Google Discover?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Discover has its own separate generative AI performance report, listed underneath the Search one in the left menu. The two are not combined, and the Discover version carries fewer dimensions. Most Shopify stores get very little Discover traffic, so the Search report is the one worth checking monthly.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>My property does not show the generative AI report. What is wrong?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Usually nothing. Google gives two reasons: the rollout has not reached your property, or your site has not received enough impressions in AI features for the search console generative AI report to populate. A third reason is worth checking too, which is whether the property has been excluded from Search generative AI features under Settings, because an excluded site receives no impressions to report.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="search-console-generative-ai-report-shopify">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
