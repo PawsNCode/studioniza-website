@@ -27,8 +27,6 @@ This is a static HTML site, deployed automatically to Cloudflare on every push t
 
 For service inquiries: [contact@studioniza.com](mailto:contact@studioniza.com)
 
-For everything else: [niza@studioniza.com](mailto:niza@studioniza.com)
-
 -----
 
 © Studio Niza. All rights reserved.
