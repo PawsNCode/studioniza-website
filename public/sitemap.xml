@@ -41,13 +41,25 @@
   <!-- Journal index (updated as new posts publish) -->
     <url>
     <loc>https://studioniza.com/journal/</loc>
-    <lastmod>2026-09-19T10:00:00+08:00</lastmod>
+    <lastmod>2026-09-21T10:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog posts -->
   <!-- ADD NEW BLOGS HERE (BLOCK 3) -->
+  <url>
+    <loc>https://studioniza.com/journal/judge-me-vs-okendo-shopify/</loc>
+    <lastmod>2026-09-21T10:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://studioniza.com/journal/chatbot-containment-rate/</loc>
+    <lastmod>2026-09-20T10:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://studioniza.com/journal/shopify-alternate-page-proper-canonical-tag/</loc>
     <lastmod>2026-09-19T10:00:00+08:00</lastmod>
