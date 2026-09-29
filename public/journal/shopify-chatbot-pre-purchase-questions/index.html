@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Purchase Chatbot: Turn Questions Into Orders</title>
+<meta name="description" content="A pre-purchase chatbot answers the sizing, fit, and shipping questions that block the sale. The 7 question types and the knowledge each one needs.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-chatbot-pre-purchase-questions/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="The Pre-Purchase Chatbot: Turning &quot;Will This Fit?&quot; Questions Into Orders">
+<meta property="og:description" content="The 7 questions shoppers ask before they buy, and how to make your chatbot answer them well.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-chatbot-pre-purchase-questions/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-chatbot-pre-purchase-questions/shopify-chatbot-pre-purchase-questions.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Pre-Purchase Chatbot for Shopify Stores by Studio Niza">
+<meta property="article:published_time" content="2026-09-24T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Chatbots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Pre-Purchase Chatbot: Turning &quot;Will This Fit?&quot; Questions Into Orders">
+<meta name="twitter:description" content="The 7 questions shoppers ask before they buy, and how your chatbot should answer them.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-chatbot-pre-purchase-questions/shopify-chatbot-pre-purchase-questions.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "The Pre-Purchase Chatbot", "item": "https://studioniza.com/journal/shopify-chatbot-pre-purchase-questions/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Pre-Purchase Chatbot: Turning &quot;Will This Fit?&quot; Questions Into Orders",
+  "description": "The seven pre-purchase questions Shopify shoppers ask, the knowledge each one needs, the answer pattern that ends in a link to buy, and how to measure assisted orders.",
+  "image": "https://studioniza.com/journal/shopify-chatbot-pre-purchase-questions/shopify-chatbot-pre-purchase-questions.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-09-24T10:00:00+08:00",
+  "dateModified": "2026-09-24T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-chatbot-pre-purchase-questions/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-chatbot-pre-purchase-questions/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a pre-purchase chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A pre-purchase chatbot is the half of your chat setup that answers shoppers who have not bought yet: fit and size, compatibility, materials, shipping cost and timing, comparing two products, stock, and discounts. It differs from a support bot because there is no order to look up and the answer usually is not in your Shopify admin. Its success measure is orders it assisted, not tickets it deflected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a chatbot answer sizing questions accurately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if your size chart exists as text. Most Shopify stores publish the chart as an image, which a chatbot cannot read, so the bot either guesses or says it is not sure. Retype the measurements as a plain text table in the product description or a metafield and add one line of fit guidance in your own words."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should a pre-purchase chatbot quote a delivery date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It should quote your processing time, your daily cutoff, and the carrier's usual transit range, but not a specific arrival date. Processing and cutoff are yours to control, and delivery is the carrier's. A bot that promises a date you miss turns one happy shopper into a refund request and a bad review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a paid chatbot for pre-purchase questions, or is Shopify Inbox enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your store takes fewer than roughly fifteen chats a week, Shopify Inbox with well-written instant answers handles the static questions for free, including materials, shipping rates, and discount rules. Paid tooling earns its cost on the questions that change per shopper: fit advice, live stock, and comparing two products. Start free and upgrade when the dynamic questions outnumber the static ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my pre-purchase chatbot is making sales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Track assisted-order rate, which is the share of product-question conversations followed by an order from that visitor within 24 hours. Shopify reported that 17% of pre-purchase Inbox conversations turned into sales in November 2023, which is a useful reference point rather than a target. Deflection rate is the wrong metric here, because a pre-purchase chat that ends in silence counts as deflected and earns nothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What pre-purchase questions should a chatbot never answer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anything involving negotiated money, such as bulk pricing, wholesale terms, or a discount a shopper is arguing for, and any safety, medical, or fit-for-purpose claim. The bot can state what a product is made of, but it should not certify what it is safe for. It should also stop and offer a human whenever the specific fact is missing from its knowledge rather than guessing at a measurement."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">The Pre-Purchase Chatbot</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Chatbots</span>
+        <span class="post-date">September 24, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>The Pre-Purchase Chatbot: Turning &quot;Will This Fit?&quot; Questions Into Orders</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-pre-purchase-questions/shopify-chatbot-pre-purchase-questions-hero.webp" alt="Shopify owner at a laptop reading a pre-purchase chatbot conversation on screen" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Most store chatbots were trained for the questions that come after the order. The ones that come before it are worth more, and they sound nothing alike. Here are the seven question types, the knowledge each one needs, and the answer shape that ends in a sale.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#pre-purchase-vs-post-purchase">Pre-purchase and post-purchase are two different bots</a></li>
+        <li><a href="#seven-question-types">The seven pre-purchase questions shoppers actually ask</a></li>
+        <li><a href="#knowledge-each-question-needs">What your bot needs to know to answer each one</a></li>
+        <li><a href="#answer-patterns">The answer pattern that ends with a link to buy</a></li>
+        <li><a href="#when-to-offer-a-human">When should a pre-purchase chatbot offer a human?</a></li>
+        <li><a href="#measuring-assisted-orders">How do you measure whether it is actually selling?</a></li>
+        <li><a href="#wrapping-up">Where to start this week</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>You installed the chatbot to stop answering &quot;where is my order&quot; at eleven at night. That was the right instinct, and it fixed the smaller half of the problem.</p>
+
+      <p>Shopify's own numbers say <a href="https://www.shopify.com/blog/customer-service-statistics" target="_blank" rel="noopener noreferrer">70% of Shopify Inbox conversations are with customers making a purchasing decision</a>. Not tracking an order. Deciding whether to buy. If your bot was set up around order lookups and return policies, it is trained for the quieter end of your chat volume.</p>
+
+      <p>A <strong>pre-purchase chatbot</strong> is the half that handles the other conversation: someone is on a product page, something is unclear, and they will either get an answer in the next two minutes or close the tab. For most small stores the unclear thing is boringly consistent. Will this fit me. Will this fit my car, my printer, my dog. When will it get here. Is the blue one back yet.</p>
+
+      <p>Here is the part most chatbot posts skip. Bots answer these badly not because the model is weak, but because the answer does not exist anywhere the bot can read it. Your size chart is a JPG. Your compatibility knowledge is in your head. Your cutoff time is in a policy page you wrote once and never linked.</p>
+
+      <p>This post covers the seven pre-purchase question types, the knowledge each one needs, the answer shape that ends with a link to buy, when the bot should offer a human, and how to tell whether any of it is making you money.</p>
+
+      <h2 id="pre-purchase-vs-post-purchase">Pre-purchase and post-purchase are two different bots</h2>
+
+      <p>They look like one product in your admin. They are two jobs with almost nothing in common.</p>
+
+      <p>A post-purchase conversation starts with a known customer. There is an order number, an email, a shipping status. The bot verifies who it is talking to and reads back a fact that already exists in Shopify. Success means the customer did not need you.</p>
+
+      <p>A pre-purchase conversation starts with a stranger. No order, no account, often no email. The question is about the product rather than the transaction, the answer usually is not in your admin, and success means an order that would not otherwise have happened.</p>
+
+      <p>The platforms have started splitting these on purpose. Gorgias now runs a <a href="https://docs.gorgias.com/en-US/shopping-assistant-explained-1216108" target="_blank" rel="noopener noreferrer">Shopping Assistant as the sales side of its AI Agent</a>, available to accounts from May 28, 2025, reading from a different pile of data than the support side: products viewed, pages browsed, what is in the cart. That split is the useful idea even if you never touch Gorgias. Your bot needs a different brief for shoppers than it has for customers.</p>
+
+      <p>One caveat before you go shopping for software. If your store takes fewer than roughly fifteen chats a week, Shopify Inbox covers the static half of this for free. You can publish up to 100 <a href="https://help.shopify.com/en/manual/inbox/chat-settings-and-appearance/instant-answers" target="_blank" rel="noopener noreferrer">instant answers</a> in the chat widget, and shoppers pick from them without anyone typing. Paid tooling earns its cost on the questions that change per shopper, not the ones you could print on a card.</p>
+
+      <h2 id="seven-question-types">The seven pre-purchase questions shoppers actually ask</h2>
+
+      <p>Read a month of your own transcripts and the variety collapses fast. Nearly everything sorts into seven families.</p>
+
+      <p><strong>1. Fit and size.</strong> &quot;I'm usually a medium, what should I order?&quot; This is the most common pre-purchase question in apparel, jewelry, and footwear, and it is the one shoppers refuse to guess at. Baymard's product page research found that <a href="https://baymard.com/blog/current-state-ecommerce-product-page-ux" target="_blank" rel="noopener noreferrer">42% of users try to work out a product's size from the photos</a>, which tells you how hard they are looking for an answer your page did not give.</p>
+
+      <p><strong>2. Compatibility.</strong> &quot;Does this work with the 2019 model?&quot; Parts, accessories, refills, cables, cases, filters. They want a yes or a no against a specific thing they already own, and a maybe loses the sale as surely as a no.</p>
+
+      <p><strong>3. Materials and care.</strong> &quot;Is this real leather? Can I machine wash it? Is it nickel free?&quot; Usually an allergy, a gift, or a past bad purchase talking. These shoppers are close to buying and checking one blocker.</p>
+
+      <p><strong>4. Shipping cost and delivery date.</strong> &quot;How much is shipping to Ireland and will it arrive before the 30th?&quot; Shoppers will not add to cart to find out. Baymard found <a href="https://baymard.com/blog/current-state-ecommerce-product-page-ux" target="_blank" rel="noopener noreferrer">67% of sites do not show a total order cost estimate on the product page</a>, so the chat window becomes the shipping calculator by default.</p>
+
+      <p><strong>5. Comparing two SKUs.</strong> &quot;What's the difference between the classic and the pro?&quot; They have already decided to buy something from you and are choosing which thing. This one is pure upside, and it is where <a href="/journal/shopify-chatbot-product-recommendations/">product recommendations in your chatbot</a> stop feeling like an upsell and start feeling like help.</p>
+
+      <p><strong>6. Stock and restock.</strong> &quot;When is the small coming back?&quot; A dead end here is a lost customer. Handled well it becomes an email address and a sale in three weeks.</p>
+
+      <p><strong>7. Discounts and codes.</strong> &quot;Do you have a first-order code? My code isn't working.&quot; The second version is urgent. Someone is at checkout with a card out and a broken code, and every minute of silence is the most expensive minute in your funnel.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-pre-purchase-questions/shopify-chatbot-pre-purchase-questions-types-diagram.webp" alt="Diagram of seven pre-purchase question types routing to a store's knowledge sources" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Four of the seven have fixed answers that never change per shopper: materials, shipping rates, discount rules, and most compatibility. Three are dynamic: fit advice, stock timing, and SKU comparison. That split decides what you need to build and what you can publish once and forget.</p>
+
+      <h2 id="knowledge-each-question-needs">What your bot needs to know to answer each one</h2>
+
+      <p>Every wrong or vague answer traces back to a missing source. Before you rewrite a single script, find out which of these your bot can reach. This is the same groundwork as <a href="/journal/train-shopify-chatbot-knowledge-base/">training a chatbot on your own policies and product data</a>, applied to the sales half of the conversation.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Question type</th>
+            <th>What answers it</th>
+            <th>Where it has to live</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fit and size</td>
+            <td>Measurements per size, in text, plus a fit note (runs small, true to size)</td>
+            <td>Product description or a metafield, never only an image</td>
+          </tr>
+          <tr>
+            <td>Compatibility</td>
+            <td>A model-by-model table of what fits what</td>
+            <td>A published page the bot is pointed at, or a metafield per product</td>
+          </tr>
+          <tr>
+            <td>Materials and care</td>
+            <td>Composition, care instructions, allergy-relevant facts</td>
+            <td>Product description, written as sentences not icons</td>
+          </tr>
+          <tr>
+            <td>Shipping cost and date</td>
+            <td>Rates by zone, processing time, daily cutoff, carrier estimates</td>
+            <td>Shipping policy plus a Knowledge Base FAQ entry</td>
+          </tr>
+          <tr>
+            <td>Comparing two SKUs</td>
+            <td>A short difference statement per product pair</td>
+            <td>Product data the bot reads live, plus a written comparison</td>
+          </tr>
+          <tr>
+            <td>Stock and restock</td>
+            <td>Live inventory, and an honest restock window if you have one</td>
+            <td>Shopify inventory, read at conversation time</td>
+          </tr>
+          <tr>
+            <td>Discounts</td>
+            <td>Active codes, their rules, and what to do when one fails</td>
+            <td>A rule the bot follows, not a list it guesses from</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Shopify's Knowledge Base app is a free place to put several of these. It generates FAQs from your shipping settings and return rules, and those entries exist <a href="https://help.shopify.com/en/manual/promoting-marketing/knowledge-base/managing-faqs" target="_blank" rel="noopener noreferrer">as a data source AI agents read when generating responses</a>. It asks for one to two sentence answers, which is the right length anyway.</p>
+
+      <h3>Why does my bot get sizing questions wrong?</h3>
+
+      <p>Because your size chart is a picture. This is the most common cause and almost every store has it. The chart was made in Canva, exported as a PNG, and dropped into the product description or behind a popup. A shopper can read it. A chatbot cannot.</p>
+
+      <p>The fix takes about twenty minutes per product family. Retype the chart as a plain text table in the product description or a metafield, keep the image for humans, and add one line of fit guidance in your own words: &quot;runs about half a size small, size up if you are between sizes.&quot; That sentence answers more questions than the chart does.</p>
+
+      <h3>Should the bot ever quote a delivery date?</h3>
+
+      <p>It should quote a shipping method, a processing time, and a cutoff. It should not promise an arrival date, because one of those is yours to control and the other is the carrier's.</p>
+
+      <p>&quot;Orders placed before 2pm Monday to Friday ship the same day, and standard delivery to Ireland usually runs 5 to 7 business days&quot; is a real answer that survives a delay. &quot;It will arrive on the 29th&quot; is a promise your bot cannot keep, and a shopper who was told the 29th and got it on the 3rd is a refund request and a one-star review.</p>
+
+      <h2 id="answer-patterns">The answer pattern that ends with a link to buy</h2>
+
+      <p>A pre-purchase answer that stops at the fact has done half the job. The shopper now has to find their way back to the product, re-select the variant, and add to cart on their own. Some do. Plenty do not.</p>
+
+      <p>Every answer worth writing has three parts, in this order.</p>
+
+      <p><strong>The fact.</strong> The specific number, the yes, the no. First sentence, no preamble.</p>
+
+      <p><strong>The confidence.</strong> One clause telling the shopper where that came from or what would change it. &quot;That's from the size chart&quot; or &quot;if you're between sizes, most people size up here.&quot; This is what makes a bot answer feel checkable instead of invented.</p>
+
+      <p><strong>The action.</strong> A link to the exact product and variant being discussed, not the collection, not the homepage. If the bot can add to cart, this is where it offers.</p>
+
+      <div style="text-align: center;"><img src="/journal/shopify-chatbot-pre-purchase-questions/shopify-chatbot-pre-purchase-questions-answer-pattern.webp" alt="Three-block diagram of a pre-purchase chatbot answer pattern ending in a product link" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>A fit answer reads like this: &quot;The medium measures 41 inches across the chest and 27 inches long. That's from our size chart, and this style runs about half a size small, so at 5'10&quot; and 175 pounds most people go large. Here's the large in navy.&quot; Fact, confidence, action, under fifty words.</p>
+
+      <p>A stock answer that has to say no still ends with an action: &quot;The small sold out on Tuesday. The next batch lands in about three weeks. Want me to email you the moment it's back?&quot; That conversation was going to end in nothing. Now it ends with an email address. The <a href="/journal/shopify-chatbot-scripts-templates/">chatbot scripts and templates post</a> has more of these written out.</p>
+
+      <p>Two rules matter more than the wording. Do not let the bot ask more than two clarifying questions before it gives something useful, because a shopper answering a questionnaire is a shopper closing a tab. And never end on a dead answer. &quot;We don't carry that in blue&quot; is a lost sale. &quot;We don't have blue, but the same cut comes in navy and slate&quot; is a fork in the road.</p>
+
+      <h2 id="when-to-offer-a-human">When should a pre-purchase chatbot offer a human?</h2>
+
+      <p>Four triggers, and they are all worth hard-coding rather than leaving to the model's judgment.</p>
+
+      <p><strong>The fact is missing.</strong> If the measurement, the compatibility answer, or the stock date is not in the bot's knowledge, it says so and offers you. A bot that says &quot;I don't want to guess your measurement, let me get you the exact one within the hour&quot; keeps the sale alive. A bot that invents 40 inches loses it twice, once at the return and once in the review.</p>
+
+      <p><strong>Money is being negotiated.</strong> Bulk orders, wholesale, custom work, price matching, a discount the shopper is arguing for. These are your calls, and a bot that improvises on price will cost you more than it makes.</p>
+
+      <p><strong>A safety, medical, or fit-for-purpose claim.</strong> &quot;Is this safe for a two-year-old?&quot; &quot;Will this hold 300 pounds?&quot; The bot can state what the product is made of. It should not certify what it is safe for.</p>
+
+      <p><strong>The second failed attempt.</strong> If a shopper rephrases the same question twice, the bot has lost. Escalate on the second miss, not the fourth.</p>
+
+      <p>When it hands off, it should say roughly when a human will answer and collect an email so the conversation survives the shopper leaving. Offering a human without a time expectation reads as a brush-off, and passing the conversation across with its context intact is what stops the customer repeating themselves to you.</p>
+
+      <h2 id="measuring-assisted-orders">How do you measure whether it is actually selling?</h2>
+
+      <p>Deflection rate is the wrong number here. It measures conversations that did not reach you, which is the goal for support and beside the point for sales. A pre-purchase conversation that ends in silence is fully deflected and worth nothing.</p>
+
+      <p>Four numbers tell you the truth instead.</p>
+
+      <p><strong>Pre-purchase conversation volume.</strong> How many chats a week are product questions rather than order questions. If you cannot tell these apart, tag them by hand for two weeks. Dull, and it is the number everything else hangs off.</p>
+
+      <p><strong>Assisted-order rate.</strong> The share of pre-purchase conversations followed by an order from that visitor, same session or within 24 hours. This is the number that justifies the tool. For a reference point, Shopify reported that <a href="https://www.shopify.com/blog/customer-service-statistics" target="_blank" rel="noopener noreferrer">17% of pre-purchase Inbox conversations turned into sales</a> in November 2023. Treat that as a reference, not a target. Your category, price point, and how fast you answer move it around a lot.</p>
+
+      <p><strong>Question mix.</strong> Which of the seven types you are getting, week over week. A spike in shipping questions in October is a shipping page problem, not a chatbot problem.</p>
+
+      <p><strong>Unanswered rate.</strong> How often the bot said some version of &quot;I'm not sure.&quot; Each one is a missing knowledge source you can go fix, and this number should fall every month for the first three months.</p>
+
+      <p>Thirty minutes a month with the transcripts will do more than any dashboard. Read what shoppers asked, not what the bot said. For the wider revenue picture, <a href="/journal/shopify-chatbot-increase-sales/">where chatbot revenue actually comes from</a> covers the moments outside pre-purchase chat too.</p>
+
+      <h2 id="wrapping-up">Where to start this week</h2>
+
+      <p>Three things carry most of the weight here.</p>
+
+      <p>Your chat volume is mostly pre-purchase already, whether or not your bot is set up for it. Seventy percent of Shopify Inbox conversations are shoppers deciding, and a bot pointed at order lookups is answering the smaller half of the mail.</p>
+
+      <p>The failure is almost always missing knowledge, not weak AI. Size charts locked in images, compatibility that lives in your head, a cutoff time written nowhere. No model fixes that for you.</p>
+
+      <p>And the answer needs to end somewhere. Fact, confidence, action. A correct answer with no link is a shopper you educated and then let go.</p>
+
+      <p>If you do one thing this week, tag a week of chats into the seven types and count them. Two types will make up most of your volume, and those two are where the work belongs. Retype that size chart as text. Write the compatibility table. Put the cutoff time in a sentence your bot can find.</p>
+
+      <p>None of this is the interesting part of running a store, and it is not fast. The stores that do it are answering in seconds at two in the morning while the rest of us are asleep, which was the point of buying the thing.</p>
+
+      <div class="cta-block">
+        <h3>Want the pre-purchase side built for you?</h3>
+        <p>The Studio Niza chatbot service covers this part: size charts and compatibility tables converted into text your bot can actually read, answer patterns written per question type, and a monthly pass through the transcripts to catch what it got wrong. Setup is $599, then $99/month all-in.</p>
+        <a href="/services/ai-chatbots/" class="cta-button">See how the chatbot service works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>What is a pre-purchase chatbot?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>A pre-purchase chatbot is the half of your chat setup that answers shoppers who have not bought yet: fit and size, compatibility, materials, shipping cost and timing, comparing two products, stock, and discounts. It differs from a support bot because there is no order to look up and the answer usually is not in your Shopify admin. Its success measure is orders it assisted, not tickets it deflected.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can a chatbot answer sizing questions accurately?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Only if your size chart exists as text. Most Shopify stores publish the chart as an image, which a chatbot cannot read, so the bot either guesses or says it is not sure. Retype the measurements as a plain text table in the product description or a metafield and add one line of fit guidance in your own words.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Should a pre-purchase chatbot quote a delivery date?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It should quote your processing time, your daily cutoff, and the carrier's usual transit range, but not a specific arrival date. Processing and cutoff are yours to control, and delivery is the carrier's. A bot that promises a date you miss turns one happy shopper into a refund request and a bad review.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Do I need a paid chatbot for pre-purchase questions, or is Shopify Inbox enough?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>If your store takes fewer than roughly fifteen chats a week, Shopify Inbox with well-written instant answers handles the static questions for free, including materials, shipping rates, and discount rules. Paid tooling earns its cost on the questions that change per shopper: fit advice, live stock, and comparing two products. Start free and upgrade when the dynamic questions outnumber the static ones.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How do I know if my pre-purchase chatbot is making sales?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Track assisted-order rate, which is the share of product-question conversations followed by an order from that visitor within 24 hours. Shopify reported that 17% of pre-purchase Inbox conversations turned into sales in November 2023, which is a useful reference point rather than a target. Deflection rate is the wrong metric here, because a pre-purchase chat that ends in silence counts as deflected and earns nothing.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>What pre-purchase questions should a chatbot never answer?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Anything involving negotiated money, such as bulk pricing, wholesale terms, or a discount a shopper is arguing for, and any safety, medical, or fit-for-purpose claim. The bot can state what a product is made of, but it should not certify what it is safe for. It should also stop and offer a human whenever the specific fact is missing from its knowledge rather than guessing at a measurement.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-chatbot-pre-purchase-questions">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
