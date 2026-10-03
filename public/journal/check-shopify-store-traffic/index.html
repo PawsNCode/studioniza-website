@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Traffic Checker: Yours and Your Competitors'</title>
+<meta name="description" content="Shopify traffic checker, honestly: how to read your own numbers across Shopify Analytics, GA4, and Search Console, and estimate a competitor's.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/check-shopify-store-traffic/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="How to Check Any Shopify Store's Traffic (Yours and Your Competitors')">
+<meta property="og:description" content="Four tools give four traffic numbers for one Shopify store. How to read each, and estimate a competitor's.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/check-shopify-store-traffic/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/check-shopify-store-traffic/check-shopify-store-traffic.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Check Any Shopify Store's Traffic by Studio Niza">
+<meta property="article:published_time" content="2026-09-30T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="Content">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Check Any Shopify Store's Traffic (Yours and Your Competitors')">
+<meta name="twitter:description" content="Four tools, four traffic numbers for one Shopify store. How to read each one honestly.">
+<meta name="twitter:image" content="https://studioniza.com/journal/check-shopify-store-traffic/check-shopify-store-traffic.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Check Shopify Store Traffic", "item": "https://studioniza.com/journal/check-shopify-store-traffic/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Check Any Shopify Store's Traffic (Yours and Your Competitors')",
+  "description": "How to check Shopify store traffic honestly: what Shopify Analytics, GA4, Search Console, and Clarity each count, why they never match, and how to estimate a competitor's traffic.",
+  "image": "https://studioniza.com/journal/check-shopify-store-traffic/check-shopify-store-traffic.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-09-30T10:00:00+08:00",
+  "dateModified": "2026-09-30T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/check-shopify-store-traffic/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/check-shopify-store-traffic/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there a free Shopify traffic checker that gives exact numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for a store you don't own. Free Shopify traffic checkers estimate visits from panel data and modeling, and no tool outside a store has access to its analytics. For your own store, the exact numbers are already free in Shopify Analytics, GA4, and Search Console."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Shopify Analytics show fewer sessions than GA4?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually it's the reverse, and the cause is session definitions plus consent. Shopify ends a session after 30 minutes of inactivity and also resets at midnight UTC, while GA4 only times out after inactivity. If GA4 is the lower number, your cookie banner is likely the reason, because GA4 only counts visitors who accept."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you check a competitor's Shopify store traffic accurately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and anyone selling certainty is overselling. You can get a rough magnitude for large stores and almost nothing useful for small ones. Review velocity, sitemap growth, and app footprint are better signals because they are public, free, and repeatable month after month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a cookie consent banner lower my GA4 traffic numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GA4 only reports visitors who accept analytics cookies unless behavioral modeling is active, and that needs at least 1,000 daily consented users plus 1,000 daily denied events over seven days. Most first-year Shopify stores never reach those thresholds, so the gap stays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need GA4 if Shopify Analytics is already built in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not on day one. Shopify Analytics ties sessions to orders, which answers the question most owners actually have. Add GA4 when you need traffic sources, landing page behavior, or campaign tracking that Shopify's reports don't cover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I check my Shopify store traffic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once a month for trends, and only after a change if you're testing something specific. Checking daily at low volume shows you noise, not progress. Write down Search Console impressions and query count on the same date each month and compare those."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Check Shopify Store Traffic</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">Content</span>
+        <span class="post-date">September 30, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>11 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>How to Check Any Shopify Store's Traffic (Yours and Your Competitors')</h1>
+      <div style="text-align: center;"><img src="/journal/check-shopify-store-traffic/check-shopify-store-traffic-hero.webp" alt="Shopify store owner at a desk comparing traffic checker dashboards on two screens" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">Four tools will give you four different traffic numbers for the same store, and all four are right. Here is how to read each one, what a free Shopify traffic checker can and cannot tell you about a competitor, and the one number worth tracking monthly.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#four-numbers">The four traffic numbers your Shopify store already has</a></li>
+        <li><a href="#why-they-differ">Why the four numbers never agree</a></li>
+        <li><a href="#shopify-traffic-checker">What a Shopify traffic checker actually measures</a></li>
+        <li><a href="#how-wrong">How wrong are the estimators for a small store?</a></li>
+        <li><a href="#better-proxies">Better proxies for a competitor you can&#x27;t measure</a></li>
+        <li><a href="#one-metric">The one metric worth tracking monthly</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>Open Shopify Analytics and you see one session count. Open GA4 and you see a different one. Open Search Console and you see clicks that match neither. Nothing is broken. The tools are measuring different things, and once you know what each one counts, the gaps stop being alarming and start being useful.</p>
+
+      <p>Then there is the other half of the question. Some competitor keeps outranking you and you want to know how much traffic they actually get. Any free Shopify traffic checker will hand you a number in about two seconds. Most of those numbers are estimates, and for a store your size they are usually poor ones.</p>
+
+      <p>This post covers both halves. First, the four numbers your own store already has, what each one counts, and why they will never line up. Then what a Shopify traffic checker actually measures, how far off it runs for small stores, and the proxies I use instead when I need a rough read on a competitor. At the end, the single metric I think is worth writing down once a month.</p>
+
+      <p>I am using my own numbers throughout. Studio Niza is a new site, so the figures are small, and that is the point. A screenshot from a store doing 200,000 visits a month would tell you nothing about what your dashboard should look like in month four.</p>
+
+      <h2 id="four-numbers">The four traffic numbers your Shopify store already has</h2>
+
+      <p>Before you go looking for a checker tool, you already have four measurement systems, and three of them are free. They answer different questions.</p>
+
+      <p><strong>Shopify Analytics</strong> counts sessions on your storefront, using its own cookies. This is the number tied to your conversion rate, because Shopify is also counting the orders. If you want to know "how many visits did it take to make those sales," this is the number that answers it.</p>
+
+      <p><strong>Google Analytics 4</strong> counts sessions and users through a tag you install. It sees traffic sources, landing pages, and behavior across the whole site, including pages Shopify does not treat as storefront. It only sees visitors whose browsers run the tag and whose consent settings allow it.</p>
+
+      <p><strong>Google Search Console</strong> counts impressions and clicks in Google Search only. It is not a traffic tool. It is a search visibility tool that happens to report the clicks Google sent you. It knows nothing about direct visits, email, social, or ads.</p>
+
+      <p><strong>Microsoft Clarity</strong> counts sessions and records what people did in them. Its value is the recordings and heatmaps, not the count. If you have not <a href="/journal/google-search-console-shopify-setup/">set up Google Search Console properly</a>, start there before adding anything else.</p>
+
+      <p>Here is what those four reported for studioniza.com over roughly the same window, May 8 to September 6, 2026.</p>
+
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>What it reported</th>
+            <th>What it is counting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google Search Console</td>
+            <td>11,390 impressions, 54 clicks, 373 queries</td>
+            <td>Google Search only</td>
+          </tr>
+          <tr>
+            <td>Bing Webmaster Tools</td>
+            <td>131 impressions, 1 click, 29 pages</td>
+            <td>Bing Search only</td>
+          </tr>
+          <tr>
+            <td>Microsoft Clarity</td>
+            <td>117 sessions on the home page, 79 on the journal index</td>
+            <td>Sessions per page, all sources</td>
+          </tr>
+          <tr>
+            <td>Google Analytics 4</td>
+            <td>Live since September, the shortest history of the four</td>
+            <td>Consented sessions, all sources</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div style="text-align: center;"><img src="/journal/check-shopify-store-traffic/check-shopify-store-traffic-four-numbers.webp" alt="Diagram of four analytics tools reporting four different traffic numbers for one Shopify store" style="margin-bottom: 16px; float: none;"></div>
+
+      <p>Four sources, four answers, one site. None of them is lying. If some of your visits are arriving from AI answers rather than blue links, that is a fifth read entirely, and I covered how to see <a href="/journal/track-ai-search-traffic-shopify/">traffic arriving from AI search</a> separately.</p>
+
+      <h2 id="why-they-differ">Why the four numbers never agree</h2>
+
+      <p>There are four reasons, and they stack. Most owners go looking for a bug when the answer is definitional.</p>
+
+      <h3>Session definitions do not match</h3>
+
+      <p>Shopify ends a session after 30 minutes of inactivity <em>and</em> resets every session at midnight UTC, which its <a href="https://help.shopify.com/en/manual/reports-and-analytics/discrepancies/customer-discrepancies" target="_blank" rel="noopener noreferrer">documentation on session discrepancies</a> spells out. GA4 also times out after 30 minutes of inactivity, but that timeout is adjustable up to 7 hours and 55 minutes, and GA4 does <em>not</em> start a new session at midnight, per <a href="https://support.google.com/analytics/answer/12798876?hl=en" target="_blank" rel="noopener noreferrer">Google's session documentation</a>.</p>
+
+      <p>That single difference explains a real gap. If you sell to one country and most of your evening traffic lands near midnight UTC, Shopify will split visits that GA4 keeps whole, and Shopify will report more sessions from the same people. For stores in Asia and Australia, midnight UTC falls in the middle of the working day.</p>
+
+      <h3>Your cookie banner is deciding what GA4 sees</h3>
+
+      <p>If you run a consent banner, and you should, GA4 only counts visitors who accept. Google fills some of that gap with modeling, but the thresholds are high. A property needs at least 1,000 events a day with consent denied for seven days, plus at least 1,000 daily users sending consented events, before <a href="https://support.google.com/analytics/answer/11161109?hl=en" target="_blank" rel="noopener noreferrer">behavioral modeling</a> turns on. Below that, Google's own wording is direct: visitors who decline are not reported.</p>
+
+      <p>Almost no store in its first year clears 1,000 daily users. So if you are a small store with a banner, your GA4 number is the consenting slice of your traffic, and it is structurally lower than Shopify's. That is not a misconfiguration to fix. It is the cost of doing consent properly.</p>
+
+      <h3>Bots, blockers, and cached reloads</h3>
+
+      <p>Shopify's <a href="https://help.shopify.com/en/manual/reports-and-analytics/discrepancies" target="_blank" rel="noopener noreferrer">analytics discrepancies page</a> lists the rest plainly: some analytics software counts search bots as visitors and some does not, browser extensions block the Google tag outright, Google can only count visitors with JavaScript and cookies active, reporting time zones differ, and Google counts every page reload while a browser serving a cached page may not.</p>
+
+      <p>At low volume, one crawler having a busy week can move your percentages by double digits. This is why I do not read month-over-month percentage changes on a store doing under a few thousand sessions. The absolute numbers are small enough that noise looks like a trend.</p>
+
+      <h3>A click is not a session</h3>
+
+      <p>Search Console counts clicks in Google Search. GA4 counts sessions on your site. Google's own <a href="https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console" target="_blank" rel="noopener noreferrer">guidance on using both tools together</a>, updated in January 2026, names the specific reasons they diverge: Search Console reports on the canonical URL Google chose while Analytics reports whatever URL carried the tag, the two use different time zones by default, and Analytics excludes known bots automatically while Search Console does not necessarily filter them.</p>
+
+      <p>One person clicking your result, bouncing, and clicking again an hour later is two clicks and two sessions. One person clicking once and browsing eleven pages is one click and one session. Neither tool is wrong. They are answering different questions.</p>
+
+      <h2 id="shopify-traffic-checker">What a Shopify traffic checker actually measures</h2>
+
+      <p>Now the competitor half. A Shopify traffic checker does not have access to the store's analytics. Nobody outside that store does. What these tools have is some mix of three inputs.</p>
+
+      <p><strong>Panel data.</strong> Anonymized browsing behavior collected from browser extensions, apps, and internet service providers, then scaled up to represent the whole internet. This is the backbone of the big estimators.</p>
+
+      <p><strong>Public storefront signals.</strong> Anything readable from the store's own pages: product count, price points, theme, apps loading in the source, review counts, publish dates. This part is genuinely reliable, because it is just reading the page.</p>
+
+      <p><strong>Modeling.</strong> The arithmetic that turns a small panel sample into a monthly visit estimate for a specific domain.</p>
+
+      <p>The middle input is the one worth your time. Store-specific checkers are usually accurate about which apps a store runs, how many products it lists, and what it charges, because those facts are sitting in the HTML. The traffic figure sitting next to those facts comes from a different process entirely, and it deserves a different level of trust.</p>
+
+      <h2 id="how-wrong">How wrong are the estimators for a small store?</h2>
+
+      <p>Wrong enough that I would not make a decision on one. This is not a contrarian take, it is what the vendors say themselves.</p>
+
+      <p>Similarweb's own documentation notes that even when you compare the same site across two direct measurement tools, the variance can reach 30 percent, and that for sites with a small number of visits its estimations will not be as statistically accurate. Its knowledge base is <a href="https://support.similarweb.com/hc/en-us/articles/360002329778-Similarweb-vs-Direct-Measurement" target="_blank" rel="noopener noreferrer">explicit that there is no single source of truth</a> across measurement tools.</p>
+
+      <p>Read that in context. If direct tools with actual tracking code can be 30 percent apart, an estimate built from a panel that never observed your competitor's store is working with far less. Below roughly 100,000 monthly visits, the panel sample for any one domain gets thin. Below 10,000, most tools return "not enough data" or a placeholder, which is the honest outcome.</p>
+
+      <p>My own site returns nothing useful in the estimators, and it should. A hundred or so home page sessions across four months is invisible to a panel. When I <a href="/journal/daily-blogging-90-days-data/">published every day for 90 days and showed the data</a>, the interesting numbers all came from Search Console, not from any third-party estimate.</p>
+
+      <p>Here is the practical rule I use. Above 100,000 monthly visits, treat an estimate as a rough magnitude and compare stores to each other rather than trusting absolute figures. Between 10,000 and 100,000, treat it as a direction. Below 10,000, ignore it and use proxies instead.</p>
+
+      <h2 id="better-proxies">Better proxies for a competitor you can't measure</h2>
+
+      <p>When the number is unavailable, the signals underneath it are not. These four are free, public, and repeatable, which means you can measure change over time even when you cannot measure level.</p>
+
+      <div style="text-align: center;"><img src="/journal/check-shopify-store-traffic/check-shopify-store-traffic-proxy-ladder.webp" alt="Ladder diagram ranking four proxy signals for estimating a competitor's Shopify store traffic" style="margin-bottom: 16px; float: none;"></div>
+
+      <h3>Review velocity</h3>
+
+      <p>Open their best-selling product and count reviews added in the last 30 days, then the 30 days before that. Review request response rates vary widely by category and by how well the store asks, so the absolute order count you infer will be soft. The trend is not soft. A store adding 40 reviews a month to one product is selling meaningfully more than one adding three, and you can check it again in 60 days.</p>
+
+      <h3>Indexed pages and publishing pace</h3>
+
+      <p>Every Shopify store publishes a sitemap at the root of its domain. Open <code>/sitemap.xml</code> on the competitor's store and follow the child files for products, collections, blogs, and pages. Count them. Come back in 60 days and count again.</p>
+
+      <p>You are not measuring traffic here. You are measuring commitment, which is often the better question. A store that added 18 blog posts and 40 products in two months is investing. A store whose sitemap has not moved since last year is coasting, and coasting stores are the ones you can outrank.</p>
+
+      <h3>App footprint</h3>
+
+      <p>View the source of a competitor's product page and look at what loads. Review apps, help desks, subscription tools, and upsell apps all announce themselves. A store running an enterprise reviews platform and a paid help desk is spending several hundred dollars a month on tooling, which tells you something about the revenue it expects to recover.</p>
+
+      <h3>The archive trail</h3>
+
+      <p>Snapshots on the Internet Archive show you what their home page said a year ago, what the prices were, and which products disappeared. Price increases and a narrowing product range usually mean something is working. A store that has rewritten its home page three times in six months is still searching.</p>
+
+      <p>None of these gives you a visit count. Together they tell you whether a competitor is growing, which is the thing you were actually trying to learn when you went looking for a traffic checker.</p>
+
+      <h2 id="one-metric">The one metric worth tracking monthly</h2>
+
+      <p>Search Console impressions, plus the number of distinct queries you appear for. Two numbers, once a month, written down.</p>
+
+      <p>Impressions move first. They tell you Google is showing your pages to people, which happens weeks or months before anyone clicks. Query count tells you how wide your coverage is getting, which is the clearest early sign that new content is doing something.</p>
+
+      <p>Clicks are the number everyone wants to track, and at small volume they are too noisy to read. My site recorded 54 clicks over 121 days against 11,390 impressions. A single good week would swing the click trend by 20 percent and mean nothing. The impression and query trend over the same period was steady and readable.</p>
+
+      <p>One caveat worth knowing: the query table in Search Console does not show everything. Rare queries are held back to protect user privacy, and the table itself is capped, so the listed queries will not add up to your chart total. My own property lists 373 queries, and the real number behind the chart is higher. That is fine for trend reading, and it is why I track the count rather than treating the list as complete.</p>
+
+      <p>If you want the fuller version of this, including what to check when sales have not arrived yet, I wrote a separate post on measuring <a href="/journal/measure-shopify-blog-roi/">whether your blog is actually working</a>. The short version: pick one source, read it the same way every month, and stop comparing dashboards that were never going to match.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+
+      <p>Three things to take away.</p>
+
+      <p>Your four numbers disagree because they count different things. Shopify splits sessions at midnight UTC and after 30 idle minutes. GA4 only counts visitors who consent, and behavioral modeling will not rescue a small store's numbers because the thresholds sit far above where you are. Search Console counts Google clicks and nothing else. Pick the one that answers your actual question and stop reconciling the rest.</p>
+
+      <p>A free Shopify traffic checker is reliable about the things it can read off a page, and unreliable about the number you came for. The vendors say so themselves. For stores under 10,000 monthly visits, which includes most stores in their first two years, the estimate is not worth acting on.</p>
+
+      <p>Review velocity, sitemap growth, app footprint, and archive snapshots will tell you whether a competitor is growing. That is usually the real question hiding behind "how much traffic do they get."</p>
+
+      <p>Here is the honest close. This post exists because <em>shopify traffic checker</em> is a query my own site appears for at position 25, with six impressions and zero clicks. I could have written a listicle of estimator tools like everything else ranking for it. Instead I opened four of my own dashboards and showed you what a real small store looks like, including the parts that are unimpressive. If your numbers are smaller than you hoped, that is the normal shape of month four, not a verdict on your store.</p>
+
+      <div class="cta-block">
+        <h3>Want the writing and the measurement handled?</h3>
+        <p>The Studio Niza Blog Content service covers keyword research, the writing, schema, and indexing follow-up, plus a monthly Search Console read so you can see what the posts are actually doing.</p>
+        <a href="/services/blog-content/" class="cta-button">See how Blog Content works <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Is there a free Shopify traffic checker that gives exact numbers?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not for a store you don&#x27;t own. Free Shopify traffic checkers estimate visits from panel data and modeling, and no tool outside a store has access to its analytics. For your own store, the exact numbers are already free in Shopify Analytics, GA4, and Search Console.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Why does Shopify Analytics show fewer sessions than GA4?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Usually it&#x27;s the reverse, and the cause is session definitions plus consent. Shopify ends a session after 30 minutes of inactivity and also resets at midnight UTC, while GA4 only times out after inactivity. If GA4 is the lower number, your cookie banner is likely the reason, because GA4 only counts visitors who accept.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can you check a competitor&#x27;s Shopify store traffic accurately?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No, and anyone selling certainty is overselling. You can get a rough magnitude for large stores and almost nothing useful for small ones. Review velocity, sitemap growth, and app footprint are better signals because they are public, free, and repeatable month after month.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Does a cookie consent banner lower my GA4 traffic numbers?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. GA4 only reports visitors who accept analytics cookies unless behavioral modeling is active, and that needs at least 1,000 daily consented users plus 1,000 daily denied events over seven days. Most first-year Shopify stores never reach those thresholds, so the gap stays.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Do I need GA4 if Shopify Analytics is already built in?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not on day one. Shopify Analytics ties sessions to orders, which answers the question most owners actually have. Add GA4 when you need traffic sources, landing page behavior, or campaign tracking that Shopify&#x27;s reports don&#x27;t cover.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How often should I check my Shopify store traffic?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Once a month for trends, and only after a change if you&#x27;re testing something specific. Checking daily at low volume shows you noise, not progress. Write down Search Console impressions and query count on the same date each month and compare those.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="check-shopify-store-traffic">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
