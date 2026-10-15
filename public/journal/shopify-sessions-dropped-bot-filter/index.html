@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Sessions Dropped? The Sept 21 Bot Filter Explained</title>
+<meta name="description" content="Shopify sessions dropped in September? The September 21 bot filter changed the count. How to read sessions, conversion, and Search Console together now.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://studioniza.com/journal/shopify-sessions-dropped-bot-filter/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="48x48" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/studio-niza-favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/studio-niza-favicon.png">
+<link rel="shortcut icon" type="image/png" href="/images/studio-niza-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/studio-niza-favicon.png">
+<meta property="og:title" content="Shopify Sessions Dropped in September? Shopify's New Bot Filter Changed the Count (How to Read Your Numbers Now)">
+<meta property="og:description" content="Sessions fell, orders did not. What Shopify changed on September 21 and how to read your numbers now.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studioniza.com/journal/shopify-sessions-dropped-bot-filter/">
+<meta property="og:site_name" content="Studio Niza">
+<meta property="og:image" content="https://studioniza.com/journal/shopify-sessions-dropped-bot-filter/shopify-sessions-dropped-bot-filter.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shopify Sessions Dropped After the Bot Filter by Studio Niza">
+<meta property="article:published_time" content="2026-10-06T10:00:00+08:00">
+<meta property="article:author" content="Niza Ravelo">
+<meta property="article:author" content="Studio Niza">
+<meta property="article:section" content="SEO">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopify Sessions Dropped in September? Shopify's New Bot Filter Changed the Count (How to Read Your Numbers Now)">
+<meta name="twitter:description" content="Sessions fell, orders did not. What Shopify changed and how to read your numbers now.">
+<meta name="twitter:image" content="https://studioniza.com/journal/shopify-sessions-dropped-bot-filter/shopify-sessions-dropped-bot-filter.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioniza.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioniza.com/journal/"},
+    {"@type": "ListItem", "position": 3, "name": "Shopify Sessions Dropped", "item": "https://studioniza.com/journal/shopify-sessions-dropped-bot-filter/"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Shopify Sessions Dropped in September? Shopify's New Bot Filter Changed the Count (How to Read Your Numbers Now)",
+  "description": "What Shopify's September 21, 2026 session measurement update changed, which nine metrics it touched, and how to read sessions, conversion rate, GA4, and Search Console together.",
+  "image": "https://studioniza.com/journal/shopify-sessions-dropped-bot-filter/shopify-sessions-dropped-bot-filter.png",
+  "author": {"@id": "https://studioniza.com/#niza-ravelo"},
+  "publisher": {"@id": "https://studioniza.com/#organization"},
+  "datePublished": "2026-10-06T10:00:00+08:00",
+  "dateModified": "2026-10-06T10:00:00+08:00",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioniza.com/journal/shopify-sessions-dropped-bot-filter/"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://studioniza.com/#organization",
+  "name": "Studio Niza",
+  "alternateName": "Studio Niza Shopify Growth Studio",
+  "url": "https://studioniza.com/",
+  "description": "A solo Shopify growth studio offering four services: SEO and GEO, blog content writing, AI chatbots, and reviews management. Philippines-based, working with Shopify owners worldwide.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://studioniza.com/images/studio-niza-logo-wide.png",
+    "width": 1200,
+    "height": 400
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Niza Ravelo",
+    "url": "https://studioniza.com/about/"
+  },
+  "foundingDate": "2026",
+  "areaServed": {"@type": "Place", "name": "Worldwide"},
+  "address": {"@type": "PostalAddress", "addressCountry": "PH"},
+  "email": "contact@studioniza.com",
+  "image": "https://studioniza.com/images/studio-niza-home.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://studioniza.com/journal/shopify-sessions-dropped-bot-filter/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Did Shopify delete my old session data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Shopify says historical data was not deleted or reprocessed by this update. Older reports can look different because the bot filter is now applied by default, and bot classification only exists for sessions from October 7, 2025 onward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see bot sessions again in Shopify Analytics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Open a sessions report under Analytics, then Reports, and find the Human or bot session row in the Filters section. Set it to include both Human and Bot, or remove the filter. You can also add Human or bot session as a dimension to see the two side by side."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my new Shopify conversion rate the real one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is closer to how real shoppers behave, because identified bots no longer sit in the session count. It is still an estimate, since Shopify's classifier is cautious and lets some bots through rather than mislabel real customers. Treat it as a new baseline and compare it only with dates after September 23, 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If my Shopify sessions dropped, will my Google rankings fall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google does not see your Shopify Analytics. The update changed how Shopify reports visits inside your admin, and nothing about how your pages are crawled, indexed, or ranked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the change affect Meta or Google Ads reporting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not inside the ad platforms. Meta and Google Ads count clicks and conversions with their own tags, so their dashboards did not change. Reports inside Shopify that tie orders or customers to sessions can look different, because they use Shopify's session count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should I wait before trusting the new Shopify session numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Give it two full weeks after September 23, 2026. That gives you two like-for-like weeks measured under the same rules, which is enough to set a baseline for sessions and conversion rate. Orders and sales never changed, so you can keep reading those as usual."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --magenta: #801D5C;
+  --magenta-soft: #FFF4FB;
+  --black: #000000;
+  --dark-gray: #444444;
+  --gray: #ABABAB;
+  --gray-line: #E8E8E8;
+  --white: #FFFFFF;
+  --pink: #CD81A9;
+  --old-rose: #BA99A2;
+  --brown: #AF8A8F;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1200px;
+  --container-narrow: 720px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+.container-narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container, .container-narrow { padding: 0 24px; } }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--black); letter-spacing: -0.01em; }
+p { color: var(--dark-gray); }
+a { color: var(--magenta); cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+.label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+/* NAV - matches homepage exactly */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-line); }
+.nav-inner { max-width: var(--container); margin: 0 auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { cursor: pointer; display: flex; align-items: center; }
+.nav-brand img { height: 56px; width: auto; display: block; }
+@media (max-width: 640px) { .nav-brand img { height: 44px; } }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links li { position: relative; }
+.nav-links a, .nav-trigger { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--black); cursor: pointer; background: none; border: none; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.nav-links a:hover, .nav-trigger:hover { color: #c02e80; background: #fff4fb; }
+.nav-links li:hover > .nav-trigger { color: #c02e80; background: #fff4fb; }
+.nav-links a.active { color: var(--magenta); }
+.nav-cta { font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--magenta) !important; }
+.nav-dropdown { position: absolute; top: 100%; left: -16px; padding-top: 12px; min-width: 240px; display: none; flex-direction: column; gap: 2px; }
+.nav-dropdown-inner { background: var(--white); border: 1px solid var(--gray-line); border-radius: 10px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06); padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.nav-links li:hover .nav-dropdown { display: flex; }
+.nav-dropdown a { display: block; padding: 10px 14px; border-radius: 6px; color: var(--black); font-size: 0.9375rem; transition: background 0.15s; }
+.nav-dropdown a:hover { background: #fff4fb; color: #c02e80; opacity: 1; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--black); margin: 5px 0; transition: all 0.3s; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: stretch; gap: 0; padding: 16px 0; border-bottom: 1px solid var(--gray-line); }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a, .nav-trigger { padding: 14px 32px; width: 100%; justify-content: flex-start; }
+  .nav-dropdown { position: static; padding-top: 0; margin: 0 0 0 16px; display: flex; background: transparent; }
+  .nav-dropdown-inner { box-shadow: none; border: none; padding: 0; background: transparent; }
+  .nav-links li:hover .nav-dropdown { display: flex; }
+  .nav-dropdown a { padding: 10px 32px; font-size: 0.875rem; color: var(--dark-gray); }
+  .nav-links > li > a, .nav-links .nav-trigger { transition: background 0.15s ease, color 0.15s ease; }
+  .nav-links > li > a:hover, .nav-links .nav-trigger:hover { background: #fff4fb; color: #c02e80; }
+}
+
+/* Article-specific styles */
+.breadcrumb { padding: 24px 0 0; font-size: 0.875rem; color: var(--gray); }
+.breadcrumb a { color: var(--gray); font-weight: 500; padding: 4px 8px; margin: 0 -2px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+.breadcrumb a:hover { color: #c02e80; background: #fff4fb; opacity: 1; }
+.breadcrumb-sep { margin: 0 8px; color: var(--gray-line); }
+.breadcrumb-current { color: var(--dark-gray); }
+
+.article-header { padding: 32px 0 40px; border-bottom: 1px solid var(--gray-line); }
+.article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; font-size: 0.8125rem; color: var(--gray); }
+.post-category { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); background: var(--magenta-soft); padding: 4px 10px; border-radius: 999px; }
+.post-date { font-weight: 500; }
+.meta-divider { color: var(--gray-line); }
+.article-header h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 20px; }
+.article-deck { font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.55; color: var(--dark-gray); max-width: 60ch; }
+
+.toc { background: var(--magenta-soft); border-radius: 12px; padding: 24px 28px; margin: 40px 0; }
+.toc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc ol li { counter-increment: toc; padding: 6px 0; border-bottom: 1px solid rgba(128, 29, 92, 0.1); }
+.toc ol li:last-child { border-bottom: none; }
+.toc ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); color: var(--magenta); font-size: 0.875rem; margin-right: 12px; font-weight: 500; }
+.toc a {
+  display: inline-block;
+  color: var(--dark-gray);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.toc a:hover {
+  background: #801d5c;
+  color: var(--white);
+  opacity: 1;
+}
+
+.article-body { padding: 8px 0 40px; font-size: 1.0625rem; line-height: 1.75; color: var(--dark-gray); }
+.article-body p { margin-bottom: 1.4em; color: var(--dark-gray); }
+.article-body h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.2; margin-top: 2.4em; margin-bottom: 0.7em; color: var(--black); scroll-margin-top: 100px; }
+.article-body h3 { font-size: clamp(1.1875rem, 2vw, 1.4375rem); line-height: 1.25; margin-top: 2em; margin-bottom: 0.5em; color: var(--black); }
+.article-body strong { color: var(--black); font-weight: 600; }
+.article-body a {
+  color: #c02e80;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-body a:hover {
+  background: none;
+  color: #cd81a9;
+  font-weight: 700;
+  opacity: 1;
+}
+.article-body hr { border: none; border-top: 1px solid var(--gray-line); margin: 56px 0 40px; }
+
+.article-body img,
+.article-header img,
+.article-deck + img { max-width: 100%; height: auto; display: block; margin: 24px auto; border-radius: 8px; }
+.article-body figure { margin: 24px 0; }
+.article-body figure img { margin: 0 auto; }
+.article-body figcaption { font-size: 0.9375rem; color: var(--gray); text-align: center; margin-top: 12px; font-style: italic; }
+
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin: 24px 0 32px; }
+.article-body th { background: var(--magenta); color: var(--white) !important; text-align: left; padding: 14px 16px; font-weight: 600; border-top: 2px solid var(--magenta); border-bottom: 2px solid var(--magenta); }
+.article-body td { padding: 14px 16px; color: var(--dark-gray); border-bottom: 1px solid var(--gray-line); vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: var(--magenta-soft); }
+
+.article-body details { border-bottom: 1px solid var(--gray-line); padding: 20px 0; }
+.article-body details summary { cursor: pointer; font-weight: 500; color: var(--black); font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--sans); }
+.article-body details summary::-webkit-details-marker { display: none; }
+.article-body details summary span:last-child { color: var(--magenta); font-weight: 300; font-size: 1.4em; flex-shrink: 0; transition: transform 0.2s ease; }
+.article-body details[open] summary span:last-child { transform: rotate(45deg); }
+.article-body details p { margin-top: 12px; color: var(--dark-gray); font-size: 1rem; }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--gray-line); }
+@media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 0; } }
+
+.cta-block { background: var(--magenta-soft); border-radius: 16px; padding: 40px 32px; margin: 48px 0; text-align: center; }
+.cta-block h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--black); }
+.cta-block p { max-width: 50ch; margin: 0 auto 24px; color: var(--dark-gray); }
+.cta-button,
+.cta-button:link,
+.cta-button:visited,
+.cta-button:active {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500 !important;
+  padding: 14px 24px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--magenta) !important;
+  background: var(--magenta) !important;
+  color: var(--white) !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.cta-button:hover {
+  background: #6a1850 !important;
+  border-color: #6a1850 !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.article-footer { padding: 40px 0 64px; border-top: 1px solid var(--gray-line); }
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.post-nav-item {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--magenta);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+.post-nav-item:hover { opacity: 0.7; }
+.post-nav-item.is-prev::before { content: '←'; }
+.post-nav-item.is-next::after { content: '→'; }
+.post-nav-item.is-center { color: var(--magenta); }
+.post-nav-item.is-center::before { content: '←'; }
+
+.post-nav-item.is-disabled {
+  color: var(--gray);
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+.post-nav-item.is-disabled:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .post-nav { flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+  .post-nav-item { justify-content: center; }
+}
+
+footer.site-footer {
+  padding: 56px 0 32px;
+  border-top: 1px solid var(--gray-line);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+.footer-brand img { height: 48px; width: auto; display: block; margin-bottom: 12px; }
+.footer-brand .footer-byline { font-style: italic; font-size: 0.875rem; color: var(--gray); margin-bottom: 8px; }
+.footer-brand p { font-size: 0.875rem; color: var(--dark-gray); line-height: 1.55; max-width: 38ch; }
+.footer-col h5 { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); font-weight: 500; margin-bottom: 16px; font-family: var(--sans); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { display: inline-block; color: var(--black); font-size: 0.9375rem; cursor: pointer; padding: 4px 8px; margin: -4px -8px; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; text-decoration: none; }
+.footer-col a:hover { color: #c02e80; opacity: 1; background: #FFF4FB; text-decoration: none; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.8125rem;
+  color: var(--gray);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; } }
+@media (max-width: 640px) {
+  .footer-grid, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+<!-- Google Consent Mode v2 (denied by default) + Google Analytics 4 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S03SD488VC"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-S03SD488VC');
+    </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wx6al1z57h");
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand" onclick="window.location.href='/'">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <button class="nav-trigger">Services</button>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+          <a href="/services/shopify-seo/">SEO &amp; GEO</a>
+          <a href="/services/blog-content/">Content Writing</a>
+          <a href="/services/ai-chatbots/">AI Chatbots</a>
+          <a href="/services/reviews-management/">Reviews Management</a>
+          <a href="/#bundles">See all services</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/journal/" class="active">Journal</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/" class="nav-cta">Email me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-narrow">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="/journal/">Journal</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Shopify Sessions Dropped</span>
+  </nav>
+</div>
+
+<article>
+  <header class="article-header">
+    <div class="container-narrow">
+      <div class="article-meta">
+        <span class="post-category">SEO</span>
+        <span class="post-date">October 6, 2026</span>
+        <span class="meta-divider">·</span>
+        <span>12 min read</span>
+        <span class="meta-divider">·</span>
+        <span>By <a href="/about/" style="color: inherit; text-decoration: underline;">Niza Ravelo</a></span>
+      </div>
+      <h1>Shopify Sessions Dropped in September? Shopify's New Bot Filter Changed the Count (How to Read Your Numbers Now)</h1>
+      <div style="text-align: center;"><img src="/journal/shopify-sessions-dropped-bot-filter/shopify-sessions-dropped-bot-filter-hero.webp" alt="Shop owner at a laptop reviewing a chart where Shopify sessions dropped in a single step" style="margin-bottom: 16px; float: none;"></div>
+      <p class="article-deck">If your Shopify sessions dropped in late September while orders held steady, the count changed, not your traffic. Here is what Shopify did between September 21 and 23, and how to read your numbers from here.</p>
+    </div>
+  </header>
+
+  <div class="container-narrow">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">In this post</div>
+      <ol>
+        <li><a href="#what-changed">What changed between September 21 and 23</a></li>
+        <li><a href="#conversion-rate">Why did my conversion rate go up?</a></li>
+        <li><a href="#compare-before-after">How to compare before and after</a></li>
+        <li><a href="#bot-share">How much bot traffic were you carrying?</a></li>
+        <li><a href="#ga4-clarity-search-console">Why GA4, Clarity, and Search Console still disagree</a></li>
+        <li><a href="#real-drop">When Shopify sessions dropped for a real reason</a></li>
+        <li><a href="#what-to-tell">What to tell a client or partner</a></li>
+        <li><a href="#wrapping-up">Wrapping up</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </nav>
+
+    <div class="article-body">
+
+      <p>If your <strong>Shopify sessions dropped</strong> in late September and your orders did not, your traffic probably did not go anywhere. Shopify changed how it counts a session. The rollout ran from September 21 to 23, 2026, and it arrived without anyone switching a setting.</p>
+      <p>That is why the numbers look strange. Sessions moved, conversion rate moved the other way, and sales stayed flat. Most owners read that as a traffic problem, because for years a falling sessions line meant exactly that.</p>
+      <p>This time the ruler changed, not the thing being measured. Shopify now leaves identified bots out of session reports by default. It also changed two quieter rules about when a session starts and ends, which is why some stores saw sessions rise instead of fall.</p>
+      <p>This post covers what changed and which nine metrics it touched, why conversion rate moved, how to compare before and after without fooling yourself, how to see the bot share you were carrying, and why GA4, Clarity, and Search Console still will not match Shopify. It ends with a short note you can send to a client or partner who asks why traffic fell.</p>
+      <p>For the wider picture of reading your own numbers across tools, start with <a href="/journal/check-shopify-store-traffic/">how to check any Shopify store's traffic</a>. This post is the September update to that one.</p>
+
+      <h2 id="what-changed">Shopify sessions dropped: what changed between September 21 and 23</h2>
+      <p>Shopify announced the update in its <a href="https://changelog.shopify.com/posts/shopify-analytics-session-measurement-improvements" target="_blank" rel="noopener noreferrer">changelog on September 21, 2026</a> and explains the detail on its <a href="https://help.shopify.com/en/manual/reports-and-analytics/discrepancies/session-measurement-update" target="_blank" rel="noopener noreferrer">session measurement help page</a>. Most write-ups call it a bot filter and stop there. It is three changes that landed together.</p>
+      <h3>Three changes, not one</h3>
+      <p><strong>Identified bots are filtered out by default.</strong> Sessions that Shopify classifies as bots no longer appear in session reports unless you ask for them. The filter is not new. Shopify added the "Human or bot session" filter on October 27, 2025. What changed in September is that it is now switched on for you.</p>
+      <p><strong>Sessions no longer end at midnight UTC.</strong> A visit that ran across midnight UTC used to be cut off at that point. Now a session follows continued activity and ends after 30 minutes of inactivity.</p>
+      <p><strong>Sessions with no pageview now count.</strong> Shopify's example is a customer who goes straight to checkout from a cart link. That visit was invisible before. Now it is a session.</p>
+      <p>The first two changes lower the count. The third raises it. Which way your store moved depends on how much bot traffic you had and how many shoppers arrive through direct checkout links. I have not found a published figure for the typical size of the change, and Shopify does not give one.</p>
+      <h3>The nine metrics that moved</h3>
+      <p>The changelog names nine session-based metrics that can look different after the update.</p>
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>What it tells you</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Sessions</td><td>Visits to your online store</td></tr>
+          <tr><td>Conversion rate</td><td>Share of sessions that end in an order</td></tr>
+          <tr><td>Add-to-cart rate</td><td>Share of sessions with an add to cart</td></tr>
+          <tr><td>Reached checkout rate</td><td>Share of sessions that reach checkout</td></tr>
+          <tr><td>Checkout conversion rate</td><td>Share of checkout sessions that complete an order</td></tr>
+          <tr><td>Bounce rate</td><td>Share of sessions that view one page and leave</td></tr>
+          <tr><td>Pageviews per session</td><td>Average pages viewed in a session</td></tr>
+          <tr><td>Online store visitors</td><td>Unique devices that visited</td></tr>
+          <tr><td>Searches</td><td>Searches run on your storefront</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>The help page adds average session duration and any metric that attributes orders or customers to sessions.</p>
+      <h3>What did not move</h3>
+      <p>Orders, sales, and customer counts were not touched. Shopify also says your historical data was not deleted or reprocessed. Nothing was lost. Older reports can look different only because the bot filter is now applied when you open them.</p>
+
+      <h2 id="conversion-rate">Why did my conversion rate go up when nothing else changed?</h2>
+      <p>Conversion rate is orders divided by sessions. Shopify changed the bottom number and left the top one alone.</p>
+      <p>Say your store had 4,000 sessions and 60 orders in a month. That is a 1.5% conversion rate. Now take out 1,000 sessions that were bots. The same 60 orders over 3,000 sessions is 2.0%.</p>
+      <p>The rate rose by a third and not one extra person bought anything. The store did not get better at selling overnight. The old number was diluted by visits that were never going to buy.</p>
+      <div style="text-align: center;"><img src="/journal/shopify-sessions-dropped-bot-filter/shopify-sessions-dropped-bot-filter-conversion-math.webp" alt="Diagram of two session bars with the same orders, showing why conversion rate rose" style="margin-bottom: 16px; float: none;"></div>
+      <p>The same thing happens to add-to-cart rate and reached checkout rate, because both divide by sessions. Bounce rate can fall too, since a bot that loads one page and leaves counted as a bounce.</p>
+      <h3>When it goes the other way</h3>
+      <p>Some stores saw sessions rise. If a lot of your shoppers land on checkout from a cart link in an email or a social post, those visits now count for the first time. More sessions over the same orders means a lower conversion rate. Shopify's help page is plain about this: the direction depends on whether your session count went up or down.</p>
+      <p>Either way, the honest reading is the same. The new rate is closer to how real shoppers behave. It is a new baseline, not a result. Do not report the jump as a win, and do not treat a dip as a loss.</p>
+
+      <h2 id="compare-before-after">How to compare before and after without fooling yourself</h2>
+      <h3>Start with orders and sales</h3>
+      <p>These did not change, so they are your control. If orders in the last week of September line up with the first three weeks, the store is fine, whatever the sessions line says.</p>
+      <h3>Use full weeks after September 23</h3>
+      <p>Shopify's advice is to treat data after the update as the new baseline for session-based metrics. The rollout reached stores across three days, so September 21 to 23 is a mixed window. Skip it.</p>
+      <p>Your first clean comparison is September 24 to 30 against October 1 to 7. Both weeks were counted under the same rules. Comparing the week of September 14 with the week of September 28 tells you about the rule change and nothing about your shoppers.</p>
+      <p>Add a note wherever you keep monthly numbers: "Session measurement changed September 21 to 23, 2026." In March you will not remember why the line steps down.</p>
+      <h3>Watch the October 7, 2025 line</h3>
+      <p>Bot classification only exists for sessions from October 7, 2025 onward. Shopify cannot go back and label older visits. Anything before that date includes bots, with no way to take them out.</p>
+      <p>For dates after October 7, 2025, keep the same filter setting on both sides of a comparison. That handles the bots. It does not undo the other two rule changes, so Shopify still says to treat anything that spans the rollout as a measurement change.</p>
+      <p>This matters for Black Friday. Your 2025 holiday sessions can be shown as humans only, but they were still counted under the old session rules. Compare orders and sales year over year, and read sessions as a rough guide.</p>
+      <h3>Restart any test that spans the change</h3>
+      <p>If you changed a theme, a price, or a product page in mid-September and planned to judge it by conversion rate, the before and after are no longer comparable. Run the test again inside the new baseline.</p>
+      <p>For content, sessions were never the cleanest yardstick. The leading indicators for <a href="/journal/measure-shopify-blog-roi/">measuring whether your Shopify blog is working</a> sit in Search Console, which this update did not touch.</p>
+
+      <h2 id="bot-share">How much bot traffic were you carrying?</h2>
+      <p>You can now see it, which is the useful part of this update. Shopify's <a href="https://help.shopify.com/en/manual/intro-to-shopify/bots/bot-filtering" target="_blank" rel="noopener noreferrer">bot filtering guide</a> covers the steps. Go to Analytics, then Reports, and open a sessions report. From the Dimensions menu, add "Human or bot session."</p>
+      <p>The report splits into a Human row and a Bot row. Set the date range to start on or after October 7, 2025, since nothing earlier is classified. Divide the Bot row by the total. That is the share of Shopify Analytics bot traffic your old numbers included.</p>
+      <p>To bring bots back into a report, find the Human or bot session row under Filters. Set it to include both Human and Bot, or remove the filter.</p>
+      <h3>Why small stores feel it more</h3>
+      <p>Owners have reported steady visits from data-center towns such as Council Bluffs, Iowa, and Ashburn, Virginia, for years. Those are automated checks and crawlers, not shoppers. On a store with 40 real visits a day, ten automated ones bend every rate on the dashboard. On a store with 4,000, they vanish into the total.</p>
+      <h3>The filter is cautious on purpose</h3>
+      <p>Shopify says its classifier would rather miss some bots than label a real customer as one. So the Human row still holds some automated visits. Treat your bot share as a floor, not an exact figure.</p>
+      <p>Filtering is also not blocking. Search crawlers and AI assistants still reach your store, and that is what you want. A person who arrives from ChatGPT or Perplexity is a human session like any other, so <a href="/journal/track-ai-search-traffic-shopify/">tracking AI search traffic</a> works the way it did before.</p>
+
+      <h2 id="ga4-clarity-search-console">Why do GA4, Clarity, and Search Console still disagree with Shopify?</h2>
+      <p>Because they never counted the same thing. None of them changed in September. Only Shopify did.</p>
+      <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table>
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>What it counts</th>
+            <th>How it treats bots</th>
+            <th>Changed in September?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Shopify Analytics</td><td>Sessions on your storefront, ending after 30 minutes of inactivity</td><td>Identified bots filtered out by default</td><td>Yes, September 21 to 23</td></tr>
+          <tr><td>Google Analytics 4</td><td>Sessions from browsers that load its tag, with a 30-minute timeout</td><td>Known bots excluded automatically, with no setting and no count shown</td><td>No</td></tr>
+          <tr><td>Microsoft Clarity</td><td>Sessions recorded by its script</td><td>Bot detection on by default, with the excluded count shown</td><td>No</td></tr>
+          <tr><td>Google Search Console</td><td>Clicks from Google results to your pages</td><td>Not a session counter</td><td>No</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p><strong>GA4 was already leaving bots out.</strong> Google says <a href="https://support.google.com/analytics/answer/9888366" target="_blank" rel="noopener noreferrer">known bot traffic is excluded automatically</a> in Analytics properties, using its own research and the IAB's spiders and bots list. You cannot turn that off or see how much was removed. That is one reason GA4 often ran below Shopify. The gap may narrow now. It will not close, because GA4 also misses visitors who block its tag or decline cookies.</p>
+      <p><strong>Clarity filters bots by default too.</strong> Its <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-setup" target="_blank" rel="noopener noreferrer">setup documentation</a> says bot detection is on by default and shows the excluded count at the top of the dashboard.</p>
+      <p><strong>Search Console counts clicks, not sessions.</strong> A <a href="https://support.google.com/webmasters/answer/7042828" target="_blank" rel="noopener noreferrer">click in Search Console</a> is someone leaving Google's results for your page. It knows nothing about bots on your store, and Shopify's update did not touch it. That makes it your steady reference. If search clicks for the last 28 days are level and Shopify sessions fell, the fall is measurement. If you have not connected it yet, here is <a href="/journal/google-search-console-shopify-setup/">how to set up Google Search Console for your Shopify store</a>.</p>
+      <div style="text-align: center;"><img src="/journal/shopify-sessions-dropped-bot-filter/shopify-sessions-dropped-bot-filter-three-counts.webp" alt="Diagram of visitors counted once at the search door, then by three on-site gates" style="margin-bottom: 16px; float: none;"></div>
+      <p>My rule is one tool per question. Orders and revenue come from Shopify. Search demand comes from Search Console. On-page behavior comes from Clarity. Do not try to make the totals agree. None of these tools cost extra, and for a store doing under $200K a year they are enough.</p>
+
+      <h2 id="real-drop">When Shopify sessions dropped for a real reason</h2>
+      <p>The update explains most late-September drops. It does not explain all of them. Check these five before you relax.</p>
+      <p><strong>Orders fell too.</strong> A measurement change cannot move orders. If sales dropped alongside sessions, something real happened.</p>
+      <p><strong>Search Console clicks fell in the same weeks.</strong> That is lost search traffic, and it needs its own diagnosis.</p>
+      <p><strong>The drop started on a different date.</strong> A step down on September 12 or October 2 is not this update.</p>
+      <p><strong>Sessions sit near zero on days with orders.</strong> That points to storefront tracking, not the filter. Look at recent theme edits, custom pixels, or a headless setup. Shopify's help page has a section on storefront implementation issues, and this one is worth a support ticket.</p>
+      <p><strong>You added or changed a cookie banner.</strong> For visitors in the EEA and UK, Shopify only collects session data after consent. A new banner lowers counted sessions without a single shopper leaving.</p>
+      <p>If none of the five apply, you are looking at the new count.</p>
+
+      <h2 id="what-to-tell">What to tell a client or partner who asks why traffic fell</h2>
+      <p>Keep it short and lead with the part they care about. Here is a note you can edit.</p>
+      <p><em>"Shopify changed how it counts sessions between September 21 and 23, 2026. Automated bot visits are now left out by default, and two session rules changed. Orders and sales were not affected. Sessions and conversion rate before and after those dates are measured differently, so I am treating September 24 onward as the new baseline. Google Search Console, which was not part of the change, shows [X] search clicks in the last 28 days against [Y] in the 28 days before."</em></p>
+      <p>Attach three things: an orders chart covering both periods, the Search Console clicks comparison, and the human versus bot split. Those three answer the follow-up questions before they arrive.</p>
+      <p>One thing to leave out: do not say conversion rate improved. It was restated. If you claim the lift now, you will have to explain next month why it stopped rising.</p>
+
+      <h2 id="wrapping-up">Wrapping up</h2>
+      <p>If your Shopify sessions dropped in late September with orders steady, the count changed and your shoppers did not. Three takeaways cover most of it.</p>
+      <p>First, the update was three changes: bots filtered by default, no more midnight UTC cutoff, and sessions without a pageview now counted. Sessions and conversion rate can move in either direction, and orders and sales did not move at all.</p>
+      <p>Second, September 24 onward is a new baseline. Compare full weeks after the rollout with each other, keep the bot filter set the same way on both sides, and remember that nothing before October 7, 2025 can be filtered.</p>
+      <p>Third, Search Console is the reference that did not change. When Shopify, GA4, and Clarity disagree, search clicks tell you whether demand for your store moved.</p>
+      <p>There is still work on your side. Pull the human versus bot split once, write the date of the change into your monthly notes, and rerun any test that straddled it. That is about twenty minutes, and you only do it once.</p>
+      <p>After that, the new numbers are better than the old ones. A conversion rate with fewer bots in it is a number you can make decisions with. If the organic side of those numbers is thinner than you would like, that is the work I do.</p>
+
+      <div class="cta-block">
+        <h3>Want a second pair of eyes on your numbers?</h3>
+        <p>The Studio Niza SEO &amp; GEO service sets up Search Console, fixes indexing, and builds the organic traffic you can measure the same way every month. Pricing starts at $499 one-time.</p>
+        <a href="/services/shopify-seo/" class="cta-button">See pricing &amp; services <span>→</span></a>
+      </div>
+
+      <p>Or email <a href="mailto:contact@studioniza.com">contact@studioniza.com</a> if you have a specific question about your store. I read every one.</p>
+
+      <hr>
+
+      <div>
+
+        <h2 id="faq">Frequently asked questions</h2>
+
+        <p style="font-style: italic; color: var(--gray); margin-bottom: 24px;">If you&#39;re still unsure after reading these, just send the question.</p>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              <span>Did Shopify delete my old session data?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Shopify says historical data was not deleted or reprocessed by this update. Older reports can look different because the bot filter is now applied by default, and bot classification only exists for sessions from October 7, 2025 onward.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Can I see bot sessions again in Shopify Analytics?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Yes. Open a sessions report under Analytics, then Reports, and find the Human or bot session row in the Filters section. Set it to include both Human and Bot, or remove the filter. You can also add Human or bot session as a dimension to see the two side by side.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Is my new Shopify conversion rate the real one?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>It is closer to how real shoppers behave, because identified bots no longer sit in the session count. It is still an estimate, since Shopify's classifier is cautious and lets some bots through rather than mislabel real customers. Treat it as a new baseline and compare it only with dates after September 23, 2026.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>If my Shopify sessions dropped, will my Google rankings fall?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>No. Google does not see your Shopify Analytics. The update changed how Shopify reports visits inside your admin, and nothing about how your pages are crawled, indexed, or ranked.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>Does the change affect Meta or Google Ads reporting?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Not inside the ad platforms. Meta and Google Ads count clicks and conversions with their own tags, so their dashboards did not change. Reports inside Shopify that tie orders or customers to sessions can look different, because they use Shopify's session count.</p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>
+              <span>How long should I wait before trusting the new Shopify session numbers?</span>
+              <span>+</span>
+            </summary>
+            <div>
+              <div>
+                <p>Give it two full weeks after September 23, 2026. That gives you two like-for-like weeks measured under the same rules, which is enough to set a baseline for sessions and conversion rate. Orders and sales never changed, so you can keep reading those as usual.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <div class="container-narrow">
+
+      <nav class="post-nav" aria-label="Journal post navigation" data-post-nav data-current-slug="shopify-sessions-dropped-bot-filter">
+        <span class="post-nav-item is-disabled is-prev" data-prev aria-disabled="true">Previous</span>
+        <a class="post-nav-item is-center" href="/journal/">Back to Journal</a>
+        <span class="post-nav-item is-disabled is-next" data-next aria-disabled="true">Next</span>
+      </nav>
+
+    </div>
+  </footer>
+
+</article>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/studio-niza-logo-wide.png" alt="Studio Niza" />
+      <p class="footer-byline">By Niza Ravelo</p>
+      <p>A Shopify growth studio for SEO, content, AI chatbots, and reviews. Based in the Philippines. Working worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/shopify-seo/">SEO &amp; GEO</a></li>
+        <li><a href="/services/blog-content/">Content Writing</a></li>
+        <li><a href="/services/ai-chatbots/">AI Chatbots</a></li>
+        <li><a href="/services/reviews-management/">Reviews Management</a></li>
+        <li><a href="/#bundles">Bundles</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/journal/">Journal</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:contact@studioniza.com">contact@studioniza.com</a></li>
+        <li><a href="/contact/">Send me a project brief</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Studio Niza. Made carefully in the Philippines.</span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp; <button type="button" class="sn-cookie-settings-link">Cookie settings</button></span>
+  </div>
+</footer>
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+(function () {
+  var nav = document.querySelector('[data-post-nav]');
+  if (!nav) return;
+
+  var currentSlug = nav.getAttribute('data-current-slug');
+  if (!currentSlug) return;
+
+  fetch('/journal/posts.json', { cache: 'no-cache' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (posts) {
+      if (!Array.isArray(posts)) return;
+
+      var index = posts.findIndex(function (p) { return p.slug === currentSlug; });
+      if (index === -1) return;
+
+      var prev = posts[index - 1];
+      var next = posts[index + 1];
+
+      if (prev) {
+        var prevEl = nav.querySelector('[data-prev]');
+        var prevLink = document.createElement('a');
+        prevLink.className = 'post-nav-item is-prev';
+        prevLink.href = prev.url;
+        prevLink.setAttribute('rel', 'prev');
+        prevLink.setAttribute('title', prev.title);
+        prevLink.textContent = 'Previous';
+        prevEl.replaceWith(prevLink);
+      }
+
+      if (next) {
+        var nextEl = nav.querySelector('[data-next]');
+        var nextLink = document.createElement('a');
+        nextLink.className = 'post-nav-item is-next';
+        nextLink.href = next.url;
+        nextLink.setAttribute('rel', 'next');
+        nextLink.setAttribute('title', next.title);
+        nextLink.textContent = 'Next';
+        nextEl.replaceWith(nextLink);
+      }
+    })
+    .catch(function () { /* leave placeholders in place */ });
+})();
+</script>
+<!-- ============================================================
+     COOKIE CONSENT BANNER (Studio Niza)
+     Place this block directly before </body> on every page.
+     Wires Google Consent Mode v2 + Microsoft Clarity consent.
+     ============================================================ -->
+<style>
+  /* Cookie banner & modal */
+  .sn-cookie-banner, .sn-cookie-modal-overlay { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .sn-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    background: #FFF4FB;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    z-index: 9999;
+    display: none;
+    animation: sn-cookie-fadein 0.3s ease;
+  }
+  @keyframes sn-cookie-fadein {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sn-cookie-banner.visible { display: block; }
+  .sn-cookie-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-body {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0 0 16px 0;
+  }
+  .sn-cookie-body a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-body a:hover { opacity: 0.75; }
+  .sn-cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sn-cookie-btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    background: #FFFFFF;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+  }
+  .sn-cookie-btn:hover {
+    background: #FFFFFF;
+    border-color: #CD81A9;
+  }
+  .sn-cookie-btn-manage {
+    background: transparent;
+    border-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 6px 16px;
+  }
+  .sn-cookie-btn-manage:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #801D5C;
+  }
+  /* Preferences modal */
+  .sn-cookie-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .sn-cookie-modal-overlay.visible { display: flex; }
+  .sn-cookie-modal {
+    background: #FFFFFF;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    padding: 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+  }
+  .sn-cookie-modal-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+  }
+  .sn-cookie-modal-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 24px 0;
+  }
+  .sn-cookie-modal-intro a {
+    color: #801D5C;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sn-cookie-category {
+    border-top: 1px solid #E8E8E8;
+    padding: 20px 0;
+  }
+  .sn-cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .sn-cookie-category-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+  }
+  .sn-cookie-category-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #444444;
+    margin: 0;
+  }
+  .sn-cookie-required-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ABABAB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  /* Toggle switch */
+  .sn-cookie-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .sn-cookie-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sn-cookie-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ABABAB;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  .sn-cookie-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider {
+    background: #801D5C;
+  }
+  .sn-cookie-toggle input:checked + .sn-cookie-toggle-slider::before {
+    transform: translateX(20px);
+  }
+  .sn-cookie-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .sn-cookie-modal-actions .sn-cookie-btn { width: auto; flex: 1; min-width: 120px; }
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .sn-cookie-banner {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      width: auto;
+      padding: 20px;
+    }
+    .sn-cookie-modal { padding: 24px; }
+    .sn-cookie-modal-actions .sn-cookie-btn { width: 100%; flex: 1 1 100%; }
+  }
+  /* Footer cookie settings link */
+  .sn-cookie-settings-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sn-cookie-settings-link:hover { color: #801D5C; }
+</style>
+<!-- Banner -->
+<div class="sn-cookie-banner" id="sn-cookie-banner" role="dialog" aria-labelledby="sn-cookie-title" aria-describedby="sn-cookie-body">
+  <h3 class="sn-cookie-title" id="sn-cookie-title">A note on cookies</h3>
+  <p class="sn-cookie-body" id="sn-cookie-body">
+    Studio Niza uses cookies for analytics, so I can understand which pages help Shopify owners. Nothing is shared with advertisers. Read the <a href="/privacy-policy/">privacy policy</a> for details.
+  </p>
+  <div class="sn-cookie-buttons">
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-accept">Accept all</button>
+    <button type="button" class="sn-cookie-btn" id="sn-cookie-reject">Reject all</button>
+    <button type="button" class="sn-cookie-btn sn-cookie-btn-manage" id="sn-cookie-manage">Manage preferences</button>
+  </div>
+</div>
+<!-- Preferences modal -->
+<div class="sn-cookie-modal-overlay" id="sn-cookie-modal-overlay" role="dialog" aria-labelledby="sn-cookie-modal-title" aria-modal="true">
+  <div class="sn-cookie-modal">
+    <h2 class="sn-cookie-modal-title" id="sn-cookie-modal-title">Cookie preferences</h2>
+    <p class="sn-cookie-modal-intro">
+      Choose which cookies you allow. You can change these settings any time from the link in the footer. See the <a href="/privacy-policy/">privacy policy</a> for what each category covers.
+    </p>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Strictly necessary</h3>
+        <span class="sn-cookie-required-label">Always on</span>
+      </div>
+      <p class="sn-cookie-category-desc">Required for the site to function. These keep your preferences saved and the site running. They cannot be turned off.</p>
+    </div>
+    <div class="sn-cookie-category">
+      <div class="sn-cookie-category-header">
+        <h3 class="sn-cookie-category-title">Analytics</h3>
+        <label class="sn-cookie-toggle">
+          <input type="checkbox" id="sn-cookie-toggle-analytics">
+          <span class="sn-cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p class="sn-cookie-category-desc">Google Analytics 4 and Microsoft Clarity. Helps Studio Niza understand which pages and articles are useful so I can improve the site. No advertising, no profile-building.</p>
+    </div>
+    <div class="sn-cookie-modal-actions">
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-reject">Reject all</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-save">Save preferences</button>
+      <button type="button" class="sn-cookie-btn" id="sn-cookie-modal-accept">Accept all</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var COOKIE_NAME = 'studioniza_consent';
+  var COOKIE_DAYS = 365;
+  var CLARITY_PROJECT_ID = 'wx6al1z57h';
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + encodeURIComponent(value) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function applyConsent(analyticsGranted) {
+    var state = analyticsGranted ? 'granted' : 'denied';
+    // Google Consent Mode v2 update
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': state,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
+    // Microsoft Clarity consent API
+    if (typeof clarity === 'function') {
+      if (analyticsGranted) {
+        clarity('consent');
+      } else {
+        clarity('consent', false);
+      }
+    }
+  }
+  function saveConsent(analyticsGranted) {
+    var data = {
+      analytics: analyticsGranted ? 'granted' : 'denied',
+      timestamp: new Date().toISOString(),
+      version: 1
+    };
+    setCookie(COOKIE_NAME, JSON.stringify(data), COOKIE_DAYS);
+    applyConsent(analyticsGranted);
+    hideBanner();
+    hideModal();
+  }
+  function readConsent() {
+    var raw = getCookie(COOKIE_NAME);
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (e) { return null; }
+  }
+  function showBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+  function hideBanner() {
+    var banner = document.getElementById('sn-cookie-banner');
+    if (banner) banner.classList.remove('visible');
+  }
+  function showModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.add('visible');
+    var existing = readConsent();
+    var toggle = document.getElementById('sn-cookie-toggle-analytics');
+    if (toggle) toggle.checked = existing ? (existing.analytics === 'granted') : false;
+  }
+  function hideModal() {
+    var modal = document.getElementById('sn-cookie-modal-overlay');
+    if (modal) modal.classList.remove('visible');
+  }
+  // Wire up buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    var existing = readConsent();
+    if (existing && (existing.analytics === 'granted' || existing.analytics === 'denied')) {
+      // User has already made a choice; apply it silently and don't show banner
+      applyConsent(existing.analytics === 'granted');
+    } else {
+      showBanner();
+    }
+    var acceptBtn = document.getElementById('sn-cookie-accept');
+    var rejectBtn = document.getElementById('sn-cookie-reject');
+    var manageBtn = document.getElementById('sn-cookie-manage');
+    var modalAcceptBtn = document.getElementById('sn-cookie-modal-accept');
+    var modalRejectBtn = document.getElementById('sn-cookie-modal-reject');
+    var modalSaveBtn = document.getElementById('sn-cookie-modal-save');
+    var modalOverlay = document.getElementById('sn-cookie-modal-overlay');
+    if (acceptBtn) acceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (manageBtn) manageBtn.addEventListener('click', function() { showModal(); });
+    if (modalAcceptBtn) modalAcceptBtn.addEventListener('click', function() { saveConsent(true); });
+    if (modalRejectBtn) modalRejectBtn.addEventListener('click', function() { saveConsent(false); });
+    if (modalSaveBtn) modalSaveBtn.addEventListener('click', function() {
+      var toggle = document.getElementById('sn-cookie-toggle-analytics');
+      saveConsent(toggle && toggle.checked);
+    });
+    if (modalOverlay) modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) hideModal();
+    });
+    // Footer "Cookie settings" link support
+    document.querySelectorAll('.sn-cookie-settings-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  });
+  // Expose for manual triggering if needed
+  window.studionizaCookies = {
+    show: showModal,
+    reset: function() {
+      setCookie(COOKIE_NAME, '', -1);
+      window.location.reload();
+    }
+  };
+})();
+</script>
+<!-- END COOKIE CONSENT BANNER -->
+</body>
+</html>
